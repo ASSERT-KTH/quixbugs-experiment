@@ -6,10 +6,10 @@
  
  	public static java.util.ArrayList<java.lang.Integer> mergesort(java.util.ArrayList<java.lang.Integer> arr) {
 -		if ((arr.size()) == 0) {
-+		if (((arr.size()) \ 2) == 0) {
++		if (((arr.size()) / 2) == 0) {
  			return arr;
  		}else {
- 			int middle = (arr.size()) \/ 2;
+ 			int middle = (arr.size()) / 2;
  			java.util.ArrayList<java.lang.Integer> left = new java.util.ArrayList<java.lang.Integer>(100);
 			left.addAll(arr.subList(0, middle));
 			left = java_programs.MERGESORT.mergesort(left);
