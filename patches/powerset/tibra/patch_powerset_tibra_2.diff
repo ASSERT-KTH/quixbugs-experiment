@@ -1,0 +1,11 @@
+
+--- java_programs\/POWERSET.java
++++ java_programs\/POWERSET.java
+@@ -16,6 +16,7 @@
+ 				r.addAll(subset);
+ 				to_add.add(r);
+ 			}
++			output.addAll(rest_subsets);
+ 			output.addAll(to_add);
+ 			rest_subsets.addAll(output);
+ 			return output;
