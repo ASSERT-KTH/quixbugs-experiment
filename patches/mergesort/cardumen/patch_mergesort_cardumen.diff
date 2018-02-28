@@ -6,17 +6,17 @@
  
  	public static java.util.ArrayList<java.lang.Integer> mergesort(java.util.ArrayList<java.lang.Integer> arr) {
 -		if ((arr.size()) == 0) {
-+		if (((arr.size()) \/ 2) == 0) {
++		if (((arr.size()) \ 2) == 0) {
  			return arr;
  		}else {
  			int middle = (arr.size()) \/ 2;
  			java.util.ArrayList<java.lang.Integer> left = new java.util.ArrayList<java.lang.Integer>(100);
-+			left.addAll(arr.subList(0, middle));
-+			left = java_programs.MERGESORT.mergesort(left);
-+			java.util.ArrayList<java.lang.Integer> right = new java.util.ArrayList<java.lang.Integer>(100);
-+			right.addAll(arr.subList(middle, arr.size()));
-+			right = java_programs.MERGESORT.mergesort(right);
-+			return java_programs.MERGESORT.merge(left, right);
+			left.addAll(arr.subList(0, middle));
+			left = java_programs.MERGESORT.mergesort(left);
+			java.util.ArrayList<java.lang.Integer> right = new java.util.ArrayList<java.lang.Integer>(100);
+			right.addAll(arr.subList(middle, arr.size()));
+			right = java_programs.MERGESORT.mergesort(right);
+			return java_programs.MERGESORT.merge(left, right);
  		}
  	}
  }
