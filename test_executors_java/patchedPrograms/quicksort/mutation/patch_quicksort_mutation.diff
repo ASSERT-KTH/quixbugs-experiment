@@ -1,0 +1,13 @@
+
+--- java_programs\/QUICKSORT.java
++++ java_programs\/QUICKSORT.java
+@@ -10,7 +10,7 @@
+ 		java.util.ArrayList<java.lang.Integer> lesser = new java.util.ArrayList<java.lang.Integer>();
+ 		java.util.ArrayList<java.lang.Integer> greater = new java.util.ArrayList<java.lang.Integer>();
+ 		for (java.lang.Integer x : arr.subList(1, arr.size())) {
+-			if (x < pivot) {
++			if (x <= pivot) {
+ 				lesser.add(x);
+ 			}else
+ 				if (x > pivot) {
+

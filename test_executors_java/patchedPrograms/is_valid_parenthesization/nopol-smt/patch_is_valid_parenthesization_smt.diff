@@ -1,0 +1,14 @@
+--- nopol-quixbugs/src/main/java/java_programs/IS_VALID_PARENTHESIZATION.java
++++ nopol-quixbugs/src/main/java/java_programs/IS_VALID_PARENTHESIZATION.java
+@@ -16,7 +16,7 @@
+ 	    Character paren = parens.charAt(i);
+-	    if (paren.equals('(')) {
+-                depth++;
++	    if ((1 < (parens.length()) - (1)) && ((paren) != (1 + '('))) {
++	        depth++;
+ 	    } else {
+-		depth--;
+-		if (depth < 0) { return false; }
++	        depth--;
++	        if (depth < 0) { return false; }
+ 	    }

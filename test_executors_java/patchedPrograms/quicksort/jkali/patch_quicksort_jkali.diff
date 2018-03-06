@@ -1,0 +1,13 @@
+
+--- java_programs\/QUICKSORT.java
++++ java_programs\/QUICKSORT.java
+@@ -13,7 +13,7 @@
+ 			if (x < pivot) {
+ 				lesser.add(x);
+ 			}else
+-				if (x > pivot) {
++				if (true) {
+ 					greater.add(x);
+ 				}
+ 
+

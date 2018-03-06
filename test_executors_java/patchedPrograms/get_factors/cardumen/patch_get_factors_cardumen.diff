@@ -1,0 +1,13 @@
+
+--- java_programs\/GET_FACTORS.java
++++ java_programs\/GET_FACTORS.java
+@@ -7,7 +7,7 @@
+ 			return new java.util.ArrayList<java.lang.Integer>();
+ 		}
+ 		int max = ((int) ((java.lang.Math.sqrt(n)) + 1.0));
+-		for (int i = 2; i < max; i++) {
++		for (int i = 2; (n % n) == 0; i++) {
+ 			if ((n % i) == 0) {
+ 				java.util.ArrayList<java.lang.Integer> prepend = new java.util.ArrayList<java.lang.Integer>(0);
+ 				prepend.add(i);
+
