@@ -1,47 +1,23 @@
 
-Wed Mar 07 17:09:09 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/mutation/p1
-passed all tests 
-Wed Mar 07 17:09:17 CET 2018 - Analyzing patched program: FIND_IN_SORTED under path ./patchedPrograms/find_in_sorted/nopol-smt/p1
-passed all tests 
-Wed Mar 07 17:10:37 CET 2018 - Analyzing patched program: LEVENSHTEIN under path ./patchedPrograms/levenshtein/cardumen/p1
-failed tests number: 14
-Wed Mar 07 17:10:46 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/nopol-smt/p1
-passed all tests 
-Wed Mar 07 17:10:54 CET 2018 - Analyzing patched program: KNAPSACK under path ./patchedPrograms/knapsack/mutation/p1
-failed tests number: 2
-Wed Mar 07 17:11:01 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/nopol-dynamoth/p1
-passed all tests 
-Wed Mar 07 17:12:37 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/mutation/p1
-passed all tests 
-Wed Mar 07 17:12:45 CET 2018 - Analyzing patched program: FIND_IN_SORTED under path ./patchedPrograms/find_in_sorted/nopol-smt/p1
-passed all tests 
-Wed Mar 07 17:14:05 CET 2018 - Analyzing patched program: LEVENSHTEIN under path ./patchedPrograms/levenshtein/cardumen/p1
+Wed Mar 07 19:07:59 CET 2018 - Analyzing patched program: LEVENSHTEIN under path ./patchedPrograms/levenshtein/cardumen/p1
 failed tests number: 13
-Wed Mar 07 17:14:13 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/nopol-smt/p1
+Wed Mar 07 19:07:59 CET 2018 - Analyzing patched program: GET_FACTORS under path ./patchedPrograms/get_factors/cardumen/p1
+failed tests number: 20
+Wed Mar 07 19:07:59 CET 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p1
 passed all tests 
-Wed Mar 07 17:14:22 CET 2018 - Analyzing patched program: KNAPSACK under path ./patchedPrograms/knapsack/mutation/p1
+Wed Mar 07 19:07:59 CET 2018 - Analyzing patched program: NEXT_PERMUTATION under path ./patchedPrograms/next_permutation/mutation/p1
+passed all tests 
+Wed Mar 07 19:07:59 CET 2018 - Analyzing patched program: RPN_EVAL under path ./patchedPrograms/rpn_eval/cardumen/p1
+passed all tests 
+Wed Mar 07 19:07:59 CET 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/statement/p1
+passed all tests 
+Wed Mar 07 19:07:59 CET 2018 - Analyzing patched program: FIND_IN_SORTED under path ./patchedPrograms/find_in_sorted/nopol-smt/p1
+failed tests number: 20
+Wed Mar 07 19:07:59 CET 2018 - Analyzing patched program: IS_VALID_PARENTHESIZATION under path ./patchedPrograms/is_valid_parenthesization/nopol-smt/p1
+failed tests number: 20
+Wed Mar 07 19:07:59 CET 2018 - Analyzing patched program: KNAPSACK under path ./patchedPrograms/knapsack/mutation/p1
 failed tests number: 2
-Wed Mar 07 17:14:29 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/nopol-dynamoth/p1
+Wed Mar 07 19:07:59 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/nopol-dynamoth/p1
 passed all tests 
-Wed Mar 07 17:14:38 CET 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p2
-
-Wed Mar 07 17:14:46 CET 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p1
-
-Wed Mar 07 17:14:54 CET 2018 - Analyzing patched program: NEXT_PERMUTATION under path ./patchedPrograms/next_permutation/mutation/p1
-passed all tests 
-Wed Mar 07 17:15:02 CET 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p0
-
-Wed Mar 07 17:15:11 CET 2018 - Analyzing patched program: MERGESORT under path ./patchedPrograms/mergesort/cardumen/p1
-passed all tests 
-Wed Mar 07 17:15:19 CET 2018 - Analyzing patched program: IS_VALID_PARENTHESIZATION under path ./patchedPrograms/is_valid_parenthesization/nopol-smt/p1
-passed all tests 
-Wed Mar 07 17:15:26 CET 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/statement/p1
-passed all tests 
-Wed Mar 07 17:15:36 CET 2018 - Analyzing patched program: RPN_EVAL under path ./patchedPrograms/rpn_eval/cardumen/p1
-passed all tests 
-Wed Mar 07 17:15:44 CET 2018 - Analyzing patched program: GET_FACTORS under path ./patchedPrograms/get_factors/cardumen/p1
-passed all tests 
-Wed Mar 07 17:15:51 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/jkali/p1
-passed all tests 
-Wed Mar 07 17:15:59 CET 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/tibra/p1
+Wed Mar 07 19:07:59 CET 2018 - Analyzing patched program: MERGESORT under path ./patchedPrograms/mergesort/cardumen/p1
 passed all tests 
