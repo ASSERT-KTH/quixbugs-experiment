@@ -93,7 +93,7 @@ public class EvoTestGenerator {
 	public void compileProgram(String dirtocompile, String programName) throws IOException {
 		dirtocompile+=File.separator+"java_programs"+File.separator;
 		Process p = null;
-		System.out.println("Dir " + dirtocompile);
+		System.out.println("Compiling Directory " + dirtocompile);
 		String[] command = new String[] { "javac", "-cp", System.getProperty("java.class.path"),
 				programName+".java" };
 		System.out.println(Arrays.toString(command));

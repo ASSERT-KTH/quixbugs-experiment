@@ -57,11 +57,12 @@ public class QuixBugExtendedOracle {
 	 * @param programToRepair
 	 *            name of the program to repair
 	 * @return
+	 * @throws IOException 
 	 */
-	public SummaryResults runEvosuiteAllSeedOnPatch(Path patchesDir, Path testLocation, String programToRepair) {
+	public SummaryResults runEvosuiteAllSeedOnPatch(Path patchesDir, Path testLocation, String programToRepair) throws IOException {
 
-		boolean passing = true;
 		SummaryResults summaryResult = new SummaryResults(patchesDir.toString(),programToRepair);
+		EvoTestGenerator generator = new EvoTestGenerator();
 		File patchedVersionFolder = patchesDir.toFile();
 		for (int seed : seeds) {
 			System.out.println("Running " + programToRepair + " seed " + seed);
@@ -70,7 +71,7 @@ public class QuixBugExtendedOracle {
 					testLocation + File.separator + "seed_" + seed + File.separator + "evosuite-tests");
 			if (testFolderSeed.exists()) {
 				LaucherJUnitProcess la = new LaucherJUnitProcess();
-
+				generator.compileProgram(patchedVersionFolder.getAbsolutePath() , programToRepair);
 				TestResult testResult = la.execute(
 						patchedVersionFolder.getAbsolutePath() + File.pathSeparator + testFolderSeed.getAbsolutePath()
 								+ File.pathSeparator + System.getProperty("java.class.path"),
@@ -78,7 +79,7 @@ public class QuixBugExtendedOracle {
 
 				summaryResult.addResultForSeed(testResult);
 				System.out.println("Results for " + programToRepair + " seed " + seed + ": " + testResult);
-				passing &= (null!=testResult&&testResult.areAllTestsPassing());
+				
 
 			} else {
 				System.out.println("Any folder at " + testFolderSeed.getAbsolutePath());
