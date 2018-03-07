@@ -5,7 +5,10 @@ package qfevotest.generator;
 import static org.junit.Assert.*;
 
 import java.io.File;
+import java.io.InputStream;
 import java.net.URL;
+import java.util.Properties;
+import java.util.Set;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -48,10 +51,16 @@ public class QuixBugTestGeneratorTest {
 	@Test
 	public void testRunPatchPassing() throws Exception {
 		//Here, we pass the location to the patched version bytecode
-		File patchLocation = new File("./patchedPrograms/lis/statement/p1/");
-		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
-		boolean determ = qg.runEvosuiteAllSeedOnPatch(patchLocation.toPath(),new File("./generatedTests").toPath(), "LIS");
-		assertTrue(determ);
+		 Properties prop = new Properties();   
+	     InputStream in = Object.class.getResourceAsStream("/test.properties");   
+	     prop.load(in); 	    	     
+	     for(Object patchPath:prop.keySet()) {
+	    	    String program = prop.getProperty((String) patchPath);
+	    		File patchLocation = new File("./patchedPrograms/"+patchPath);
+	    		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
+	    		boolean determ = qg.runEvosuiteAllSeedOnPatch(patchLocation.toPath(),new File("./generatedTests").toPath(), program);
+	    		assertTrue(determ);
+	     }	
 	}
 
 	@Test
