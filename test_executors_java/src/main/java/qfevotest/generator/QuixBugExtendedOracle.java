@@ -1,13 +1,13 @@
 package qfevotest.generator;
 
-import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.Collection;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -57,11 +57,12 @@ public class QuixBugExtendedOracle {
 	 * @param programToRepair
 	 *            name of the program to repair
 	 * @return
-	 * @throws IOException 
+	 * @throws IOException
 	 */
-	public SummaryResults runEvosuiteAllSeedOnPatch(Path patchesDir, Path testLocation, String programToRepair) throws IOException {
+	public SummaryResults runEvosuiteAllSeedOnPatch(Path patchesDir, Path testLocation, String programToRepair)
+			throws IOException {
 
-		SummaryResults summaryResult = new SummaryResults(patchesDir.toString(),programToRepair);
+		SummaryResults summaryResult = new SummaryResults(patchesDir.toString(), programToRepair);
 		EvoTestGenerator generator = new EvoTestGenerator();
 		File patchedVersionFolder = patchesDir.toFile();
 		for (int seed : seeds) {
@@ -71,7 +72,7 @@ public class QuixBugExtendedOracle {
 					testLocation + File.separator + "seed_" + seed + File.separator + "evosuite-tests");
 			if (testFolderSeed.exists()) {
 				LaucherJUnitProcess la = new LaucherJUnitProcess();
-				generator.compileProgram(patchedVersionFolder.getAbsolutePath() , programToRepair);
+				generator.compileProgram(patchedVersionFolder.getAbsolutePath(), programToRepair);
 				TestResult testResult = la.execute(
 						patchedVersionFolder.getAbsolutePath() + File.pathSeparator + testFolderSeed.getAbsolutePath()
 								+ File.pathSeparator + System.getProperty("java.class.path"),
@@ -79,7 +80,6 @@ public class QuixBugExtendedOracle {
 
 				summaryResult.addResultForSeed(testResult);
 				System.out.println("Results for " + programToRepair + " seed " + seed + ": " + testResult);
-				
 
 			} else {
 				System.out.println("Any folder at " + testFolderSeed.getAbsolutePath());
@@ -92,33 +92,69 @@ public class QuixBugExtendedOracle {
 	}
 
 	private void outputResult(SummaryResults summaryResult) {
-		
-		FileWriter fw = null;		
+
+		FileWriter fw = null;
 		try {
-			  fw = new FileWriter("report.txt",true); 
-			  fw.write(System.getProperty("line.separator"));
-			  fw.write(new Date().toString() + " - Analyzing patched program: "+summaryResult.getProgramName() + " under path "+ summaryResult.getPatchPath());
-			  fw.write(System.getProperty("line.separator"));
-			  if(summaryResult.isCorrect()) {
-				  fw.write("passed all tests ");
-			  } else {
-				  fw.write("failed tests number: "+summaryResult.getFailing().size());
-			  }
-			  fw.flush();			
+			fw = new FileWriter("report.txt", true);
+			fw.write(System.getProperty("line.separator"));
+			fw.write(new Date().toString() + " - Analyzing patched program: " + summaryResult.getProgramName()
+					+ " under path " + summaryResult.getPatchPath());
+			fw.write(System.getProperty("line.separator"));
+			if (summaryResult.isCorrect()) {
+				fw.write("passed all tests ");
+			} else {
+				fw.write("failed tests number: " + summaryResult.getFailing().size());
+			}
+			fw.flush();
 		} catch (Exception e) {
 			System.out.println("An error in generating a evosuit running result report.");
 		} finally {
-			 if (fw != null)  {
-				 try {
+			if (fw != null) {
+				try {
 					fw.close();
 				} catch (IOException e) {
 					System.out.println("failed to close file writer stream");
 				}
-			 }
-	                
+			}
+
 		}
-        
-		
+
+	}
+
+	public void outputResult(Collection<SummaryResults> summaryResults) {
+
+		FileWriter fw = null;
+		try {
+			String path = "report.txt";
+			fw = new FileWriter(path, false);
+			System.out.println("Saving results on file " + new File(path).getAbsolutePath());
+			for (SummaryResults summaryResult : summaryResults) {
+
+				fw.write(System.getProperty("line.separator"));
+
+				fw.write(new Date().toString() + " - Analyzing patched program: " + summaryResult.getProgramName()
+						+ " under path " + summaryResult.getPatchPath());
+				fw.write(System.getProperty("line.separator"));
+				if (summaryResult.isCorrect()) {
+					fw.write("passed all tests ");
+				} else {
+					fw.write("failed tests number: " + summaryResult.getFailing().size());
+				}
+				fw.flush();
+			}
+		} catch (Exception e) {
+			System.out.println("An error in generating a evosuit running result report.");
+		} finally {
+			if (fw != null) {
+				try {
+					fw.close();
+				} catch (IOException e) {
+					System.out.println("failed to close file writer stream");
+				}
+			}
+
+		}
+
 	}
 
 	public void generateTest4AllProgramsAllSeed(String outDir) throws Exception {
@@ -221,8 +257,38 @@ public class QuixBugExtendedOracle {
 		}
 	}
 
-	public void runAllResults(File patchDirectory, File generatedTest) {
+	public Map<String, SummaryResults> runAllResults(File patchDirectory, File generatedTest) throws IOException {
+		Map<String, SummaryResults> resultByProgram = new HashMap<>();
+		for (String programToRepair : subjectsQuixBugs) {
+			// Here, we pass the location to the patched version bytecode
+			// "./patchedPrograms/lis/statement/p1/"
+			System.out.println("Program " + programToRepair);
+			File patchesLocationRoot = new File("./patchedPrograms");
+			File folderProgram = new File(patchesLocationRoot, programToRepair);
+			if (!folderProgram.isDirectory())
+				continue;
+			// patch_get_factors_cardumen.diff
+			// String patchContent = new
+			// String(Files.readAllBytes(Paths.get("duke.java")));
+			for (File method : folderProgram.listFiles()) {
+				System.out.println("--> method " + method.getName());
+				if (method.isDirectory()) {
+					for (File patch : method.listFiles()) {
+						if (patch.isDirectory()) {
+							QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
 
+							System.out.println("Analyzing patch at " + patch.getAbsolutePath());
+							SummaryResults resultallseeds = qg.runEvosuiteAllSeedOnPatch(patch.toPath(),
+									generatedTest.toPath(), programToRepair.toUpperCase());
+
+							resultByProgram.put(programToRepair, resultallseeds);
+							System.out.println("Result for " + programToRepair + " " + resultallseeds.isCorrect());
+						}
+					}
+				}
+			}
+		}
+		return resultByProgram;
 	}
 
 }

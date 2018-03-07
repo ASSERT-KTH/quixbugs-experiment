@@ -3,15 +3,16 @@ package qfevotest.generator;
 /**
  * 
  */
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.List;
+import java.util.Map;
 import java.util.Properties;
-import java.util.Set;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import qfevotest.testrunner.SummaryResults;
@@ -65,6 +66,22 @@ public class QuixBugTestGeneratorTest {
 	    				new File("./generatedTests").toPath(), program);
 	    		//assertTrue(resultallseed.isCorrect());//removing this assertion, not all test must pass
 	     }	
+	}
+	
+	@Test
+	public void testGetAllResults() throws Exception {
+		File patchLocation = new File("./patchedPrograms/");
+		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
+		Map<String, SummaryResults> resultByProgram = qg.runAllResults(patchLocation, new File("./generatedTests"));
+		qg.outputResult(resultByProgram.values());
+		System.out.println("\nEND: printing finals results: ");
+		for (String program : resultByProgram.keySet()) {
+			
+			SummaryResults sr = resultByProgram.get(program);
+			List<?> failingSeed = sr.getFailing();
+			System.out.println(program + ": pass all test? " + sr.isCorrect() + " failings: (" + failingSeed.size()
+					+ ") " + failingSeed);
+		}
 	}
 
 	@Test
