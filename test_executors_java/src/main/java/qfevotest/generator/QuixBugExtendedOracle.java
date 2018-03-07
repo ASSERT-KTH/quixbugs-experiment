@@ -1,8 +1,13 @@
 package qfevotest.generator;
 
+import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.Date;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -56,7 +61,7 @@ public class QuixBugExtendedOracle {
 	public SummaryResults runEvosuiteAllSeedOnPatch(Path patchesDir, Path testLocation, String programToRepair) {
 
 		boolean passing = true;
-		SummaryResults summaryResult = new SummaryResults();
+		SummaryResults summaryResult = new SummaryResults(patchesDir.toString(),programToRepair);
 		File patchedVersionFolder = patchesDir.toFile();
 		for (int seed : seeds) {
 			System.out.println("Running " + programToRepair + " seed " + seed);
@@ -73,15 +78,46 @@ public class QuixBugExtendedOracle {
 
 				summaryResult.addResultForSeed(testResult);
 				System.out.println("Results for " + programToRepair + " seed " + seed + ": " + testResult);
-				passing &= (testResult.areAllTestsPassing());
+				passing &= (null!=testResult&&testResult.areAllTestsPassing());
 
 			} else {
 				System.out.println("Any folder at " + testFolderSeed.getAbsolutePath());
 			}
 
 		}
+		outputResult(summaryResult);
 		return summaryResult;
 
+	}
+
+	private void outputResult(SummaryResults summaryResult) {
+		
+		FileWriter fw = null;		
+		try {
+			  fw = new FileWriter("report.txt",true); 
+			  fw.write(System.getProperty("line.separator"));
+			  fw.write(new Date().toString() + " - Analyzing patched program: "+summaryResult.getProgramName() + " under path "+ summaryResult.getPatchPath());
+			  fw.write(System.getProperty("line.separator"));
+			  if(summaryResult.isCorrect()) {
+				  fw.write("passed all tests ");
+			  } else {
+				  fw.write("failed tests number: "+summaryResult.getFailing().size());
+			  }
+			  fw.flush();			
+		} catch (Exception e) {
+			System.out.println("An error in generating a evosuit running result report.");
+		} finally {
+			 if (fw != null)  {
+				 try {
+					fw.close();
+				} catch (IOException e) {
+					System.out.println("failed to close file writer stream");
+				}
+			 }
+	                
+		}
+        
+		
 	}
 
 	public void generateTest4AllProgramsAllSeed(String outDir) throws Exception {

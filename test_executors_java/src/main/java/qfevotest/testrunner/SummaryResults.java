@@ -12,6 +12,13 @@ import java.util.stream.Collectors;
 public class SummaryResults {
 	// One results for seed
 	List<TestResult> result = new ArrayList<>();
+	String patchPath; 
+	String programName;
+	
+	public SummaryResults(String patchedProgramPath, String programName){
+		this.patchPath = patchedProgramPath;
+		this.programName = programName;
+	}
 
 	public List<TestResult> getResult() {
 		return result;
@@ -38,4 +45,21 @@ public class SummaryResults {
 		return this.result.stream().filter(e -> !e.areAllTestsPassing()).collect(Collectors.toList());
 
 	}
+	
+	public String getPatchPath() {
+		return patchPath;
+	}
+
+	public void setPatchPath(String patchPath) {
+		this.patchPath = patchPath;
+	}
+
+	public String getProgramName() {
+		return programName;
+	}
+
+	public void setProgramName(String programName) {
+		this.programName = programName;
+	}
+
 }
