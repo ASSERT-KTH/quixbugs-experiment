@@ -3,7 +3,9 @@ package qfevotest.generator;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
@@ -267,20 +269,24 @@ public class QuixBugExtendedOracle {
 			File folderProgram = new File(patchesLocationRoot, programToRepair);
 			if (!folderProgram.isDirectory())
 				continue;
-			// patch_get_factors_cardumen.diff
-			// String patchContent = new
-			// String(Files.readAllBytes(Paths.get("duke.java")));
 			for (File method : folderProgram.listFiles()) {
 				System.out.println("--> method " + method.getName());
 				if (method.isDirectory()) {
 					for (File patch : method.listFiles()) {
 						if (patch.isDirectory()) {
+
+							// patch_get_factors_cardumen.diff
+							String patchContent = new String(Files.readAllBytes(
+									Paths.get(method.getAbsolutePath() + File.separator + "patch_" + programToRepair
+											+ "_" + method.getName() + "_" + patch.getName().substring(1) + ".diff")));
+							System.out.println("Diff: \n" + patchContent);
+
 							QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
 
 							System.out.println("Analyzing patch at " + patch.getAbsolutePath());
 							SummaryResults resultallseeds = qg.runEvosuiteAllSeedOnPatch(patch.toPath(),
 									generatedTest.toPath(), programToRepair.toUpperCase());
-
+							resultallseeds.setPatchDiff(patchContent);
 							resultByProgram.put(programToRepair, resultallseeds);
 							System.out.println("Result for " + programToRepair + " " + resultallseeds.isCorrect());
 						}

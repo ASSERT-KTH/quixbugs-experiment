@@ -14,10 +14,17 @@ public class SummaryResults {
 	List<TestResult> result = new ArrayList<>();
 	String patchPath;
 	String programName;
+	String patchDiff;
 
 	public SummaryResults(String patchedProgramPath, String programName) {
 		this.patchPath = patchedProgramPath;
 		this.programName = programName;
+	}
+	
+	public SummaryResults(String patchedProgramPath, String programName, String patchDiff) {
+		this.patchPath = patchedProgramPath;
+		this.programName = programName;
+		this.patchDiff = patchDiff;
 	}
 
 	public List<TestResult> getResult() {
@@ -60,6 +67,14 @@ public class SummaryResults {
 
 	public void setProgramName(String programName) {
 		this.programName = programName;
+	}
+
+	public String getPatchDiff() {
+		return patchDiff;
+	}
+
+	public void setPatchDiff(String patchDiff) {
+		this.patchDiff = patchDiff;
 	}
 
 }
