@@ -9,10 +9,13 @@ import java.util.concurrent.TimeUnit;
 
 import qfevotest.generator.multithread.EVRunner;
 import qfevotest.testrunner.LaucherJUnitProcess;
+import qfevotest.testrunner.SummaryResults;
 import qfevotest.testrunner.TestResult;
 
 /**
- * Class that a)  invokes the generation of evosuite test cases, and b) execute programs over generated test cases.
+ * Class that a) invokes the generation of evosuite test cases, and b) execute
+ * programs over generated test cases.
+ * 
  * @author Matias Martinez
  *
  */
@@ -26,14 +29,13 @@ public class QuixBugExtendedOracle {
 			seeds[i] = i + 1;
 		}
 	}
+	static String[] subjectsQuixBugs = new String[] { "bitcount", "bucketsort", "find_first_in_sorted",
+			"find_in_sorted", "flatten", "gcd", "get_factors", "hanoi", "is_valid_parenthesization", "kheapsort",
+			"knapsack", "kth", "lcs_length", "levenshtein", "lis", "longest_common_subsequence", "max_sublist_sum",
+			"mergesort", "next_palindrome", "next_permutation", "pascal", "possible_change", "powerset", "quicksort",
+			"rpn_eval", "shunting_yard", "sieve", "sqrt", "subsequences", "to_base", "wrap", };
 
 	public void generateTest4AllPrograms(String out, int seed) throws Exception {
-
-		String[] subjectsQuixBugs = new String[] { "bitcount", "bucketsort", "find_first_in_sorted", "find_in_sorted",
-				"flatten", "gcd", "get_factors", "hanoi", "is_valid_parenthesization", "kheapsort", "knapsack", "kth",
-				"lcs_length", "levenshtein", "lis", "longest_common_subsequence", "max_sublist_sum", "mergesort",
-				"next_palindrome", "next_permutation", "pascal", "possible_change", "powerset", "quicksort", "rpn_eval",
-				"shunting_yard", "sieve", "sqrt", "subsequences", "to_base", "wrap", };
 
 		for (String prog : subjectsQuixBugs) {
 			generateAndRunEvoTests(out, prog, seed);
@@ -51,10 +53,10 @@ public class QuixBugExtendedOracle {
 	 *            name of the program to repair
 	 * @return
 	 */
-	public boolean runEvosuiteAllSeedOnPatch(Path patchesDir, Path testLocation, String programToRepair) {
+	public SummaryResults runEvosuiteAllSeedOnPatch(Path patchesDir, Path testLocation, String programToRepair) {
 
 		boolean passing = true;
-
+		SummaryResults summaryResult = new SummaryResults();
 		File patchedVersionFolder = patchesDir.toFile();
 		for (int seed : seeds) {
 			System.out.println("Running " + programToRepair + " seed " + seed);
@@ -63,33 +65,26 @@ public class QuixBugExtendedOracle {
 					testLocation + File.separator + "seed_" + seed + File.separator + "evosuite-tests");
 			if (testFolderSeed.exists()) {
 				LaucherJUnitProcess la = new LaucherJUnitProcess();
-				
+
 				TestResult testResult = la.execute(
 						patchedVersionFolder.getAbsolutePath() + File.pathSeparator + testFolderSeed.getAbsolutePath()
 								+ File.pathSeparator + System.getProperty("java.class.path"),
 						"java_programs." + programToRepair.toUpperCase() + "_ESTest", testFolderSeed.getAbsolutePath());
 
+				summaryResult.addResultForSeed(testResult);
 				System.out.println("Results for " + programToRepair + " seed " + seed + ": " + testResult);
 				passing &= (testResult.areAllTestsPassing());
 
-			}else{
-				System.out.println("Any folder at "+ testFolderSeed.getAbsolutePath());
+			} else {
+				System.out.println("Any folder at " + testFolderSeed.getAbsolutePath());
 			}
 
 		}
-		return passing;
+		return summaryResult;
 
 	}
 
 	public void generateTest4AllProgramsAllSeed(String outDir) throws Exception {
-
-		String[] subjectsQuixBugs = new String[] { "bitcount", "bucketsort",
-
-				"find_first_in_sorted", "find_in_sorted", "flatten", "gcd", "get_factors", "hanoi",
-				"is_valid_parenthesization", "kheapsort", "knapsack", "kth", "lcs_length", "levenshtein", "lis",
-				"longest_common_subsequence", "max_sublist_sum", "mergesort", "next_palindrome", "next_permutation",
-				"pascal", "possible_change", "powerset", "quicksort", "rpn_eval", "shunting_yard", "sieve", "sqrt",
-				"subsequences", "to_base", "wrap", };
 
 		for (String programToRepair : subjectsQuixBugs) {
 
@@ -168,12 +163,6 @@ public class QuixBugExtendedOracle {
 
 		ExecutorService exec = Executors.newFixedThreadPool(numThreads);
 
-		String[] subjectsQuixBugs = new String[] { "bitcount", "bucketsort", "find_first_in_sorted", "find_in_sorted",
-				"flatten", "gcd", "get_factors", "hanoi", "is_valid_parenthesization", "kheapsort", "knapsack", "kth",
-				"lcs_length", "levenshtein", "lis", "longest_common_subsequence", "max_sublist_sum", "mergesort",
-				"next_palindrome", "next_permutation", "pascal", "possible_change", "powerset", "quicksort", "rpn_eval",
-				"shunting_yard", "sieve", "sqrt", "subsequences", "to_base", "wrap", };
-
 		for (String programToRepair : subjectsQuixBugs) {
 
 			for (int seed : seeds) {
@@ -193,6 +182,10 @@ public class QuixBugExtendedOracle {
 		} catch (InterruptedException e) {
 			exec.shutdownNow();
 		}
+	}
+
+	public void runAllResults(File patchDirectory, File generatedTest) {
+
 	}
 
 }
