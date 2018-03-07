@@ -12,10 +12,10 @@ import java.util.stream.Collectors;
 public class SummaryResults {
 	// One results for seed
 	List<TestResult> result = new ArrayList<>();
-	String patchPath; 
+	String patchPath;
 	String programName;
-	
-	public SummaryResults(String patchedProgramPath, String programName){
+
+	public SummaryResults(String patchedProgramPath, String programName) {
 		this.patchPath = patchedProgramPath;
 		this.programName = programName;
 	}
@@ -34,7 +34,7 @@ public class SummaryResults {
 
 	public boolean isCorrect() {
 		for (TestResult testResult : result) {
-			if (!testResult.areAllTestsPassing()) {
+			if (testResult != null && !testResult.areAllTestsPassing()) {
 				return false;
 			}
 		}
@@ -42,10 +42,10 @@ public class SummaryResults {
 	}
 
 	public List<TestResult> getFailing() {
-		return this.result.stream().filter(e -> !e.areAllTestsPassing()).collect(Collectors.toList());
+		return this.result.stream().filter(e -> e != null && !e.areAllTestsPassing()).collect(Collectors.toList());
 
 	}
-	
+
 	public String getPatchPath() {
 		return patchPath;
 	}
