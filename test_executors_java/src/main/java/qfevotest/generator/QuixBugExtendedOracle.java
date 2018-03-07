@@ -98,16 +98,7 @@ public class QuixBugExtendedOracle {
 		FileWriter fw = null;
 		try {
 			fw = new FileWriter("report.txt", true);
-			fw.write(System.getProperty("line.separator"));
-			fw.write(new Date().toString() + " - Analyzing patched program: " + summaryResult.getProgramName()
-					+ " under path " + summaryResult.getPatchPath());
-			fw.write(System.getProperty("line.separator"));
-			if (summaryResult.isCorrect()) {
-				fw.write("passed all tests ");
-			} else {
-				fw.write("failed tests number: " + summaryResult.getFailing().size());
-			}
-			fw.flush();
+			writePatchInfo(fw, summaryResult);
 		} catch (Exception e) {
 			System.out.println("An error in generating a evosuit running result report.");
 		} finally {
@@ -132,17 +123,7 @@ public class QuixBugExtendedOracle {
 			System.out.println("Saving results on file " + new File(path).getAbsolutePath());
 			for (SummaryResults summaryResult : summaryResults) {
 
-				fw.write(System.getProperty("line.separator"));
-
-				fw.write(new Date().toString() + " - Analyzing patched program: " + summaryResult.getProgramName()
-						+ " under path " + summaryResult.getPatchPath());
-				fw.write(System.getProperty("line.separator"));
-				if (summaryResult.isCorrect()) {
-					fw.write("passed all tests ");
-				} else {
-					fw.write("failed tests number: " + summaryResult.getFailing().size());
-				}
-				fw.flush();
+				writePatchInfo(fw, summaryResult);
 			}
 		} catch (Exception e) {
 			System.out.println("An error in generating a evosuit running result report.");
@@ -157,6 +138,20 @@ public class QuixBugExtendedOracle {
 
 		}
 
+	}
+
+	private void writePatchInfo(FileWriter fw, SummaryResults summaryResult) throws IOException {
+		fw.write(System.getProperty("line.separator"));
+
+		fw.write(new Date().toString() + " - Analyzing patched program: " + summaryResult.getProgramName()
+				+ " under path " + summaryResult.getPatchPath());
+		fw.write(System.getProperty("line.separator"));
+		if (summaryResult.isCorrect()) {
+			fw.write("passed all tests ");
+		} else {
+			fw.write("failed tests number: " + summaryResult.getFailing().size());
+		}
+		fw.flush();
 	}
 
 	public void generateTest4AllProgramsAllSeed(String outDir) throws Exception {
