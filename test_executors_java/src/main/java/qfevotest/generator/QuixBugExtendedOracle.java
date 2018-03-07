@@ -146,6 +146,12 @@ public class QuixBugExtendedOracle {
 		fw.write(new Date().toString() + " - Analyzing patched program: " + summaryResult.getProgramName()
 				+ " under path " + summaryResult.getPatchPath());
 		fw.write(System.getProperty("line.separator"));
+		if(summaryResult.getPatchDiff() != null){
+			fw.write("Patch:");
+			fw.write(System.getProperty("line.separator"));
+			fw.write(summaryResult.getPatchDiff());
+			fw.write(System.getProperty("line.separator"));
+		}
 		if (summaryResult.isCorrect()) {
 			fw.write("passed all tests ");
 		} else {
