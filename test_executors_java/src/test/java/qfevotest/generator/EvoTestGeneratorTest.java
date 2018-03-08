@@ -81,6 +81,7 @@ public class EvoTestGeneratorTest {
 				"java_programs."+programName
 				+ "_ESTest", fESout.getAbsolutePath());
 		System.out.println(tr);
+		assertTrue(tr.areAllTestsPassing());
 	}
 
 	@Test
