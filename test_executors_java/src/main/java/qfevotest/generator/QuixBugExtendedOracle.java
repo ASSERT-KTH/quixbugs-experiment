@@ -36,7 +36,7 @@ public class QuixBugExtendedOracle {
 			seeds[i] = i + 1;
 		}
 	}
-	static String[] subjectsQuixBugs = new String[] { "bitcount", "bucketsort", "find_first_in_sorted",
+	public static String[] subjectsQuixBugs = new String[] { "bitcount", "bucketsort", "find_first_in_sorted",
 			"find_in_sorted", "flatten", "gcd", "get_factors", "hanoi", "is_valid_parenthesization", "kheapsort",
 			"knapsack", "kth", "lcs_length", "levenshtein", "lis", "longest_common_subsequence", "max_sublist_sum",
 			"mergesort", "next_palindrome", "next_permutation", "pascal", "possible_change", "powerset", "quicksort",
@@ -146,7 +146,7 @@ public class QuixBugExtendedOracle {
 		fw.write(new Date().toString() + " - Analyzing patched program: " + summaryResult.getProgramName()
 				+ " under path " + summaryResult.getPatchPath());
 		fw.write(System.getProperty("line.separator"));
-		if(summaryResult.getPatchDiff() != null){
+		if (summaryResult.getPatchDiff() != null) {
 			fw.write("Patch:");
 			fw.write(System.getProperty("line.separator"));
 			fw.write(summaryResult.getPatchDiff());
@@ -233,6 +233,32 @@ public class QuixBugExtendedOracle {
 			}
 		}
 		return sameresults;
+	}
+
+	public boolean checkOriginalCorrect(String testLocation, String programToRepair) throws Exception, IOException {
+
+		for (int seed : seeds) {
+			System.out.println("Running " + programToRepair + " seed " + seed);
+
+			File fESout = new File(testLocation + File.separator + "seed_" + seed + File.separator + "evosuite-tests");
+			if (fESout.exists()) {
+				LaucherJUnitProcess la = new LaucherJUnitProcess();
+
+				TestResult tr = la.execute(
+						fESout.getAbsolutePath() + File.pathSeparator + System.getProperty("java.class.path"),
+						"java_programs." + programToRepair.toUpperCase() + "_ESTest", fESout.getAbsolutePath());
+				System.out.println("Results for " + programToRepair + " seed " + seed + ": " + tr);
+
+				if (tr != null && (!tr.areAllTestsPassing() || tr.getCasesExecuted() == 0)) {
+					System.out.println("Failing " + programToRepair + " seed " + seed + ": " + tr);
+
+					return false;
+				}
+			} else {
+				System.out.println("Alert:  Seed not exist " + seed);
+			}
+		}
+		return true;
 	}
 
 	public void generateTestAllSeedMultithread(String outDir, int numThreads) throws Exception {

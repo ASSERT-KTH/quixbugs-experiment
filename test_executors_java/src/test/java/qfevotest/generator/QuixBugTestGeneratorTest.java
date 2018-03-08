@@ -9,6 +9,7 @@ import static org.junit.Assert.assertTrue;
 import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -51,7 +52,31 @@ public class QuixBugTestGeneratorTest {
 		boolean determ = qg.checkDeterministic("./out", "LIS");
 		assertTrue(determ);
 	}
+	
+	@Test
+	public void testCheckDeterminismAll() throws Exception {
+		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
+		for (String subjects : qg.subjectsQuixBugs) {
+			boolean determ = qg.checkDeterministic("./generatedTests", subjects.toUpperCase());
+			assertTrue(determ);
+		}
+		
+	}
 
+	@Test
+	public void testCheckCorretnessOriginalAll() throws Exception {
+		List<String> failing = new ArrayList<>();
+		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
+		for (String subjects : qg.subjectsQuixBugs) {
+			boolean allPassing = qg.checkOriginalCorrect("./generatedTests", subjects.toUpperCase());
+			//assertTrue(allPassing);
+			if(!allPassing)
+				failing.add(subjects);
+		}
+		System.out.println("failings: "+ failing);
+		assertTrue("Programs With failures in EvoS for the original program: "+failing,  failing.isEmpty());
+	}
+	
 	@Test
 	public void testRunPatchPassing() throws Exception {
 		//Here, we pass the location to the patched version bytecode
