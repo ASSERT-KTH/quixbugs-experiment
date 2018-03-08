@@ -56,6 +56,32 @@ public class EvoTestGeneratorTest {
 				"java_programs.LIS_ESTest", fESout.getAbsolutePath());
 		System.out.println(tr);
 	}
+	
+	
+	@Test
+	public void testPossibleChangeGenerateCompileRun() throws Exception {
+		EvoTestGenerator ev = new EvoTestGenerator();
+		boolean useDSE = false;
+		int timeout = 60;
+		int seed = 1;
+
+		String programName  = "POSSIBLE_CHANGE";
+		boolean generated = ev.runEvosuite("java_programs."+programName, new File(".").getAbsolutePath(), "./out", seed, timeout,
+				useDSE);
+		assertTrue(generated);
+
+		File fESout = new File("./out" + File.separator + "seed_" + seed + File.separator + "evosuite-tests");
+
+		ev.compileEvoSuiteTest(fESout.getAbsolutePath(), programName);
+
+		LaucherJUnitProcess la = new LaucherJUnitProcess();
+
+		TestResult tr = la.execute(
+				fESout.getAbsolutePath() + File.pathSeparator + System.getProperty("java.class.path"),
+				"java_programs."+programName
+				+ "_ESTest", fESout.getAbsolutePath());
+		System.out.println(tr);
+	}
 
 	@Test
 	public void testListOnlyRun() throws Exception {
