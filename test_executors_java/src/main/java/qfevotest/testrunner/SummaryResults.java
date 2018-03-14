@@ -15,6 +15,8 @@ public class SummaryResults {
 	String patchPath;
 	String programName;
 	String patchDiff;
+	String reportName;
+
 
 	public SummaryResults(String patchedProgramPath, String programName) {
 		this.patchPath = patchedProgramPath;
@@ -26,6 +28,8 @@ public class SummaryResults {
 		this.programName = programName;
 		this.patchDiff = patchDiff;
 	}
+	
+	
 
 	public List<TestResult> getResult() {
 		return result;
@@ -39,12 +43,16 @@ public class SummaryResults {
 		this.result = result;
 	}
 
-	public boolean isCorrect() {
+	public Boolean isCorrect() {
+		if(result.size()==0) {
+			return null;
+		}
 		for (TestResult testResult : result) {
 			if (testResult != null && !testResult.areAllTestsPassing()) {
 				return false;
 			}
 		}
+		
 		return true;
 	}
 
@@ -75,6 +83,14 @@ public class SummaryResults {
 
 	public void setPatchDiff(String patchDiff) {
 		this.patchDiff = patchDiff;
+	}
+	
+	public String getReportName() {
+		return reportName;
+	}
+
+	public void setReportName(String reportName) {
+		this.reportName = reportName;
 	}
 
 }

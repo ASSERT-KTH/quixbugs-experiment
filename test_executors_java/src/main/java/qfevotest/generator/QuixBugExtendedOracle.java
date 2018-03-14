@@ -41,6 +41,9 @@ public class QuixBugExtendedOracle {
 			"knapsack", "kth", "lcs_length", "levenshtein", "lis", "longest_common_subsequence", "max_sublist_sum",
 			"mergesort", "next_palindrome", "next_permutation", "pascal", "possible_change", "powerset", "quicksort",
 			"rpn_eval", "shunting_yard", "sieve", "sqrt", "subsequences", "to_base", "wrap", };
+	
+	
+	//public static String[] subjectsQuixBugs = new String[] { "quicksort"};
 
 	public void generateTest4AllPrograms(String out, int seed) throws Exception {
 
@@ -61,13 +64,26 @@ public class QuixBugExtendedOracle {
 	 * @return
 	 * @throws IOException
 	 */
-	public SummaryResults runEvosuiteAllSeedOnPatch(Path patchesDir, Path testLocation, String programToRepair)
+	public SummaryResults runEvosuiteAllSeedOnPatch(Path patchesDir, Path testLocation, String programToRepair, Integer seedNumber,String reportName,String patchContent)
 			throws IOException {
 
-		SummaryResults summaryResult = new SummaryResults(patchesDir.toString(), programToRepair);
+		SummaryResults summaryResult = new SummaryResults(patchesDir.toString(), programToRepair, patchContent);
+		summaryResult.setReportName(reportName);
 		EvoTestGenerator generator = new EvoTestGenerator();
 		File patchedVersionFolder = patchesDir.toFile();
-		for (int seed : seeds) {
+		int[] targetSeeds = null;
+		if(seedNumber>20) {
+			System.out.println("seed number cannot more than 20");
+			return null;
+		} else if (seedNumber == 20){
+			//run all seed
+			targetSeeds = seeds;
+		} else {
+			//specific seed
+			targetSeeds = new int[1];
+			targetSeeds[0]=seedNumber;
+		}
+		for (int seed : targetSeeds) {
 			System.out.println("Running " + programToRepair + " seed " + seed);
 
 			File testFolderSeed = new File(
@@ -80,7 +96,9 @@ public class QuixBugExtendedOracle {
 								+ File.pathSeparator + System.getProperty("java.class.path"),
 						"java_programs." + programToRepair.toUpperCase() + "_ESTest", testFolderSeed.getAbsolutePath());
 
-				summaryResult.addResultForSeed(testResult);
+				if(null!=testResult) {
+					summaryResult.addResultForSeed(testResult);
+				}
 				System.out.println("Results for " + programToRepair + " seed " + seed + ": " + testResult);
 
 			} else {
@@ -90,14 +108,55 @@ public class QuixBugExtendedOracle {
 		}
 		outputResult(summaryResult);
 		return summaryResult;
-
 	}
+	
+	
+	
+	
+	public SummaryResults runSimpleTestsOnPatch(Path patchesDir, Path testLocation, String programToRepair, Integer seedNumber,String reportName,String patchContent)
+			throws IOException {
+
+		SummaryResults summaryResult = new SummaryResults(patchesDir.toString(), programToRepair, patchContent);
+		summaryResult.setReportName(reportName);
+		EvoTestGenerator generator = new EvoTestGenerator();
+		File patchedVersionFolder = patchesDir.toFile();
+
+
+			File testFolder = new File(testLocation+"");
+			if (testFolder.exists()) {
+				LaucherJUnitProcess la = new LaucherJUnitProcess();
+				generator.compileProgram(patchedVersionFolder.getAbsolutePath(), programToRepair);
+				
+			
+				
+				String path = patchedVersionFolder.getAbsolutePath() + File.pathSeparator + testFolder.getAbsolutePath()
+				+ File.pathSeparator + System.getProperty("java.class.path");
+				
+				TestResult testResult = la.execute(
+						path,
+						"java_programs." +programToRepair.toUpperCase() + "_TEST", testFolder.getAbsolutePath());
+			if(null!=testResult) {
+				summaryResult.addResultForSeed(testResult);
+			}
+
+			} else {
+				System.out.println("Any folder at " + testFolder.getAbsolutePath());
+			}
+
+
+		outputResult(summaryResult);
+		return summaryResult;
+	}
+	
+	
+	
+	
 
 	private void outputResult(SummaryResults summaryResult) {
 
 		FileWriter fw = null;
 		try {
-			fw = new FileWriter("report.txt", true);
+			fw = new FileWriter(summaryResult.getReportName(), true);
 			writePatchInfo(fw, summaryResult);
 		} catch (Exception e) {
 			System.out.println("An error in generating a evosuit running result report.");
@@ -152,7 +211,9 @@ public class QuixBugExtendedOracle {
 			fw.write(summaryResult.getPatchDiff());
 			fw.write(System.getProperty("line.separator"));
 		}
-		if (summaryResult.isCorrect()) {
+		if(null==summaryResult.isCorrect()) {
+			fw.write("Errors in running tests ");
+		} else if (summaryResult.isCorrect()) {
 			fw.write("passed all tests ");
 		} else {
 			fw.write("failed tests number: " + summaryResult.getFailing().size());
@@ -286,7 +347,7 @@ public class QuixBugExtendedOracle {
 		}
 	}
 
-	public Map<String, SummaryResults> runAllResults(File patchDirectory, File generatedTest) throws IOException {
+	public Map<String, SummaryResults> runAllResults(File generatedTest, int seedNumber, String reportName) throws IOException {
 		Map<String, SummaryResults> resultByProgram = new HashMap<>();
 		for (String programToRepair : subjectsQuixBugs) {
 			// Here, we pass the location to the patched version bytecode
@@ -311,10 +372,21 @@ public class QuixBugExtendedOracle {
 							QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
 
 							System.out.println("Analyzing patch at " + patch.getAbsolutePath());
-							SummaryResults resultallseeds = qg.runEvosuiteAllSeedOnPatch(patch.toPath(),
-									generatedTest.toPath(), programToRepair.toUpperCase());
-							resultallseeds.setPatchDiff(patchContent);
-							resultByProgram.put(programToRepair, resultallseeds);
+							SummaryResults resultallseeds = null;
+							if(seedNumber!=0) {
+								//tests generated by EvoSuite
+								resultallseeds = qg.runEvosuiteAllSeedOnPatch(patch.toPath(),
+									generatedTest.toPath(), programToRepair.toUpperCase(), seedNumber,reportName,patchContent);
+							} else {
+								//simple tests generated by us
+								resultallseeds = qg.runSimpleTestsOnPatch(patch.toPath(),
+										generatedTest.toPath(), programToRepair.toUpperCase(), seedNumber,reportName,patchContent);
+							}
+							
+							
+							
+							
+							resultByProgram.put(patch.toPath().toString(), resultallseeds);
 							System.out.println("Result for " + programToRepair + " " + resultallseeds.isCorrect());
 						}
 					}

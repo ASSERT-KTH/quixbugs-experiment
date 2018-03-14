@@ -88,16 +88,31 @@ public class QuixBugTestGeneratorTest {
 	    		File patchLocation = new File("./patchedPrograms/"+patchPath);
 	    		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
 	    		SummaryResults resultallseed = qg.runEvosuiteAllSeedOnPatch(patchLocation.toPath(),
-	    				new File("./generatedTests").toPath(), program);
+	    				new File("./generatedTests").toPath(), program,20,"report.txt","");
 	    		//assertTrue(resultallseed.isCorrect());//removing this assertion, not all test must pass
 	     }	
 	}
 	
 	@Test
 	public void testGetAllResults() throws Exception {
-		File patchLocation = new File("./patchedPrograms/");
 		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
-		Map<String, SummaryResults> resultByProgram = qg.runAllResults(patchLocation, new File("./generatedTests"));
+		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File("./generatedTests"),20,"report_evosuite_20_seeds.txt");
+		qg.outputResult(resultByProgram.values());
+		System.out.println("\nEND: printing finals results: ");
+		for (String program : resultByProgram.keySet()) {
+			
+			SummaryResults sr = resultByProgram.get(program);
+			List<?> failingSeed = sr.getFailing();
+			System.out.println(program + ": pass all test? " + sr.isCorrect() + " failings: (" + failingSeed.size()
+					+ ") " + failingSeed);
+		}
+	}
+	
+	
+	@Test
+	public void testResultsByRunningOneSeed() throws Exception {
+		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
+		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File("./generatedTests"),1,"report_evosuite_1_seed.txt");
 		qg.outputResult(resultByProgram.values());
 		System.out.println("\nEND: printing finals results: ");
 		for (String program : resultByProgram.keySet()) {
@@ -117,8 +132,38 @@ public class QuixBugTestGeneratorTest {
 		File patchLocation = new File(urlPatchTest.getPath());
 		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
 		SummaryResults resultallseed = qg.runEvosuiteAllSeedOnPatch(patchLocation.toPath(),
-				new File("./generatedTests").toPath(), "LIS");
+				new File("./generatedTests").toPath(), "LIS",20,"report.txt","");
 		assertFalse(resultallseed.isCorrect());
+	}
+	
+	@Test
+	public void testRunSimple500TestsResults() throws Exception {
+		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
+		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File("./generatedTests/simple_500"),0,"report_simple_tests_500.txt");
+		qg.outputResult(resultByProgram.values());
+		System.out.println("\nEND: printing finals results: ");
+		for (String program : resultByProgram.keySet()) {
+			
+			SummaryResults sr = resultByProgram.get(program);
+			List<?> failingSeed = sr.getFailing();
+			System.out.println(program + ": pass all test? " + sr.isCorrect() + " failings: (" + failingSeed.size()
+					+ ") " + failingSeed);
+		}
+	}
+	
+	@Test
+	public void testRunSimple5000TestsResults() throws Exception {
+		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
+		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File("./generatedTests/simple_5000"),0,"report_simple_tests_5000.txt");
+		qg.outputResult(resultByProgram.values());
+		System.out.println("\nEND: printing finals results: ");
+		for (String program : resultByProgram.keySet()) {
+			
+			SummaryResults sr = resultByProgram.get(program);
+			List<?> failingSeed = sr.getFailing();
+			System.out.println(program + ": pass all test? " + sr.isCorrect() + " failings: (" + failingSeed.size()
+					+ ") " + failingSeed);
+		}
 	}
 
 }
