@@ -216,7 +216,9 @@ public class QuixBugExtendedOracle {
 		} else if (summaryResult.isCorrect()) {
 			fw.write("passed all tests ");
 		} else {
-			fw.write("failed tests number: " + summaryResult.getFailing().size());
+			fw.write("failed tests number: " + summaryResult.getFailingNumber());
+			fw.write(System.getProperty("line.separator"));
+			fw.write("failed tests info: " + summaryResult.getFailingInfo());
 		}
 		fw.flush();
 	}

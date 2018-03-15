@@ -94,9 +94,10 @@ public class QuixBugTestGeneratorTest {
 	}
 	
 	@Test
-	public void testGetAllResults() throws Exception {
+	public void testResultsByRunning20Seeds() throws Exception {
+		int seed = 20;
 		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
-		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File("./generatedTests"),20,"report_evosuite_20_seeds.txt");
+		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File("./generatedTests"),seed,"report_evosuite_20_seeds.txt");
 		qg.outputResult(resultByProgram.values());
 		System.out.println("\nEND: printing finals results: ");
 		for (String program : resultByProgram.keySet()) {
@@ -111,8 +112,9 @@ public class QuixBugTestGeneratorTest {
 	
 	@Test
 	public void testResultsByRunningOneSeed() throws Exception {
+		int seed = 1;
 		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
-		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File("./generatedTests"),1,"report_evosuite_1_seed.txt");
+		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File("./generatedTests"),seed,"report_evosuite_1_seed.txt");
 		qg.outputResult(resultByProgram.values());
 		System.out.println("\nEND: printing finals results: ");
 		for (String program : resultByProgram.keySet()) {

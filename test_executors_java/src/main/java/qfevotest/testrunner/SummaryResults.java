@@ -64,6 +64,24 @@ public class SummaryResults {
 	public String getPatchPath() {
 		return patchPath;
 	}
+	
+	public int getFailingNumber() {		
+		int  num=0;
+		for(TestResult tr: result) {
+			num+=tr.getFailureCount();
+		}		
+		return num;
+	}
+	
+	public String getFailingInfo() {		
+		String  failingInfo="";
+		for(TestResult tr: result) {
+			failingInfo+=tr.failTest.toString();
+		}		
+		return failingInfo;
+	}
+	
+	
 
 	public void setPatchPath(String patchPath) {
 		this.patchPath = patchPath;

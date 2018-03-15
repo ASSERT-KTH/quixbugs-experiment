@@ -63,7 +63,7 @@ public class EvoTestGenerator {
 		return false;
 	}
 
-	private String readOut(Process p) {
+	private static String readOut(Process p) {
 		String out = "";
 		String all = "";
 		try {
@@ -90,7 +90,7 @@ public class EvoTestGenerator {
 
 	}
 
-	public void compileProgram(String dirtocompile, String programName) throws IOException {
+	public static void compileProgram(String dirtocompile, String programName) throws IOException {
 		dirtocompile+=File.separator+"java_programs"+File.separator;
 		Process p = null;
 		System.out.println("Compiling Directory " + dirtocompile);
