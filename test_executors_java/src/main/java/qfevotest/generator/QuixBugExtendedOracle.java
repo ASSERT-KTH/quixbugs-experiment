@@ -36,7 +36,7 @@ public class QuixBugExtendedOracle {
 			seeds[i] = i + 1;
 		}
 	}
-	public static String[] subjectsQuixBugs = new String[] { "bitcount", "bucketsort", "find_first_in_sorted",
+	public static String[] subjectsQuixBugs = new String[] { "bitcount","depth_first_search", "bucketsort", "find_first_in_sorted",
 			"find_in_sorted", "flatten", "gcd", "get_factors", "hanoi", "is_valid_parenthesization", "kheapsort",
 			"knapsack", "kth", "lcs_length", "levenshtein", "lis", "longest_common_subsequence", "max_sublist_sum",
 			"mergesort", "next_palindrome", "next_permutation", "pascal", "possible_change", "powerset", "quicksort",

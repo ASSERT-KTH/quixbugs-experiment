@@ -2,19 +2,24 @@ package simpletest.generator;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.Type;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.Set;
 
 public class RandomTestConfig {
 	
 	private final static int MAX_ARRAY_SIZE = 20;
 	
 	private final static int INTEGER_SIZE = 100;
+	
+	private static DecimalFormat df=new DecimalFormat("0.00");
 	
 	public static Map getRandomParamters(Type[] parametersTypes,String program){
 		
@@ -28,18 +33,27 @@ public class RandomTestConfig {
 			
 			if("java.util.ArrayList".equals(type.getTypeName())) {
 				if("rpn_eval".equals(program)) {
-					ArrayList array = getRandomDoubleList();
+					
+					//preconditions: isinstance(token, float) or token in ('+', '-', '*', '/') for token in tokens
+					ArrayList array = getTokenList();
 					params[index]=array;		
-					paramStr += "new java.util.ArrayList(java.util.Arrays.asList("+array.toString()+"))";
+					paramStr += "new java.util.ArrayList(java.util.Arrays.asList("+strArrayToString(array)+"))";
 					paramStr=paramStr.replace("[", "").replace("]", "")+",";
 				} else if ("powerset".equals(program)) {
 					ArrayList array = getRandomStringList();
-					params[index]=array;		
-					paramStr += "new java.util.ArrayList(java.util.Arrays.asList("+strArrayToString(array)+"))";
+							
+					////precondition: A list of unique elements
+					ArrayList newarray = uniqueIntegerList(array);
+					params[index]=newarray;
+					paramStr += "new java.util.ArrayList(java.util.Arrays.asList("+strArrayToString(newarray)+"))";
 					paramStr=paramStr.replace("[", "").replace("]", "")+",";
 				} else {
 				ArrayList array = getRandomList();
 				params[index]=array;		
+				if("next_permutation".equals(program)) {
+					//precondition: A list of unique ints
+					array = uniqueIntegerList(array);
+				}				
 				paramStr += "new java.util.ArrayList(java.util.Arrays.asList("+array.toString()+"))";
 				paramStr=paramStr.replace("[", "").replace("]", "")+",";
 				}
@@ -48,15 +62,28 @@ public class RandomTestConfig {
 				params[index]=twoDimArray;
 				paramStr += "new " + type.getTypeName() + "{" + twoArraysToString(twoDimArray)+"},";
 			} else if("int[]".equals(type.getTypeName())) {
-				int[] array = getRandomArray() ;
-				params[index]=array;
+				int[] array = getRandomArray() ;				
 				//For program find_in_sorted, a sorted array is needed
 				if("find_in_sorted".equals(program)) {
 					Arrays.sort(array);
-				}			
+				} else if("lis".equals(program))	{
+					if(array.length>2) {
+						//precondition for lis：unique array
+						array = uniqueArray(array);
+					}
+				}
+				params[index]=array;
 				paramStr += "new " + type.getTypeName() + "{" + arrayToString(array)+"},";
 			} else if(type.getTypeName().equals("int")){
-				int i = (int)(Math.random()*INTEGER_SIZE)*getRandomNegative();
+				int i = 0;
+				if("get_factors".equals(program)) {
+					//precondition: >=1
+					Random random = new Random();
+					i=random.nextInt(2000)+1;
+				} else {
+					i = (int)(Math.random()*INTEGER_SIZE);
+
+				}
 				params[index]= i;
 				paramStr += "(" + type.getTypeName() + ")" + i+",";
 			} else if(type.getTypeName().equals("java.lang.String")) {
@@ -78,10 +105,43 @@ public class RandomTestConfig {
 	}
 	
 	
+
+	private static ArrayList<Integer> uniqueIntegerList(ArrayList list) {
+		 Set<Integer> set = new  HashSet<Integer>(); 
+         ArrayList<Integer> newList = new  ArrayList<Integer>(); 
+         set.addAll(list);
+         newList.addAll(set);
+       
+		return newList;
+	}
+
+
+	private static int[] uniqueArray(int[] array) {
+		Integer[] integerArr = getDistinct(array);
+		int[] uniqueArray = new int[integerArr.length];
+		uniqueArray= Arrays.stream(integerArr).mapToInt(Integer::valueOf).toArray();
+	     return uniqueArray;
+	}
+
+	static Integer[] getDistinct(int num[]) {
+        List<Integer> list = new java.util.ArrayList<Integer>();
+        for (int i = 0; i < num.length; i++) {
+            if (!list.contains(num[i])) {
+                list.add(num[i]); 
+            }
+        }
+        return list.toArray(new Integer[0]);  
+	}
+
 	private static String strArrayToString(ArrayList array) {
 		String str = " ";
 		for(int i =0;i<array.size();i++) {
-			str+="\""+array.get(i)+"\""+",";
+			if(array.get(i) instanceof Double) {
+				str+= array.get(i)+",";
+			}
+			else {
+				str+="\""+array.get(i)+"\""+",";
+			} 
 		}
 		return str.substring(0,str.length()-1);
 	}
@@ -91,10 +151,10 @@ public class RandomTestConfig {
 		String str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	   ArrayList<String> stringList= new  ArrayList<String>();
 	   Random random=new Random();
-	   int arraySize = random.nextInt(5);
+	   int arraySize = random.nextInt(5)+1;
 	   for(int j=0;j<arraySize;j++) {
 	   StringBuffer sb=new StringBuffer();
-	   int charNum = random.nextInt(5);
+	   int charNum = random.nextInt(5)+1;
 	   for(int i=0;i<charNum;i++) {
 		   int number=random.nextInt(52);
 	       sb.append(str.charAt(number));
@@ -109,7 +169,7 @@ public class RandomTestConfig {
 		String str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	     Random random=new Random();
 	     StringBuffer sb=new StringBuffer();
-	     int strSize = random.nextInt(10);
+	     int strSize = random.nextInt(10)+1;
 	     for(int i=0;i<strSize;i++){
 	       int number=random.nextInt(52);
 	       sb.append(str.charAt(number));
@@ -195,14 +255,17 @@ public class RandomTestConfig {
 		return arrayList;
 	}
 	
-	private static ArrayList getRandomDoubleList() {		
+	private static ArrayList<Object> getTokenList() {		
+		String operator="+-*/";
 		 Random random=new Random();
-		 int num = random.nextInt(MAX_ARRAY_SIZE);
-   		ArrayList arrayList = new ArrayList();
+		 int num = random.nextInt(7)+2;
+   		ArrayList<Object> arrayList = new ArrayList<Object>();
 		for(int i=0;i<num;i++) {
-			double randomValue=Math.random()*INTEGER_SIZE;
-			arrayList.add(getRandomNegative()*randomValue);
-
+			if(Math.random()>0.6) {
+				arrayList.add(operator.charAt(random.nextInt(4))+"");
+			}else {
+				arrayList.add(Double.parseDouble(df.format(random.nextDouble())));
+			}
 		}	
 		return arrayList;
 	}

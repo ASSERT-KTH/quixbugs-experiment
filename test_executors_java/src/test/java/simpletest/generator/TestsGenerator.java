@@ -195,12 +195,12 @@ public class TestsGenerator {
 		String testPackageName = "java_programs";
 
 		
-		String[] names = new String[] { "find_in_sorted","get_factors","is_valid_parenthesization","knapsack","levenshtein","lis","mergesort"
+		String[] names = new String[] {"find_in_sorted","get_factors","is_valid_parenthesization","knapsack","levenshtein","lis","mergesort"
 				, "next_permutation","quicksort","rpn_eval","powerset" };
 		
 		for (String prog : names) {
 			String programToExecute = prog;
-			String out = ROOT_DIR+"../../generatedTests/simple_5000";
+			String out = ROOT_DIR+"../../generatedTests/precondition_simple_5000";
 			TestsGenerator ct = new TestsGenerator();
 			ct.createTestCases(ROOT_DIR, programToExecute, out, testPackageName, subjectPackageName);
 			EvoTestGenerator.compileProgram(out,prog.toUpperCase() + "_TEST");
@@ -260,7 +260,9 @@ public class TestsGenerator {
 		} catch(Exception e) {
 			return "error";
 		}
-		
+		if("Infinity".equals(ouputValue)||"-Infinity".equals(ouputValue)) {
+			return "error";
+		}
 		return ouputValue;
 	}
 	
@@ -309,8 +311,8 @@ public class TestsGenerator {
 	 * @return
 	 */
 	private static int getTimeOut(String program, int nrTestcase) {
-		if (program.toLowerCase().equals("levenshtein") && nrTestcase == 3) {
-			return 40000;
+		if (program.toLowerCase().equals("levenshtein")) {
+			return 50000;
 		} else {
 			return TIMEOUT;
 		}

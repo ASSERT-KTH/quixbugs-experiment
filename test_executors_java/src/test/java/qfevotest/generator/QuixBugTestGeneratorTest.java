@@ -167,5 +167,35 @@ public class QuixBugTestGeneratorTest {
 					+ ") " + failingSeed);
 		}
 	}
+	
+	@Test
+	public void testRunPreconditionSimple500TestsResults() throws Exception {
+		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
+		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File("./generatedTests/precondition_simple_500"),0,"report_precondition_simple_tests_500.txt");
+		qg.outputResult(resultByProgram.values());
+		System.out.println("\nEND: printing finals results: ");
+		for (String program : resultByProgram.keySet()) {
+			
+			SummaryResults sr = resultByProgram.get(program);
+			List<?> failingSeed = sr.getFailing();
+			System.out.println(program + ": pass all test? " + sr.isCorrect() + " failings: (" + failingSeed.size()
+					+ ") " + failingSeed);
+		}
+	}
+	
+	@Test
+	public void testRunPreconditionSimple5000TestsResults() throws Exception {
+		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
+		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File("./generatedTests/precondition_simple_5000"),0,"report_precondition_simple_tests_5000.txt");
+		qg.outputResult(resultByProgram.values());
+		System.out.println("\nEND: printing finals results: ");
+		for (String program : resultByProgram.keySet()) {
+			
+			SummaryResults sr = resultByProgram.get(program);
+			List<?> failingSeed = sr.getFailing();
+			System.out.println(program + ": pass all test? " + sr.isCorrect() + " failings: (" + failingSeed.size()
+					+ ") " + failingSeed);
+		}
+	}
 
 }
