@@ -18,3 +18,8 @@ Selected_output= by default the output is "./out/"
 
 The class QuixBugExtendedOracle runs EvosuiteTest generation for generating test cases, and runs a patched version of a program over it.
 
+### preconditions
+![image](https://github.com/KTH/quixbugs-experiment/blob/master/test_executors_java/preconditions.jpg)
+
+### patch evaluation
+![image](https://github.com/KTH/quixbugs-experiment/blob/master/test_executors_java/PatchEvaluation.png)
