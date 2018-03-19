@@ -35,6 +35,16 @@ The class QuixBugExtendedOracle runs EvosuiteTest generation for generating test
 |quicksort|the ints in arr are unique|
 |rpn_eval|token in ('+', '-', '*', '/')|
 
+### failing evosuite
+
+| program | failing tests in seed|reason|
+| --- |---| --- |
+| flatten |seed 2(Test 2)|
+|hanoi | seed 10(Test 2)  |Timeout/Error reading the validation process |
+
+
+
+
 ### patch evaluation
 
 
