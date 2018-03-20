@@ -28,11 +28,11 @@ public class LEVENSHTEIN_ESTest {
       assertEquals(7, int0);
   }
 
-  @Test(timeout = 4000)
-  public void test3()  throws Throwable  {
-      // Undeclared exception!
-      LEVENSHTEIN.levenshtein("+G.hL<ZaceC#tR!", "2SWT7oU05XYko k&Z[");
-  }
+//  @Test(timeout = 4000)
+//  public void test3()  throws Throwable  {
+//      // Undeclared exception!
+//      LEVENSHTEIN.levenshtein("+G.hL<ZaceC#tR!", "2SWT7oU05XYko k&Z[");
+//  }
 
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {

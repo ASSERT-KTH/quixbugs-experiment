@@ -24,11 +24,11 @@ public class WRAP_ESTest {
       assertEquals(2, stringArray0.length);
   }
 
-  @Test(timeout = 4000)
-  public void test2()  throws Throwable  {
-      // Undeclared exception!
-      WRAP.wrap(")J7p.n^ $JFn4hK;s", 1);
-  }
+//  @Test(timeout = 4000)
+//  public void test2()  throws Throwable  {
+//      // Undeclared exception!
+//      WRAP.wrap(")J7p.n^ $JFn4hK;s", 1);
+//  }
 
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {

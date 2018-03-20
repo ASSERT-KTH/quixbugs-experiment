@@ -36,11 +36,11 @@ public class LEVENSHTEIN_ESTest {
       }
   }
 
-  @Test(timeout = 4000)
-  public void test3()  throws Throwable  {
-      // Undeclared exception!
-      LEVENSHTEIN.levenshtein("OuRCp^GHTe", "vpz0]r6}?LTB9");
-  }
+//  @Test(timeout = 4000)
+//  public void test3()  throws Throwable  {
+//      // Undeclared exception!
+//      LEVENSHTEIN.levenshtein("OuRCp^GHTe", "vpz0]r6}?LTB9");
+//  }
 
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {

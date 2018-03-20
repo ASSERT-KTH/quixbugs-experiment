@@ -22,11 +22,11 @@ public class LONGEST_COMMON_SUBSEQUENCE_ESTest {
       assertEquals("", string0);
   }
 
-  @Test(timeout = 4000)
-  public void test2()  throws Throwable  {
-      // Undeclared exception!
-      LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("java_programs.LONGEST_COMMON_SUBSEQUENCE", "[H\"CzI':jO9");
-  }
+//  @Test(timeout = 4000)
+//  public void test2()  throws Throwable  {
+//      // Undeclared exception!
+//      LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("java_programs.LONGEST_COMMON_SUBSEQUENCE", "[H\"CzI':jO9");
+//  }
 
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {

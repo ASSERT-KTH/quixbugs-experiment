@@ -23,13 +23,13 @@ public class FLATTEN_ESTest {
       assertNull(object0);
   }
 
-  @Test(timeout = 4000)
-  public void test2()  throws Throwable  {
-      Object object0 = new Object();
-      ArrayList<Object> arrayList0 = new ArrayList<Object>();
-      arrayList0.add((Object) arrayList0);
-      FLATTEN.flatten(arrayList0);
-  }
+//  @Test(timeout = 4000)
+//  public void test2()  throws Throwable  {
+//      Object object0 = new Object();
+//      ArrayList<Object> arrayList0 = new ArrayList<Object>();
+//      arrayList0.add((Object) arrayList0);
+//      FLATTEN.flatten(arrayList0);
+//  }
 
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {

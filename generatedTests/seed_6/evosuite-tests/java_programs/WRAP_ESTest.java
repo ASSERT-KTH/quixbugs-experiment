@@ -30,11 +30,11 @@ public class WRAP_ESTest {
       assertEquals(11, arrayList0.size());
   }
 
-  @Test(timeout = 4000)
-  public void test3()  throws Throwable  {
-      // Undeclared exception!
-      WRAP.wrap("| f]mxSd})?(Sn4", 1);
-  }
+//  @Test(timeout = 4000)
+//  public void test3()  throws Throwable  {
+//      // Undeclared exception!
+//      WRAP.wrap("| f]mxSd})?(Sn4", 1);
+//  }
 
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {

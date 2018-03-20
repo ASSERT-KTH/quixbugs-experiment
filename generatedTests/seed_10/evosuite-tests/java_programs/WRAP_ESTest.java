@@ -41,11 +41,11 @@ public class WRAP_ESTest {
       assertEquals(1, arrayList0.size());
   }
 
-  @Test(timeout = 4000)
-  public void test4()  throws Throwable  {
-      // Undeclared exception!
-      WRAP.wrap("Q `[", 1);
-  }
+//  @Test(timeout = 4000)
+//  public void test4()  throws Throwable  {
+//      // Undeclared exception!
+//      WRAP.wrap("Q `[", 1);
+//  }
 
   @Test(timeout = 4000)
   public void test5()  throws Throwable  {

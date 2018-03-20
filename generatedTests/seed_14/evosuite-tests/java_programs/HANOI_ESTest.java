@@ -14,14 +14,14 @@ import org.evosuite.runtime.ViolatedAssumptionAnswer;
 
 public class HANOI_ESTest {
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test0()  throws Throwable  {
       HANOI.Pair<String, Object> hANOI_Pair0 = new HANOI.Pair<String, Object>("", (Object) null);
       Object object0 = hANOI_Pair0.getSecond();
       assertNull(object0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test1()  throws Throwable  {
       HANOI.Pair<Integer, String> hANOI_Pair0 = new HANOI.Pair<Integer, String>((Integer) null, "");
       Integer integer0 = hANOI_Pair0.getFirst();
@@ -32,14 +32,14 @@ public class HANOI_ESTest {
       assertFalse(hANOI_Pair3.equals((Object)hANOI_Pair1));
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test2()  throws Throwable  {
       Integer integer0 = new Integer(2876);
       HANOI.Pair<Object, Object> hANOI_Pair0 = new HANOI.Pair<Object, Object>(integer0, ", ");
       hANOI_Pair0.setSecond(integer0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test3()  throws Throwable  {
       Integer integer0 = new Integer((-686));
       HANOI.Pair<Integer, String> hANOI_Pair0 = new HANOI.Pair<Integer, String>(integer0, ",o");
@@ -47,18 +47,18 @@ public class HANOI_ESTest {
       assertEquals("(-686, ,o)", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test4()  throws Throwable  {
       HANOI hANOI0 = new HANOI();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test5()  throws Throwable  {
       List<HANOI.Pair<Integer, Integer>> list0 = HANOI.hanoi(2, 0, 0);
       assertEquals(3, list0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test6()  throws Throwable  {
       List<HANOI.Pair<Integer, Integer>> list0 = HANOI.hanoi((-1323), 0, 0);
       assertTrue(list0.isEmpty());

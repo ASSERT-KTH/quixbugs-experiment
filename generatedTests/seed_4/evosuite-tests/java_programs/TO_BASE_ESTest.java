@@ -41,11 +41,11 @@ public class TO_BASE_ESTest {
       }
   }
 
-  @Test(timeout = 4000)
-  public void test3()  throws Throwable  {
-      // Undeclared exception!
-      TO_BASE.to_base(590, 1);
-  }
+//  @Test(timeout = 4000)
+//  public void test3()  throws Throwable  {
+//      // Undeclared exception!
+//      TO_BASE.to_base(590, 1);
+//  }
 
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {

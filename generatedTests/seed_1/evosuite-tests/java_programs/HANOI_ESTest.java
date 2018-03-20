@@ -13,29 +13,11 @@ import java_programs.HANOI;
 import org.evosuite.runtime.ViolatedAssumptionAnswer;
 
 public class HANOI_ESTest {
+  
+  
 
-  @Test(timeout = 4000)
-  public void test0()  throws Throwable  {
-      HANOI hANOI0 = new HANOI();
-      int int0 = 2986;
-      HANOI.hanoi(1, 0, 2986);
-      HANOI.hanoi(3, 2986, 355);
-      HANOI.hanoi(1, 1, 2986);
-      List<HANOI.Pair<Integer, Integer>> list0 = HANOI.hanoi(1, 1, 1);
-      HANOI.Pair<Object, Object> hANOI_Pair0 = new HANOI.Pair<Object, Object>((Object) null, hANOI0);
-      hANOI_Pair0.getFirst();
-      hANOI_Pair0.getFirst();
-      hANOI_Pair0.setSecond(list0);
-      int int1 = 1482;
-      int int2 = 3;
-      HANOI.hanoi(int0, int1, int2);
-      Object object0 = new Object();
-      hANOI_Pair0.setSecond(object0);
-      Object object1 = new Object();
-      hANOI_Pair0.setFirst(object1);
-  }
-
-  @Test(timeout = 4000)
+  @SuppressWarnings("unchecked")
+  @Test(timeout = 20000)
   public void test1()  throws Throwable  {
       HANOI hANOI0 = new HANOI();
       HANOI.hanoi((-1707), (-1707), 2654);
@@ -46,39 +28,5 @@ public class HANOI_ESTest {
       assertSame(hANOI_Pair2, hANOI_Pair0);
   }
 
-  @Test(timeout = 4000)
-  public void test2()  throws Throwable  {
-      String string0 = "";
-      HANOI.Pair<Object, Object> hANOI_Pair0 = new HANOI.Pair<Object, Object>("", "");
-      Object object0 = new Object();
-      hANOI_Pair0.setFirst((Object) null);
-      hANOI_Pair0.toString();
-      hANOI_Pair0.setSecond(object0);
-      hANOI_Pair0.toString();
-      String string1 = ", ";
-      HANOI.Pair<String, String> hANOI_Pair1 = new HANOI.Pair<String, String>(", ", "(null, java.lang.Object@489bfb9f)");
-      hANOI_Pair1.setFirst("(null, )");
-      int int0 = 46;
-      hANOI_Pair0.setFirst(hANOI_Pair1);
-      Integer integer0 = new Integer(46);
-      HANOI.Pair<Object, Integer> hANOI_Pair2 = new HANOI.Pair<Object, Integer>(hANOI_Pair1, integer0);
-      hANOI_Pair2.setFirst("(null, )");
-      int int1 = 944;
-      int int2 = 2081;
-      HANOI.hanoi(int1, int2, int0);
-      Integer integer1 = Integer.getInteger(string1);
-      String string2 = "_`ma{w^H]TiVxpCk|";
-      HANOI.Pair<Integer, String> hANOI_Pair3 = new HANOI.Pair<Integer, String>(integer0, string2);
-      Integer.decode(string0);
-      hANOI_Pair3.toString();
-      hANOI_Pair3.setFirst(integer1);
-      hANOI_Pair3.toString();
-      hANOI_Pair3.getSecond();
-      HANOI hANOI0 = new HANOI();
-      int int3 = (-1287);
-      HANOI.hanoi(int2, int2, int3);
-      String string3 = "-p'L&g2,!|nOn^fA~}";
-      HANOI.Pair<HANOI.Pair<String, String>, String> hANOI_Pair4 = new HANOI.Pair<HANOI.Pair<String, String>, String>(hANOI_Pair1, string3);
-      hANOI_Pair4.getSecond();
-  }
+
 }

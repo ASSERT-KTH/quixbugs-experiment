@@ -61,9 +61,9 @@ public class WRAP_ESTest {
       }
   }
 
-  @Test(timeout = 4000)
-  public void test6()  throws Throwable  {
-      // Undeclared exception!
-      WRAP.wrap("Bx}C7)^p =1UDSmz", 1);
-  }
+//  @Test(timeout = 4000)
+//  public void test6()  throws Throwable  {
+//      // Undeclared exception!
+//      WRAP.wrap("Bx}C7)^p =1UDSmz", 1);
+//  }
 }

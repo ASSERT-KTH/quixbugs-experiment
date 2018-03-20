@@ -14,7 +14,7 @@ import org.evosuite.runtime.ViolatedAssumptionAnswer;
 
 public class HANOI_ESTest {
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test00()  throws Throwable  {
       Object object0 = new Object();
       HANOI.Pair<Object, String> hANOI_Pair0 = new HANOI.Pair<Object, String>(object0, "");
@@ -28,7 +28,7 @@ public class HANOI_ESTest {
       assertNull(integer1);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test01()  throws Throwable  {
       HANOI.hanoi(2, 2, (-351));
       Integer integer0 = new Integer(0);
@@ -43,7 +43,7 @@ public class HANOI_ESTest {
       assertFalse(integer1.equals((Object)integer3));
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test02()  throws Throwable  {
       HANOI.Pair<String, String> hANOI_Pair0 = new HANOI.Pair<String, String>("6MlP8<GmH/l8'V", "zejvyb");
       hANOI_Pair0.setSecond("zejvyb");
@@ -70,7 +70,7 @@ public class HANOI_ESTest {
       assertTrue(integer3.equals((Object)integer1));
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 12000)
   public void test03()  throws Throwable  {
       HANOI hANOI0 = new HANOI();
       HANOI.Pair<Object, String> hANOI_Pair0 = (HANOI.Pair<Object, String>) mock(HANOI.Pair.class, new ViolatedAssumptionAnswer());
@@ -96,7 +96,7 @@ public class HANOI_ESTest {
       hANOI_Pair3.setSecond(string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test04()  throws Throwable  {
       Integer integer0 = new Integer(0);
       assertNotNull(integer0);
@@ -112,7 +112,7 @@ public class HANOI_ESTest {
       assertNotNull(object0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test05()  throws Throwable  {
       Integer integer0 = new Integer(0);
       assertNotNull(integer0);
@@ -150,7 +150,7 @@ public class HANOI_ESTest {
       assertTrue(object1.equals((Object)integer0));
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test06()  throws Throwable  {
       Object object0 = new Object();
       assertNotNull(object0);
@@ -171,7 +171,7 @@ public class HANOI_ESTest {
       assertSame(object0, object1);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test07()  throws Throwable  {
       HANOI.Pair<String, Object> hANOI_Pair0 = new HANOI.Pair<String, Object>("", "");
       assertNotNull(hANOI_Pair0);
@@ -181,7 +181,7 @@ public class HANOI_ESTest {
       assertEquals("", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test08()  throws Throwable  {
       HANOI hANOI0 = new HANOI();
       assertNotNull(hANOI0);
@@ -231,7 +231,7 @@ public class HANOI_ESTest {
       assertFalse(integer1.equals((Object)int0));
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test09()  throws Throwable  {
       Integer integer0 = new Integer((-1600));
       assertNotNull(integer0);
@@ -285,7 +285,7 @@ public class HANOI_ESTest {
       assertNotNull(hANOI_Pair3);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test10()  throws Throwable  {
       List<HANOI.Pair<Integer, Integer>> list0 = HANOI.hanoi((-1), 0, (-1));
       assertTrue(list0.isEmpty());

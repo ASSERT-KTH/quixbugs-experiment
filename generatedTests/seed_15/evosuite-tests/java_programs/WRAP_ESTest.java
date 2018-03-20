@@ -39,11 +39,11 @@ public class WRAP_ESTest {
       assertTrue(arrayList0.contains(" "));
   }
 
-  @Test(timeout = 4000)
-  public void test4()  throws Throwable  {
-      // Undeclared exception!
-      WRAP.wrap(" ", 0);
-  }
+//  @Test(timeout = 4000)
+//  public void test4()  throws Throwable  {
+//      // Undeclared exception!
+//      WRAP.wrap(" ", 0);
+//  }
 
   @Test(timeout = 4000)
   public void test5()  throws Throwable  {

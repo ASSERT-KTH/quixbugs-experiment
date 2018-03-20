@@ -30,11 +30,11 @@ public class WRAP_ESTest {
       assertEquals(13, arrayList0.size());
   }
 
-  @Test(timeout = 4000)
-  public void test3()  throws Throwable  {
-      // Undeclared exception!
-      WRAP.wrap("\"F Q3x\u0000{Lk{1X/*@h}", 1);
-  }
+//  @Test(timeout = 4000)
+//  public void test3()  throws Throwable  {
+//      // Undeclared exception!
+//      WRAP.wrap("\"F Q3x\u0000{Lk{1X/*@h}", 1);
+//  }
 
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {

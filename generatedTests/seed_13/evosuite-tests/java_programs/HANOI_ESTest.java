@@ -14,7 +14,7 @@ import org.evosuite.runtime.ViolatedAssumptionAnswer;
 
 public class HANOI_ESTest {
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test0()  throws Throwable  {
       HANOI hANOI0 = new HANOI();
       HANOI.Pair<String, Object> hANOI_Pair0 = new HANOI.Pair<String, Object>("", hANOI0);
@@ -22,19 +22,19 @@ public class HANOI_ESTest {
       assertSame(hANOI0, object0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test1()  throws Throwable  {
       HANOI.Pair<Integer, Integer> hANOI_Pair0 = new HANOI.Pair<Integer, Integer>((Integer) null, (Integer) null);
       hANOI_Pair0.setFirst((Integer) null);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test2()  throws Throwable  {
       HANOI.Pair<Integer, Integer> hANOI_Pair0 = new HANOI.Pair<Integer, Integer>((Integer) null, (Integer) null);
       hANOI_Pair0.setSecond((Integer) null);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test3()  throws Throwable  {
       HANOI.Pair<Object, Object> hANOI_Pair0 = (HANOI.Pair<Object, Object>) mock(HANOI.Pair.class, new ViolatedAssumptionAnswer());
       doReturn((String) null).when(hANOI_Pair0).toString();
@@ -43,20 +43,20 @@ public class HANOI_ESTest {
       assertEquals("(null, null)", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test4()  throws Throwable  {
       HANOI.Pair<String, Integer> hANOI_Pair0 = new HANOI.Pair<String, Integer>("(null, null)", (Integer) null);
       String string0 = hANOI_Pair0.getFirst();
       assertEquals("(null, null)", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test5()  throws Throwable  {
       List<HANOI.Pair<Integer, Integer>> list0 = HANOI.hanoi(2, (-1), 0);
       assertEquals(3, list0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test6()  throws Throwable  {
       List<HANOI.Pair<Integer, Integer>> list0 = HANOI.hanoi((-1), (-1), (-1));
       assertTrue(list0.isEmpty());

@@ -16,11 +16,11 @@ public class LEVENSHTEIN_ESTest {
       LEVENSHTEIN lEVENSHTEIN0 = new LEVENSHTEIN();
   }
 
-  @Test(timeout = 4000)
-  public void test1()  throws Throwable  {
-      // Undeclared exception!
-      LEVENSHTEIN.levenshtein("|>-%/a0", "}sMB/`>9(r");
-  }
+//  @Test(timeout = 4000)
+//  public void test1()  throws Throwable  {
+//      // Undeclared exception!
+//      LEVENSHTEIN.levenshtein("|>-%/a0", "}sMB/`>9(r");
+//  }
 
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {

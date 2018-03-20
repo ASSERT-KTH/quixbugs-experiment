@@ -13,7 +13,7 @@ import java_programs.HANOI;
 
 public class HANOI_ESTest {
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test0()  throws Throwable  {
       Object object0 = new Object();
       HANOI.Pair<Object, String> hANOI_Pair0 = new HANOI.Pair<Object, String>((Object) null, "");
@@ -22,13 +22,13 @@ public class HANOI_ESTest {
       hANOI_Pair0.setFirst(object1);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test1()  throws Throwable  {
       HANOI.Pair<Object, String> hANOI_Pair0 = new HANOI.Pair<Object, String>((Object) null, "");
       hANOI_Pair0.setSecond("");
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test2()  throws Throwable  {
       Integer integer0 = new Integer(0);
       HANOI.Pair<String, Integer> hANOI_Pair0 = new HANOI.Pair<String, Integer>("", integer0);
@@ -36,7 +36,7 @@ public class HANOI_ESTest {
       assertEquals("(, 0)", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test3()  throws Throwable  {
       Integer integer0 = new Integer(0);
       List<HANOI.Pair<Integer, Integer>> list0 = HANOI.hanoi(2, (-1417), 0);
@@ -45,18 +45,18 @@ public class HANOI_ESTest {
       assertEquals(3, arrayList0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test4()  throws Throwable  {
       HANOI hANOI0 = new HANOI();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test5()  throws Throwable  {
       List<HANOI.Pair<Integer, Integer>> list0 = HANOI.hanoi(0, 368, 0);
       assertEquals(0, list0.size());
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test6()  throws Throwable  {
       List<HANOI.Pair<Integer, Integer>> list0 = HANOI.hanoi((-1), (-1), (-1));
       assertTrue(list0.isEmpty());

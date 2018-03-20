@@ -13,7 +13,7 @@ import org.evosuite.runtime.ViolatedAssumptionAnswer;
 
 public class HANOI_ESTest {
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test0()  throws Throwable  {
       HANOI.Pair<Object, Integer> hANOI_Pair0 = (HANOI.Pair<Object, Integer>) mock(HANOI.Pair.class, new ViolatedAssumptionAnswer());
       int int0 = 1775;
@@ -30,7 +30,7 @@ public class HANOI_ESTest {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test1()  throws Throwable  {
       HANOI.Pair<String, HANOI.Pair<Object, Integer>> hANOI_Pair0 = new HANOI.Pair<String, HANOI.Pair<Object, Integer>>("fC", (HANOI.Pair<Object, Integer>) null);
       hANOI_Pair0.setFirst("");
@@ -49,7 +49,7 @@ public class HANOI_ESTest {
       hANOI_Pair3.setFirst(">ELIc?\"<0'u");
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test2()  throws Throwable  {
       Integer integer0 = new Integer(0);
       Integer integer1 = new Integer(0);
@@ -59,7 +59,7 @@ public class HANOI_ESTest {
       hANOI_Pair1.setFirst((String) null);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test3()  throws Throwable  {
       Object object0 = new Object();
       HANOI.Pair<Object, Object> hANOI_Pair0 = new HANOI.Pair<Object, Object>(object0, object0);
@@ -93,7 +93,7 @@ public class HANOI_ESTest {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test4()  throws Throwable  {
       HANOI.Pair<String, Object> hANOI_Pair0 = new HANOI.Pair<String, Object>("40V&}'", "40V&}'");
       hANOI_Pair0.toString();
@@ -118,7 +118,7 @@ public class HANOI_ESTest {
       hANOI_Pair3.getSecond();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test5()  throws Throwable  {
       HANOI hANOI0 = new HANOI();
       String string0 = "";

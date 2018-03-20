@@ -11,7 +11,7 @@ import java_programs.LONGEST_COMMON_SUBSEQUENCE;
 
 public class LONGEST_COMMON_SUBSEQUENCE_ESTest {
 
-  @Test(timeout = 4000)
+  @Test
   public void test0()  throws Throwable  {
       LONGEST_COMMON_SUBSEQUENCE lONGEST_COMMON_SUBSEQUENCE0 = new LONGEST_COMMON_SUBSEQUENCE();
       LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("", "");

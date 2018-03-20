@@ -28,11 +28,11 @@ public class LONGEST_COMMON_SUBSEQUENCE_ESTest {
       assertEquals("", string0);
   }
 
-  @Test(timeout = 4000)
-  public void test3()  throws Throwable  {
-      // Undeclared exception!
-      LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("[F1MED9j", "y|TUZB.%9cMm1");
-  }
+//  @Test(timeout = 4000)
+//  public void test3()  throws Throwable  {
+//      // Undeclared exception!
+//      LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("[F1MED9j", "y|TUZB.%9cMm1");
+//  }
 
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {

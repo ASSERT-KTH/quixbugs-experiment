@@ -13,7 +13,7 @@ import org.evosuite.runtime.ViolatedAssumptionAnswer;
 
 public class HANOI_ESTest {
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test0()  throws Throwable  {
       HANOI hANOI0 = new HANOI();
       HANOI.Pair<Object, Object> hANOI_Pair0 = (HANOI.Pair<Object, Object>) mock(HANOI.Pair.class, new ViolatedAssumptionAnswer());
@@ -46,7 +46,7 @@ public class HANOI_ESTest {
       assertEquals(897, (int)integer1);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test1()  throws Throwable  {
       HANOI.Pair<String, String> hANOI_Pair0 = new HANOI.Pair<String, String>(")", ")");
       hANOI_Pair0.toString();
@@ -70,7 +70,7 @@ public class HANOI_ESTest {
       hANOI_Pair2.toString();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test2()  throws Throwable  {
       HANOI.hanoi((-1618), (-1618), (-1618));
       Integer integer0 = new Integer((-1618));
@@ -111,14 +111,14 @@ public class HANOI_ESTest {
       hANOI_Pair5.setFirst(string5);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test3()  throws Throwable  {
       Integer integer0 = new Integer(0);
       HANOI.Pair<String, Integer> hANOI_Pair0 = new HANOI.Pair<String, Integer>("6`:nbKY", integer0);
       HANOI.hanoi(0, 0, 0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test4()  throws Throwable  {
       HANOI hANOI0 = new HANOI();
       HANOI.Pair<Object, Object> hANOI_Pair0 = (HANOI.Pair<Object, Object>) mock(HANOI.Pair.class, new ViolatedAssumptionAnswer());
@@ -132,7 +132,7 @@ public class HANOI_ESTest {
       hANOI_Pair4.getSecond();
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test5()  throws Throwable  {
       HANOI hANOI0 = new HANOI();
       HANOI.hanoi(1, (-1808), 1);
@@ -141,7 +141,7 @@ public class HANOI_ESTest {
       hANOI_Pair0.setFirst(integer0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test6()  throws Throwable  {
       HANOI.Pair<String, Integer> hANOI_Pair0 = new HANOI.Pair<String, Integer>("9I", (Integer) null);
       hANOI_Pair0.toString();
@@ -156,7 +156,7 @@ public class HANOI_ESTest {
       hANOI_Pair2.setFirst((Integer) null);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test7()  throws Throwable  {
       Object object0 = new Object();
       HANOI.Pair<Object, String> hANOI_Pair0 = new HANOI.Pair<Object, String>(object0, "{B,'\"F Q3x\u0000{Lk");

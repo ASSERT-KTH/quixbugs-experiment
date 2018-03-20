@@ -14,7 +14,7 @@ import org.evosuite.runtime.ViolatedAssumptionAnswer;
 
 public class HANOI_ESTest {
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test0()  throws Throwable  {
       Integer integer0 = new Integer(40);
       HANOI.Pair<String, Integer> hANOI_Pair0 = new HANOI.Pair<String, Integer>("%I", integer0);
@@ -22,7 +22,7 @@ public class HANOI_ESTest {
       HANOI.Pair<Object, Object> hANOI_Pair1 = new HANOI.Pair<Object, Object>("2r:CIRL;\"d$cRA((", "(%I, 40)");
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test1()  throws Throwable  {
       Object object0 = new Object();
       HANOI.Pair<Object, String> hANOI_Pair0 = new HANOI.Pair<Object, String>(object0, "");
@@ -38,7 +38,7 @@ public class HANOI_ESTest {
       assertEquals("(2, buw&{ZjTl(y)", string0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test2()  throws Throwable  {
       HANOI hANOI0 = new HANOI();
       String string0 = "";
@@ -54,44 +54,44 @@ public class HANOI_ESTest {
       }
   }
 
-  @Test(timeout = 4000)
-  public void test3()  throws Throwable  {
-      int int0 = 731;
-      int int1 = 3;
-      int int2 = 0;
-      List<HANOI.Pair<Integer, Integer>> list0 = HANOI.hanoi(int0, int1, int2);
-      Integer integer0 = null;
-      HANOI.Pair<Object, Integer> hANOI_Pair0 = new HANOI.Pair<Object, Integer>(list0, integer0);
-      int int3 = 0;
-      Integer integer1 = new Integer(int3);
-      hANOI_Pair0.setSecond(integer1);
-      hANOI_Pair0.toString();
-      hANOI_Pair0.setSecond(integer0);
-      HANOI.Pair<Integer, String> hANOI_Pair1 = (HANOI.Pair<Integer, String>) mock(HANOI.Pair.class, new ViolatedAssumptionAnswer());
-      doReturn((String) null, (String) null).when(hANOI_Pair1).toString();
-      HANOI.Pair<Object, HANOI.Pair<Integer, String>> hANOI_Pair2 = new HANOI.Pair<Object, HANOI.Pair<Integer, String>>(list0, hANOI_Pair1);
-      hANOI_Pair2.getSecond();
-      HANOI.Pair<Integer, Integer> hANOI_Pair3 = (HANOI.Pair<Integer, Integer>) mock(HANOI.Pair.class, new ViolatedAssumptionAnswer());
-      HANOI.Pair<Object, HANOI.Pair<Integer, Integer>> hANOI_Pair4 = new HANOI.Pair<Object, HANOI.Pair<Integer, Integer>>(hANOI_Pair2, hANOI_Pair3);
-      hANOI_Pair4.getFirst();
-      String string0 = "3l/T{!nfzOGd";
-      int int4 = 0;
-      Integer integer2 = new Integer(int4);
-      HANOI.Pair<String, Integer> hANOI_Pair5 = new HANOI.Pair<String, Integer>(string0, integer2);
-      hANOI_Pair5.getFirst();
-      HANOI hANOI0 = new HANOI();
-      Integer integer3 = new Integer(int0);
-      Integer.divideUnsigned(int2, int2);
-      hANOI_Pair0.setFirst(integer3);
-      int int5 = (-254);
-      Integer integer4 = new Integer(int5);
-      hANOI_Pair5.setSecond(integer4);
-      String string1 = "Tn";
-      HANOI.Pair<String, String> hANOI_Pair6 = new HANOI.Pair<String, String>(string1, string0);
-      hANOI_Pair6.toString();
-  }
+//  @Test(timeout = 8000)
+//  public void test3()  throws Throwable  {
+//      int int0 = 731;
+//      int int1 = 3;
+//      int int2 = 0;
+//      List<HANOI.Pair<Integer, Integer>> list0 = HANOI.hanoi(int0, int1, int2);
+//      Integer integer0 = null;
+//      HANOI.Pair<Object, Integer> hANOI_Pair0 = new HANOI.Pair<Object, Integer>(list0, integer0);
+//      int int3 = 0;
+//      Integer integer1 = new Integer(int3);
+//      hANOI_Pair0.setSecond(integer1);
+//      hANOI_Pair0.toString();
+//      hANOI_Pair0.setSecond(integer0);
+//      HANOI.Pair<Integer, String> hANOI_Pair1 = (HANOI.Pair<Integer, String>) mock(HANOI.Pair.class, new ViolatedAssumptionAnswer());
+//      doReturn((String) null, (String) null).when(hANOI_Pair1).toString();
+//      HANOI.Pair<Object, HANOI.Pair<Integer, String>> hANOI_Pair2 = new HANOI.Pair<Object, HANOI.Pair<Integer, String>>(list0, hANOI_Pair1);
+//      hANOI_Pair2.getSecond();
+//      HANOI.Pair<Integer, Integer> hANOI_Pair3 = (HANOI.Pair<Integer, Integer>) mock(HANOI.Pair.class, new ViolatedAssumptionAnswer());
+//      HANOI.Pair<Object, HANOI.Pair<Integer, Integer>> hANOI_Pair4 = new HANOI.Pair<Object, HANOI.Pair<Integer, Integer>>(hANOI_Pair2, hANOI_Pair3);
+//      hANOI_Pair4.getFirst();
+//      String string0 = "3l/T{!nfzOGd";
+//      int int4 = 0;
+//      Integer integer2 = new Integer(int4);
+//      HANOI.Pair<String, Integer> hANOI_Pair5 = new HANOI.Pair<String, Integer>(string0, integer2);
+//      hANOI_Pair5.getFirst();
+//      HANOI hANOI0 = new HANOI();
+//      Integer integer3 = new Integer(int0);
+//      Integer.divideUnsigned(int2, int2);
+//      hANOI_Pair0.setFirst(integer3);
+//      int int5 = (-254);
+//      Integer integer4 = new Integer(int5);
+//      hANOI_Pair5.setSecond(integer4);
+//      String string1 = "Tn";
+//      HANOI.Pair<String, String> hANOI_Pair6 = new HANOI.Pair<String, String>(string1, string0);
+//      hANOI_Pair6.toString();
+//  }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test4()  throws Throwable  {
       HANOI.Pair<String, String> hANOI_Pair0 = (HANOI.Pair<String, String>) mock(HANOI.Pair.class, new ViolatedAssumptionAnswer());
       doReturn((String) null).when(hANOI_Pair0).toString();
@@ -113,46 +113,46 @@ public class HANOI_ESTest {
       assertEquals("(null, 5352)", string0);
   }
 
-  @Test(timeout = 4000)
-  public void test5()  throws Throwable  {
-      Object object0 = null;
-      HANOI.Pair<String, Object> hANOI_Pair0 = new HANOI.Pair<String, Object>("", (Object) null);
-      String string0 = hANOI_Pair0.getFirst();
-      int int0 = 0;
-      Integer integer0 = new Integer(0);
-      HANOI.Pair<Object, Object> hANOI_Pair1 = new HANOI.Pair<Object, Object>(integer0, "");
-      hANOI_Pair1.setSecond((Object) null);
-      Object object1 = hANOI_Pair1.getSecond();
-      int int1 = 1725;
-      int int2 = 0;
-      HANOI.Pair<Object, String> hANOI_Pair2 = new HANOI.Pair<Object, String>("", "o}B'sk|hBC;");
-      hANOI_Pair2.setSecond("");
-      hANOI_Pair2.getFirst();
-      hANOI_Pair1.setFirst("");
-      HANOI.hanoi(int1, int2, int2);
-      Integer integer1 = new Integer(int1);
-      HANOI.Pair<String, Integer> hANOI_Pair3 = new HANOI.Pair<String, Integer>(string0, integer1);
-      HANOI.Pair<Object, String> hANOI_Pair4 = (HANOI.Pair<Object, String>) mock(HANOI.Pair.class, new ViolatedAssumptionAnswer());
-      HANOI.Pair<HANOI.Pair<Object, String>, Object> hANOI_Pair5 = new HANOI.Pair<HANOI.Pair<Object, String>, Object>(hANOI_Pair4, object1);
-      hANOI_Pair5.getSecond();
-      int int3 = (-241);
-      HANOI.hanoi(int0, int2, int3);
-      HANOI.Pair<Object, Integer> hANOI_Pair6 = new HANOI.Pair<Object, Integer>(integer1, integer0);
-      hANOI_Pair6.setFirst(object0);
-      HANOI.Pair<String, Integer> hANOI_Pair7 = new HANOI.Pair<String, Integer>(string0, integer1);
-      hANOI_Pair6.setFirst(hANOI_Pair7);
-      int int4 = 0;
-      Integer integer2 = new Integer(int4);
-      hANOI_Pair6.setSecond(integer2);
-      hANOI_Pair0.toString();
-      int int5 = 0;
-      Integer integer3 = new Integer(int5);
-      String string1 = "";
-      HANOI.Pair<Integer, Object> hANOI_Pair8 = new HANOI.Pair<Integer, Object>(integer3, string1);
-      hANOI_Pair8.setSecond(string0);
-  }
+//  @Test(timeout = 8000)
+//  public void test5()  throws Throwable  {
+//      Object object0 = null;
+//      HANOI.Pair<String, Object> hANOI_Pair0 = new HANOI.Pair<String, Object>("", (Object) null);
+//      String string0 = hANOI_Pair0.getFirst();
+//      int int0 = 0;
+//      Integer integer0 = new Integer(0);
+//      HANOI.Pair<Object, Object> hANOI_Pair1 = new HANOI.Pair<Object, Object>(integer0, "");
+//      hANOI_Pair1.setSecond((Object) null);
+//      Object object1 = hANOI_Pair1.getSecond();
+//      int int1 = 1725;
+//      int int2 = 0;
+//      HANOI.Pair<Object, String> hANOI_Pair2 = new HANOI.Pair<Object, String>("", "o}B'sk|hBC;");
+//      hANOI_Pair2.setSecond("");
+//      hANOI_Pair2.getFirst();
+//      hANOI_Pair1.setFirst("");
+//      HANOI.hanoi(int1, int2, int2);
+//      Integer integer1 = new Integer(int1);
+//      HANOI.Pair<String, Integer> hANOI_Pair3 = new HANOI.Pair<String, Integer>(string0, integer1);
+//      HANOI.Pair<Object, String> hANOI_Pair4 = (HANOI.Pair<Object, String>) mock(HANOI.Pair.class, new ViolatedAssumptionAnswer());
+//      HANOI.Pair<HANOI.Pair<Object, String>, Object> hANOI_Pair5 = new HANOI.Pair<HANOI.Pair<Object, String>, Object>(hANOI_Pair4, object1);
+//      hANOI_Pair5.getSecond();
+//      int int3 = (-241);
+//      HANOI.hanoi(int0, int2, int3);
+//      HANOI.Pair<Object, Integer> hANOI_Pair6 = new HANOI.Pair<Object, Integer>(integer1, integer0);
+//      hANOI_Pair6.setFirst(object0);
+//      HANOI.Pair<String, Integer> hANOI_Pair7 = new HANOI.Pair<String, Integer>(string0, integer1);
+//      hANOI_Pair6.setFirst(hANOI_Pair7);
+//      int int4 = 0;
+//      Integer integer2 = new Integer(int4);
+//      hANOI_Pair6.setSecond(integer2);
+//      hANOI_Pair0.toString();
+//      int int5 = 0;
+//      Integer integer3 = new Integer(int5);
+//      String string1 = "";
+//      HANOI.Pair<Integer, Object> hANOI_Pair8 = new HANOI.Pair<Integer, Object>(integer3, string1);
+//      hANOI_Pair8.setSecond(string0);
+//  }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test6()  throws Throwable  {
       HANOI hANOI0 = new HANOI();
       Integer integer0 = new Integer(0);
@@ -162,27 +162,27 @@ public class HANOI_ESTest {
       hANOI_Pair0.setSecond(integer2);
   }
 
-  @Test(timeout = 4000)
-  public void test7()  throws Throwable  {
-      String string0 = "bHn]~:^x2-";
-      HANOI.Pair<String, Object> hANOI_Pair0 = new HANOI.Pair<String, Object>("~waixQ$#4]\"C P", "bHn]~:^x2-");
-      hANOI_Pair0.getFirst();
-      HANOI.Pair<Object, Object> hANOI_Pair1 = new HANOI.Pair<Object, Object>("bHn]~:^x2-", "~waixQ$#4]\"C P");
-      hANOI_Pair1.getFirst();
-      int int0 = 2411;
-      int int1 = 2;
-      HANOI.hanoi(int0, int0, int1);
-      HANOI.Pair<HANOI.Pair<Object, Object>, Object> hANOI_Pair2 = new HANOI.Pair<HANOI.Pair<Object, Object>, Object>(hANOI_Pair1, hANOI_Pair1);
-      hANOI_Pair2.setFirst(hANOI_Pair1);
-      HANOI.Pair<String, Integer> hANOI_Pair3 = (HANOI.Pair<String, Integer>) mock(HANOI.Pair.class, new ViolatedAssumptionAnswer());
-      String string1 = "(";
-      HANOI.Pair<HANOI.Pair<String, Integer>, String> hANOI_Pair4 = new HANOI.Pair<HANOI.Pair<String, Integer>, String>(hANOI_Pair3, string1);
-      String string2 = "BUcFm>)PD9a";
-      hANOI_Pair4.setSecond(string2);
-      hANOI_Pair4.setSecond(string0);
-  }
+//  @Test(timeout = 8000)
+//  public void test7()  throws Throwable  {
+//      String string0 = "bHn]~:^x2-";
+//      HANOI.Pair<String, Object> hANOI_Pair0 = new HANOI.Pair<String, Object>("~waixQ$#4]\"C P", "bHn]~:^x2-");
+//      hANOI_Pair0.getFirst();
+//      HANOI.Pair<Object, Object> hANOI_Pair1 = new HANOI.Pair<Object, Object>("bHn]~:^x2-", "~waixQ$#4]\"C P");
+//      hANOI_Pair1.getFirst();
+//      int int0 = 2411;
+//      int int1 = 2;
+//      HANOI.hanoi(int0, int0, int1);
+//      HANOI.Pair<HANOI.Pair<Object, Object>, Object> hANOI_Pair2 = new HANOI.Pair<HANOI.Pair<Object, Object>, Object>(hANOI_Pair1, hANOI_Pair1);
+//      hANOI_Pair2.setFirst(hANOI_Pair1);
+//      HANOI.Pair<String, Integer> hANOI_Pair3 = (HANOI.Pair<String, Integer>) mock(HANOI.Pair.class, new ViolatedAssumptionAnswer());
+//      String string1 = "(";
+//      HANOI.Pair<HANOI.Pair<String, Integer>, String> hANOI_Pair4 = new HANOI.Pair<HANOI.Pair<String, Integer>, String>(hANOI_Pair3, string1);
+//      String string2 = "BUcFm>)PD9a";
+//      hANOI_Pair4.setSecond(string2);
+//      hANOI_Pair4.setSecond(string0);
+//  }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 8000)
   public void test8()  throws Throwable  {
       String string0 = "i#,pN!8y~L39V6p)z`w";
       HANOI.Pair<String, Object> hANOI_Pair0 = new HANOI.Pair<String, Object>("i#,pN!8y~L39V6p)z`w", "i#,pN!8y~L39V6p)z`w");

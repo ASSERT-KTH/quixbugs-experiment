@@ -55,11 +55,11 @@ public class WRAP_ESTest {
       }
   }
 
-  @Test(timeout = 4000)
-  public void test5()  throws Throwable  {
-      // Undeclared exception!
-      WRAP.wrap("FuuN_;PR?1;ub A", 1);
-  }
+//  @Test(timeout = 4000)
+//  public void test5()  throws Throwable  {
+//      // Undeclared exception!
+//      WRAP.wrap("FuuN_;PR?1;ub A", 1);
+//  }
 
   @Test(timeout = 4000)
   public void test6()  throws Throwable  {

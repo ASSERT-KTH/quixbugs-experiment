@@ -22,11 +22,11 @@ public class WRAP_ESTest {
       WRAP.main((String[]) null);
   }
 
-  @Test(timeout = 4000)
-  public void test2()  throws Throwable  {
-      // Undeclared exception!
-      WRAP.wrap("<<sozl )!ysT$", 1);
-  }
+//  @Test(timeout = 4000)
+//  public void test2()  throws Throwable  {
+//      // Undeclared exception!
+//      WRAP.wrap("<<sozl )!ysT$", 1);
+//  }
 
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {

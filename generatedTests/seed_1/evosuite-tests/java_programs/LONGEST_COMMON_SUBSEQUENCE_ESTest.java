@@ -90,7 +90,7 @@ public class LONGEST_COMMON_SUBSEQUENCE_ESTest {
       LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("jb+L7ol", "u+*n9p}[KbAka$@");
   }
 
-  @Test(timeout = 4000)
+  @Test
   public void test6()  throws Throwable  {
       LONGEST_COMMON_SUBSEQUENCE lONGEST_COMMON_SUBSEQUENCE0 = new LONGEST_COMMON_SUBSEQUENCE();
       LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("", "");

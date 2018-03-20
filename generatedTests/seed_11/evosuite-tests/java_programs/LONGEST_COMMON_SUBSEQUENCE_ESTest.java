@@ -89,17 +89,17 @@ public class LONGEST_COMMON_SUBSEQUENCE_ESTest {
       LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("Lm?)j!!uPM", "");
   }
 
-  @Test(timeout = 4000)
-  public void test7()  throws Throwable  {
-      LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("GG#", "AUto%V]]ii2jqYk");
-      LONGEST_COMMON_SUBSEQUENCE lONGEST_COMMON_SUBSEQUENCE0 = new LONGEST_COMMON_SUBSEQUENCE();
-      LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("", "");
-      String string0 = "FVa>+=9KYOW$}";
-      LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("GG#", "FVa>+=9KYOW$}");
-      String string1 = "java_programs.LONGEST_COMMON_SUBSEQUENCE";
-      // Undeclared exception!
-      LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("FVa>+=9KYOW$}", "java_programs.LONGEST_COMMON_SUBSEQUENCE");
-  }
+//  @Test(timeout = 4000)
+//  public void test7()  throws Throwable  {
+//      LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("GG#", "AUto%V]]ii2jqYk");
+//      LONGEST_COMMON_SUBSEQUENCE lONGEST_COMMON_SUBSEQUENCE0 = new LONGEST_COMMON_SUBSEQUENCE();
+//      LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("", "");
+//      String string0 = "FVa>+=9KYOW$}";
+//      LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("GG#", "FVa>+=9KYOW$}");
+//      String string1 = "java_programs.LONGEST_COMMON_SUBSEQUENCE";
+//      // Undeclared exception!
+//      LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("FVa>+=9KYOW$}", "java_programs.LONGEST_COMMON_SUBSEQUENCE");
+//  }
 
   @Test(timeout = 4000)
   public void test8()  throws Throwable  {

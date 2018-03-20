@@ -23,21 +23,21 @@ public class LEVENSHTEIN_ESTest {
       assertFalse(int2 == int0);
   }
 
-  @Test(timeout = 4000)
-  public void test1()  throws Throwable  {
-      LEVENSHTEIN lEVENSHTEIN0 = new LEVENSHTEIN();
-      LEVENSHTEIN.levenshtein("X!lw7blb^t@i>4(~A", "X!lw7blb^t@i>4(~A");
-      LEVENSHTEIN.levenshtein("X!lw7blb^t@i>4(~A", "X!lw7blb^t@i>4(~A");
-      String string0 = "";
-      LEVENSHTEIN.levenshtein("X!lw7blb^t@i>4(~A", "");
-      String string1 = "UV2(cP9k";
-      LEVENSHTEIN.levenshtein("UV2(cP9k", "");
-      String string2 = "";
-      LEVENSHTEIN.levenshtein("UV2(cP9k", "");
-      LEVENSHTEIN.levenshtein("", "X!lw7blb^t@i>4(~A");
-      // Undeclared exception!
-      LEVENSHTEIN.levenshtein("X!lw7blb^t@i>4(~A", "UV2(cP9k");
-  }
+//  @Test(timeout = 4000)
+//  public void test1()  throws Throwable  {
+//      LEVENSHTEIN lEVENSHTEIN0 = new LEVENSHTEIN();
+//      LEVENSHTEIN.levenshtein("X!lw7blb^t@i>4(~A", "X!lw7blb^t@i>4(~A");
+//      LEVENSHTEIN.levenshtein("X!lw7blb^t@i>4(~A", "X!lw7blb^t@i>4(~A");
+//      String string0 = "";
+//      LEVENSHTEIN.levenshtein("X!lw7blb^t@i>4(~A", "");
+//      String string1 = "UV2(cP9k";
+//      LEVENSHTEIN.levenshtein("UV2(cP9k", "");
+//      String string2 = "";
+//      LEVENSHTEIN.levenshtein("UV2(cP9k", "");
+//      LEVENSHTEIN.levenshtein("", "X!lw7blb^t@i>4(~A");
+//      // Undeclared exception!
+//      LEVENSHTEIN.levenshtein("X!lw7blb^t@i>4(~A", "UV2(cP9k");
+//  }
 
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {

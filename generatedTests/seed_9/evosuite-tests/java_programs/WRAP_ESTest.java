@@ -24,11 +24,11 @@ public class WRAP_ESTest {
       assertEquals(5, stringArray0.length);
   }
 
-  @Test(timeout = 4000)
-  public void test2()  throws Throwable  {
-      // Undeclared exception!
-      WRAP.wrap("\"EtTK:r[hy!?M2 8e", 1);
-  }
+//  @Test(timeout = 4000)
+//  public void test2()  throws Throwable  {
+//      // Undeclared exception!
+//      WRAP.wrap("\"EtTK:r[hy!?M2 8e", 1);
+//  }
 
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {

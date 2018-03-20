@@ -15,7 +15,8 @@ import org.evosuite.runtime.ViolatedAssumptionAnswer;
 
 public class HANOI_ESTest {
 
-  @Test(timeout = 4000)
+  @SuppressWarnings("unchecked")
+  @Test(timeout = 8000)
   public void test0()  throws Throwable  {
       Integer integer0 = new Integer(0);
       HANOI.Pair<Integer, Integer> hANOI_Pair0 = new HANOI.Pair<Integer, Integer>(integer0, integer0);
@@ -23,27 +24,31 @@ public class HANOI_ESTest {
       assertEquals(0, (int)integer1);
   }
 
-  @Test(timeout = 4000)
+  @SuppressWarnings("unchecked")
+  @Test(timeout = 8000)
   public void test1()  throws Throwable  {
       HANOI.Pair<String, Object> hANOI_Pair0 = new HANOI.Pair<String, Object>("QT~%@;;IeJ", "QT~%@;;IeJ");
       hANOI_Pair0.setFirst("QT~%@;;IeJ");
   }
 
-  @Test(timeout = 4000)
+  @SuppressWarnings("unchecked")
+  @Test(timeout = 8000)
   public void test2()  throws Throwable  {
       Integer integer0 = new Integer(0);
       HANOI.Pair<String, Integer> hANOI_Pair0 = new HANOI.Pair<String, Integer>("", integer0);
       hANOI_Pair0.setSecond(integer0);
   }
 
-  @Test(timeout = 4000)
+  @SuppressWarnings("unchecked")
+  @Test(timeout = 8000)
   public void test3()  throws Throwable  {
       HANOI.Pair<String, Object> hANOI_Pair0 = new HANOI.Pair<String, Object>("QT~%@;;IeJ", "QT~%@;;IeJ");
       String string0 = hANOI_Pair0.toString();
       assertEquals("(QT~%@;;IeJ, QT~%@;;IeJ)", string0);
   }
 
-  @Test(timeout = 4000)
+  @SuppressWarnings("unchecked")
+  @Test(timeout = 8000)
   public void test4()  throws Throwable  {
       List<HANOI.Pair<Integer, Integer>> list0 = HANOI.hanoi(3, 3, 1);
       HANOI.Pair<Object, Object> hANOI_Pair0 = (HANOI.Pair<Object, Object>) mock(HANOI.Pair.class, new ViolatedAssumptionAnswer());
@@ -52,12 +57,14 @@ public class HANOI_ESTest {
       assertEquals(7, arrayList0.size());
   }
 
-  @Test(timeout = 4000)
+  @SuppressWarnings("unchecked")
+  @Test(timeout = 8000)
   public void test5()  throws Throwable  {
       HANOI hANOI0 = new HANOI();
   }
 
-  @Test(timeout = 4000)
+  @SuppressWarnings("unchecked")
+  @Test(timeout = 8000)
   public void test6()  throws Throwable  {
       List<HANOI.Pair<Integer, Integer>> list0 = HANOI.hanoi((-1284), (-1284), 1);
       assertEquals(0, list0.size());

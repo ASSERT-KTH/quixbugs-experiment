@@ -104,71 +104,71 @@ public class KNAPSACK_ESTest {
       assertEquals(2, int1);
   }
 
-  @Test(timeout = 4000)
-  public void test4()  throws Throwable  {
-      int[][] intArray0 = new int[9][4];
-      int[] intArray1 = new int[3];
-      intArray1[0] = 4724;
-      intArray1[1] = 4724;
-      intArray1[2] = 4724;
-      intArray0[0] = intArray1;
-      int[] intArray2 = new int[8];
-      intArray2[0] = 4724;
-      intArray2[1] = 4724;
-      intArray2[2] = 4724;
-      intArray2[3] = 4724;
-      intArray2[4] = 4724;
-      intArray2[5] = 4724;
-      intArray2[6] = 4724;
-      intArray2[7] = 4724;
-      intArray0[1] = intArray2;
-      int[] intArray3 = new int[9];
-      intArray3[0] = 4724;
-      intArray3[1] = 4724;
-      intArray3[2] = 1;
-      intArray3[3] = 4724;
-      intArray3[4] = 4724;
-      intArray3[5] = 4724;
-      intArray3[6] = 4724;
-      intArray3[7] = 4724;
-      intArray3[8] = 4724;
-      intArray0[2] = intArray3;
-      int[] intArray4 = new int[1];
-      intArray4[0] = 4724;
-      intArray0[3] = intArray4;
-      int[] intArray5 = new int[8];
-      intArray5[0] = 4724;
-      intArray5[1] = 4724;
-      intArray5[2] = 4724;
-      intArray5[3] = 1;
-      intArray5[4] = 1;
-      intArray5[5] = 1;
-      intArray5[6] = 1;
-      intArray5[7] = 4724;
-      intArray0[4] = intArray5;
-      int[] intArray6 = new int[1];
-      intArray6[0] = 4724;
-      intArray0[5] = intArray6;
-      int[] intArray7 = new int[8];
-      intArray7[0] = 1;
-      intArray7[1] = (-4154);
-      intArray7[2] = 1;
-      intArray7[3] = 1;
-      intArray7[4] = 1;
-      intArray7[5] = 1;
-      intArray7[6] = 4724;
-      intArray7[7] = 1;
-      intArray0[6] = intArray7;
-      int[] intArray8 = new int[0];
-      intArray0[7] = intArray8;
-      int[] intArray9 = new int[3];
-      intArray9[0] = (-4154);
-      intArray9[1] = 1;
-      intArray9[2] = (-4154);
-      intArray0[8] = intArray9;
-      // Undeclared exception!
-      KNAPSACK.knapsack(4724, intArray0);
-  }
+//  @Test(timeout = 4000)
+//  public void test4()  throws Throwable  {
+//      int[][] intArray0 = new int[9][4];
+//      int[] intArray1 = new int[3];
+//      intArray1[0] = 4724;
+//      intArray1[1] = 4724;
+//      intArray1[2] = 4724;
+//      intArray0[0] = intArray1;
+//      int[] intArray2 = new int[8];
+//      intArray2[0] = 4724;
+//      intArray2[1] = 4724;
+//      intArray2[2] = 4724;
+//      intArray2[3] = 4724;
+//      intArray2[4] = 4724;
+//      intArray2[5] = 4724;
+//      intArray2[6] = 4724;
+//      intArray2[7] = 4724;
+//      intArray0[1] = intArray2;
+//      int[] intArray3 = new int[9];
+//      intArray3[0] = 4724;
+//      intArray3[1] = 4724;
+//      intArray3[2] = 1;
+//      intArray3[3] = 4724;
+//      intArray3[4] = 4724;
+//      intArray3[5] = 4724;
+//      intArray3[6] = 4724;
+//      intArray3[7] = 4724;
+//      intArray3[8] = 4724;
+//      intArray0[2] = intArray3;
+//      int[] intArray4 = new int[1];
+//      intArray4[0] = 4724;
+//      intArray0[3] = intArray4;
+//      int[] intArray5 = new int[8];
+//      intArray5[0] = 4724;
+//      intArray5[1] = 4724;
+//      intArray5[2] = 4724;
+//      intArray5[3] = 1;
+//      intArray5[4] = 1;
+//      intArray5[5] = 1;
+//      intArray5[6] = 1;
+//      intArray5[7] = 4724;
+//      intArray0[4] = intArray5;
+//      int[] intArray6 = new int[1];
+//      intArray6[0] = 4724;
+//      intArray0[5] = intArray6;
+//      int[] intArray7 = new int[8];
+//      intArray7[0] = 1;
+//      intArray7[1] = (-4154);
+//      intArray7[2] = 1;
+//      intArray7[3] = 1;
+//      intArray7[4] = 1;
+//      intArray7[5] = 1;
+//      intArray7[6] = 4724;
+//      intArray7[7] = 1;
+//      intArray0[6] = intArray7;
+//      int[] intArray8 = new int[0];
+//      intArray0[7] = intArray8;
+//      int[] intArray9 = new int[3];
+//      intArray9[0] = (-4154);
+//      intArray9[1] = 1;
+//      intArray9[2] = (-4154);
+//      intArray0[8] = intArray9;
+//      // Undeclared exception!
+//      KNAPSACK.knapsack(4724, intArray0);
+//  }
 
   @Test(timeout = 4000)
   public void test5()  throws Throwable  {
