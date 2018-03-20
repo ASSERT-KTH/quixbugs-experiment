@@ -37,12 +37,13 @@ The class QuixBugExtendedOracle runs EvosuiteTest generation for generating test
 
 ### failing evosuite
 
-| program | failing tests in seed|reason|
-| --- |---| --- |
-| flatten |seed 2(Test 2)|
-|hanoi | seed 10(Test 2)  |Timeout/Error reading the validation process |
-
-
+| program | failing tests in seed|reason|solution|
+| --- |---| --- |---|
+| flatten |seed2(Test 2)|illegal paramters|remove|
+|hanoi | seed1(Test0/1/2)  |Timeout/Compilation errors |increase timeout /add uncheck annotation for each method|
+|knapsack|seed2(Test4) seed8(Test5)|ArrayIndexOutOfBoundsException(Undeclared exception)|remove|
+|levenshtein|seed3(Test4) seed5(Test1) seed6(Test2) seed7(Test2) seed9(Test3) seed10(Test2) seed11(Test0/2) seed14(Test0/1/5/6) seed15(Test2) seed17(Test3) seed18(Test4) seed19(Test3) seed20(Test1)|recursion error|remove|
+|longest_common_subsequence|seed1(Test6) seed2(Test0)|timeout|remove timeout|
 
 
 ### patch evaluation
