@@ -17,11 +17,11 @@ public class PASCAL_ESTest {
       PASCAL pASCAL0 = new PASCAL();
   }
 
-  @Test(timeout = 4000)
-  public void test1()  throws Throwable  {
-      // Undeclared exception!
-      PASCAL.pascal(4583);
-  }
+//  @Test(timeout = 4000)
+//  public void test1()  throws Throwable  {
+//      // Undeclared exception!
+//      PASCAL.pascal(4583);
+//  }
 
   @Test(timeout = 4000)
   public void test2()  throws Throwable  {

@@ -26,35 +26,35 @@ public class SUBSEQUENCES_ESTest {
       assertEquals(1, arrayList0.size());
   }
 
-  @Test(timeout = 4000)
-  public void test2()  throws Throwable  {
-      int int0 = (-1447);
-      int int1 = 0;
-      SUBSEQUENCES.subsequences((-1447), 0, 0);
-      SUBSEQUENCES.subsequences(0, 0, 0);
-      SUBSEQUENCES sUBSEQUENCES0 = new SUBSEQUENCES();
-      int int2 = 1145;
-      SUBSEQUENCES.subsequences(0, 1145, 0);
-      int int3 = 484;
-      SUBSEQUENCES.subsequences(1145, 0, 484);
-      int int4 = 0;
-      int int5 = 0;
-      SUBSEQUENCES.subsequences(int4, int5, int0);
-      int int6 = (-1847);
-      int int7 = 113;
-      SUBSEQUENCES.subsequences(int6, int1, int7);
-      int int8 = (-1511);
-      int int9 = 0;
-      SUBSEQUENCES.subsequences(int8, int3, int9);
-      int int10 = 1;
-      SUBSEQUENCES.subsequences(int10, int2, int0);
-      int int11 = 1;
-      SUBSEQUENCES.subsequences(int7, int11, int10);
-  }
+//  @Test(timeout = 4000)
+//  public void test2()  throws Throwable  {
+//      int int0 = (-1447);
+//      int int1 = 0;
+//      SUBSEQUENCES.subsequences((-1447), 0, 0);
+//      SUBSEQUENCES.subsequences(0, 0, 0);
+//      SUBSEQUENCES sUBSEQUENCES0 = new SUBSEQUENCES();
+//      int int2 = 1145;
+//      SUBSEQUENCES.subsequences(0, 1145, 0);
+//      int int3 = 484;
+//      SUBSEQUENCES.subsequences(1145, 0, 484);
+//      int int4 = 0;
+//      int int5 = 0;
+//      SUBSEQUENCES.subsequences(int4, int5, int0);
+//      int int6 = (-1847);
+//      int int7 = 113;
+//      SUBSEQUENCES.subsequences(int6, int1, int7);
+//      int int8 = (-1511);
+//      int int9 = 0;
+//      SUBSEQUENCES.subsequences(int8, int3, int9);
+//      int int10 = 1;
+//      SUBSEQUENCES.subsequences(int10, int2, int0);
+//      int int11 = 1;
+//      SUBSEQUENCES.subsequences(int7, int11, int10);
+//  }
 
-  @Test(timeout = 4000)
-  public void test3()  throws Throwable  {
-      // Undeclared exception!
-      SUBSEQUENCES.subsequences((-994), 365, 90);
-  }
+//  @Test(timeout = 4000)
+//  public void test3()  throws Throwable  {
+//      // Undeclared exception!
+//      SUBSEQUENCES.subsequences((-994), 365, 90);
+//  }
 }

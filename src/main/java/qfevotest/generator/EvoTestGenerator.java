@@ -94,7 +94,10 @@ public class EvoTestGenerator {
 		dirtocompile+=File.separator+"java_programs"+File.separator;
 		Process p = null;
 		System.out.println("Compiling Directory " + dirtocompile);
-		String[] command = new String[] { "javac", "-cp", System.getProperty("java.class.path"),
+		String dependencyPath= new File("./libs/evosuite-standalone-runtime-1.0.6-SNAPSHOT.jar").getAbsolutePath();
+
+		String path = System.getProperty("java.class.path")+":"+dependencyPath;
+		String[] command = new String[] { "javac", "-cp", path,
 				programName+".java" };
 		System.out.println(Arrays.toString(command));
 		ProcessBuilder pb = new ProcessBuilder(command);

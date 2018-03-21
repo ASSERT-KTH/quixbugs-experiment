@@ -40,10 +40,7 @@ public class QuixBugExtendedOracle {
 			"find_in_sorted", "flatten", "gcd", "get_factors", "hanoi", "is_valid_parenthesization", "kheapsort",
 			"knapsack", "kth", "lcs_length", "levenshtein", "lis", "longest_common_subsequence", "max_sublist_sum",
 			"mergesort", "next_palindrome", "next_permutation", "pascal", "possible_change", "powerset", "quicksort",
-			"rpn_eval", "shunting_yard", "sieve", "sqrt", "subsequences", "to_base", "wrap", };
-	
-	
-	//public static String[] subjectsQuixBugs = new String[] { "quicksort"};
+			"rpn_eval", "shunting_yard", "sieve", "sqrt", "subsequences", "to_base", "wrap", };	
 
 	public void generateTest4AllPrograms(String out, int seed) throws Exception {
 

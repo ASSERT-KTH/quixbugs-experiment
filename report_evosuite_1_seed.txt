@@ -1,4 +1,4 @@
-Thu Mar 15 11:07:47 CET 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/nopol-dynamoth/p1
+Wed Mar 21 11:01:05 CET 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/nopol-dynamoth/p1
 Patch:
 --- nopol-quixbugs/src/main/java/java_programs/Node.java
 +++ nopol-quixbugs/src/main/java/java_programs/Node.java
@@ -11,7 +11,7 @@ Patch:
      }
 
 Errors in running tests 
-Thu Mar 15 11:07:48 CET 2018 - Analyzing patched program: FIND_IN_SORTED under path ./patchedPrograms/find_in_sorted/nopol-smt/p1
+Wed Mar 21 11:01:08 CET 2018 - Analyzing patched program: FIND_IN_SORTED under path ./patchedPrograms/find_in_sorted/nopol-smt/p1
 Patch:
 --- nopol-quixbugs/src/main/java/java_programs/FIND_IN_SORTED.java
 +++ nopol-quixbugs/src/main/java/java_programs/FIND_IN_SORTED.java
@@ -23,7 +23,7 @@ Patch:
 
 failed tests number: 4
 failed tests info: [test3(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test6(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: NullPointerException-, test7(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test8(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-]
-Thu Mar 15 11:07:49 CET 2018 - Analyzing patched program: GET_FACTORS under path ./patchedPrograms/get_factors/cardumen/p1
+Wed Mar 21 11:01:11 CET 2018 - Analyzing patched program: GET_FACTORS under path ./patchedPrograms/get_factors/cardumen/p1
 Patch:
 
 --- java_programs\/GET_FACTORS.java
@@ -41,7 +41,7 @@ Patch:
 
 failed tests number: 1
 failed tests info: [test3(java_programs.GET_FACTORS_ESTest): / by zero-]
-Thu Mar 15 11:07:50 CET 2018 - Analyzing patched program: IS_VALID_PARENTHESIZATION under path ./patchedPrograms/is_valid_parenthesization/nopol-smt/p1
+Wed Mar 21 11:01:13 CET 2018 - Analyzing patched program: IS_VALID_PARENTHESIZATION under path ./patchedPrograms/is_valid_parenthesization/nopol-smt/p1
 Patch:
 --- nopol-quixbugs/src/main/java/java_programs/IS_VALID_PARENTHESIZATION.java
 +++ nopol-quixbugs/src/main/java/java_programs/IS_VALID_PARENTHESIZATION.java
@@ -60,7 +60,7 @@ Patch:
 
 failed tests number: 1
 failed tests info: [test2(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-]
-Thu Mar 15 11:07:52 CET 2018 - Analyzing patched program: KNAPSACK under path ./patchedPrograms/knapsack/mutation/p1
+Wed Mar 21 11:01:16 CET 2018 - Analyzing patched program: KNAPSACK under path ./patchedPrograms/knapsack/mutation/p1
 Patch:
 
 --- java_programs\/KNAPSACK.java
@@ -77,7 +77,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:07:54 CET 2018 - Analyzing patched program: LEVENSHTEIN under path ./patchedPrograms/levenshtein/cardumen/p1
+Wed Mar 21 11:01:21 CET 2018 - Analyzing patched program: LEVENSHTEIN under path ./patchedPrograms/levenshtein/cardumen/p1
 Patch:
 
 --- java_programs\/LEVENSHTEIN.java
@@ -94,7 +94,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:07:55 CET 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/statement/p1
+Wed Mar 21 11:01:24 CET 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/statement/p1
 Patch:
 
 --- java_programs\/LIS.java
@@ -110,7 +110,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:07:56 CET 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/tibra/p1
+Wed Mar 21 11:01:27 CET 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/tibra/p1
 Patch:
 
 --- java_programs\/LIS.java
@@ -126,7 +126,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:07:57 CET 2018 - Analyzing patched program: MERGESORT under path ./patchedPrograms/mergesort/cardumen/p1
+Wed Mar 21 11:01:29 CET 2018 - Analyzing patched program: MERGESORT under path ./patchedPrograms/mergesort/cardumen/p1
 Patch:
 
 --- java_programs\/MERGESORT.java
@@ -153,7 +153,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:07:58 CET 2018 - Analyzing patched program: NEXT_PERMUTATION under path ./patchedPrograms/next_permutation/mutation/p1
+Wed Mar 21 11:01:32 CET 2018 - Analyzing patched program: NEXT_PERMUTATION under path ./patchedPrograms/next_permutation/mutation/p1
 Patch:
 
 --- java_programs\/NEXT_PERMUTATION.java
@@ -170,7 +170,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:08:00 CET 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p0
+Wed Mar 21 11:01:35 CET 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p0
 Patch:
 
 --- java_programs\/POWERSET.java
@@ -186,7 +186,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:08:01 CET 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p1
+Wed Mar 21 11:01:38 CET 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p1
 Patch:
 
 --- java_programs\/POWERSET.java
@@ -203,7 +203,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:08:02 CET 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p2
+Wed Mar 21 11:01:40 CET 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p2
 Patch:
 
 --- java_programs\/POWERSET.java
@@ -217,7 +217,7 @@ Patch:
  			rest_subsets.addAll(output);
  			return output;
 passed all tests 
-Thu Mar 15 11:08:03 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/jkali/p1
+Wed Mar 21 11:01:43 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/jkali/p1
 Patch:
 
 --- java_programs\/QUICKSORT.java
@@ -234,7 +234,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:08:05 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/mutation/p1
+Wed Mar 21 11:01:46 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/mutation/p1
 Patch:
 
 --- java_programs\/QUICKSORT.java
@@ -251,7 +251,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:08:06 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/nopol-dynamoth/p1
+Wed Mar 21 11:01:49 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/nopol-dynamoth/p1
 Patch:
 --- nopol-quixbugs/src/main/java/java_programs/QUICKSORT.java
 +++ nopol-quixbugs/src/main/java/java_programs/QUICKSORT.java
@@ -262,7 +262,7 @@ Patch:
                  greater.add(x);
 
 passed all tests 
-Thu Mar 15 11:08:07 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/nopol-smt/p1
+Wed Mar 21 11:01:52 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/nopol-smt/p1
 Patch:
 --- nopol-quixbugs/src/main/java/java_programs/QUICKSORT.java
 +++ nopol-quixbugs/src/main/java/java_programs/QUICKSORT.java
@@ -273,7 +273,7 @@ Patch:
                  greater.add(x);
 
 passed all tests 
-Thu Mar 15 11:08:08 CET 2018 - Analyzing patched program: RPN_EVAL under path ./patchedPrograms/rpn_eval/cardumen/p1
+Wed Mar 21 11:01:55 CET 2018 - Analyzing patched program: RPN_EVAL under path ./patchedPrograms/rpn_eval/cardumen/p1
 Patch:
 
 --- java_programs\/RPN_EVAL.java

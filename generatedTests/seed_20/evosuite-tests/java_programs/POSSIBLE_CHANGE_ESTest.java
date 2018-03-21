@@ -11,14 +11,14 @@ import java_programs.POSSIBLE_CHANGE;
 
 public class POSSIBLE_CHANGE_ESTest {
 
-  @Test(timeout = 4000)
-  public void test0()  throws Throwable  {
-      int[] intArray0 = new int[2];
-      intArray0[0] = (-1278);
-      intArray0[1] = 0;
-      int int0 = 1072;
-      POSSIBLE_CHANGE.possible_change(intArray0, int0);
-  }
+//  @Test(timeout = 4000)
+//  public void test0()  throws Throwable  {
+//      int[] intArray0 = new int[2];
+//      intArray0[0] = (-1278);
+//      intArray0[1] = 0;
+//      int int0 = 1072;
+//      POSSIBLE_CHANGE.possible_change(intArray0, int0);
+//  }
 
   @Test(timeout = 4000)
   public void test1()  throws Throwable  {
@@ -33,63 +33,63 @@ public class POSSIBLE_CHANGE_ESTest {
       assertEquals(1, int1);
   }
 
-  @Test(timeout = 4000)
-  public void test2()  throws Throwable  {
-      POSSIBLE_CHANGE pOSSIBLE_CHANGE0 = new POSSIBLE_CHANGE();
-      int[] intArray0 = new int[1];
-      int int0 = 0;
-      intArray0[0] = 0;
-      int int1 = 1762;
-      int int2 = POSSIBLE_CHANGE.possible_change(intArray0, int1);
-      int int3 = (-2572);
-      int int4 = POSSIBLE_CHANGE.possible_change(intArray0, int3);
-      int int5 = POSSIBLE_CHANGE.possible_change(intArray0, int0);
-      int int6 = POSSIBLE_CHANGE.possible_change(intArray0, int4);
-      int[] intArray1 = new int[8];
-      intArray1[0] = int5;
-      intArray1[1] = int1;
-      intArray1[2] = int4;
-      intArray1[3] = int3;
-      intArray1[4] = int3;
-      intArray1[5] = int6;
-      intArray1[6] = int2;
-      intArray1[7] = int3;
-      POSSIBLE_CHANGE.possible_change(intArray1, int1);
-      POSSIBLE_CHANGE.possible_change(intArray0, intArray1[3]);
-      int int7 = POSSIBLE_CHANGE.possible_change(intArray0, intArray1[3]);
-      int[] intArray2 = new int[5];
-      intArray2[0] = int3;
-      intArray2[1] = int3;
-      intArray2[2] = int4;
-      intArray2[3] = int0;
-      intArray2[4] = int7;
-      int int8 = 0;
-      POSSIBLE_CHANGE.possible_change(intArray2, int8);
-      int int9 = 0;
-      POSSIBLE_CHANGE.possible_change(intArray0, int9);
-      int int10 = (-390);
-      POSSIBLE_CHANGE.possible_change(intArray0, int10);
-  }
+//  @Test(timeout = 4000)
+//  public void test2()  throws Throwable  {
+//      POSSIBLE_CHANGE pOSSIBLE_CHANGE0 = new POSSIBLE_CHANGE();
+//      int[] intArray0 = new int[1];
+//      int int0 = 0;
+//      intArray0[0] = 0;
+//      int int1 = 1762;
+//      int int2 = POSSIBLE_CHANGE.possible_change(intArray0, int1);
+//      int int3 = (-2572);
+//      int int4 = POSSIBLE_CHANGE.possible_change(intArray0, int3);
+//      int int5 = POSSIBLE_CHANGE.possible_change(intArray0, int0);
+//      int int6 = POSSIBLE_CHANGE.possible_change(intArray0, int4);
+//      int[] intArray1 = new int[8];
+//      intArray1[0] = int5;
+//      intArray1[1] = int1;
+//      intArray1[2] = int4;
+//      intArray1[3] = int3;
+//      intArray1[4] = int3;
+//      intArray1[5] = int6;
+//      intArray1[6] = int2;
+//      intArray1[7] = int3;
+//      POSSIBLE_CHANGE.possible_change(intArray1, int1);
+//      POSSIBLE_CHANGE.possible_change(intArray0, intArray1[3]);
+//      int int7 = POSSIBLE_CHANGE.possible_change(intArray0, intArray1[3]);
+//      int[] intArray2 = new int[5];
+//      intArray2[0] = int3;
+//      intArray2[1] = int3;
+//      intArray2[2] = int4;
+//      intArray2[3] = int0;
+//      intArray2[4] = int7;
+//      int int8 = 0;
+//      POSSIBLE_CHANGE.possible_change(intArray2, int8);
+//      int int9 = 0;
+//      POSSIBLE_CHANGE.possible_change(intArray0, int9);
+//      int int10 = (-390);
+//      POSSIBLE_CHANGE.possible_change(intArray0, int10);
+//  }
 
-  @Test(timeout = 4000)
-  public void test3()  throws Throwable  {
-      int[] intArray0 = new int[0];
-      POSSIBLE_CHANGE.possible_change(intArray0, 1);
-      POSSIBLE_CHANGE.possible_change(intArray0, (-1459));
-      POSSIBLE_CHANGE.possible_change(intArray0, 1);
-      POSSIBLE_CHANGE.possible_change(intArray0, 0);
-      POSSIBLE_CHANGE pOSSIBLE_CHANGE0 = new POSSIBLE_CHANGE();
-      POSSIBLE_CHANGE.possible_change(intArray0, 1);
-      int[] intArray1 = new int[7];
-      intArray1[0] = 1;
-      intArray1[1] = 1394;
-      intArray1[2] = 1;
-      intArray1[3] = 1;
-      intArray1[4] = (-1459);
-      intArray1[5] = 0;
-      intArray1[6] = 0;
-      POSSIBLE_CHANGE.possible_change(intArray1, intArray1[3]);
-  }
+//  @Test(timeout = 4000)
+//  public void test3()  throws Throwable  {
+//      int[] intArray0 = new int[0];
+//      POSSIBLE_CHANGE.possible_change(intArray0, 1);
+//      POSSIBLE_CHANGE.possible_change(intArray0, (-1459));
+//      POSSIBLE_CHANGE.possible_change(intArray0, 1);
+//      POSSIBLE_CHANGE.possible_change(intArray0, 0);
+//      POSSIBLE_CHANGE pOSSIBLE_CHANGE0 = new POSSIBLE_CHANGE();
+//      POSSIBLE_CHANGE.possible_change(intArray0, 1);
+//      int[] intArray1 = new int[7];
+//      intArray1[0] = 1;
+//      intArray1[1] = 1394;
+//      intArray1[2] = 1;
+//      intArray1[3] = 1;
+//      intArray1[4] = (-1459);
+//      intArray1[5] = 0;
+//      intArray1[6] = 0;
+//      POSSIBLE_CHANGE.possible_change(intArray1, intArray1[3]);
+//  }
 
   @Test(timeout = 4000)
   public void test4()  throws Throwable  {

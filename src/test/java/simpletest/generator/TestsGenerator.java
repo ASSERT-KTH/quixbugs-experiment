@@ -40,7 +40,7 @@ public class TestsGenerator {
 
 	public static int TIMEOUT = 3000;
 	public static int DELTA_FLOAT_COMPARISON = 0;
-	public static int TOTAL_TEST_NUMBER=5000;
+	public static int TOTAL_TEST_NUMBER=10000;
 
 	public static double[] DELTAS_TESTS_SQRT = new double[] { 0.01, 0.5, 0.3, 0.2, 0.01, 0.05, 0.03 };
 	// Test to add anotation ignore: key is program+test_id
@@ -200,7 +200,7 @@ public class TestsGenerator {
 		
 		for (String prog : names) {
 			String programToExecute = prog;
-			String out = ROOT_DIR+"../../generatedTests/precondition_simple_5000";
+			String out = ROOT_DIR+"../../generatedTests/precondition_simple_10000";
 			TestsGenerator ct = new TestsGenerator();
 			ct.createTestCases(ROOT_DIR, programToExecute, out, testPackageName, subjectPackageName);
 			EvoTestGenerator.compileProgram(out,prog.toUpperCase() + "_TEST");

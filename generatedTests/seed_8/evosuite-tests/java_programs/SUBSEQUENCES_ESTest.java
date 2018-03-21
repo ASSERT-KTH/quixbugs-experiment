@@ -23,11 +23,11 @@ public class SUBSEQUENCES_ESTest {
       assertEquals(1, arrayList0.size());
   }
 
-  @Test(timeout = 4000)
-  public void test2()  throws Throwable  {
-      // Undeclared exception!
-      SUBSEQUENCES.subsequences((-849), 2598, 40);
-  }
+//  @Test(timeout = 4000)
+//  public void test2()  throws Throwable  {
+//      // Undeclared exception!
+//      SUBSEQUENCES.subsequences((-849), 2598, 40);
+//  }
 
   @Test(timeout = 4000)
   public void test3()  throws Throwable  {

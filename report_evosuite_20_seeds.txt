@@ -1,5 +1,5 @@
 
-Thu Mar 15 11:09:47 CET 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/nopol-dynamoth/p1
+Wed Mar 21 11:04:58 CET 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/nopol-dynamoth/p1
 Patch:
 --- nopol-quixbugs/src/main/java/java_programs/Node.java
 +++ nopol-quixbugs/src/main/java/java_programs/Node.java
@@ -12,7 +12,7 @@ Patch:
      }
 
 Errors in running tests 
-Thu Mar 15 11:10:11 CET 2018 - Analyzing patched program: FIND_IN_SORTED under path ./patchedPrograms/find_in_sorted/nopol-smt/p1
+Wed Mar 21 11:05:52 CET 2018 - Analyzing patched program: FIND_IN_SORTED under path ./patchedPrograms/find_in_sorted/nopol-smt/p1
 Patch:
 --- nopol-quixbugs/src/main/java/java_programs/FIND_IN_SORTED.java
 +++ nopol-quixbugs/src/main/java/java_programs/FIND_IN_SORTED.java
@@ -24,7 +24,7 @@ Patch:
 
 failed tests number: 94
 failed tests info: [test3(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test6(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: NullPointerException-, test7(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test8(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-][test3(java_programs.FIND_IN_SORTED_ESTest): expected:<3> but was:<-1>-, test5(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: NullPointerException-, test7(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test9(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-][test1(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: NullPointerException-, test2(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test3(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test4(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: ArrayIndexOutOfBoundsException-, test8(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-][test1(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test7(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test8(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test9(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-][test4(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: ArrayIndexOutOfBoundsException-, test5(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: NullPointerException-, test7(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test8(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test9(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-][test02(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test04(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: ArrayIndexOutOfBoundsException-, test06(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test07(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-][test2(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test3(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: ArrayIndexOutOfBoundsException-, test4(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: NullPointerException-, test7(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test8(java_programs.FIND_IN_SORTED_ESTest): expected:<2> but was:<-1>-, test9(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-][test1(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test7(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test8(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test9(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-][test2(java_programs.FIND_IN_SORTED_ESTest): expected:<4> but was:<-1>-, test4(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: NullPointerException-, test7(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test8(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test9(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-][test2(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test4(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: NullPointerException-, test6(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test7(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test8(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-][test02(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test06(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: NullPointerException-, test07(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test08(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test09(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-][test03(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test04(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: ArrayIndexOutOfBoundsException-, test05(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: NullPointerException-, test06(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test07(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test08(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-][test2(java_programs.FIND_IN_SORTED_ESTest): expected:<2> but was:<-1>-, test5(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: ArrayIndexOutOfBoundsException-, test7(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test8(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test9(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-][test02(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test03(java_programs.FIND_IN_SORTED_ESTest): expected:<5> but was:<-1>-, test07(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test08(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-][test1(java_programs.FIND_IN_SORTED_ESTest): expected:<2> but was:<-1>-, test2(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: ArrayIndexOutOfBoundsException-, test3(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: NullPointerException-, test5(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test6(java_programs.FIND_IN_SORTED_ESTest): expected:<2> but was:<-1>-, test7(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-][test02(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test04(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: ArrayIndexOutOfBoundsException-, test05(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: NullPointerException-, test07(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test08(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test09(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-][test02(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test07(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test08(java_programs.FIND_IN_SORTED_ESTest): expected:<2> but was:<-1>-, test09(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-][test01(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test03(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test08(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test09(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-][test3(java_programs.FIND_IN_SORTED_ESTest): expected:<-1> but was:<3>-, test5(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: NullPointerException-, test7(java_programs.FIND_IN_SORTED_ESTest): expected:<1> but was:<-1>-, test8(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test9(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-][test04(java_programs.FIND_IN_SORTED_ESTest): Expecting exception: ArrayIndexOutOfBoundsException-, test09(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-, test10(java_programs.FIND_IN_SORTED_ESTest): expected:<0> but was:<-1>-]
-Thu Mar 15 11:12:16 CET 2018 - Analyzing patched program: GET_FACTORS under path ./patchedPrograms/get_factors/cardumen/p1
+Wed Mar 21 11:09:21 CET 2018 - Analyzing patched program: GET_FACTORS under path ./patchedPrograms/get_factors/cardumen/p1
 Patch:
 
 --- java_programs\/GET_FACTORS.java
@@ -42,7 +42,7 @@ Patch:
 
 failed tests number: 18
 failed tests info: [test3(java_programs.GET_FACTORS_ESTest): / by zero-][test3(java_programs.GET_FACTORS_ESTest): test timed out after 4000 milliseconds-][test1(java_programs.GET_FACTORS_ESTest): / by zero-][test3(java_programs.GET_FACTORS_ESTest): / by zero-][test3(java_programs.GET_FACTORS_ESTest): / by zero-][test3(java_programs.GET_FACTORS_ESTest): / by zero-][test3(java_programs.GET_FACTORS_ESTest): test timed out after 4000 milliseconds-][test1(java_programs.GET_FACTORS_ESTest): test timed out after 4000 milliseconds-][test3(java_programs.GET_FACTORS_ESTest): / by zero-][test3(java_programs.GET_FACTORS_ESTest): / by zero-][test1(java_programs.GET_FACTORS_ESTest): / by zero-][test3(java_programs.GET_FACTORS_ESTest): / by zero-][][test1(java_programs.GET_FACTORS_ESTest): test timed out after 4000 milliseconds-][test1(java_programs.GET_FACTORS_ESTest): / by zero-][test1(java_programs.GET_FACTORS_ESTest): test timed out after 4000 milliseconds-][test3(java_programs.GET_FACTORS_ESTest): / by zero-][test3(java_programs.GET_FACTORS_ESTest): / by zero-][][test1(java_programs.GET_FACTORS_ESTest): / by zero-]
-Thu Mar 15 11:12:39 CET 2018 - Analyzing patched program: IS_VALID_PARENTHESIZATION under path ./patchedPrograms/is_valid_parenthesization/nopol-smt/p1
+Wed Mar 21 11:10:14 CET 2018 - Analyzing patched program: IS_VALID_PARENTHESIZATION under path ./patchedPrograms/is_valid_parenthesization/nopol-smt/p1
 Patch:
 --- nopol-quixbugs/src/main/java/java_programs/IS_VALID_PARENTHESIZATION.java
 +++ nopol-quixbugs/src/main/java/java_programs/IS_VALID_PARENTHESIZATION.java
@@ -61,7 +61,7 @@ Patch:
 
 failed tests number: 22
 failed tests info: [test2(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test4(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test1(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test1(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test2(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test2(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test2(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test2(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test2(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test1(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test2(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-, test4(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test2(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test1(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-, test2(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test4(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test1(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test4(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test1(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test4(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test2(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-][test1(java_programs.IS_VALID_PARENTHESIZATION_ESTest): null-]
-Thu Mar 15 11:13:01 CET 2018 - Analyzing patched program: KNAPSACK under path ./patchedPrograms/knapsack/mutation/p1
+Wed Mar 21 11:11:09 CET 2018 - Analyzing patched program: KNAPSACK under path ./patchedPrograms/knapsack/mutation/p1
 Patch:
 
 --- java_programs\/KNAPSACK.java
@@ -77,9 +77,8 @@ Patch:
  						memo[i][j] = memo[(i - 1)][j];
 
 
-failed tests number: 2
-failed tests info: [][test4(java_programs.KNAPSACK_ESTest): 1-][][][][][][test5(java_programs.KNAPSACK_ESTest): 0-][][][][][][][][][][][][]
-Thu Mar 15 11:14:32 CET 2018 - Analyzing patched program: LEVENSHTEIN under path ./patchedPrograms/levenshtein/cardumen/p1
+passed all tests 
+Wed Mar 21 11:12:06 CET 2018 - Analyzing patched program: LEVENSHTEIN under path ./patchedPrograms/levenshtein/cardumen/p1
 Patch:
 
 --- java_programs\/LEVENSHTEIN.java
@@ -95,9 +94,8 @@ Patch:
  			}
 
 
-failed tests number: 13
-failed tests info: [][][test4(java_programs.LEVENSHTEIN_ESTest): test timed out after 4000 milliseconds-][][test1(java_programs.LEVENSHTEIN_ESTest): test timed out after 4000 milliseconds-][test2(java_programs.LEVENSHTEIN_ESTest): test timed out after 4000 milliseconds-][test2(java_programs.LEVENSHTEIN_ESTest): test timed out after 4000 milliseconds-][][test3(java_programs.LEVENSHTEIN_ESTest): test timed out after 4000 milliseconds-][test2(java_programs.LEVENSHTEIN_ESTest): test timed out after 4000 milliseconds-][test2(java_programs.LEVENSHTEIN_ESTest): test timed out after 4000 milliseconds-][][][test5(java_programs.LEVENSHTEIN_ESTest): test timed out after 4000 milliseconds-][test2(java_programs.LEVENSHTEIN_ESTest): test timed out after 4000 milliseconds-][test2(java_programs.LEVENSHTEIN_ESTest): test timed out after 4000 milliseconds-][test3(java_programs.LEVENSHTEIN_ESTest): test timed out after 4000 milliseconds-][test4(java_programs.LEVENSHTEIN_ESTest): test timed out after 4000 milliseconds-][test3(java_programs.LEVENSHTEIN_ESTest): test timed out after 4000 milliseconds-][]
-Thu Mar 15 11:14:59 CET 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/statement/p1
+passed all tests 
+Wed Mar 21 11:13:08 CET 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/statement/p1
 Patch:
 
 --- java_programs\/LIS.java
@@ -113,7 +111,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:15:24 CET 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/tibra/p1
+Wed Mar 21 11:14:09 CET 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/tibra/p1
 Patch:
 
 --- java_programs\/LIS.java
@@ -129,7 +127,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:15:51 CET 2018 - Analyzing patched program: MERGESORT under path ./patchedPrograms/mergesort/cardumen/p1
+Wed Mar 21 11:15:09 CET 2018 - Analyzing patched program: MERGESORT under path ./patchedPrograms/mergesort/cardumen/p1
 Patch:
 
 --- java_programs\/MERGESORT.java
@@ -156,7 +154,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:16:17 CET 2018 - Analyzing patched program: NEXT_PERMUTATION under path ./patchedPrograms/next_permutation/mutation/p1
+Wed Mar 21 11:16:06 CET 2018 - Analyzing patched program: NEXT_PERMUTATION under path ./patchedPrograms/next_permutation/mutation/p1
 Patch:
 
 --- java_programs\/NEXT_PERMUTATION.java
@@ -173,7 +171,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:16:42 CET 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p0
+Wed Mar 21 11:17:01 CET 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p0
 Patch:
 
 --- java_programs\/POWERSET.java
@@ -189,7 +187,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:17:07 CET 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p1
+Wed Mar 21 11:17:56 CET 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p1
 Patch:
 
 --- java_programs\/POWERSET.java
@@ -206,7 +204,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:17:33 CET 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p2
+Wed Mar 21 11:18:51 CET 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p2
 Patch:
 
 --- java_programs\/POWERSET.java
@@ -220,7 +218,7 @@ Patch:
  			rest_subsets.addAll(output);
  			return output;
 passed all tests 
-Thu Mar 15 11:17:59 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/jkali/p1
+Wed Mar 21 11:19:47 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/jkali/p1
 Patch:
 
 --- java_programs\/QUICKSORT.java
@@ -237,7 +235,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:18:25 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/mutation/p1
+Wed Mar 21 11:20:43 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/mutation/p1
 Patch:
 
 --- java_programs\/QUICKSORT.java
@@ -254,7 +252,7 @@ Patch:
 
 
 passed all tests 
-Thu Mar 15 11:18:51 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/nopol-dynamoth/p1
+Wed Mar 21 11:21:39 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/nopol-dynamoth/p1
 Patch:
 --- nopol-quixbugs/src/main/java/java_programs/QUICKSORT.java
 +++ nopol-quixbugs/src/main/java/java_programs/QUICKSORT.java
@@ -265,7 +263,7 @@ Patch:
                  greater.add(x);
 
 passed all tests 
-Thu Mar 15 11:19:18 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/nopol-smt/p1
+Wed Mar 21 11:22:39 CET 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/nopol-smt/p1
 Patch:
 --- nopol-quixbugs/src/main/java/java_programs/QUICKSORT.java
 +++ nopol-quixbugs/src/main/java/java_programs/QUICKSORT.java
@@ -276,7 +274,7 @@ Patch:
                  greater.add(x);
 
 passed all tests 
-Thu Mar 15 11:19:48 CET 2018 - Analyzing patched program: RPN_EVAL under path ./patchedPrograms/rpn_eval/cardumen/p1
+Wed Mar 21 11:23:43 CET 2018 - Analyzing patched program: RPN_EVAL under path ./patchedPrograms/rpn_eval/cardumen/p1
 Patch:
 
 --- java_programs\/RPN_EVAL.java

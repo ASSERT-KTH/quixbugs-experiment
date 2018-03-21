@@ -67,36 +67,36 @@ public class LONGEST_COMMON_SUBSEQUENCE_ESTest {
       assertEquals("", string1);
   }
 
-  @Test(timeout = 4000)
-  public void test4()  throws Throwable  {
-      String string0 = LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("", "");
-      assertNotNull(string0);
-      assertEquals("", string0);
-      
-      String string1 = LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("", (String) null);
-      assertNotNull(string1);
-      assertEquals("", string1);
-      
-      LONGEST_COMMON_SUBSEQUENCE lONGEST_COMMON_SUBSEQUENCE0 = new LONGEST_COMMON_SUBSEQUENCE();
-      assertNotNull(lONGEST_COMMON_SUBSEQUENCE0);
-      
-      String string2 = "";
-      String string3 = LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("", (String) null);
-      assertNotNull(string3);
-      assertEquals("", string3);
-      
-      String string4 = LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("", "");
-      assertNotNull(string4);
-      assertEquals("", string4);
-      
-      String string5 = LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("", "");
-      assertNotNull(string5);
-      assertEquals("", string5);
-      
-      String string6 = "KF%]g7)";
-      // Undeclared exception!
-      LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("KF%]g7)", "java_programs.LONGEST_COMMON_SUBSEQUENCE");
-  }
+//  @Test(timeout = 4000)
+//  public void test4()  throws Throwable  {
+//      String string0 = LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("", "");
+//      assertNotNull(string0);
+//      assertEquals("", string0);
+//      
+//      String string1 = LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("", (String) null);
+//      assertNotNull(string1);
+//      assertEquals("", string1);
+//      
+//      LONGEST_COMMON_SUBSEQUENCE lONGEST_COMMON_SUBSEQUENCE0 = new LONGEST_COMMON_SUBSEQUENCE();
+//      assertNotNull(lONGEST_COMMON_SUBSEQUENCE0);
+//      
+//      String string2 = "";
+//      String string3 = LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("", (String) null);
+//      assertNotNull(string3);
+//      assertEquals("", string3);
+//      
+//      String string4 = LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("", "");
+//      assertNotNull(string4);
+//      assertEquals("", string4);
+//      
+//      String string5 = LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("", "");
+//      assertNotNull(string5);
+//      assertEquals("", string5);
+//      
+//      String string6 = "KF%]g7)";
+//      // Undeclared exception!
+//      LONGEST_COMMON_SUBSEQUENCE.longest_common_subsequence("KF%]g7)", "java_programs.LONGEST_COMMON_SUBSEQUENCE");
+//  }
 
   @Test(timeout = 4000)
   public void test5()  throws Throwable  {

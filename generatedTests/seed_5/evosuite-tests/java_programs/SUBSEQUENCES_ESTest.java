@@ -12,28 +12,28 @@ import java_programs.SUBSEQUENCES;
 
 public class SUBSEQUENCES_ESTest {
 
-  @Test(timeout = 4000)
-  public void test0()  throws Throwable  {
-      SUBSEQUENCES sUBSEQUENCES0 = new SUBSEQUENCES();
-      int int0 = (-1);
-      SUBSEQUENCES.subsequences(int0, int0, int0);
-      int int1 = 311;
-      int int2 = 764;
-      SUBSEQUENCES.subsequences(int1, int2, int2);
-      int int3 = (-2186);
-      int int4 = 0;
-      SUBSEQUENCES.subsequences(int3, int3, int4);
-      int int5 = (-1507);
-      int int6 = 4084;
-      SUBSEQUENCES.subsequences(int5, int5, int6);
-      int int7 = (-1);
-      SUBSEQUENCES.subsequences(int7, int7, int7);
-      int int8 = (-1);
-      int int9 = (-1);
-      SUBSEQUENCES.subsequences(int8, int9, int8);
-      int int10 = 0;
-      SUBSEQUENCES.subsequences(int10, int9, int10);
-  }
+//  @Test(timeout = 4000)
+//  public void test0()  throws Throwable  {
+//      SUBSEQUENCES sUBSEQUENCES0 = new SUBSEQUENCES();
+//      int int0 = (-1);
+//      SUBSEQUENCES.subsequences(int0, int0, int0);
+//      int int1 = 311;
+//      int int2 = 764;
+//      SUBSEQUENCES.subsequences(int1, int2, int2);
+//      int int3 = (-2186);
+//      int int4 = 0;
+//      SUBSEQUENCES.subsequences(int3, int3, int4);
+//      int int5 = (-1507);
+//      int int6 = 4084;
+//      SUBSEQUENCES.subsequences(int5, int5, int6);
+//      int int7 = (-1);
+//      SUBSEQUENCES.subsequences(int7, int7, int7);
+//      int int8 = (-1);
+//      int int9 = (-1);
+//      SUBSEQUENCES.subsequences(int8, int9, int8);
+//      int int10 = 0;
+//      SUBSEQUENCES.subsequences(int10, int9, int10);
+//  }
 
   @Test(timeout = 4000)
   public void test1()  throws Throwable  {
@@ -53,94 +53,94 @@ public class SUBSEQUENCES_ESTest {
       assertFalse(arrayList2.equals((Object)arrayList1));
   }
 
-  @Test(timeout = 4000)
-  public void test3()  throws Throwable  {
-      int int0 = (-791);
-      SUBSEQUENCES.subsequences(int0, int0, int0);
-      SUBSEQUENCES sUBSEQUENCES0 = new SUBSEQUENCES();
-      int int1 = (-1838);
-      int int2 = (-1);
-      SUBSEQUENCES.subsequences(int1, int0, int2);
-      int int3 = 0;
-      SUBSEQUENCES.subsequences(int0, int3, int3);
-      int int4 = (-1);
-      SUBSEQUENCES.subsequences(int3, int0, int4);
-      int int5 = (-3046);
-      int int6 = 1;
-      SUBSEQUENCES.subsequences(int5, int6, int1);
-      int int7 = 50;
-      int int8 = (-1);
-      SUBSEQUENCES.subsequences(int7, int8, int0);
-      int int9 = (-975);
-      SUBSEQUENCES.subsequences(int8, int8, int9);
-      int int10 = 50;
-      int int11 = 0;
-      SUBSEQUENCES.subsequences(int10, int11, int3);
-  }
+//  @Test(timeout = 4000)
+//  public void test3()  throws Throwable  {
+//      int int0 = (-791);
+//      SUBSEQUENCES.subsequences(int0, int0, int0);
+//      SUBSEQUENCES sUBSEQUENCES0 = new SUBSEQUENCES();
+//      int int1 = (-1838);
+//      int int2 = (-1);
+//      SUBSEQUENCES.subsequences(int1, int0, int2);
+//      int int3 = 0;
+//      SUBSEQUENCES.subsequences(int0, int3, int3);
+//      int int4 = (-1);
+//      SUBSEQUENCES.subsequences(int3, int0, int4);
+//      int int5 = (-3046);
+//      int int6 = 1;
+//      SUBSEQUENCES.subsequences(int5, int6, int1);
+//      int int7 = 50;
+//      int int8 = (-1);
+//      SUBSEQUENCES.subsequences(int7, int8, int0);
+//      int int9 = (-975);
+//      SUBSEQUENCES.subsequences(int8, int8, int9);
+//      int int10 = 50;
+//      int int11 = 0;
+//      SUBSEQUENCES.subsequences(int10, int11, int3);
+//  }
 
-  @Test(timeout = 4000)
-  public void test4()  throws Throwable  {
-      SUBSEQUENCES sUBSEQUENCES0 = new SUBSEQUENCES();
-      int int0 = 0;
-      int int1 = 3869;
-      SUBSEQUENCES.subsequences(int0, int1, int1);
-      int int2 = (-3101);
-      SUBSEQUENCES.subsequences(int2, int2, int2);
-      int int3 = 545;
-      SUBSEQUENCES.subsequences(int3, int3, int3);
-      int int4 = 50;
-      int int5 = 1;
-      SUBSEQUENCES.subsequences(int4, int5, int5);
-      int int6 = 0;
-      SUBSEQUENCES.subsequences(int6, int6, int6);
-      int int7 = (-1758);
-      SUBSEQUENCES.subsequences(int7, int7, int7);
-      int int8 = (-201);
-      int int9 = 0;
-      SUBSEQUENCES.subsequences(int8, int8, int9);
-      int int10 = (-424);
-      int int11 = 1341;
-      SUBSEQUENCES.subsequences(int10, int8, int11);
-      int int12 = 0;
-      int int13 = 803;
-      SUBSEQUENCES.subsequences(int10, int12, int13);
-      SUBSEQUENCES.subsequences(int7, int13, int9);
-      int int14 = (-2591);
-      SUBSEQUENCES.subsequences(int14, int6, int10);
-      int int15 = (-1);
-      SUBSEQUENCES.subsequences(int13, int15, int9);
-      int int16 = 2613;
-      int int17 = 1;
-      SUBSEQUENCES.subsequences(int16, int17, int8);
-      int int18 = 3017;
-      SUBSEQUENCES.subsequences(int15, int18, int18);
-  }
+//  @Test(timeout = 4000)
+//  public void test4()  throws Throwable  {
+//      SUBSEQUENCES sUBSEQUENCES0 = new SUBSEQUENCES();
+//      int int0 = 0;
+//      int int1 = 3869;
+//      SUBSEQUENCES.subsequences(int0, int1, int1);
+//      int int2 = (-3101);
+//      SUBSEQUENCES.subsequences(int2, int2, int2);
+//      int int3 = 545;
+//      SUBSEQUENCES.subsequences(int3, int3, int3);
+//      int int4 = 50;
+//      int int5 = 1;
+//      SUBSEQUENCES.subsequences(int4, int5, int5);
+//      int int6 = 0;
+//      SUBSEQUENCES.subsequences(int6, int6, int6);
+//      int int7 = (-1758);
+//      SUBSEQUENCES.subsequences(int7, int7, int7);
+//      int int8 = (-201);
+//      int int9 = 0;
+//      SUBSEQUENCES.subsequences(int8, int8, int9);
+//      int int10 = (-424);
+//      int int11 = 1341;
+//      SUBSEQUENCES.subsequences(int10, int8, int11);
+//      int int12 = 0;
+//      int int13 = 803;
+//      SUBSEQUENCES.subsequences(int10, int12, int13);
+//      SUBSEQUENCES.subsequences(int7, int13, int9);
+//      int int14 = (-2591);
+//      SUBSEQUENCES.subsequences(int14, int6, int10);
+//      int int15 = (-1);
+//      SUBSEQUENCES.subsequences(int13, int15, int9);
+//      int int16 = 2613;
+//      int int17 = 1;
+//      SUBSEQUENCES.subsequences(int16, int17, int8);
+//      int int18 = 3017;
+//      SUBSEQUENCES.subsequences(int15, int18, int18);
+//  }
 
-  @Test(timeout = 4000)
-  public void test5()  throws Throwable  {
-      int int0 = (-1);
-      SUBSEQUENCES.subsequences(int0, int0, int0);
-      int int1 = 0;
-      SUBSEQUENCES.subsequences(int0, int0, int1);
-      SUBSEQUENCES sUBSEQUENCES0 = new SUBSEQUENCES();
-      int int2 = (-630);
-      int int3 = (-326);
-      SUBSEQUENCES.subsequences(int2, int3, int2);
-      int int4 = 0;
-      int int5 = (-582);
-      SUBSEQUENCES.subsequences(int4, int5, int1);
-      int int6 = 1;
-      int int7 = (-3530);
-      SUBSEQUENCES.subsequences(int6, int7, int1);
-      int int8 = 1;
-      int int9 = 411;
-      SUBSEQUENCES.subsequences(int8, int1, int9);
-      int int10 = 0;
-      SUBSEQUENCES.subsequences(int7, int10, int1);
-      int int11 = (-2105);
-      int int12 = 0;
-      SUBSEQUENCES.subsequences(int11, int9, int12);
-  }
+//  @Test(timeout = 4000)
+//  public void test5()  throws Throwable  {
+//      int int0 = (-1);
+//      SUBSEQUENCES.subsequences(int0, int0, int0);
+//      int int1 = 0;
+//      SUBSEQUENCES.subsequences(int0, int0, int1);
+//      SUBSEQUENCES sUBSEQUENCES0 = new SUBSEQUENCES();
+//      int int2 = (-630);
+//      int int3 = (-326);
+//      SUBSEQUENCES.subsequences(int2, int3, int2);
+//      int int4 = 0;
+//      int int5 = (-582);
+//      SUBSEQUENCES.subsequences(int4, int5, int1);
+//      int int6 = 1;
+//      int int7 = (-3530);
+//      SUBSEQUENCES.subsequences(int6, int7, int1);
+//      int int8 = 1;
+//      int int9 = 411;
+//      SUBSEQUENCES.subsequences(int8, int1, int9);
+//      int int10 = 0;
+//      SUBSEQUENCES.subsequences(int7, int10, int1);
+//      int int11 = (-2105);
+//      int int12 = 0;
+//      SUBSEQUENCES.subsequences(int11, int9, int12);
+//  }
 
   @Test(timeout = 4000)
   public void test6()  throws Throwable  {

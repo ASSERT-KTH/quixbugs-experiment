@@ -7,6 +7,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.ArrayList;
@@ -63,19 +64,7 @@ public class QuixBugTestGeneratorTest {
 		
 	}
 
-	@Test
-	public void testCheckCorretnessOriginalAll() throws Exception {
-		List<String> failing = new ArrayList<>();
-		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
-		for (String subjects : qg.subjectsQuixBugs) {
-			boolean allPassing = qg.checkOriginalCorrect("./generatedTests", subjects.toUpperCase());
-			//assertTrue(allPassing);
-			if(!allPassing)
-				failing.add(subjects);
-		}
-		System.out.println("failings: "+ failing);
-		assertTrue("Programs With failures in EvoS for the original program: "+failing,  failing.isEmpty());
-	}
+	
 	
 	@Test
 	public void testRunPatchPassing() throws Exception {
@@ -169,9 +158,9 @@ public class QuixBugTestGeneratorTest {
 	}
 	
 	@Test
-	public void testRunPreconditionSimple500TestsResults() throws Exception {
+	public void testRunPreconditionSimple10000TestsResults() throws Exception {
 		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
-		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File("./generatedTests/precondition_simple_500"),0,"report_precondition_simple_tests_500.txt");
+		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File("./generatedTests/precondition_simple_10000"),0,"report_precondition_simple_tests_10000.txt");
 		qg.outputResult(resultByProgram.values());
 		System.out.println("\nEND: printing finals results: ");
 		for (String program : resultByProgram.keySet()) {
@@ -195,6 +184,28 @@ public class QuixBugTestGeneratorTest {
 			List<?> failingSeed = sr.getFailing();
 			System.out.println(program + ": pass all test? " + sr.isCorrect() + " failings: (" + failingSeed.size()
 					+ ") " + failingSeed);
+		}
+	}
+	
+	@Test
+	public void testCheckCorretnessOriginalAll() throws Exception {
+		List<String> failing = new ArrayList<>();
+		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
+		for (String subjects : qg.subjectsQuixBugs) {
+			boolean allPassing = qg.checkOriginalCorrect("./generatedTests", subjects.toUpperCase());
+			//assertTrue(allPassing);
+			if(!allPassing)
+				failing.add(subjects);
+		}
+		System.out.println("failings: "+ failing);
+		
+		//assertTrue("Programs With failures in EvoS for the original program: "+failing,  failing.isEmpty());
+	}
+	
+	@Test
+	public void compileUpdatedProgram() throws IOException {
+		for(int i = 1; i<=20;i++) {
+		EvoTestGenerator.compileProgram("./generatedTests/seed_"+i+"/evosuite-tests","SUBSEQUENCES_ESTest");
 		}
 	}
 
