@@ -44,11 +44,12 @@ The class QuixBugExtendedOracle runs EvosuiteTest generation for generating test
 |knapsack|seed2(Test4) seed8(Test5)|ArrayIndexOutOfBoundsException(Undeclared exception)|remove|
 |levenshtein|seed3(Test4) seed5(Test1) seed6(Test2) seed7(Test2) seed9(Test3) seed10(Test2) seed11(Test0/2) seed14(Test0/1/5/6) seed15(Test2) seed17(Test3) seed18(Test4) seed19(Test3) seed20(Test1)|recursion error|remove|
 |longest_common_subsequence|seed1(Test6) seed2(Test0) seed11（Test7)seed12(Test1) seed13(Test3)seed14(Test4)seed16(Test0/6）|timeout|remove timeout|
-|possible_change|seed1(Test2/4/5/6) seed5(Test3/4/6/7) seed7(Test0/2/6)|illegal paramters(recursion)|remove|
-|sqrt|seed1(Test1) seed2(Test2) seed3(Test2）seed4(Test2) seed5(Test1)|illegal paramters(recursion)|remove|
-|subsequences|seed1(Test1/2/3/4/5/10)|illegal paramters(recursion)|remove|
+|possible_change|seed1(Test2/4/5/6) seed5(Test3/4/6/7) seed7(Test0/2/6) seed13(Test0/1/4/5) seed16(Test3/4/5) seed19(Test1/4/5) seed20(0/2/3)|illegal paramters(recursion)|remove|
+|sqrt|seed1(Test1) seed2(Test2) seed3(Test2）seed4(Test2) seed5(Test1) seed6(Test2)seed7(Test2) seed8/9/10(Test1) seed13/14(Test2) seed15(Test1) seed17(Test2) seed18(Test1) seed19(Test2) seed20(Test1)|illegal paramters(recursion)|remove|
+|subsequences|seed1(Test1/2/3/4/5/10) seed2(0/2/3/5/6/7) seed6(Test0/1/2/3/5/6) seed9(Test0/1/2) seed11(Test1/2/3/5/6) seed12(Test1/3/4) seed13(Test1/2/4/5/6)|illegal paramters(recursion)|remove|
 |to_base|seed1(Test4) seed2(Test4) seed3(Test3) seed4(Test3) seed5(Test1) seed6(Test4) seed7(Test1) seed8(Test4) seed9(Test4) seed10(Test1) seed11(Test4) seed12(Test4) seed13(Test1) seed14(Test4) seed15(Test4) seed16(Test4) seed17(Test1) seed18(Test4) seed19(Test4) seed20(Test3)|illegal paramters(recursion)|remove|
 |wrap|seed1(Test5) seed2(Test2) seed3(Test2) seed4(Test4) seed5(Test2) seed6(Test3) seed7(Test3) seed8(Test2) seed9(Test2) seed10(Test4) seed11(Test4) seed12(Test4) seed13(Test4) seed14(Test4) seed15(Test4) seed16(Test4) seed17(Test4)seed18(Test3) seed19(Test3)seed20(Test6)|illegal paramters(recursion)|remove|
+|pascal|seed8(Test2) seed14(Test1)|illegal paramters(recursion)|remove|
 
 
 ### patch evaluation
