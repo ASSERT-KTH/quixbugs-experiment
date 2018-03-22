@@ -11,7 +11,7 @@
 [INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ qfevotest ---
 [INFO] Changes detected - recompiling the module!
 [WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
-[INFO] Compiling 45 source files to /Users/sophie/Documents/clean/quixbugs-experiment/target/classes
+[INFO] Compiling 48 source files to /Users/sophie/Documents/clean/quixbugs-experiment/target/classes
 [WARNING] /Users/sophie/Documents/clean/quixbugs-experiment/src/main/java/java_programs/RPN_EVAL.java: 某些输入文件使用了未经检查或不安全的操作。
 [WARNING] /Users/sophie/Documents/clean/quixbugs-experiment/src/main/java/java_programs/RPN_EVAL.java: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
 [INFO] 
@@ -28,41 +28,20 @@
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
-objc[26283]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/bin/java and /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/libinstrument.dylib. One of the two will be used. Which one is undefined.
-[Yajta] Begin with 'print=tie|excludes=java,javax,sun,sunw'
-Exception in thread "main" java.lang.reflect.InvocationTargetException
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at sun.instrument.InstrumentationImpl.loadClassAndStartAgent(InstrumentationImpl.java:386)
-	at sun.instrument.InstrumentationImpl.loadClassAndCallPremain(InstrumentationImpl.java:401)
-Caused by: java.lang.BootstrapMethodError: java.lang.NoClassDefFoundError: Could not initialize class java.lang.invoke.CallSite
-	at fr.inria.yajta.Agent.premain(Agent.java:108)
-	at fr.inria.yajta.Yajta.premain(Yajta.java:30)
-	... 6 more
-Caused by: java.lang.NoClassDefFoundError: Could not initialize class java.lang.invoke.CallSite
-	at java.lang.invoke.MethodHandleNatives.linkCallSiteImpl(MethodHandleNatives.java:307)
-	at java.lang.invoke.MethodHandleNatives.linkCallSite(MethodHandleNatives.java:297)
-	... 8 more
-FATAL ERROR in native method: processing of -javaagent failed
-/bin/sh: line 1: 26283 Abort trap: 6           /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/bin/java '-javaagent:libs/yajta-2.0.0-jar-with-dependencies.jar=print=tie|excludes=java,javax,sun,sunw' -jar /Users/sophie/Documents/clean/quixbugs-experiment/target/surefire/surefirebooter1807391096183364179.jar /Users/sophie/Documents/clean/quixbugs-experiment/target/surefire/surefire5492681982672244850tmp /Users/sophie/Documents/clean/quixbugs-experiment/target/surefire/surefire_01266556427043044189tmp
+objc[27243]: Class JavaLaunchHelper is implemented in both /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/bin/java and /Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/jre/lib/libinstrument.dylib. One of the two will be used. Which one is undefined.
+[Yajta] Begin with 'strict-includes|print=matix|includes=patched_java_programs|output=oupout.json'
+[Premain] Done
+Running patched_java_programs.GET_FACTORS_TEST
+Tests run: 100, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.233 sec
 
 Results :
 
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+Tests run: 100, Failures: 0, Errors: 0, Skipped: 0
 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 12.681 s
-[INFO] Finished at: 2018-03-22T08:36:50+01:00
+[INFO] Total time: 10.067 s
+[INFO] Finished at: 2018-03-22T20:15:58+01:00
 [INFO] Final Memory: 25M/198M
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project qfevotest: Execution default-test of goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test failed: The forked VM terminated without saying properly goodbye. VM crash or System.exit called ? -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginExecutionException
