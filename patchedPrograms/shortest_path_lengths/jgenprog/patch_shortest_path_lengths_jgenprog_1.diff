@@ -1,0 +1,12 @@
+
+--- java_programs\/SHORTEST_PATH_LENGTHS.java
++++ java_programs\/SHORTEST_PATH_LENGTHS.java
+@@ -16,6 +16,7 @@
+ 						length_by_path.put(edge, length_by_edge.get(edge));
+ 					}else {
+ 						length_by_path.put(edge, java_programs.SHORTEST_PATH_LENGTHS.INF);
++						return length_by_path;
+ 					}
+ 
+ 			}
+
