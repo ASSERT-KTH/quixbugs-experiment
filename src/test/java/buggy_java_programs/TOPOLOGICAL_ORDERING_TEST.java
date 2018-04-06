@@ -12,7 +12,7 @@ public class TOPOLOGICAL_ORDERING_TEST {
 	/**
 	 * Case 1: Wikipedia graph Output: 5 7 3 11 8 10 2 9
 	 */
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test1() {
 		Node five = new Node("5");
 		Node seven = new Node("7");
@@ -51,7 +51,7 @@ public class TOPOLOGICAL_ORDERING_TEST {
  * 	 Case 2: GeekforGeeks example
  * 
  */
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test2() {
 		Node five = new Node("5");
 		Node zero = new Node("0");
@@ -83,7 +83,7 @@ public class TOPOLOGICAL_ORDERING_TEST {
 	 *  Case 3: Cooking with InteractivePython
 	 */
 
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test3() {               
         Node milk = new Node("3/4 cup milk");
         Node egg = new Node("1 egg");

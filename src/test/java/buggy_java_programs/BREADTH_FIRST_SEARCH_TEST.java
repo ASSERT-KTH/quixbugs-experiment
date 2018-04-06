@@ -16,7 +16,7 @@ public class BREADTH_FIRST_SEARCH_TEST {
 	 * Case 1: Strongly connected graph Output: Path found!
 	 */
 
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test1() {
 		Node station1 = new Node("Westminster");
 		Node station2 = new Node("Waterloo", new ArrayList<Node>(Arrays.asList(station1)));
@@ -39,7 +39,7 @@ public class BREADTH_FIRST_SEARCH_TEST {
 	/**
 	 * Case 2: Branching graph Output: Path found!
 	 */
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test2() {
 		Node nodef = new Node("F");
 		Node nodee = new Node("E");
@@ -61,7 +61,7 @@ public class BREADTH_FIRST_SEARCH_TEST {
 	/**
 	 * Case 3: Two unconnected nodes in graph Output: Path not found!
 	 */
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test3() {
 		Node nodef = new Node("F");
 		Node nodee = new Node("E");
@@ -83,7 +83,7 @@ public class BREADTH_FIRST_SEARCH_TEST {
 	/**
 	 * Case 4: One node graph Output: Path found!
 	 */
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test4() {
 		ArrayList<Node> empty = new ArrayList<Node>();
 		Node nodef = new Node("F");
@@ -102,7 +102,7 @@ public class BREADTH_FIRST_SEARCH_TEST {
 	 * Case 5: Graph with cycles Output: Path found!
 	 */
 
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test5() {
 		Node node1 = new Node("1");
 		Node node2 = new Node("2");

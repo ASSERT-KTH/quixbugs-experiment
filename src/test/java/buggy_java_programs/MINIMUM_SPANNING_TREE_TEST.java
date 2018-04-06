@@ -28,7 +28,7 @@ public class MINIMUM_SPANNING_TREE_TEST {
 	 * Case 1: Simple tree input.
 	 * expected output: (1, 2) (3, 4) (1, 4)
 	 */
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test1() {
 		WeightedEdge edge11 = new WeightedEdge(node1, node2, 10);
 		WeightedEdge edge12 = new WeightedEdge(node2, node3, 15);
@@ -57,7 +57,7 @@ public class MINIMUM_SPANNING_TREE_TEST {
 	 * Case 2: Strongly connected tree input.
 	 * expected output: (1,3) (4,6) (2,3) (3,6)（2,5) 
 	 */
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test2() {
 		WeightedEdge edge21 = new WeightedEdge(node1, node2, 6);
 		WeightedEdge edge22 = new WeightedEdge(node1, node3, 1);
@@ -93,7 +93,7 @@ public class MINIMUM_SPANNING_TREE_TEST {
 	 * Case 3: Minimum spanning tree input.
 	 * expected output: (1, 2) (1, 3) (2, 4) 
 	 */
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test3() {
 		WeightedEdge edge31 = new WeightedEdge(node1, node2, 6);
 		WeightedEdge edge32 = new WeightedEdge(node1, node3, 1);

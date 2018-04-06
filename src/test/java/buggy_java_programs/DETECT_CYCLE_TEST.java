@@ -11,7 +11,7 @@ public class DETECT_CYCLE_TEST {
 	 * Case 1: 5-node list input with no cycle Expected Output: Cycle not detected!
 	 */
 
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test1() {
 		Node node1 = new Node("1");
 		Node node2 = new Node("2", node1);
@@ -32,7 +32,7 @@ public class DETECT_CYCLE_TEST {
 	 * Case 2: 5-node list input with cycle Expected Output: Cycle detected!
 	 */
 
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test2() {
 		Node node1 = new Node("1");
 		Node node2 = new Node("2", node1);
@@ -54,7 +54,7 @@ public class DETECT_CYCLE_TEST {
 	 * Case 3: 2-node list with cycle Expected Output: Cycle detected!
 	 */
 
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test3() {
 		Node node1 = new Node("1");
 		Node node2 = new Node("2", node1);
@@ -76,7 +76,7 @@ public class DETECT_CYCLE_TEST {
 	 * Case 4: 2-node list with no cycle Expected Output: Cycle not detected!
 	 */
 
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test4() {
 		Node node1 = new Node("1");
 		Node node2 = new Node("2", node1);
@@ -99,7 +99,7 @@ public class DETECT_CYCLE_TEST {
 	 * Case 5: 1-node list Expected Output: Cycle not detected!
 	 */
 
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test5() {
 		Node node = new Node("0");
 		Boolean result = DETECT_CYCLE.detect_cycle(node);

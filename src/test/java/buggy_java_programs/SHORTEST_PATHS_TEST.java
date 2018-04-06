@@ -17,7 +17,7 @@ public class SHORTEST_PATHS_TEST {
 	 * Case 1: All vertex is reachable from starting vertex Output: ('A', 0) ('B',
 	 * 1) ('C', 3) ('D', 10) ('E', 5) ('F', 4)
 	 */
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test1() {
 		Map<List<String>, Integer> graph = new HashMap<>();
 		graph.put(new ArrayList<String>(Arrays.asList("A", "C")), 3);
@@ -41,7 +41,7 @@ public class SHORTEST_PATHS_TEST {
 	 * Case 2: Graph with one path Output: ('A', 0) ('B', 1) ('C', 3) ('D', 6) ('E',
 	 * 5) ('F', 9)
 	 */
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test2() {
 		Map<List<String>, Integer> graph2 = new HashMap<>();
 		graph2.put(new ArrayList<String>(Arrays.asList("A", "B")), 1);
@@ -62,7 +62,7 @@ public class SHORTEST_PATHS_TEST {
 	 * Case 3: Graph with cycle 
 	 * Output: {'A': 0, 'C': 3, 'B': 1, 'E': 5, 'D': 6, 'F': 9}
 	 */
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test3() {
 		Map<List<String>, Integer> graph2 = new HashMap<>();
 		graph2.put(new ArrayList<String>(Arrays.asList("A", "B")), 1);

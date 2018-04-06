@@ -42,7 +42,7 @@ public class SHORTEST_PATH_LENGTH_TEST {
 	/**
 	 * Case 1: One path Output: 4
 	 */
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test1() {
 		int result = spl.shortest_path_length(length_by_edge, node0, node1);
 		
@@ -54,7 +54,7 @@ public class SHORTEST_PATH_LENGTH_TEST {
 	/**
 	 * Case 2: Multiple path Output: 7
 	 */
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test2() {
 		int result = spl.shortest_path_length(length_by_edge, node0, node5);
 		assertEquals(7, result);
@@ -63,7 +63,7 @@ public class SHORTEST_PATH_LENGTH_TEST {
 	/**
 	 * Case 3: Start point is same as end point Output: 0
 	 */
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test3() {
 		int result = spl.shortest_path_length(length_by_edge, node2, node2);
 		assertEquals(0, result);
@@ -72,7 +72,7 @@ public class SHORTEST_PATH_LENGTH_TEST {
 	/**
 	 * Case 4: Unreachable path Output: INT_MAX
 	 */
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test4() {
 		int result = spl.shortest_path_length(length_by_edge, node1, node5);
 		assertEquals(2147483647, result);

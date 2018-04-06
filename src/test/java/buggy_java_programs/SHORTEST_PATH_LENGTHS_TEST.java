@@ -8,13 +8,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.junit.Test;
-import java_programs.SHORTEST_PATH_LENGTHS;
+import buggy_java_programs.SHORTEST_PATH_LENGTHS;
 
 
 public class SHORTEST_PATH_LENGTHS_TEST {
 
     // Case 1: Basic graph input.
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test1() {
 		Map<List<Integer>, Integer> graph = new HashMap<>();
 		graph.put(new ArrayList<Integer>(Arrays.asList(0, 2)), 3);
@@ -35,7 +35,7 @@ public class SHORTEST_PATH_LENGTHS_TEST {
 	}
 
 	// Case 2: Linear graph input.
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test2() {
 		Map<List<Integer>, Integer> graph2 = new HashMap<>();
 		graph2.put(new ArrayList<Integer>(Arrays.asList(0, 1)), 3);
@@ -53,7 +53,7 @@ public class SHORTEST_PATH_LENGTHS_TEST {
 	}
 
 	// Case 3: Disconnected graphs input.
-	@Test
+	@org.junit.Test(timeout = 60000)
 	public void test3() {
 		Map<List<Integer>, Integer> graph3 = new HashMap<>();
 		graph3.put(new ArrayList<Integer>(Arrays.asList(0, 1)), 3);
@@ -69,7 +69,7 @@ public class SHORTEST_PATH_LENGTHS_TEST {
 		}
 	}
 
-	@Test
+	@org.junit.Test(timeout = 60000)
 	// Case 4: Strongly connected graph input.
 	public void test4s() {
 		Map<List<Integer>, Integer> graph4 = new HashMap<>();
