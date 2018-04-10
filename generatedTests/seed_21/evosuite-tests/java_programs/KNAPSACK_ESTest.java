@@ -169,43 +169,43 @@ public class KNAPSACK_ESTest {
       }
   }
 
-  @Test(timeout = 4000)
-  public void test5()  throws Throwable  {
-      int[][] intArray0 = new int[6][4];
-      int[] intArray1 = new int[2];
-      intArray1[0] = 4301;
-      intArray1[1] = 4301;
-      intArray0[0] = intArray1;
-      int[] intArray2 = new int[8];
-      intArray2[0] = 4301;
-      intArray2[1] = 0;
-      intArray2[2] = 4301;
-      intArray2[3] = 4301;
-      intArray2[4] = 4301;
-      intArray2[5] = 4301;
-      intArray2[6] = 4301;
-      intArray2[7] = (-834);
-      intArray0[1] = intArray2;
-      int[] intArray3 = new int[3];
-      intArray3[0] = 4301;
-      intArray3[1] = (-834);
-      intArray3[2] = 0;
-      intArray0[2] = intArray3;
-      int[] intArray4 = new int[4];
-      intArray4[0] = 4301;
-      intArray4[1] = 0;
-      intArray4[2] = 0;
-      intArray4[3] = 4301;
-      intArray0[3] = intArray4;
-      int[] intArray5 = new int[0];
-      intArray0[4] = intArray5;
-      int[] intArray6 = new int[4];
-      intArray6[0] = 4301;
-      intArray6[1] = 0;
-      intArray6[2] = 4301;
-      intArray6[3] = 0;
-      intArray0[5] = intArray6;
-      // Undeclared exception!
-      KNAPSACK.knapsack(4301, intArray0);
-  }
+//  @Test(timeout = 4000)
+//  public void test5()  throws Throwable  {
+//      int[][] intArray0 = new int[6][4];
+//      int[] intArray1 = new int[2];
+//      intArray1[0] = 4301;
+//      intArray1[1] = 4301;
+//      intArray0[0] = intArray1;
+//      int[] intArray2 = new int[8];
+//      intArray2[0] = 4301;
+//      intArray2[1] = 0;
+//      intArray2[2] = 4301;
+//      intArray2[3] = 4301;
+//      intArray2[4] = 4301;
+//      intArray2[5] = 4301;
+//      intArray2[6] = 4301;
+//      intArray2[7] = (-834);
+//      intArray0[1] = intArray2;
+//      int[] intArray3 = new int[3];
+//      intArray3[0] = 4301;
+//      intArray3[1] = (-834);
+//      intArray3[2] = 0;
+//      intArray0[2] = intArray3;
+//      int[] intArray4 = new int[4];
+//      intArray4[0] = 4301;
+//      intArray4[1] = 0;
+//      intArray4[2] = 0;
+//      intArray4[3] = 4301;
+//      intArray0[3] = intArray4;
+//      int[] intArray5 = new int[0];
+//      intArray0[4] = intArray5;
+//      int[] intArray6 = new int[4];
+//      intArray6[0] = 4301;
+//      intArray6[1] = 0;
+//      intArray6[2] = 4301;
+//      intArray6[3] = 0;
+//      intArray0[5] = intArray6;
+//      // Undeclared exception!
+//      KNAPSACK.knapsack(4301, intArray0);
+//  }
 }

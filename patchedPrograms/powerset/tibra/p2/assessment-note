@@ -1,0 +1,10 @@
+
+ evosuite: 0/87 failures
+ inputSampling: 224/300 failures
+ manual incorrect: test as follow:
+ 
+reason:
+
+evosuite assertion is less useful,  less elements in arraylist as input
+assertEquals(2, arrayList0.size());
+assertTrue(arrayList0.contains((-1)));

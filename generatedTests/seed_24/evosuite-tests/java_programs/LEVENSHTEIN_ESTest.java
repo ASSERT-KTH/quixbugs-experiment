@@ -11,7 +11,7 @@ import java_programs.LEVENSHTEIN;
 
 public class LEVENSHTEIN_ESTest {
 
-  @Test(timeout = 4000)
+  @Test(timeout = 60000)
   public void test0()  throws Throwable  {
       String string0 = "";
       LEVENSHTEIN.levenshtein("", "");
@@ -35,7 +35,7 @@ public class LEVENSHTEIN_ESTest {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 60000)
   public void test1()  throws Throwable  {
       String string0 = "java_programs.LEVENSHTEIN";
       String string1 = null;
@@ -50,16 +50,16 @@ public class LEVENSHTEIN_ESTest {
          //
       }
   }
+//
+//  @Test(timeout = 60000)
+//  public void test2()  throws Throwable  {
+//      LEVENSHTEIN.levenshtein("A.~LX;$R'W%", "A.~LX;$R'W%");
+//      String string0 = "LU@j*8d3P9Fnb:1;";
+//      // Undeclared exception!
+//      LEVENSHTEIN.levenshtein("LU@j*8d3P9Fnb:1;", "A.~LX;$R'W%");
+//  }
 
-  @Test(timeout = 4000)
-  public void test2()  throws Throwable  {
-      LEVENSHTEIN.levenshtein("A.~LX;$R'W%", "A.~LX;$R'W%");
-      String string0 = "LU@j*8d3P9Fnb:1;";
-      // Undeclared exception!
-      LEVENSHTEIN.levenshtein("LU@j*8d3P9Fnb:1;", "A.~LX;$R'W%");
-  }
-
-  @Test(timeout = 4000)
+  @Test(timeout = 60000)
   public void test3()  throws Throwable  {
       String string0 = "w]]H\"ZwDYw,";
       int int0 = LEVENSHTEIN.levenshtein("", "w]]H\"ZwDYw,");
@@ -113,7 +113,7 @@ public class LEVENSHTEIN_ESTest {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 60000)
   public void test4()  throws Throwable  {
       LEVENSHTEIN lEVENSHTEIN0 = new LEVENSHTEIN();
       assertNotNull(lEVENSHTEIN0);
@@ -127,7 +127,7 @@ public class LEVENSHTEIN_ESTest {
       LEVENSHTEIN.levenshtein("4yH!,U$1", "u(X#5[c&s");
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 60000)
   public void test5()  throws Throwable  {
       int int0 = LEVENSHTEIN.levenshtein("~H6Z&.b", ":");
       assertEquals(7, int0);
@@ -158,7 +158,7 @@ public class LEVENSHTEIN_ESTest {
       assertEquals(1, int4);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 60000)
   public void test6()  throws Throwable  {
       String string0 = "";
       String string1 = "X!Fw41OVX.?";

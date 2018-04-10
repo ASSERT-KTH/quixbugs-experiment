@@ -15,7 +15,7 @@ import java_programs.SHORTEST_PATH_LENGTHS;
 
 public class SHORTEST_PATH_LENGTHS_ESTest {
 
-  @Test(timeout = 4000)
+  @Test(timeout = 60000)
   public void test00()  throws Throwable  {
       SHORTEST_PATH_LENGTHS sHORTEST_PATH_LENGTHS0 = new SHORTEST_PATH_LENGTHS();
       int int0 = 0;
@@ -32,7 +32,7 @@ public class SHORTEST_PATH_LENGTHS_ESTest {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 60000)
   public void test01()  throws Throwable  {
       int int0 = 2392;
       Map<List<Integer>, Integer> map0 = null;
@@ -41,7 +41,7 @@ public class SHORTEST_PATH_LENGTHS_ESTest {
       SHORTEST_PATH_LENGTHS.shortest_path_lengths(2392, map1);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 60000)
   public void test02()  throws Throwable  {
       Map<List<Integer>, Integer> map0 = SHORTEST_PATH_LENGTHS.shortest_path_lengths((-143), (Map<List<Integer>, Integer>) null);
       Map<List<Integer>, Integer> map1 = SHORTEST_PATH_LENGTHS.shortest_path_lengths((-143), map0);
@@ -49,7 +49,7 @@ public class SHORTEST_PATH_LENGTHS_ESTest {
       SHORTEST_PATH_LENGTHS.shortest_path_lengths(593, map1);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 60000)
   public void test03()  throws Throwable  {
       HashMap<List<Integer>, Integer> hashMap0 = new HashMap<List<Integer>, Integer>();
       Map<List<Integer>, Integer> map0 = SHORTEST_PATH_LENGTHS.shortest_path_lengths(0, hashMap0);
@@ -60,7 +60,7 @@ public class SHORTEST_PATH_LENGTHS_ESTest {
       SHORTEST_PATH_LENGTHS.shortest_path_lengths((-2728), hashMap1);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 60000)
   public void test04()  throws Throwable  {
       int int0 = 99999;
       HashMap<List<Integer>, Integer> hashMap0 = new HashMap<List<Integer>, Integer>();
@@ -68,7 +68,7 @@ public class SHORTEST_PATH_LENGTHS_ESTest {
       SHORTEST_PATH_LENGTHS.shortest_path_lengths(99999, hashMap0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 60000)
   public void test05()  throws Throwable  {
       int int0 = 0;
       HashMap<List<Integer>, Integer> hashMap0 = new HashMap<List<Integer>, Integer>(0);
@@ -79,7 +79,7 @@ public class SHORTEST_PATH_LENGTHS_ESTest {
       SHORTEST_PATH_LENGTHS.shortest_path_lengths(325, hashMap0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 60000)
   public void test06()  throws Throwable  {
       SHORTEST_PATH_LENGTHS sHORTEST_PATH_LENGTHS0 = new SHORTEST_PATH_LENGTHS();
       HashMap<List<Integer>, Integer> hashMap0 = new HashMap<List<Integer>, Integer>();
@@ -105,7 +105,7 @@ public class SHORTEST_PATH_LENGTHS_ESTest {
       SHORTEST_PATH_LENGTHS.shortest_path_lengths(156, map5);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 60000)
   public void test07()  throws Throwable  {
       int int0 = (-1886);
       HashMap<List<Integer>, Integer> hashMap0 = new HashMap<List<Integer>, Integer>();
@@ -124,7 +124,7 @@ public class SHORTEST_PATH_LENGTHS_ESTest {
       }
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 60000)
   public void test08()  throws Throwable  {
       SHORTEST_PATH_LENGTHS sHORTEST_PATH_LENGTHS0 = new SHORTEST_PATH_LENGTHS();
       HashMap<List<Integer>, Integer> hashMap0 = new HashMap<List<Integer>, Integer>();
@@ -132,7 +132,7 @@ public class SHORTEST_PATH_LENGTHS_ESTest {
       SHORTEST_PATH_LENGTHS.shortest_path_lengths(2847, hashMap0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 60000)
   public void test09()  throws Throwable  {
       SHORTEST_PATH_LENGTHS sHORTEST_PATH_LENGTHS0 = new SHORTEST_PATH_LENGTHS();
       int int0 = 99999;
@@ -143,7 +143,7 @@ public class SHORTEST_PATH_LENGTHS_ESTest {
       SHORTEST_PATH_LENGTHS.shortest_path_lengths(99999, map0);
   }
 
-  @Test(timeout = 4000)
+  @Test(timeout = 60000)
   public void test10()  throws Throwable  {
       // Undeclared exception!
       try { 

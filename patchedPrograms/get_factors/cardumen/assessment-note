@@ -1,0 +1,8 @@
+precondition is n>1; 
+
+Evosuite: 27/119 failures , failure when n = 0; 
+
+
+input sampling: 0/300 failures;
+
+

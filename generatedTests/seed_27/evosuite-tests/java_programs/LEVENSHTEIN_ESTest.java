@@ -11,16 +11,16 @@ import java_programs.LEVENSHTEIN;
 
 public class LEVENSHTEIN_ESTest {
 
-  @Test(timeout = 4000)
-  public void test0()  throws Throwable  {
-      LEVENSHTEIN lEVENSHTEIN0 = new LEVENSHTEIN();
-      String string0 = "!^0L\\'e,]h";
-      LEVENSHTEIN.levenshtein("!^0L'e,]h", "!^0L'e,]h");
-      LEVENSHTEIN.levenshtein("!^0L'e,]h", "!^0L'e,]h");
-      String string1 = "java_programs.LEVENSHTEIN";
-      // Undeclared exception!
-      LEVENSHTEIN.levenshtein("!^0L'e,]h", "java_programs.LEVENSHTEIN");
-  }
+//  @Test(timeout = 4000)
+//  public void test0()  throws Throwable  {
+//      LEVENSHTEIN lEVENSHTEIN0 = new LEVENSHTEIN();
+//      String string0 = "!^0L\\'e,]h";
+//      LEVENSHTEIN.levenshtein("!^0L'e,]h", "!^0L'e,]h");
+//      LEVENSHTEIN.levenshtein("!^0L'e,]h", "!^0L'e,]h");
+//      String string1 = "java_programs.LEVENSHTEIN";
+//      // Undeclared exception!
+//      LEVENSHTEIN.levenshtein("!^0L'e,]h", "java_programs.LEVENSHTEIN");
+//  }
 
   @Test(timeout = 4000)
   public void test1()  throws Throwable  {

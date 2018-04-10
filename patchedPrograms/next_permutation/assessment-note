@@ -1,0 +1,19 @@
+ correct  if (perm.get(j) > perm.get(i)) 
+ 
+ fail if  have the same value in one array (perm.get(j) =  perm.get(i))
+ 
+ 
+ 
+ evosuite: 0/222 failures
+ inputSampling: 0/300 failures
+ manual incorrect: test as follow:
+ 
+@org.junit.Test(timeout = 60000)
+    public void test_manual() throws java.lang.Exception {
+        java.util.ArrayList result = patched_java_programs.NEXT_PERMUTATION.next_permutation(new java.util.ArrayList(java.util.Arrays.asList(1,3,2,2,1,3,1)));
+        String resultFormatted = java_programs.QuixFixOracleHelper.format(result,true);
+        org.junit.Assert.assertEquals("[1,3,2,2,3,1,1]", resultFormatted);
+    }
+    
+    
+    actual: [1,3,2,2,1,1,3]
