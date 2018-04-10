@@ -73,6 +73,16 @@ public class SummaryResults {
 		return num;
 	}
 	
+	
+	
+	public int getTotalNumber() {
+		int num = 0;
+		for(TestResult tr: result) {
+			num+=tr.getCasesExecuted();
+		}		
+		return num;
+	}
+	
 	public String getFailingInfo() {		
 		String  failingInfo="";
 		for(TestResult tr: result) {

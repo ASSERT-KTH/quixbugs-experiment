@@ -13,6 +13,8 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
+import java_programs.Node;
+
 public class RandomTestConfig {
 	
 	private final static int MAX_ARRAY_SIZE = 20;
@@ -27,6 +29,8 @@ public class RandomTestConfig {
 		Map map = new HashMap();
 		Object[] params = new Object[parametersTypes.length];
 		String paramStr = "";
+		String paramArray = "";
+		String paramInt = "";
 		for(int index = 0;index<parametersTypes.length;index++ ) {
 			Type type = parametersTypes[index];
 			String type1 = type.getTypeName();
@@ -49,11 +53,12 @@ public class RandomTestConfig {
 					paramStr=paramStr.replace("[", "").replace("]", "")+",";
 				} else {
 				ArrayList array = getRandomList();
-				params[index]=array;		
+					
 				if("next_permutation".equals(program)) {
 					//precondition: A list of unique ints
 					array = uniqueIntegerList(array);
-				}				
+				}		
+				params[index]=array;	
 				paramStr += "new java.util.ArrayList(java.util.Arrays.asList("+array.toString()+"))";
 				paramStr=paramStr.replace("[", "").replace("]", "")+",";
 				}
@@ -96,15 +101,71 @@ public class RandomTestConfig {
 					params[index] = string;
 					paramStr +="\""+string+"\""+",";
 				}
-			}
+			} else if(type.getTypeName().contains("Node")) {
+				Node node = randomNode();
+				params[index] = node;
+				
+				if(node.getSuccessors().size()!=0) {
+				paramStr += "new Node( \""+node.getValue()+"\",new java.util.ArrayList<Node>(java.util.Arrays.asList( new Node(\""+node.getSuccessors().get(0).getValue()+"\"))))" +",";
+				} else {
+					paramStr += "new Node(\""+node.getValue() +  "\") ,";
+				}
+				
+				}else if(type.getTypeName().contains("Map")) {
+					if("shortest_path_lengths".equals(program)) {
+						Map resultMap = randomMap();
+						params[index] = resultMap.get("map");
+						paramStr += "map ,";
+						paramArray = resultMap.get("array")+"";
+						paramInt = resultMap.get("int")+"";
+					}
+				}
 		}
 		
 		map.put("parameters",params );
 		map.put("parametersToString",paramStr.substring(0,paramStr.length()-1));
+		map.put("array", paramArray);
+		map.put("int", paramInt);
 		return map;
 	}
 	
 	
+
+	private static Map randomMap() {
+		 Random random=new Random();
+		 int int1 = random.nextInt(10);
+		 int int2 = random.nextInt(10);
+		 int int3 = random.nextInt(10);
+		 Map<List<Integer>, Integer> map =  (Map<List<Integer>, Integer>) new HashMap();
+		 map.put(new ArrayList<Integer>(Arrays.asList(int1, int2)), int3);
+		
+		 HashMap results = new HashMap();
+		 results.put("map", map);
+		 results.put("array",int1+","+int2);
+		 results.put("int",int3);
+		 
+		 return results;
+
+	}
+
+
+
+	private static Node randomNode() {
+		// TODO Auto-generated method stub
+		
+		Node node = new Node(randomString());
+		
+		 Random random=new Random();
+		int randomNumber = random.nextInt(10);
+		if(randomNumber>=5) {
+			//return a new node with current node as successors
+			node = new Node(randomString(),new ArrayList<Node>(Arrays.asList(node)));
+				
+		}	
+		return node;
+	}
+
+
 
 	private static ArrayList<Integer> uniqueIntegerList(ArrayList list) {
 		 Set<Integer> set = new  HashSet<Integer>(); 

@@ -40,8 +40,8 @@ public class LaucherJUnitProcess {
 	public TestResult execute(String classpath, String test2Exec,  String location) {
 		Process p = null;
 		String jvmPath = "java";
-
 		String newClasspath = classpath;
+		//String newClasspath = classpath+":./evosuite-standalone-runtime-1.0.6-SNAPSHOT.jar";
 
 		try {
 			File ftemp = null;
@@ -157,7 +157,7 @@ public class LaucherJUnitProcess {
 	private void printCommandToExecute(List<String> command) {
 		String commandString = toString(command);
 		String commandToPrint = commandString;
-		System.out.println("Executing process: \n" + commandToPrint);
+		//System.out.println("Executing process: \n" + commandToPrint);
 	}
 
 	private String toString(List<String> command) {

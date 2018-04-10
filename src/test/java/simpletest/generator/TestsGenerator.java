@@ -38,9 +38,9 @@ import spoon.support.reflect.code.CtBlockImpl;
  */
 public class TestsGenerator {
 
-	public static int TIMEOUT = 3000;
+	public static int TIMEOUT = 60000;
 	public static int DELTA_FLOAT_COMPARISON = 0;
-	public static int TOTAL_TEST_NUMBER=10000;
+	public static int TOTAL_TEST_NUMBER=	300;
 
 	public static double[] DELTAS_TESTS_SQRT = new double[] { 0.01, 0.5, 0.3, 0.2, 0.01, 0.05, 0.03 };
 	// Test to add anotation ignore: key is program+test_id
@@ -98,6 +98,19 @@ public class TestsGenerator {
 			Class returnType = getReturnType(program, program.toUpperCase(), subjectsPakcageName);
 			boolean isOutputDecimal = returnType.getSimpleName().toLowerCase().equals("double");
 			CtCodeSnippetStatement stmtInvProgramUnderRepair = f.Core().createCodeSnippetStatement();
+			if("shortest_path_lengths".equals(program)) {
+				CtCodeSnippetStatement predefineParameter = f.Core().createCodeSnippetStatement();
+				predefineParameter.setValue( "java.util.HashMap <java.util.List<Integer>,Integer> map = new java.util.HashMap<java.util.List<Integer>,Integer>(); ");
+				block.addStatement(predefineParameter);
+				CtCodeSnippetStatement addMap = f.Core().createCodeSnippetStatement();				
+				addMap.setValue("map.put(new java.util.ArrayList<Integer>(java.util.Arrays.asList("+parameterMap.get("array")+")), "+parameterMap.get("int")+");");
+				block.addStatement(addMap);
+			
+			}
+			
+			
+			
+			
 			stmtInvProgramUnderRepair.setValue(returnType.getCanonicalName() + " result = " + subjectsPakcageName + "."
 					+ program.toUpperCase() + "." + program.toLowerCase() + "("
 					+ (parameterMap.get("parametersToString")) + ")");
@@ -106,6 +119,8 @@ public class TestsGenerator {
 
 
 			CtCodeSnippetStatement stmtAssert = f.Core().createCodeSnippetStatement();
+			
+			
 			
 			if (isNumber(returnType) || returnType.isPrimitive()) {
 				if (returnType.getSimpleName().toLowerCase().equals("double")) {
@@ -120,11 +135,16 @@ public class TestsGenerator {
 
 			} else {
 				CtCodeSnippetStatement stmtCall = f.Core().createCodeSnippetStatement();
+				
+				
 
 				stmtCall.setValue(
 						"String resultFormatted = " + testPackageName + "." + QuixFixOracleHelper.class.getSimpleName()
 								+ ".format(" + "result," + (!isOutputDecimal) + ")");
 				block.addStatement(stmtCall);
+				
+				
+				
 				
 				stmtAssert.setValue("org.junit.Assert.assertEquals(" + "\""
 						+ QuixFixOracleHelper.format(expected, (!isOutputDecimal)) + "\"" + ", resultFormatted)");
@@ -195,12 +215,14 @@ public class TestsGenerator {
 		String testPackageName = "java_programs";
 
 		
-		String[] names = new String[] {"find_in_sorted","get_factors","is_valid_parenthesization","knapsack","levenshtein","lis","mergesort"
-				, "next_permutation","quicksort","rpn_eval","powerset" };
+//		String[] names = new String[] {"find_in_sorted","get_factors","is_valid_parenthesization","knapsack","levenshtein","lis","mergesort"
+//				, "next_permutation","quicksort","rpn_eval","powerset","shortest_path_lengths" };
+//		
+		String[] names = new String[] { "shortest_path_lengths" };
 		
 		for (String prog : names) {
 			String programToExecute = prog;
-			String out = ROOT_DIR+"../../generatedTests/precondition_simple_10000";
+			String out = ROOT_DIR+"../../generatedTests/precondition_simple_300";
 			TestsGenerator ct = new TestsGenerator();
 			ct.createTestCases(ROOT_DIR, programToExecute, out, testPackageName, subjectPackageName);
 			EvoTestGenerator.compileProgram(out,prog.toUpperCase() + "_TEST");
@@ -312,7 +334,7 @@ public class TestsGenerator {
 	 */
 	private static int getTimeOut(String program, int nrTestcase) {
 		if (program.toLowerCase().equals("levenshtein")) {
-			return 50000;
+			return 60000;
 		} else {
 			return TIMEOUT;
 		}

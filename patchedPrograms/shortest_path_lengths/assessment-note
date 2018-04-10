@@ -1,5 +1,5 @@
 
  evosuite: 0/218 failures
- inputSampling: 0/300 failures
- manual correct: identical
+ inputSampling: 297/300 failures
+ manual correct: incorrect
  
