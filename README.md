@@ -4,14 +4,17 @@ This experiment is to evaluate effectiveness of two representative automatic rep
 
 In our experiment, we focus on two parts:
 
-#### How many QuixBugs programs could be repaired by two considered tools?
+```
 
-#### How to assess the correctness of generated patches?
+# How many QuixBugs programs could be repaired by two considered tools?
+
+# How to assess the correctness of generated patches?
+
+```
 
 
 
-
-### Project Structure
+### Folder Structure
 
 [Buggy Java Programs](https://github.com/KTH/quixbugs-experiment/tree/master/src/main/java/buggy_java_programs) are 40 buggy programs from QuixBugs and Corresponding [Junit Tests](https://github.com/KTH/quixbugs-experiment/tree/master/src/test/java/buggy_java_programs)
 
