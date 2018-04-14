@@ -31,7 +31,7 @@ public class EvoTestGeneratorTest {
 		int timeoutSeconds = 60;
 		int seed = 1;
 		String packageName = "java_programs";
-		boolean generated = ev.runEvosuite(packageName + "." + "LIS", new File(".").getAbsolutePath(), "./out", seed,
+		boolean generated = ev.runEvosuite(packageName + "." + "DEPTH_FIRST_SEARCH", new File(".").getAbsolutePath(), "./out", seed,
 				timeoutSeconds, useDSE);
 		assertTrue(generated);
 	}
