@@ -1,4 +1,4 @@
-### Automatic repair experiment on QuixBugs.
+## Automatic repair experiment on QuixBugs.
 
 This experiment is to evaluate effectiveness of two representative automatic repair tools Astor and Nopol on repairing [QuixBugs](https://github.com/jkoppel/QuixBugs) benchmark. QuixBugs is a benchmark suite of 40 confirmed bugs from classic algorithms with a bug on a single line of code. Before we start our experiment, we did some [preperation work](https://github.com/jkoppel/QuixBugs/pulls?q=is%3Apr+is%3Aclosed) to contribute QuixBugs as a usable repair benchmark in Java programs.
 
@@ -11,7 +11,7 @@ B: How to assess the correctness of generated patches?
 
 
 
-## Project Structure
+### Project Structure
 
 [Buggy Java Programs](https://github.com/KTH/quixbugs-experiment/tree/master/src/main/java/buggy_java_programs) are 40 buggy programs from QuixBugs and Corresponding [Junit Tests](https://github.com/KTH/quixbugs-experiment/tree/master/src/test/java/buggy_java_programs)
 
@@ -23,9 +23,9 @@ B: How to assess the correctness of generated patches?
 
 [Patch Correctness Assessment](https://github.com/KTH/quixbugs-experiment/tree/master/patches_assessment_report) are the assessment reports of each patch when runing different number tests.
 
-## Getting started
+### Getting started
 
-1) Check out the project:
+#### Check out the project:
 
 ```
 git clone https://github.com/KTH/quixbugs-experiment.git
@@ -34,15 +34,28 @@ mvn clean install -DskipTests
 cd ..
 ```
 
-2) Patch correctness assessment:
+##### Class to generate tests by InputSampling
+```
+simpletest.generator.InputSampling
+```
 
-2.1 To assess patches ,for example, by using 30 Evosuite test suites:
+
+##### Class to generate tests by Evosuite
+
+```
+simpletest.generator.QuixBugExtendedOracle
+
+```
+
+##### Patch correctness assessment:
+
+To assess patches ,for example, by using 30 Evosuite test suites:
 
 ```
 java -cp /path/to/junit-4.9.jar org.junit.runner.JUnitCore qfevotest.generator.PatchAssessmentTest#testResultsByRunning30Seeds
 
 ```
-2.1 To assess patches ,for example, by using 300 InputSampling tests:
+To assess patches ,for example, by using 300 InputSampling tests:
 
 ```
 java -cp /path/to/junit-4.9.jar org.junit.runner.JUnitCore qfevotest.generator.PatchAssessmentTest#inputSampling_300_assessment
