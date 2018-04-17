@@ -86,14 +86,27 @@ Some programs of QuixBugs have preconditions that constrain the input domain. It
 |quicksort|the ints in arr are unique|
 |rpn_eval|token in ('+', '-', '*', '/')|
 
-#### Failing evosuite
+#### Failing Evosuite Tests
 
-Evosuite generates test cases that fail on the version used for generating them, more information [here](https://github.com/KTH/quixbugs-experiment/issues/1). These failing tests will result in incorrect patch assessment result, to address this problem, we first run all Evosuite test over corresponding the referecen program (using [this](https://github.com/KTH/quixbugs-experiment/blob/master/src/test/java/qfevotest/generator/PatchAssessmentTest.java#L228) method to check), then manually remove the failing tests. 
+Evosuite generates test cases that fail on the version used for generating them, more information [here](https://github.com/KTH/quixbugs-experiment/issues/1). These failing tests will result in incorrect patch assessment result. To address this problem, we first run all Evosuite test over corresponding the referecen program (using [this](https://github.com/KTH/quixbugs-experiment/blob/master/src/test/java/qfevotest/generator/PatchAssessmentTest.java#L228) method to check), then manually remove the failing tests. 
 
 | program | reason|
 | --- |---|
-|knapsack |ArrayIndexOutOfBoundsException(Undeclared exception)|
-|levenshtein| recursion error|
+|find_in_sorted|Undeclared exception |
+|get_factors|Undeclared exception|
+|knapsack |Undeclared exception|
+|levenshtein| Undeclared exception|
+|next_permutation|Undeclared exception|
+|shortest_path_lengths|Undeclared exception|
+
+
+#### Tests to prove manual analysis of patch correctness
+While manual analysis of patch correctness, if a patch is considered as incorrect, the author must show a test that the same input would have two different ouputs between patch program and reference program.
+
+|program| Input | Output from reference program | Output from patched program|
+| --- |---| --- |---|
+|find_in_sorted| [21,33,45,67,69,70], 100|-1|3|
+|next_permutation|[1,3,2,2,1,3,1] |[1,3,2,2,3,1,1]|[1,3,2,2,1,1,3]|
 
 
 
