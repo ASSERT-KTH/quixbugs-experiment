@@ -109,5 +109,14 @@ While manual analysis of patch correctness, if a patch is considered as incorrec
 |next_permutation|[1,3,2,2,1,3,1] |[1,3,2,2,3,1,1]|[1,3,2,2,1,1,3]|
 
 
+## Test Coverage 
+[Evosuite](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/Evosuite/index.html)
+
+[InputSampling](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/InputSampling/index.html)
+
+[EvosuiteAndInputSampling](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/InputSamplingAndEvosuite/index.html)
+
+[original_tests](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/original_tests/index.html)
+
 
 
