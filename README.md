@@ -107,7 +107,7 @@ While manual analysis of patch correctness, if a patch is considered as incorrec
 | --- |---| --- |---|
 |find_in_sorted| [21,33,45,67,69,70], 100|-1|3|
 |next_permutation|[1,3,2,2,1,3,1] |[1,3,2,2,3,1,1]|[1,3,2,2,1,1,3]|
-
+|get_factors| 0 | | Arithmetical exception|
 
 ## Test Coverage 
 [Evosuite](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/Evosuite/index.html)
