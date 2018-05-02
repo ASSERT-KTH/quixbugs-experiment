@@ -116,6 +116,9 @@ While manual analysis of patch correctness, if a patch is considered as incorrec
 |powerset(Astor)-p0|new ArrayList(Arrays.asList( "a","l"))|[[],[l],[a],[a,l]]|[[],[l],[a,l]]| 
 |powerset(Astor)-p1|new ArrayList(Arrays.asList( "a","l"))|[[],[l],[a],[a,l]]|[[]]|  
 |powerset(Astor)-p2|new ArrayList(Arrays.asList( "a","l"))|[[],[l],[a],[a,l]]|[[],[l],[a,l]]|  
+|shortest_path_lengths(Astor)|HashMap <List<Integer>,Integer> map = new HashMap<List<Integer>,Integer>(); map.put(new ArrayList<Integer>(Arrays.asList(2,6)), 8);|{[0, 0]=0, [0, 1]=99999, [0, 2]=99999...}|{[0, 0]=0, [0, 1]=99999}|    
+  
+  
 
   
 ## Test Coverage 
