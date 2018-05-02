@@ -103,20 +103,30 @@ Evosuite generates test cases that fail on the version used for generating them,
 #### Tests to prove manual analysis of patch correctness
 While manual analysis of patch correctness, if a patch is considered as incorrect, the author must show a test that the same input would have two different ouputs between patch program and reference program.
 
-|program| Input | Output from reference program | Output from patched program|
+|Patch| Input | Output from reference program | Output from patched program|
 | --- |---| --- |---|
-|find_in_sorted| [21,33,45,67,69,70], 100|-1|3|
-|next_permutation|[1,3,2,2,1,3,1] |[1,3,2,2,3,1,1]|[1,3,2,2,1,1,3]|
-|get_factors| 0 | | Arithmetical exception|
+|depth_first_search(Astor)-p0| new Node( "MkLlUfgc",new ArrayList<Node>(Arrays.asList( new Node("a")))) , new Node( "UCmpcBi",new ArrayList<Node>(Arrays.asList(new Node("HtpbRgv"))) | false | true|
+  |depth_first_search(Astor)-p1| new Node("j,ava_programs.Node") , Node node1 = new Node("j,ava_programs.Node", new Node("j,ava_programs.Node"))| false | Stack overflow|
+ |depth_first_search(Astor)-p2| new Node("j,ava_programs.Node") , Node node1 = new Node("j,ava_programs.Node", new Node("j,ava_programs.Node"))| false | Stack overflow|
+   |depth_first_search(Nopol)| new Node("j,ava_programs.Node") , Node node1 = new Node("j,ava_programs.Node", new Node("j,ava_programs.Node"))| false | Stack overflow|
+  |find_in_sorted(Nopol)| [21,33,45,67,69,70], 100|-1|3|
+  |get_factors(Nopol)| 0 | 0 | Arithmetical exception|
+|next_permutation(Astor)|[1,3,2,2,1,3,1] |[1,3,2,2,3,1,1]|[1,3,2,2,1,1,3]|
+|is_valid_parenthesization(Astor)|"(((())(())"|false|true|
+|powerset(Astor)-p0|new ArrayList(Arrays.asList( "a","l"))|[[],[l],[a],[a,l]]|[[],[l],[a,l]]| 
+|powerset(Astor)-p1|new ArrayList(Arrays.asList( "a","l"))|[[],[l],[a],[a,l]]|[[]]|  
+|powerset(Astor)-p2|new ArrayList(Arrays.asList( "a","l"))|[[],[l],[a],[a,l]]|[[],[l],[a,l]]|  
 
+  
 ## Test Coverage 
+[Quixbugs_original_tests](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/original_tests/index.html)
+
 [Evosuite](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/Evosuite/index.html)
 
 [InputSampling](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/InputSampling/index.html)
 
 [EvosuiteAndInputSampling](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/InputSamplingAndEvosuite/index.html)
 
-[original_tests](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/original_tests/index.html)
 
 
 
