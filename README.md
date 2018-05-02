@@ -65,6 +65,14 @@ To assess patches ,for example, by using 300 InputSampling tests:
 java -cp /path/to/junit-4.9.jar org.junit.runner.JUnitCore qfevotest.generator.PatchAssessmentTest#inputSampling_300_assessment
 ```
 
+## Test Coverage 
+[QuixBugs_original_tests](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/original_tests/index.html)
+
+[Evosuite](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/Evosuite/index.html)
+
+[InputSampling](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/InputSampling/index.html)
+
+[EvosuiteAndInputSampling](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/InputSamplingAndEvosuite/index.html)
 
 
 #### Preconditions
@@ -73,31 +81,46 @@ Some programs of QuixBugs have preconditions that constrain the input domain. It
 
 | program | preconditions|
 | --- |---|
-|depth_first_search||
-|find_in_sorted|a sorted list of ints|
-|get_factors|n int greater than 1|
+|bitcount|A nonnegative int|
+|breadth_first_search|-|
+|bucketsort|0 <= x < k for x in arr|
+|depth_first_search|-|
+|detect_cycle|-|
+|find_first_in_sorted| -|
+|find_in_sorted|A sorted list of ints|
+|flatten| The input has no list containment cycles|
+|gcd|A and b are nonnegative int|
+|get_factors|n >= 1|
+|hanoi|The height >= 0 start peg and end peg in (1, 2, 3)|
 |is_valid_parenthesization|paren in '()'|
-|knapsack||
-|levenshtein||
-|lis|the ints in arr are unique|
-|mergesort||
-|next_permutation|perm is not sorted in reverse order|
-|powerset|array has no duplicate elements|
+|kheapsort|The elements of arr are unique and each element is at most k places from its sorted position|
+|knapsack|-|
+|kth|The arr is a list of ints and k is an int, 0 <= k < len(arr)|
+|levenshtein|-|
+|lis|The ints in arr are unique|
+|longest_common_subsequence| -|
+|max_sublist_sum| -| 
+|mergesort|-|
+|minimum_spanning_tree|The input graph is connected|
+|next_palindrome|The initial input array represents a palindrome|
+|next_permutation|The perm is not sorted in reverse order|
+|pascal|The n is the number of rows to return and n>=1|
+|possible_change|-|
+|powerset| The array is a list of ints|
 |quicksort|the ints in arr are unique|
+|reverse_linked_list|The input is acyclic|
 |rpn_eval|token in ('+', '-', '*', '/')|
+|shortest_path_length|The length > 0 for length in length by edge|
+|shortest_path_lengths|There are no negative-length cycles in the input graph|
+|shortest_paths|The input graph contains no negative-weight cycles|
+|shunting_yard| isinstance(token, int) or token in '+-*/' |
+|sieve| - |
+|sqrt|The x >= 1 and epsilon > 0|
+|subsequences|The a and b are ints and k is a positive int|
+|to_base|The num > 0, 2 <= b <= 36|
+|topological_ordering|The input graph is acyclic|
+| wrap|The target column width>0|
 
-#### Failing Evosuite Tests
-
-Evosuite generates test cases that fail on the version used for generating them, more information [here](https://github.com/KTH/quixbugs-experiment/issues/1). These failing tests will result in incorrect patch assessment result. To address this problem, we first run all Evosuite test over corresponding the referecen program (using [this](https://github.com/KTH/quixbugs-experiment/blob/master/src/test/java/qfevotest/generator/PatchAssessmentTest.java#L228) method to check), then manually remove the failing tests. 
-
-| program | reason|
-| --- |---|
-|find_in_sorted|Undeclared exception |
-|get_factors|Undeclared exception|
-|knapsack |Undeclared exception|
-|levenshtein| Undeclared exception|
-|next_permutation|Undeclared exception|
-|shortest_path_lengths|Undeclared exception|
 
 
 #### Tests to prove manual analysis of patch correctness
@@ -119,16 +142,19 @@ While manual analysis of patch correctness, if a patch is considered as incorrec
 |shortest_path_lengths(Astor)|HashMap <List<Integer>,Integer> map = new HashMap<List<Integer>,Integer>(); map.put(new ArrayList<Integer>(Arrays.asList(2,6)), 8);|{[0, 0]=0, [0, 1]=99999, [0, 2]=99999...}|{[0, 0]=0, [0, 1]=99999}|    
   
   
+#### Failing Evosuite Tests
 
+Evosuite generates test cases that fail on the version used for generating them, more information [here](https://github.com/KTH/quixbugs-experiment/issues/1). These failing tests will result in incorrect patch assessment result. To address this problem, we first run all Evosuite test over corresponding the referecen program (using [this](https://github.com/KTH/quixbugs-experiment/blob/master/src/test/java/qfevotest/generator/PatchAssessmentTest.java#L228) method to check), then manually remove the failing tests. 
+
+| program | reason|
+| --- |---|
+|find_in_sorted|Undeclared exception |
+|get_factors|Undeclared exception|
+|knapsack |Undeclared exception|
+|levenshtein| Undeclared exception|
+|next_permutation|Undeclared exception|
+|shortest_path_lengths|Undeclared exception|
   
-## Test Coverage 
-[Quixbugs_original_tests](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/original_tests/index.html)
-
-[Evosuite](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/Evosuite/index.html)
-
-[InputSampling](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/InputSampling/index.html)
-
-[EvosuiteAndInputSampling](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/InputSamplingAndEvosuite/index.html)
 
 
 
