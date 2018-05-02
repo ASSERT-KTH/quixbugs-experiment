@@ -65,7 +65,7 @@ To assess patches ,for example, by using 300 InputSampling tests:
 java -cp /path/to/junit-4.9.jar org.junit.runner.JUnitCore qfevotest.generator.PatchAssessmentTest#inputSampling_300_assessment
 ```
 
-## Test Coverage 
+### Test Coverage 
 [QuixBugs_original_tests](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/original_tests/index.html)
 
 [Evosuite](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/Evosuite/index.html)
@@ -75,7 +75,7 @@ java -cp /path/to/junit-4.9.jar org.junit.runner.JUnitCore qfevotest.generator.P
 [EvosuiteAndInputSampling](http://htmlpreview.github.io/?https://github.com/KTH/quixbugs-experiment/blob/master/code_coverage/InputSamplingAndEvosuite/index.html)
 
 
-#### Preconditions
+### Preconditions
 
 Some programs of QuixBugs have preconditions that constrain the input domain. It is important to clear about the preconditions when sampling the input domain for genereating tests in InputSampling.
 
@@ -123,7 +123,7 @@ Some programs of QuixBugs have preconditions that constrain the input domain. It
 
 
 
-#### Tests to prove manual analysis of patch correctness
+### Tests to prove manual analysis of patch correctness
 While manual analysis of patch correctness, if a patch is considered as incorrect, the author must show a test that the same input would have two different ouputs between patch program and reference program.
 
 |Patch| Input | Output from reference program | Output from patched program|
@@ -142,7 +142,7 @@ While manual analysis of patch correctness, if a patch is considered as incorrec
 |shortest_path_lengths(Astor)|HashMap <List<Integer>,Integer> map = new HashMap<List<Integer>,Integer>(); map.put(new ArrayList<Integer>(Arrays.asList(2,6)), 8);|{[0, 0]=0, [0, 1]=99999, [0, 2]=99999...}|{[0, 0]=0, [0, 1]=99999}|    
   
   
-#### Failing Evosuite Tests
+### Failing Evosuite Tests
 
 Evosuite generates test cases that fail on the version used for generating them, more information [here](https://github.com/KTH/quixbugs-experiment/issues/1). These failing tests will result in incorrect patch assessment result. To address this problem, we first run all Evosuite test over corresponding the referecen program (using [this](https://github.com/KTH/quixbugs-experiment/blob/master/src/test/java/qfevotest/generator/PatchAssessmentTest.java#L228) method to check), then manually remove the failing tests. 
 
