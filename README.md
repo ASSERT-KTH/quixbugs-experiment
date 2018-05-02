@@ -77,7 +77,7 @@ java -cp /path/to/junit-4.9.jar org.junit.runner.JUnitCore qfevotest.generator.P
 
 ### Preconditions
 
-Some programs of QuixBugs have preconditions that constrain the input domain. It is important to clear about the preconditions when sampling the input domain for genereating tests in InputSampling.
+Some programs of QuixBugs have preconditions that constraints the input domain. It is important to clear about the preconditions when sampling the input domain for genereating tests in InputSampling.
 
 | program | preconditions|
 | --- |---|
