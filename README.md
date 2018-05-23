@@ -8,10 +8,11 @@ If you use this Quixbugs repair baseline for academic research, please cite:
 [A Comprehensive Study of Automatic Program
 Repair on the QuixBugs Benchmark](https://arxiv.org/pdf/1805.03454.pdf)（He Ye, Matias Martinez, Martin Monperrus）
 ```Bibtex
-@article{Ye:arXiv-1805.03454,
+@techreport{Ye:arXiv-1805.03454,
  title = {A Comprehensive Study of Automatic Program Repair on the QuixBugs Benchmark},
  author = {Ye, He and Martinez, Matias and Monperrus, Martin},
- journal = {arXiv},
+ institution = {arXiv},
+ number = {1805.03454}
  year = {2018},
 }
 ```
