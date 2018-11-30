@@ -1,0 +1,19 @@
+--- ./src/main/java/buggy_java_programs/SHORTEST_PATH_LENGTHS.java	2018-11-29 09:16:21.000000000 +0100
++++ a.java	2018-11-30 09:41:26.000000000 +0100
+@@ -19,13 +19,12 @@
+         for (int i = 0; i < numNodes; i++) {
+             for (int j =0; j < numNodes; j++) {
+                 List<Integer> edge = new ArrayList<>(Arrays.asList(i,j));
++                length_by_path.put(edge,0);
+                 if (i == j) {
+                     length_by_path.put(edge, 0);
+                 }
+-                else if (length_by_edge.containsKey(edge) ) {
+-                    length_by_path.put(edge, length_by_edge.get(edge));
+-                } else {
+-                    length_by_path.put(edge, INF);
++                else  {
++                    return length_by_path;
+                 }
+             }
+         }
