@@ -1,0 +1,15 @@
+--- ./src/main/java/buggy_java_programs/QUICKSORT.java	2018-11-29 09:16:21.000000000 +0100
++++ a.java	2018-11-29 15:54:33.000000000 +0100
+@@ -23,10 +23,9 @@
+         for (Integer x : arr.subList(1, arr.size())) {
+             if (x < pivot) {
+                 lesser.add(x);
+-            } else if (x > pivot) {
+-                greater.add(x);
+-            }
++            } else greater.add(x);
+         }
++        lesser=quicksort(lesser);
+         ArrayList<Integer> middle = new ArrayList<Integer>();
+         middle.add(pivot);
+         lesser = quicksort(lesser);

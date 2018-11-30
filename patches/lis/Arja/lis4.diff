@@ -1,0 +1,17 @@
+--- ./src/main/java/buggy_java_programs/LIS.java	2018-11-29 09:16:21.000000000 +0100
++++ a.java	2018-11-29 10:28:36.000000000 +0100
+@@ -26,8 +26,14 @@
+ 
+             int length = !prefix_lengths.isEmpty() ? Collections.max(prefix_lengths) : 0;
+ 
++            ends.put(length + 1,i);
+             if (length == longest || val < arr[ends.get(length+1)]) {
+                 ends.put(length+1, i);
++                for (int j=1; j < longest+1; j++) {
++                    if (arr[ends.get(j)] < val) {
++                        prefix_lengths.add(j);
++                    }
++                }
+                 longest = length + 1;
+             }
+ 

@@ -1,0 +1,18 @@
+--- ./src/main/java/buggy_java_programs/Node.java	2018-11-29 09:16:21.000000000 +0100
++++ a.java	2018-11-29 14:06:58.000000000 +0100
+@@ -47,7 +47,6 @@
+     }
+ 
+     public void setSuccessors(ArrayList<Node> successors) {
+-        this.successors = successors;
+     }
+ 
+     public void setPredecessors(ArrayList<Node> predecessors) {
+@@ -59,6 +58,7 @@
+     }
+ 
+     public ArrayList<Node> getSuccessors() {
++        this.successor=null;
+         return successors;
+     }
+     public ArrayList<Node> getPredecessors() {
