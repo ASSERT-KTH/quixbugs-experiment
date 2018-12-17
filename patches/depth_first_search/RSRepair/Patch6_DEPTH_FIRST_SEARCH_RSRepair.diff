@@ -1,0 +1,11 @@
+--- /tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 12:31:09.099967637 -0500
++++ /tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/patches_tvm8/Patch_45/patched/tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 12:31:23.448040826 -0500
+@@ -47,7 +47,7 @@
+     }
+ 
+     public void setSuccessors(ArrayList<Node> successors) {
+-        this.successors = successors;
++        this.predecessors = new ArrayList<>();
+     }
+ 
+     public void setPredecessors(ArrayList<Node> predecessors) {
