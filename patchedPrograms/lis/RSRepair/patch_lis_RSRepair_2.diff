@@ -1,0 +1,14 @@
+--- /tmp/RSRepair_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 12:31:08.869182822 -0500
++++ /tmp/RSRepair_QuixBugs_LIS_/patches_yr6r/Patch_51/patched/tmp/RSRepair_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 12:31:24.797261605 -0500
+@@ -28,7 +28,10 @@
+ 
+             if (length == longest || val < arr[ends.get(length+1)]) {
+                 ends.put(length+1, i);
+-                longest = length + 1;
++                if (length == longest || val < arr[ends.get(length + 1)]) {
++                    ends.put(length + 1, i);
++                    longest = length + 1;
++                }
+             }
+ 
+             i++;
