@@ -16,6 +16,7 @@ This experiment is to evaluate effectiveness of two representative automatic rep
 
 * [Patch Correctness Assessment](https://github.com/KTH/quixbugs-experiment/tree/master/assessment_report) are the assessment reports of each patch when running different number tests.
 
+* [log](https://github.com/KTH/quixbugs-experiment/tree/master/log) contains all the patch generation logs.
 
 ### Getting started
 
