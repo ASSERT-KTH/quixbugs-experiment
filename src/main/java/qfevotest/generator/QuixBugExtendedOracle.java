@@ -28,15 +28,15 @@ import qfevotest.testrunner.TestResult;
  */
 public class QuixBugExtendedOracle {
 
-	static int[] seeds = new int[20];
+	static int[] seeds = new int[30];
 
 	static {
 		// by default, seeds from 0 to 20-1
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < 30; i++) {
 			seeds[i] = i + 1;
 		}
 	}
-	public static String[] subjectsQuixBugs = new String[] { "bitcount","depth_first_search", "bucketsort", "find_first_in_sorted",
+	public static String[] subjectsQuixBugs = new String[] { "bitcount","depth_first_search","detect_cycle", "bucketsort", "find_first_in_sorted",
 			"find_in_sorted", "flatten", "gcd", "get_factors", "hanoi", "is_valid_parenthesization", "kheapsort",
 			"knapsack", "kth", "lcs_length", "levenshtein", "lis", "longest_common_subsequence", "max_sublist_sum",
 			"mergesort", "next_palindrome", "next_permutation", "pascal", "possible_change", "powerset", "quicksort",
@@ -69,10 +69,10 @@ public class QuixBugExtendedOracle {
 		EvoTestGenerator generator = new EvoTestGenerator();
 		File patchedVersionFolder = patchesDir.toFile();
 		int[] targetSeeds = null;
-		if(seedNumber>20) {
-			System.out.println("seed number cannot more than 20");
+		if(seedNumber>30) {
+			System.out.println("seed number cannot more than 30");
 			return null;
-		} else if (seedNumber == 20){
+		} else if (seedNumber == 30){
 			//run all seed
 			targetSeeds = seeds;
 		} else {
@@ -123,9 +123,7 @@ public class QuixBugExtendedOracle {
 			if (testFolder.exists()) {
 				LaucherJUnitProcess la = new LaucherJUnitProcess();
 				generator.compileProgram(patchedVersionFolder.getAbsolutePath(), programToRepair);
-				
-			
-				
+								
 				String path = patchedVersionFolder.getAbsolutePath() + File.pathSeparator + testFolder.getAbsolutePath()
 				+ File.pathSeparator + System.getProperty("java.class.path");
 				
@@ -361,7 +359,7 @@ public class QuixBugExtendedOracle {
 				if (method.isDirectory()) {
 					for (File patch : method.listFiles()) {
 						if (patch.isDirectory()) {
-
+							System.out.println("--> patch " + patch.getName());
 							// patch_get_factors_cardumen.diff
 							String patchContent = new String(Files.readAllBytes(
 									Paths.get(method.getAbsolutePath() + File.separator + "patch_" + programToRepair

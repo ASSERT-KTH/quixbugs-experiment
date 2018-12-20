@@ -1,0 +1,24 @@
+--- ./src/main/java/buggy_java_programs/POWERSET.java	2018-12-11 07:04:29.000000000 -0800
++++ ./src/main/java/java_programs/POWERSET.java	2018-12-19 23:06:29.000000000 -0800
+@@ -20,13 +20,17 @@
+ 
+             ArrayList<ArrayList> output = new ArrayList<ArrayList>(100);
+             ArrayList to_add = new ArrayList(100);
+-            to_add.add(first);
++
+             for (ArrayList subset : rest_subsets) {
+-                to_add.addAll(subset);
++            		ArrayList r = new ArrayList();
++				r.add(first);
++				r.addAll(subset);
++				to_add.add(r);
+             }
+-            output.add(to_add);
++            output.addAll(to_add);
++            rest_subsets.addAll(output);
+ 
+-            return output;
++            return rest_subsets;
+         } else {
+             ArrayList empty_set = new ArrayList<ArrayList>();
+             empty_set.add(new ArrayList());

@@ -17,6 +17,8 @@ import java.util.Properties;
 
 import org.junit.Test;
 
+import qfevotest.generator.EvoTestGenerator;
+import qfevotest.generator.QuixBugExtendedOracle;
 import qfevotest.testrunner.SummaryResults;
 
 public class PatchAssessmentTest {
@@ -86,7 +88,7 @@ public class PatchAssessmentTest {
 	 * @throws Exception
 	 */
 	@Test
-	public void testResultsByRunning30Seeds() throws Exception {
+	public void evosuite_30_seeds() throws Exception {
 		int seed = 30;
 		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
 		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File("./generatedTests"),seed,"Evosuite-30-seeds.txt");
@@ -107,7 +109,7 @@ public class PatchAssessmentTest {
 	 */
 	
 	@Test
-	public void Evosuite_one_seed_assessment() throws Exception {
+	public void evosuite_1_seed() throws Exception {
 		int seed = 1;
 		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
 		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File("./generatedTests"),seed,"Evosuite-1-seed.txt");
@@ -127,7 +129,7 @@ public class PatchAssessmentTest {
 	 * @throws Exception
 	 */
 	@Test
-	public void testResultsByRunning5Seeds() throws Exception {
+	public void evosuite_5_seeds() throws Exception {
 		int seed = 5;
 		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
 		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File("./generatedTests"),seed,"Evosuite-5-seeds.txt");
@@ -162,7 +164,7 @@ public class PatchAssessmentTest {
 	public void inputSampling_10_assessment() throws Exception {
 		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
 		String testPath = "./generatedTests/InputSampling_10";
-		String reportName="report_InputSampling_10.txt";
+		String reportName="InputSampling_10.txt";
 		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File(testPath),0,reportName);
 		qg.outputResult(resultByProgram.values());
 		System.out.println("\nEND: printing finals results: ");
@@ -185,7 +187,7 @@ public class PatchAssessmentTest {
 	public void inputSampling_50_assessment() throws Exception {
 		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
 		String testPath = "./generatedTests/InputSampling_50";
-		String reportName="report_InputSampling_50.txt";
+		String reportName="InputSampling_50.txt";
 		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File(testPath),0,reportName);
 		qg.outputResult(resultByProgram.values());
 		System.out.println("\nEND: printing finals results: ");
@@ -207,7 +209,7 @@ public class PatchAssessmentTest {
 	public void inputSampling_300_assessment() throws Exception {
 		QuixBugExtendedOracle qg = new QuixBugExtendedOracle();
 		String testPath = "./generatedTests/InputSampling_300";
-		String reportName="InputSampling-300.txt";
+		String reportName="InputSampling_300.txt";
 		Map<String, SummaryResults> resultByProgram = qg.runAllResults(new File(testPath),0,reportName);
 		qg.outputResult(resultByProgram.values());
 		System.out.println("\nEND: printing finals results: ");

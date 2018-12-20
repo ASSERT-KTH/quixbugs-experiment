@@ -1,0 +1,14 @@
+--- ./src/main/java/buggy_java_programs/SHORTEST_PATH_LENGTH.java	2018-12-11 07:04:29.000000000 -0800
++++ ./src/main/java/java_programs/SHORTEST_PATH_LENGTH.java	2018-12-11 07:04:29.000000000 -0800
+@@ -35,14 +37,14 @@
+                 }
+ 
+                 unvisitedNodes.put(nextnode, Math.min(unvisitedNodes.get(nextnode),
+-                        unvisitedNodes.get(nextnode) + length_by_edge.get(Arrays.asList(node, nextnode))));
++                        distance + length_by_edge.get(Arrays.asList(node, nextnode))));
+             }
+         }
+ 
+         return Integer.MAX_VALUE;
+     }
+ 

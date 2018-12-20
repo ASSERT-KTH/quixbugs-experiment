@@ -1,0 +1,11 @@
+--- ./src/main/java/buggy_java_programs/TOPOLOGICAL_ORDERING.java	2018-12-11 07:04:29.000000000 -0800
++++ ./src/main/java/java_programs/TOPOLOGICAL_ORDERING.java	2018-12-11 07:04:29.000000000 -0800
+@@ -14,7 +16,7 @@
+         for (int i = 0; i < listSize; i++) {
+             Node node = orderedNodes.get(i);
+             for (Node nextNode : node.getSuccessors()) {
+-                if (orderedNodes.containsAll(nextNode.getSuccessors()) && !orderedNodes.contains(nextNode)) {
++                if (orderedNodes.containsAll(nextNode.getPredecessors()) && !orderedNodes.contains(nextNode)) {
+                     orderedNodes.add(nextNode);
+                     listSize++;
+                 }

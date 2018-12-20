@@ -157,7 +157,7 @@ public class LaucherJUnitProcess {
 	private void printCommandToExecute(List<String> command) {
 		String commandString = toString(command);
 		String commandToPrint = commandString;
-		//System.out.println("Executing process: \n" + commandToPrint);
+		System.out.println("Executing process: \n" + commandToPrint);
 	}
 
 	private String toString(List<String> command) {

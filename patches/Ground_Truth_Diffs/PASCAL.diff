@@ -1,0 +1,11 @@
+--- ./src/main/java/buggy_java_programs/PASCAL.java	2018-12-11 07:04:29.000000000 -0800
++++ ./src/main/java/java_programs/PASCAL.java	2018-12-11 07:04:29.000000000 -0800
+@@ -19,7 +19,7 @@
+ 
+         for (int r=1; r<n; r++) {
+             ArrayList<Integer> row = new ArrayList<Integer>();
+-            for (int c=0; c<r; c++) {
++            for (int c=0; c<r+1; c++) {
+                 int upleft, upright;
+                 if (c > 0) {
+                     upleft = rows.get(r-1).get(c-1);

@@ -214,12 +214,11 @@ public class InputSampling {
 		String subjectPackageName = "java_programs";
 		String testPackageName = "java_programs";
 		
-		String[] programs = new String[] {"depth_first_search","find_in_sorted","get_factors","is_valid_parenthesization","knapsack","levenshtein","lis","mergesort"
-				, "next_permutation","quicksort","powerset","rpn_eval","shortest_path_lengths" };
+		String[] programs = new String[] {"hanoi"};
 		
 		for (String prog : programs) {
 			String programToExecute = prog;
-			String out = ROOT_DIR+"../../generatedTests/InputSampling_50";
+			String out = ROOT_DIR+"../../generatedTests/InputSampling_300";
 			InputSampling ct = new InputSampling();
 			ct.createTestCases(ROOT_DIR, programToExecute, out, testPackageName, subjectPackageName);
 			EvoTestGenerator.compileProgram(out,prog.toUpperCase() + "_TEST");

@@ -9,7 +9,7 @@ import java_programs.Node;
  */
 
 public class SHORTEST_PATH_LENGTH {
-    public static int shortest_path_length(Map<List<Node>, Integer> length_by_edge, Node startnode, Node goalnode) {
+    public int shortest_path_length(Map<List<Node>, Integer> length_by_edge, Node startnode, Node goalnode) {
         int n = length_by_edge.size();
         // the shortest distance from source to each node
         Map<Node, Integer> unvisitedNodes = new HashMap<>();
@@ -44,7 +44,7 @@ public class SHORTEST_PATH_LENGTH {
         return Integer.MAX_VALUE;
     }
 
-    public static Node getNodeWithMinDistance(Map<Node,Integer> list) {
+    public Node getNodeWithMinDistance(Map<Node,Integer> list) {
         Node minNode = null;
         int minDistance = Integer.MAX_VALUE;
         for (Node node : list.keySet()) {

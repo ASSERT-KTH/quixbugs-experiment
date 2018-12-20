@@ -24,6 +24,7 @@ public class EvoTestGeneratorTest {
 	public void setUp() throws Exception {
 	}
 
+	
 	@Test
 	public void testLisGenerateTest() throws Exception {
 		EvoTestGenerator ev = new EvoTestGenerator();

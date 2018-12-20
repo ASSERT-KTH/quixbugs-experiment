@@ -1,0 +1,11 @@
+--- ./src/main/java/buggy_java_programs/BITCOUNT.java	2018-12-11 07:04:29.000000000 -0800
++++ ./src/main/java/java_programs/BITCOUNT.java	2018-12-11 07:04:29.000000000 -0800
+@@ -12,7 +13,7 @@
+     public static int bitcount(int n) {
+     int count = 0;
+     while (n != 0) {
+-        n = (n ^ (n - 1));
++        n = (n & (n - 1));
+         count++;
+     }
+     return count;

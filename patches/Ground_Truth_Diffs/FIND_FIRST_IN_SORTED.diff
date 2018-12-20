@@ -1,0 +1,17 @@
+--- ./src/main/java/buggy_java_programs/FIND_FIRST_IN_SORTED.java	2018-12-11 07:04:29.000000000 -0800
++++ ./src/main/java/java_programs/FIND_FIRST_IN_SORTED.java	2018-12-11 07:04:29.000000000 -0800
+@@ -1,4 +1,4 @@
+-package buggy_java_programs;
++package java_programs;
+ import java.util.*;
+ 
+ /*
+@@ -16,7 +16,7 @@
+         int lo = 0;
+         int hi = arr.length;
+ 
+-        while (lo <= hi) {
++        while (lo < hi) {
+             int mid = (lo + hi) / 2; // check if this is floor division
+ 
+             if (x == arr[mid] && (mid == 0 || x != arr[mid-1])) {

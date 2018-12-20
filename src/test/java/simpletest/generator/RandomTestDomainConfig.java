@@ -33,7 +33,6 @@ public class RandomTestDomainConfig {
 		String paramInt = "";
 		for(int index = 0;index<parametersTypes.length;index++ ) {
 			Type type = parametersTypes[index];
-			String type1 = type.getTypeName();
 			
 			if("java.util.ArrayList".equals(type.getTypeName())) {
 				if("rpn_eval".equals(program)) {
@@ -81,10 +80,13 @@ public class RandomTestDomainConfig {
 				paramStr += "new " + type.getTypeName() + "{" + arrayToString(array)+"},";
 			} else if(type.getTypeName().equals("int")){
 				int i = 0;
-				if("get_factors".equals(program)) {
-					Random random = new Random();
+				Random random = new Random();
+				if("get_factors".equals(program)) {					
 					i=random.nextInt(1000);
-				} else {
+				} else if("hanoi".equals(program)) {					
+					i=random.nextInt(10);
+				}
+				else {
 					i = (int)(Math.random()*INTEGER_SIZE);
 
 				}

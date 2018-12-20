@@ -1,0 +1,13 @@
+--- ./src/main/java/buggy_java_programs/SUBSEQUENCES.java	2018-12-11 07:04:29.000000000 -0800
++++ ./src/main/java/java_programs/SUBSEQUENCES.java	2018-12-11 07:04:29.000000000 -0800
+@@ -13,7 +13,9 @@
+ public class SUBSEQUENCES {
+     public static ArrayList<ArrayList> subsequences(int a, int b, int k) {
+         if (k == 0) {
+-            return new ArrayList();
++        	 ArrayList empty_set = new ArrayList<ArrayList>();
++         empty_set.add(new ArrayList());
++         return empty_set;
+         }
+ 
+         ArrayList ret = new ArrayList(50);

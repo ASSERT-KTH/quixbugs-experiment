@@ -1,0 +1,11 @@
+--- ./src/main/java/buggy_java_programs/GCD.java	2018-12-11 07:04:29.000000000 -0800
++++ ./src/main/java/java_programs/GCD.java	2018-12-11 07:04:29.000000000 -0800
+@@ -16,7 +16,7 @@
+         if (b == 0) {
+             return a;
+         } else {
+-            return gcd(a % b, b);
++            return gcd(b, a%b);
+         }
+     }
+ }

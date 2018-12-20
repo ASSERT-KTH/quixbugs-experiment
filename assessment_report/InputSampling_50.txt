@@ -1,0 +1,1036 @@
+
+Thu Dec 20 07:34:16 PST 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/Arja/p1
+Patch:
+--- /tmp/Arja_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 05:36:11.048343665 -0500
++++ /tmp/Arja_QuixBugs_DEPTH_FIRST_SEARCH_/patches_xts7/Patch_1/patched/tmp/Arja_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 05:36:17.456456508 -0500
+@@ -47,7 +47,6 @@
+     }
+ 
+     public void setSuccessors(ArrayList<Node> successors) {
+-        this.successors = successors;
+     }
+ 
+     public void setPredecessors(ArrayList<Node> predecessors) {
+
+passed all tests 
+Thu Dec 20 07:34:18 PST 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/Arja/p2
+Patch:
+--- /tmp/Arja_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 05:36:11.048343665 -0500
++++ /tmp/Arja_QuixBugs_DEPTH_FIRST_SEARCH_/patches_xts7/Patch_485/patched/tmp/Arja_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 05:37:30.513093004 -0500
+@@ -47,7 +47,7 @@
+     }
+ 
+     public void setSuccessors(ArrayList<Node> successors) {
+-        this.successors = successors;
++        this.successor = null;
+     }
+ 
+     public void setPredecessors(ArrayList<Node> predecessors) {
+@@ -59,7 +59,8 @@
+     }
+ 
+     public ArrayList<Node> getSuccessors() {
+-        return successors;
++        this.successor = null;
++        return successors;
+     }
+     public ArrayList<Node> getPredecessors() {
+         return predecessors;
+
+passed all tests 
+Thu Dec 20 07:34:21 PST 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/Arja/p3
+Patch:
+--- /tmp/Arja_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 05:36:11.048343665 -0500
++++ /tmp/Arja_QuixBugs_DEPTH_FIRST_SEARCH_/patches_xts7/Patch_302/patched/tmp/Arja_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 05:37:02.804941690 -0500
+@@ -47,7 +47,7 @@
+     }
+ 
+     public void setSuccessors(ArrayList<Node> successors) {
+-        this.successors = successors;
++        this.value = value;
+     }
+ 
+     public void setPredecessors(ArrayList<Node> predecessors) {
+@@ -59,7 +59,8 @@
+     }
+ 
+     public ArrayList<Node> getSuccessors() {
+-        return successors;
++        this.successor = null;
++        return successors;
+     }
+     public ArrayList<Node> getPredecessors() {
+         return predecessors;
+
+passed all tests 
+Thu Dec 20 07:34:23 PST 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/Arja/p4
+Patch:
+--- /tmp/Arja_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 05:36:11.048343665 -0500
++++ /tmp/Arja_QuixBugs_DEPTH_FIRST_SEARCH_/patches_xts7/Patch_32/patched/tmp/Arja_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 05:36:22.512535827 -0500
+@@ -47,7 +47,7 @@
+     }
+ 
+     public void setSuccessors(ArrayList<Node> successors) {
+-        this.successors = successors;
++        this.value = value;
+     }
+ 
+     public void setPredecessors(ArrayList<Node> predecessors) {
+
+passed all tests 
+Thu Dec 20 07:34:27 PST 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/Arja/p5
+Patch:
+--- /tmp/Arja_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 05:36:11.048343665 -0500
++++ /tmp/Arja_QuixBugs_DEPTH_FIRST_SEARCH_/patches_xts7/Patch_110/patched/tmp/Arja_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 05:36:34.532698135 -0500
+@@ -47,7 +47,7 @@
+     }
+ 
+     public void setSuccessors(ArrayList<Node> successors) {
+-        this.successors = successors;
++        this.predecessors = new ArrayList<>();
+     }
+ 
+     public void setPredecessors(ArrayList<Node> predecessors) {
+@@ -59,7 +59,8 @@
+     }
+ 
+     public ArrayList<Node> getSuccessors() {
+-        return successors;
++        this.value = value;
++        return successors;
+     }
+     public ArrayList<Node> getPredecessors() {
+         return predecessors;
+
+passed all tests 
+Thu Dec 20 07:34:28 PST 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/Cardumen/p1
+Patch:
+
+--- java_programs\/DEPTH_FIRST_SEARCH.java
++++ java_programs\/DEPTH_FIRST_SEARCH.java
+@@ -13,7 +13,7 @@
+ 						return true;
+ 					}else {
+ 						for (java_programs.Node successornodes : node.getSuccessors()) {
+-							if (search(successornodes)) {
++							if (node == node) {
+ 								return true;
+ 							}
+ 						}
+
+
+failed tests number: 27
+failed tests info: [test_0(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, test_3(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, test_5(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, test_10(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, test_12(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, test_13(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, test_15(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, test_16(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, test_17(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, test_21(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, test_23(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, ...and 17 failures more, test_25(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, ...and 17 failures more, test_26(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, ...and 17 failures more, test_28(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, ...and 17 failures more, test_30(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, ...and 17 failures more, test_31(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, ...and 17 failures more, test_32(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, ...and 17 failures more, test_33(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, ...and 17 failures more, test_35(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, ...and 17 failures more, test_36(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, ...and 17 failures more, test_39(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, ...and 17 failures more, test_40(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, ...and 17 failures more, test_42(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, ...and 17 failures more, test_44(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, ...and 17 failures more, test_45(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, ...and 17 failures more, test_46(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, ...and 17 failures more, test_47(java_programs.DEPTH_FIRST_SEARCH_TEST): expected:<false> but was:<true>-, ...and 17 failures more]
+Thu Dec 20 07:34:31 PST 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/Dynamoth/p1
+Patch:
+--- nopol-quixbugs/src/main/java/java_programs/Node.java
++++ nopol-quixbugs/src/main/java/java_programs/Node.java
+@@ -49,3 +49,5 @@
+     public void setSuccessors(ArrayList<Node> successors) {
+-        this.successors = successors;
++        if (successors.contains((java.lang.Object) this)) {
++            this.successors = successors;
++        }
+     }
+
+passed all tests 
+Thu Dec 20 07:34:34 PST 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/JGenprog/p1
+Patch:
+
+--- java_programs\/Node.java
++++ java_programs\/Node.java
+@@ -50,6 +50,7 @@
+ 
+ 	public void setSuccessors(java.util.ArrayList<java_programs.Node> successors) {
+ 		this.successors = successors;
++		this.successors = new java.util.ArrayList<java_programs.Node>();
+ 	}
+ 
+ 	public void setPredecessors(java.util.ArrayList<java_programs.Node> predecessors) {
+
+
+passed all tests 
+Thu Dec 20 07:34:36 PST 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/Jkali/p1
+Patch:
+
+--- java_programs\/Node.java
++++ java_programs\/Node.java
+@@ -49,7 +49,6 @@
+ 	}
+ 
+ 	public void setSuccessors(java.util.ArrayList<java_programs.Node> successors) {
+-		this.successors = successors;
+ 	}
+ 
+ 	public void setPredecessors(java.util.ArrayList<java_programs.Node> predecessors) {
+
+
+passed all tests 
+Thu Dec 20 07:34:38 PST 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/RSRepair/p1
+Patch:
+--- /tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 12:31:09.099967637 -0500
++++ /tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/patches_tvm8/Patch_17/patched/tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 12:31:18.524015729 -0500
+@@ -47,7 +47,7 @@
+     }
+ 
+     public void setSuccessors(ArrayList<Node> successors) {
+-        this.successors = successors;
++        Set<Node> nodesvisited = new HashSet<>();
+     }
+ 
+     public void setPredecessors(ArrayList<Node> predecessors) {
+
+passed all tests 
+Thu Dec 20 07:34:41 PST 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/RSRepair/p2
+Patch:
+--- /tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 12:31:09.099967637 -0500
++++ /tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/patches_tvm8/Patch_108/patched/tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 12:31:33.972094396 -0500
+@@ -47,7 +47,7 @@
+     }
+ 
+     public void setSuccessors(ArrayList<Node> successors) {
+-        this.successors = successors;
++        this.value = value;
+     }
+ 
+     public void setPredecessors(ArrayList<Node> predecessors) {
+
+passed all tests 
+Thu Dec 20 07:34:43 PST 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/RSRepair/p3
+Patch:
+--- /tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 12:31:09.099967637 -0500
++++ /tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/patches_tvm8/Patch_1/patched/tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 12:31:15.656001100 -0500
+@@ -47,7 +47,6 @@
+     }
+ 
+     public void setSuccessors(ArrayList<Node> successors) {
+-        this.successors = successors;
+     }
+ 
+     public void setPredecessors(ArrayList<Node> predecessors) {
+
+passed all tests 
+Thu Dec 20 07:34:45 PST 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/RSRepair/p4
+Patch:
+--- /tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 12:31:09.099967637 -0500
++++ /tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/patches_tvm8/Patch_5/patched/tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 12:31:16.368004733 -0500
+@@ -47,7 +47,7 @@
+     }
+ 
+     public void setSuccessors(ArrayList<Node> successors) {
+-        this.successors = successors;
++        this.successors = new ArrayList<>();
+     }
+ 
+     public void setPredecessors(ArrayList<Node> predecessors) {
+
+passed all tests 
+Thu Dec 20 07:34:48 PST 2018 - Analyzing patched program: DEPTH_FIRST_SEARCH under path ./patchedPrograms/depth_first_search/RSRepair/p5
+Patch:
+--- /tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 12:31:09.099967637 -0500
++++ /tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/patches_tvm8/Patch_96/patched/tmp/RSRepair_QuixBugs_DEPTH_FIRST_SEARCH_/src/main/java/Node.java    2018-12-02 12:31:32.196085363 -0500
+@@ -47,7 +47,7 @@
+     }
+ 
+     public void setSuccessors(ArrayList<Node> successors) {
+-        this.successors = successors;
++        Set<Node> nodesvisited = new HashSet<>();
+     }
+ 
+     public void setPredecessors(ArrayList<Node> predecessors) {
+@@ -59,7 +59,8 @@
+     }
+ 
+     public ArrayList<Node> getSuccessors() {
+-        return successors;
++        Set<Node> nodesvisited = new HashSet<>();
++        return successors;
+     }
+     public ArrayList<Node> getPredecessors() {
+         return predecessors;
+
+passed all tests 
+Thu Dec 20 07:34:49 PST 2018 - Analyzing patched program: DETECT_CYCLE under path ./patchedPrograms/detect_cycle/NPEFix/p1
+Patch:
+--- /DETECT_CYCLE.java
++++ /DETECT_CYCLE.java
+@@ -17,6 +17,14 @@
+         while (true) {
+-            if (hare.getSuccessor() == null)
++            if (hare == null) {
++                if ( node.getSuccessor() == null)
+                 return false;
++            } else {
++                if (hare.getSuccessor() == null)
++                return false;
++            }
+ 
+             tortoise = tortoise.getSuccessor();
++            if (hare == null) {
++                return Boolean.FALSE;
++            }
+             hare = hare.getSuccessor().getSuccessor();
+
+Errors in running tests 
+Thu Dec 20 07:34:50 PST 2018 - Analyzing patched program: DETECT_CYCLE under path ./patchedPrograms/detect_cycle/NPEFix/p2
+Patch:
+--- /DETECT_CYCLE.java
++++ /DETECT_CYCLE.java
+@@ -17,6 +17,14 @@
+         while (true) {
+-            if (hare.getSuccessor() == null)
++            if (hare == null) {
++                if ( node.getSuccessor() == null)
+                 return false;
++            } else {
++                if (hare.getSuccessor() == null)
++                return false;
++            }
+ 
+             tortoise = tortoise.getSuccessor();
++            if (hare == null) {
++                return false;
++            }
+             hare = hare.getSuccessor().getSuccessor();
+
+Errors in running tests 
+Thu Dec 20 07:34:51 PST 2018 - Analyzing patched program: DETECT_CYCLE under path ./patchedPrograms/detect_cycle/NPEFix/p3
+Patch:
+--- /DETECT_CYCLE.java
++++ /DETECT_CYCLE.java
+@@ -17,4 +17,9 @@
+         while (true) {
+-            if (hare.getSuccessor() == null)
++            if (hare == null) {
++                if ( tortoise.getSuccessor() == null)
+                 return false;
++            } else {
++                if (hare.getSuccessor() == null)
++                return false;
++            }
+ 
+
+Errors in running tests 
+Thu Dec 20 07:34:52 PST 2018 - Analyzing patched program: DETECT_CYCLE under path ./patchedPrograms/detect_cycle/NPEFix/p4
+Patch:
+--- /DETECT_CYCLE.java
++++ /DETECT_CYCLE.java
+@@ -17,2 +17,5 @@
+         while (true) {
++            if (hare == null) {
++                hare = tortoise;
++            }
+             if (hare.getSuccessor() == null)
+
+Errors in running tests 
+Thu Dec 20 07:34:54 PST 2018 - Analyzing patched program: DETECT_CYCLE under path ./patchedPrograms/detect_cycle/NPEFix/p5
+Patch:
+--- /DETECT_CYCLE.java
++++ /DETECT_CYCLE.java
+@@ -17,4 +17,9 @@
+         while (true) {
+-            if (hare.getSuccessor() == null)
++            if (hare == null) {
++                if ( new Node().getSuccessor() == null)
+                 return false;
++            } else {
++                if (hare.getSuccessor() == null)
++                return false;
++            }
+ 
+
+Errors in running tests 
+Thu Dec 20 07:34:55 PST 2018 - Analyzing patched program: FIND_IN_SORTED under path ./patchedPrograms/find_in_sorted/nopol-smt/p1
+Patch:
+--- nopol-quixbugs/src/main/java/java_programs/FIND_IN_SORTED.java
++++ nopol-quixbugs/src/main/java/java_programs/FIND_IN_SORTED.java
+@@ -16,3 +16,3 @@
+         int mid = start + (end - start) / 2; // check this is floor division
+-        if (x < arr[mid]) {
++        if ((mid <= 2) || (((x) != ((arr[mid]))) && (!(arr.length < (arr[mid]))))) {
+             return binsearch(arr, x, start, mid);
+
+failed tests number: 25
+failed tests info: [test_2(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<13>-, test_3(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<4>-, test_4(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<15>-, test_6(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<5>-, test_7(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<8>-, test_9(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<6>-, test_16(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<3>-, test_17(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<5>-, test_19(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<8>-, test_21(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<11>-, test_24(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<14>-, ...and 15 failures more, test_28(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<8>-, ...and 15 failures more, test_29(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<14>-, ...and 15 failures more, test_31(java_programs.FIND_IN_SORTED_TEST): expected:<5> but was:<7>-, ...and 15 failures more, test_32(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<11>-, ...and 15 failures more, test_33(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<10>-, ...and 15 failures more, test_34(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<10>-, ...and 15 failures more, test_35(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<6>-, ...and 15 failures more, test_37(java_programs.FIND_IN_SORTED_TEST): expected:<10> but was:<12>-, ...and 15 failures more, test_39(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<7>-, ...and 15 failures more, test_41(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<9>-, ...and 15 failures more, test_43(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<9>-, ...and 15 failures more, test_44(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<9>-, ...and 15 failures more, test_46(java_programs.FIND_IN_SORTED_TEST): expected:<-1> but was:<14>-, ...and 15 failures more, test_49(java_programs.FIND_IN_SORTED_TEST): expected:<18> but was:<-1>-, ...and 15 failures more]
+Thu Dec 20 07:34:56 PST 2018 - Analyzing patched program: GET_FACTORS under path ./patchedPrograms/get_factors/cardumen/p1
+Patch:
+
+--- java_programs\/GET_FACTORS.java
++++ java_programs\/GET_FACTORS.java
+@@ -7,7 +7,7 @@
+ 			return new java.util.ArrayList<java.lang.Integer>();
+ 		}
+ 		int max = ((int) ((java.lang.Math.sqrt(n)) + 1.0));
+-		for (int i = 2; i < max; i++) {
++		for (int i = 2; (n % n) == 0; i++) {
+ 			if ((n % i) == 0) {
+ 				java.util.ArrayList<java.lang.Integer> prepend = new java.util.ArrayList<java.lang.Integer>(0);
+ 				prepend.add(i);
+
+
+passed all tests 
+Thu Dec 20 07:34:57 PST 2018 - Analyzing patched program: HANOI under path ./patchedPrograms/hanoi/NPEFix/p1
+Patch:
+--- /HANOI.java
++++ /HANOI.java
+@@ -24,3 +24,10 @@
+             crap_set.remove(end);
+-            int helper = crap_set.poll();
++            } else {
++                int helper;
++                if (crap_set.poll() == null) {
++                    helper = end;
++                } else {
++                    helper = crap_set.poll();
++                }
++            }
+             steps.addAll(hanoi(height-1, start, helper));
+
+passed all tests 
+Thu Dec 20 07:34:59 PST 2018 - Analyzing patched program: IS_VALID_PARENTHESIZATION under path ./patchedPrograms/is_valid_parenthesization/nopol-smt/p1
+Patch:
+--- nopol-quixbugs/src/main/java/java_programs/IS_VALID_PARENTHESIZATION.java
++++ nopol-quixbugs/src/main/java/java_programs/IS_VALID_PARENTHESIZATION.java
+@@ -16,7 +16,7 @@
+ 	    Character paren = parens.charAt(i);
+-	    if (paren.equals('(')) {
+-                depth++;
++	    if ((1 < (parens.length()) - (1)) && ((paren) != (1 + '('))) {
++	        depth++;
+ 	    } else {
+-		depth--;
+-		if (depth < 0) { return false; }
++	        depth--;
++	        if (depth < 0) { return false; }
+ 	    }
+
+failed tests number: 8
+failed tests info: [test_7(java_programs.IS_VALID_PARENTHESIZATION_TEST): expected:<false> but was:<true>-, test_8(java_programs.IS_VALID_PARENTHESIZATION_TEST): expected:<false> but was:<true>-, test_11(java_programs.IS_VALID_PARENTHESIZATION_TEST): expected:<false> but was:<true>-, test_31(java_programs.IS_VALID_PARENTHESIZATION_TEST): expected:<false> but was:<true>-, test_32(java_programs.IS_VALID_PARENTHESIZATION_TEST): expected:<false> but was:<true>-, test_34(java_programs.IS_VALID_PARENTHESIZATION_TEST): expected:<false> but was:<true>-, test_36(java_programs.IS_VALID_PARENTHESIZATION_TEST): expected:<false> but was:<true>-, test_44(java_programs.IS_VALID_PARENTHESIZATION_TEST): expected:<false> but was:<true>-]
+Thu Dec 20 07:35:00 PST 2018 - Analyzing patched program: KNAPSACK under path ./patchedPrograms/knapsack/mutation/p1
+Patch:
+
+--- java_programs\/KNAPSACK.java
++++ java_programs\/KNAPSACK.java
+@@ -16,7 +16,7 @@
+ 				if ((i == 0) || (j == 0)) {
+ 					memo[i][j] = 0;
+ 				}else
+-					if (weight < j) {
++					if (weight <= j) {
+ 						memo[i][j] = java.lang.Math.max(memo[(i - 1)][j], (value + (memo[(i - 1)][(j - weight)])));
+ 					}else {
+ 						memo[i][j] = memo[(i - 1)][j];
+
+
+passed all tests 
+Thu Dec 20 07:35:02 PST 2018 - Analyzing patched program: LEVENSHTEIN under path ./patchedPrograms/levenshtein/cardumen/p1
+Patch:
+
+--- java_programs\/LEVENSHTEIN.java
++++ java_programs\/LEVENSHTEIN.java
+@@ -7,7 +7,7 @@
+ 			return source.isEmpty() ? target.length() : source.length();
+ 		}else
+ 			if ((source.charAt(0)) == (target.charAt(0))) {
+-				return 1 + (java_programs.LEVENSHTEIN.levenshtein(source.substring(1), target.substring(1)));
++				return java_programs.LEVENSHTEIN.levenshtein(source.substring(1), target.substring(1));
+ 			}else {
+ 				return 1 + (java.lang.Math.min(java.lang.Math.min(java_programs.LEVENSHTEIN.levenshtein(source, target.substring(1)), java_programs.LEVENSHTEIN.levenshtein(source.substring(1), target.substring(1))), java_programs.LEVENSHTEIN.levenshtein(source.substring(1), target)));
+ 			}
+
+
+passed all tests 
+Thu Dec 20 07:35:03 PST 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/Arja/p1
+Patch:
+--- /tmp/Arja_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 05:37:18.902230939 -0500
++++ /tmp/Arja_QuixBugs_LIS_/patches_nmk9/Patch_865/patched/tmp/Arja_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 05:40:03.683088658 -0500
+@@ -20,15 +20,25 @@
+             ArrayList<Integer> prefix_lengths = new ArrayList<Integer>(100);
+             for (int j=1; j < longest+1; j++) {
+                 if (arr[ends.get(j)] < val) {
+-                    prefix_lengths.add(j);
++                    if (arr[ends.get(j)] < val) {
++                        prefix_lengths.add(j);
++                    }
+                 }
+             }
+ 
+             int length = !prefix_lengths.isEmpty() ? Collections.max(prefix_lengths) : 0;
+ 
+-            if (length == longest || val < arr[ends.get(length+1)]) {
++            for (int j = 1; j < longest + 1; j++) {
++                if (arr[ends.get(j)] < val) {
++                    prefix_lengths.add(j);
++                }
++            }
++            if (length == longest || val < arr[ends.get(length+1)]) {
+                 ends.put(length+1, i);
+-                longest = length + 1;
++                if (length == longest || val < arr[ends.get(length + 1)]) {
++                    ends.put(length + 1, i);
++                    longest = length + 1;
++                }
+             }
+ 
+             i++;
+
+passed all tests 
+Thu Dec 20 07:35:05 PST 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/Arja/p2
+Patch:
+--- /tmp/Arja_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 05:37:18.902230939 -0500
++++ /tmp/Arja_QuixBugs_LIS_/patches_nmk9/Patch_364/patched/tmp/Arja_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 05:38:34.566570253 -0500
+@@ -28,7 +28,10 @@
+ 
+             if (length == longest || val < arr[ends.get(length+1)]) {
+                 ends.put(length+1, i);
+-                longest = length + 1;
++                if (length == longest || val < arr[ends.get(length + 1)]) {
++                    ends.put(length + 1, i);
++                    longest = length + 1;
++                }
+             }
+ 
+             i++;
+
+passed all tests 
+Thu Dec 20 07:35:06 PST 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/Arja/p3
+Patch:
+--- /tmp/Arja_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 05:37:18.902230939 -0500
++++ /tmp/Arja_QuixBugs_LIS_/patches_nmk9/Patch_146/patched/tmp/Arja_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 05:37:55.890229808 -0500
+@@ -20,7 +20,9 @@
+             ArrayList<Integer> prefix_lengths = new ArrayList<Integer>(100);
+             for (int j=1; j < longest+1; j++) {
+                 if (arr[ends.get(j)] < val) {
+-                    prefix_lengths.add(j);
++                    if (arr[ends.get(j)] < val) {
++                        prefix_lengths.add(j);
++                    }
+                 }
+             }
+ 
+@@ -28,7 +30,10 @@
+ 
+             if (length == longest || val < arr[ends.get(length+1)]) {
+                 ends.put(length+1, i);
+-                longest = length + 1;
++                if (length == longest || val < arr[ends.get(length + 1)]) {
++                    ends.put(length + 1, i);
++                    longest = length + 1;
++                }
+             }
+ 
+             i++;
+
+passed all tests 
+Thu Dec 20 07:35:07 PST 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/Arja/p4
+Patch:
+--- /tmp/Arja_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 05:37:18.902230939 -0500
++++ /tmp/Arja_QuixBugs_LIS_/patches_nmk9/Patch_331/patched/tmp/Arja_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 05:38:28.782483553 -0500
+@@ -28,10 +28,17 @@
+ 
+             if (length == longest || val < arr[ends.get(length+1)]) {
+                 ends.put(length+1, i);
+-                longest = length + 1;
++                if (length == longest || val < arr[ends.get(length + 1)]) {
++                    ends.put(length + 1, i);
++                    longest = length + 1;
++                }
+             }
+ 
+-            i++;
++            if (length == longest || val < arr[ends.get(length + 1)]) {
++                ends.put(length + 1, i);
++                longest = length + 1;
++            }
++            i++;
+         }
+         return longest;
+     }
+
+passed all tests 
+Thu Dec 20 07:35:08 PST 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/Arja/p5
+Patch:
+--- /tmp/Arja_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 05:37:18.902230939 -0500
++++ /tmp/Arja_QuixBugs_LIS_/patches_nmk9/Patch_776/patched/tmp/Arja_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 05:39:47.791041364 -0500
+@@ -28,10 +28,13 @@
+ 
+             if (length == longest || val < arr[ends.get(length+1)]) {
+                 ends.put(length+1, i);
+-                longest = length + 1;
+             }
+ 
+-            i++;
++            if (length == longest || val < arr[ends.get(length + 1)]) {
++                ends.put(length + 1, i);
++                longest = length + 1;
++            }
++            i++;
+         }
+         return longest;
+     }
+
+passed all tests 
+Thu Dec 20 07:35:10 PST 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/RSRepair/p1
+Patch:
+--- /tmp/RSRepair_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 12:31:08.869182822 -0500
++++ /tmp/RSRepair_QuixBugs_LIS_/patches_yr6r/Patch_317/patched/tmp/RSRepair_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 12:32:07.677466262 -0500
+@@ -28,10 +28,13 @@
+ 
+             if (length == longest || val < arr[ends.get(length+1)]) {
+                 ends.put(length+1, i);
+-                longest = length + 1;
+             }
+ 
+-            i++;
++            if (length == longest || val < arr[ends.get(length + 1)]) {
++                ends.put(length + 1, i);
++                longest = length + 1;
++            }
++            i++;
+         }
+         return longest;
+     }
+
+passed all tests 
+Thu Dec 20 07:35:11 PST 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/RSRepair/p2
+Patch:
+--- /tmp/RSRepair_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 12:31:08.869182822 -0500
++++ /tmp/RSRepair_QuixBugs_LIS_/patches_yr6r/Patch_51/patched/tmp/RSRepair_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 12:31:24.797261605 -0500
+@@ -28,7 +28,10 @@
+ 
+             if (length == longest || val < arr[ends.get(length+1)]) {
+                 ends.put(length+1, i);
+-                longest = length + 1;
++                if (length == longest || val < arr[ends.get(length + 1)]) {
++                    ends.put(length + 1, i);
++                    longest = length + 1;
++                }
+             }
+ 
+             i++;
+
+passed all tests 
+Thu Dec 20 07:35:12 PST 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/RSRepair/p3
+Patch:
+--- /tmp/RSRepair_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 12:31:08.869182822 -0500
++++ /tmp/RSRepair_QuixBugs_LIS_/patches_yr6r/Patch_39/patched/tmp/RSRepair_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 12:31:22.917252390 -0500
+@@ -18,7 +18,12 @@
+         for (int val : arr) {
+ 
+             ArrayList<Integer> prefix_lengths = new ArrayList<Integer>(100);
+-            for (int j=1; j < longest+1; j++) {
++            for (int j = 1; j < longest + 1; j++) {
++                if (arr[ends.get(j)] < val) {
++                    prefix_lengths.add(j);
++                }
++            }
++            for (int j=1; j < longest+1; j++) {
+                 if (arr[ends.get(j)] < val) {
+                     prefix_lengths.add(j);
+                 }
+@@ -28,7 +33,10 @@
+ 
+             if (length == longest || val < arr[ends.get(length+1)]) {
+                 ends.put(length+1, i);
+-                longest = length + 1;
++                if (length == longest || val < arr[ends.get(length + 1)]) {
++                    ends.put(length + 1, i);
++                    longest = length + 1;
++                }
+             }
+ 
+             i++;
+
+passed all tests 
+Thu Dec 20 07:35:14 PST 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/RSRepair/p4
+Patch:
+--- /tmp/RSRepair_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 12:31:08.869182822 -0500
++++ /tmp/RSRepair_QuixBugs_LIS_/patches_yr6r/Patch_546/patched/tmp/RSRepair_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 12:32:44.005632147 -0500
+@@ -26,8 +26,12 @@
+ 
+             int length = !prefix_lengths.isEmpty() ? Collections.max(prefix_lengths) : 0;
+ 
+-            if (length == longest || val < arr[ends.get(length+1)]) {
+-                ends.put(length+1, i);
++            ends.put(length + 1, i);
++            if (length == longest || val < arr[ends.get(length+1)]) {
++                if (length == longest || val < arr[ends.get(length + 1)]) {
++                    ends.put(length + 1, i);
++                    longest = length + 1;
++                }
+                 longest = length + 1;
+             }
+ 
+
+passed all tests 
+Thu Dec 20 07:35:15 PST 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/RSRepair/p5
+Patch:
+--- /tmp/RSRepair_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 12:31:08.869182822 -0500
++++ /tmp/RSRepair_QuixBugs_LIS_/patches_yr6r/Patch_172/patched/tmp/RSRepair_QuixBugs_LIS_/src/main/java/LIS.java    2018-12-02 12:31:44.429356589 -0500
+@@ -26,7 +26,8 @@
+ 
+             int length = !prefix_lengths.isEmpty() ? Collections.max(prefix_lengths) : 0;
+ 
+-            if (length == longest || val < arr[ends.get(length+1)]) {
++            ends.put(length + 1, i);
++            if (length == longest || val < arr[ends.get(length+1)]) {
+                 ends.put(length+1, i);
+                 longest = length + 1;
+             }
+
+passed all tests 
+Thu Dec 20 07:35:17 PST 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/statement/p1
+Patch:
+
+--- java_programs\/LIS.java
++++ java_programs\/LIS.java
+@@ -14,6 +14,7 @@
+ 				}
+ 			}
+ 			int length = (!(prefix_lengths.isEmpty())) ? java.util.Collections.max(prefix_lengths) : 0;
++			ends.put((length + 1), i);
+ 			if ((length == longest) || (val < (arr[ends.get((length + 1))]))) {
+ 				ends.put((length + 1), i);
+ 				longest = length + 1;
+
+
+passed all tests 
+Thu Dec 20 07:35:18 PST 2018 - Analyzing patched program: LIS under path ./patchedPrograms/lis/tibra/p1
+Patch:
+
+--- java_programs\/LIS.java
++++ java_programs\/LIS.java
+@@ -14,6 +14,7 @@
+ 				}
+ 			}
+ 			int length = (!(prefix_lengths.isEmpty())) ? java.util.Collections.max(prefix_lengths) : 0;
++			ends.put((length + 1), i);
+ 			if ((length == longest) || (val < (arr[ends.get((length + 1))]))) {
+ 				ends.put((length + 1), i);
+ 				longest = length + 1;
+
+
+passed all tests 
+Thu Dec 20 07:35:20 PST 2018 - Analyzing patched program: MERGESORT under path ./patchedPrograms/mergesort/cardumen/p1
+Patch:
+
+--- java_programs\/MERGESORT.java
++++ java_programs\/MERGESORT.java
+@@ -20,11 +20,17 @@
+ 	}
+ 
+ 	public static java.util.ArrayList<java.lang.Integer> mergesort(java.util.ArrayList<java.lang.Integer> arr) {
+-		if ((arr.size()) == 0) {
++		if (((arr.size()) / 2) == 0) {
+ 			return arr;
+ 		}else {
+ 			int middle = (arr.size()) / 2;
+ 			java.util.ArrayList<java.lang.Integer> left = new java.util.ArrayList<java.lang.Integer>(100);
+			left.addAll(arr.subList(0, middle));
+			left = java_programs.MERGESORT.mergesort(left);
+			java.util.ArrayList<java.lang.Integer> right = new java.util.ArrayList<java.lang.Integer>(100);
+			right.addAll(arr.subList(middle, arr.size()));
+			right = java_programs.MERGESORT.mergesort(right);
+			return java_programs.MERGESORT.merge(left, right);
+ 		}
+ 	}
+ }
+
+
+passed all tests 
+Thu Dec 20 07:35:21 PST 2018 - Analyzing patched program: NEXT_PERMUTATION under path ./patchedPrograms/next_permutation/mutation/p1
+Patch:
+
+--- java_programs\/NEXT_PERMUTATION.java
++++ java_programs\/NEXT_PERMUTATION.java
+@@ -6,7 +6,7 @@
+ 		for (int i = (perm.size()) - 2; i != (-1); i--) {
+ 			if ((perm.get(i)) < (perm.get((i + 1)))) {
+ 				for (int j = (perm.size()) - 1; j != i; j--) {
+-					if ((perm.get(j)) < (perm.get(i))) {
++					if ((perm.get(j)) >= (perm.get(i))) {
+ 						java.util.ArrayList<java.lang.Integer> next_perm = perm;
+ 						int temp_j = perm.get(j);
+ 						int temp_i = perm.get(i);
+
+
+passed all tests 
+Thu Dec 20 07:35:22 PST 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p0
+Patch:
+
+--- java_programs\/POWERSET.java
++++ java_programs\/POWERSET.java
+@@ -10,6 +10,7 @@
+ 			java.util.ArrayList<java.util.ArrayList> rest_subsets = java_programs.POWERSET.powerset(rest);
+ 			java.util.ArrayList<java.util.ArrayList> output = new java.util.ArrayList<java.util.ArrayList>(100);
+ 			java.util.ArrayList to_add = new java.util.ArrayList(100);
++			output.addAll(rest_subsets);
+ 			for (java.util.ArrayList subset : rest_subsets) {
+ 				java.util.ArrayList r = new java.util.ArrayList();
+ 				r.add(first);
+
+
+failed tests number: 42
+failed tests info: [test_0(java_programs.POWERSET_TEST): expected:<, AlG, lmmJG, lmmJG, AlG, UYq, UYq, AlG, UYq, lmmJG, UYq, lmmJG, AlG, yMGc, yMGc, AlG, yMGc, lmmJG, yMGc, lmmJG, AlG, yMGc, UYq, yMGc, UYq, AlG, yMGc, UYq, lmmJG, yMGc, UYq, lmmJG, AlG, UEVgM, UEVgM, AlG, UEVgM, lmmJG, UEVgM, lmmJG, AlG, UEVgM, UYq, UEVgM, UYq, AlG, UEVgM, UYq, lmmJG, UEVgM, UYq, lmmJG, AlG, UEVgM, yMGc, UEVgM, yMGc, AlG, UEVgM, yMGc, lmmJG, UEVgM, yMGc, lmmJG, AlG, UEVgM, yMGc, UYq, UEVgM, yMGc, UYq, AlG, UEVgM, yMGc, UYq, lmmJG, UEVgM, yMGc, UYq, lmmJG, AlG> but was:<, AlG, lmmJG, AlG, UYq, AlG, lmmJG, AlG, yMGc, AlG, lmmJG, AlG, UYq, AlG, lmmJG, AlG, UEVgM, AlG, lmmJG, AlG, UYq, AlG, lmmJG, AlG, yMGc, AlG, lmmJG, AlG, UYq, AlG, lmmJG, AlG>-, test_1(java_programs.POWERSET_TEST): expected:<, UZd, m, m, UZd> but was:<, UZd, m, UZd>-, test_2(java_programs.POWERSET_TEST): expected:<, noY, wBq, wBq, noY, BgoI, BgoI, noY, BgoI, wBq, BgoI, wBq, noY> but was:<, noY, wBq, noY, BgoI, noY, wBq, noY>-, test_3(java_programs.POWERSET_TEST): expected:<, yHArr, MgP, MgP, yHArr, uhfll, uhfll, yHArr, uhfll, MgP, uhfll, MgP, yHArr, Q, Q, yHArr, Q, MgP, Q, MgP, yHArr, Q, uhfll, Q, uhfll, yHArr, Q, uhfll, MgP, Q, uhfll, MgP, yHArr, P, P, yHArr, P, MgP, P, MgP, yHArr, P, uhfll, P, uhfll, yHArr, P, uhfll, MgP, P, uhfll, MgP, yHArr, P, Q, P, Q, yHArr, P, Q, MgP, P, Q, MgP, yHArr, P, Q, uhfll, P, Q, uhfll, yHArr, P, Q, uhfll, MgP, P, Q, uhfll, MgP, yHArr> but was:<, yHArr, MgP, yHArr, uhfll, yHArr, MgP, yHArr, Q, yHArr, MgP, yHArr, uhfll, yHArr, MgP, yHArr, P, yHArr, MgP, yHArr, uhfll, yHArr, MgP, yHArr, Q, yHArr, MgP, yHArr, uhfll, yHArr, MgP, yHArr>-, test_4(java_programs.POWERSET_TEST): expected:<, O, yigE, yigE, O, anMAO, anMAO, O, anMAO, yigE, anMAO, yigE, O, GMw, GMw, O, GMw, yigE, GMw, yigE, O, GMw, anMAO, GMw, anMAO, O, GMw, anMAO, yigE, GMw, anMAO, yigE, O, BR, BR, O, BR, yigE, BR, yigE, O, BR, anMAO, BR, anMAO, O, BR, anMAO, yigE, BR, anMAO, yigE, O, BR, GMw, BR, GMw, O, BR, GMw, yigE, BR, GMw, yigE, O, BR, GMw, anMAO, BR, GMw, anMAO, O, BR, GMw, anMAO, yigE, BR, GMw, anMAO, yigE, O> but was:<, O, yigE, O, anMAO, O, yigE, O, GMw, O, yigE, O, anMAO, O, yigE, O, BR, O, yigE, O, anMAO, O, yigE, O, GMw, O, yigE, O, anMAO, O, yigE, O>-, test_6(java_programs.POWERSET_TEST): expected:<, Wd, X, X, Wd, C, C, Wd, C, X, C, X, Wd, eIu, eIu, Wd, eIu, X, eIu, X, Wd, eIu, C, eIu, C, Wd, eIu, C, X, eIu, C, X, Wd> but was:<, Wd, X, Wd, C, Wd, X, Wd, eIu, Wd, X, Wd, C, Wd, X, Wd>-, test_7(java_programs.POWERSET_TEST): expected:<, GpbV, h, h, GpbV, zRN, zRN, GpbV, zRN, h, zRN, h, GpbV, Vnbx, Vnbx, GpbV, Vnbx, h, Vnbx, h, GpbV, Vnbx, zRN, Vnbx, zRN, GpbV, Vnbx, zRN, h, Vnbx, zRN, h, GpbV> but was:<, GpbV, h, GpbV, zRN, GpbV, h, GpbV, Vnbx, GpbV, h, GpbV, zRN, GpbV, h, GpbV>-, test_8(java_programs.POWERSET_TEST): expected:<, pES, lIX, lIX, pES, eWOv, eWOv, pES, eWOv, lIX, eWOv, lIX, pES, d, d, pES, d, lIX, d, lIX, pES, d, eWOv, d, eWOv, pES, d, eWOv, lIX, d, eWOv, lIX, pES> but was:<, pES, lIX, pES, eWOv, pES, lIX, pES, d, pES, lIX, pES, eWOv, pES, lIX, pES>-, test_9(java_programs.POWERSET_TEST): expected:<, Er, u, u, Er, aWSpN, aWSpN, Er, aWSpN, u, aWSpN, u, Er, dOmCf, dOmCf, Er, dOmCf, u, dOmCf, u, Er, dOmCf, aWSpN, dOmCf, aWSpN, Er, dOmCf, aWSpN, u, dOmCf, aWSpN, u, Er, fjIs, fjIs, Er, fjIs, u, fjIs, u, Er, fjIs, aWSpN, fjIs, aWSpN, Er, fjIs, aWSpN, u, fjIs, aWSpN, u, Er, fjIs, dOmCf, fjIs, dOmCf, Er, fjIs, dOmCf, u, fjIs, dOmCf, u, Er, fjIs, dOmCf, aWSpN, fjIs, dOmCf, aWSpN, Er, fjIs, dOmCf, aWSpN, u, fjIs, dOmCf, aWSpN, u, Er> but was:<, Er, u, Er, aWSpN, Er, u, Er, dOmCf, Er, u, Er, aWSpN, Er, u, Er, fjIs, Er, u, Er, aWSpN, Er, u, Er, dOmCf, Er, u, Er, aWSpN, Er, u, Er>-, test_12(java_programs.POWERSET_TEST): expected:<, qxu, eNIS, eNIS, qxu, XB, XB, qxu, XB, eNIS, XB, eNIS, qxu, G, G, qxu, G, eNIS, G, eNIS, qxu, G, XB, G, XB, qxu, G, XB, eNIS, G, XB, eNIS, qxu, ct, ct, qxu, ct, eNIS, ct, eNIS, qxu, ct, XB, ct, XB, qxu, ct, XB, eNIS, ct, XB, eNIS, qxu, ct, G, ct, G, qxu, ct, G, eNIS, ct, G, eNIS, qxu, ct, G, XB, ct, G, XB, qxu, ct, G, XB, eNIS, ct, G, XB, eNIS, qxu> but was:<, qxu, eNIS, qxu, XB, qxu, eNIS, qxu, G, qxu, eNIS, qxu, XB, qxu, eNIS, qxu, ct, qxu, eNIS, qxu, XB, qxu, eNIS, qxu, G, qxu, eNIS, qxu, XB, qxu, eNIS, qxu>-, test_13(java_programs.POWERSET_TEST): expected:<, EaCPP, WXoqP, WXoqP, EaCPP, HE, HE, EaCPP, HE, WXoqP, HE, WXoqP, EaCPP, Kr, Kr, EaCPP, Kr, WXoqP, Kr, WXoqP, EaCPP, Kr, HE, Kr, HE, EaCPP, Kr, HE, WXoqP, Kr, HE, WXoqP, EaCPP, f, f, EaCPP, f, WXoqP, f, WXoqP, EaCPP, f, HE, f, HE, EaCPP, f, HE, WXoqP, f, HE, WXoqP, EaCPP, f, Kr, f, Kr, EaCPP, f, Kr, WXoqP, f, Kr, WXoqP, EaCPP, f, Kr, HE, f, Kr, HE, EaCPP, f, Kr, HE, WXoqP, f, Kr, HE, WXoqP, EaCPP> but was:<, EaCPP, WXoqP, EaCPP, HE, EaCPP, WXoqP, EaCPP, Kr, EaCPP, WXoqP, EaCPP, HE, EaCPP, WXoqP, EaCPP, f, EaCPP, WXoqP, EaCPP, HE, EaCPP, WXoqP, EaCPP, Kr, EaCPP, WXoqP, EaCPP, HE, EaCPP, WXoqP, EaCPP>-, ...and 32 failures more, test_15(java_programs.POWERSET_TEST): expected:<, AkR, Eh, Eh, AkR, GDQPu, GDQPu, AkR, GDQPu, Eh, GDQPu, Eh, AkR> but was:<, AkR, Eh, AkR, GDQPu, AkR, Eh, AkR>-, ...and 32 failures more, test_16(java_programs.POWERSET_TEST): expected:<, usRcA, bHCpi, bHCpi, usRcA> but was:<, usRcA, bHCpi, usRcA>-, ...and 32 failures more, test_17(java_programs.POWERSET_TEST): expected:<, K, du, du, K, q, q, K, q, du, q, du, K, vf, vf, K, vf, du, vf, du, K, vf, q, vf, q, K, vf, q, du, vf, q, du, K> but was:<, K, du, K, q, K, du, K, vf, K, du, K, q, K, du, K>-, ...and 32 failures more, test_18(java_programs.POWERSET_TEST): expected:<, Hr, Ha, Ha, Hr, WwH, WwH, Hr, WwH, Ha, WwH, Ha, Hr, d, d, Hr, d, Ha, d, Ha, Hr, d, WwH, d, WwH, Hr, d, WwH, Ha, d, WwH, Ha, Hr, A, A, Hr, A, Ha, A, Ha, Hr, A, WwH, A, WwH, Hr, A, WwH, Ha, A, WwH, Ha, Hr, A, d, A, d, Hr, A, d, Ha, A, d, Ha, Hr, A, d, WwH, A, d, WwH, Hr, A, d, WwH, Ha, A, d, WwH, Ha, Hr> but was:<, Hr, Ha, Hr, WwH, Hr, Ha, Hr, d, Hr, Ha, Hr, WwH, Hr, Ha, Hr, A, Hr, Ha, Hr, WwH, Hr, Ha, Hr, d, Hr, Ha, Hr, WwH, Hr, Ha, Hr>-, ...and 32 failures more, test_19(java_programs.POWERSET_TEST): expected:<, TpLb, vXgdZ, vXgdZ, TpLb, naV, naV, TpLb, naV, vXgdZ, naV, vXgdZ, TpLb> but was:<, TpLb, vXgdZ, TpLb, naV, TpLb, vXgdZ, TpLb>-, ...and 32 failures more, test_20(java_programs.POWERSET_TEST): expected:<, LwQ, A, A, LwQ, sdB, sdB, LwQ, sdB, A, sdB, A, LwQ, mEmW, mEmW, LwQ, mEmW, A, mEmW, A, LwQ, mEmW, sdB, mEmW, sdB, LwQ, mEmW, sdB, A, mEmW, sdB, A, LwQ> but was:<, LwQ, A, LwQ, sdB, LwQ, A, LwQ, mEmW, LwQ, A, LwQ, sdB, LwQ, A, LwQ>-, ...and 32 failures more, test_21(java_programs.POWERSET_TEST): expected:<, dWFE, FK, FK, dWFE> but was:<, dWFE, FK, dWFE>-, ...and 32 failures more, test_22(java_programs.POWERSET_TEST): expected:<, k, blR, blR, k, jSKbz, jSKbz, k, jSKbz, blR, jSKbz, blR, k, Cjmqn, Cjmqn, k, Cjmqn, blR, Cjmqn, blR, k, Cjmqn, jSKbz, Cjmqn, jSKbz, k, Cjmqn, jSKbz, blR, Cjmqn, jSKbz, blR, k> but was:<, k, blR, k, jSKbz, k, blR, k, Cjmqn, k, blR, k, jSKbz, k, blR, k>-, ...and 32 failures more, test_23(java_programs.POWERSET_TEST): expected:<, M, cAtzc, cAtzc, M, Tzl, Tzl, M, Tzl, cAtzc, Tzl, cAtzc, M> but was:<, M, cAtzc, M, Tzl, M, cAtzc, M>-, ...and 32 failures more, test_24(java_programs.POWERSET_TEST): expected:<, sxtH, x, x, sxtH, F, F, sxtH, F, x, F, x, sxtH, C, C, sxtH, C, x, C, x, sxtH, C, F, C, F, sxtH, C, F, x, C, F, x, sxtH, IRj, IRj, sxtH, IRj, x, IRj, x, sxtH, IRj, F, IRj, F, sxtH, IRj, F, x, IRj, F, x, sxtH, IRj, C, IRj, C, sxtH, IRj, C, x, IRj, C, x, sxtH, IRj, C, F, IRj, C, F, sxtH, IRj, C, F, x, IRj, C, F, x, sxtH> but was:<, sxtH, x, sxtH, F, sxtH, x, sxtH, C, sxtH, x, sxtH, F, sxtH, x, sxtH, IRj, sxtH, x, sxtH, F, sxtH, x, sxtH, C, sxtH, x, sxtH, F, sxtH, x, sxtH>-, ...and 32 failures more, test_25(java_programs.POWERSET_TEST): expected:<, ewLon, V, V, ewLon> but was:<, ewLon, V, ewLon>-, ...and 32 failures more, test_26(java_programs.POWERSET_TEST): expected:<, o, L, L, o, Bz, Bz, o, Bz, L, Bz, L, o, d, d, o, d, L, d, L, o, d, Bz, d, Bz, o, d, Bz, L, d, Bz, L, o, q, q, o, q, L, q, L, o, q, Bz, q, Bz, o, q, Bz, L, q, Bz, L, o, q, d, q, d, o, q, d, L, q, d, L, o, q, d, Bz, q, d, Bz, o, q, d, Bz, L, q, d, Bz, L, o> but was:<, o, L, o, Bz, o, L, o, d, o, L, o, Bz, o, L, o, q, o, L, o, Bz, o, L, o, d, o, L, o, Bz, o, L, o>-, ...and 32 failures more, test_28(java_programs.POWERSET_TEST): expected:<, wf, o, o, wf, Ly, Ly, wf, Ly, o, Ly, o, wf, xrz, xrz, wf, xrz, o, xrz, o, wf, xrz, Ly, xrz, Ly, wf, xrz, Ly, o, xrz, Ly, o, wf> but was:<, wf, o, wf, Ly, wf, o, wf, xrz, wf, o, wf, Ly, wf, o, wf>-, ...and 32 failures more, test_29(java_programs.POWERSET_TEST): expected:<, qbM, HKp, HKp, qbM, jil, jil, qbM, jil, HKp, jil, HKp, qbM, QoLyl, QoLyl, qbM, QoLyl, HKp, QoLyl, HKp, qbM, QoLyl, jil, QoLyl, jil, qbM, QoLyl, jil, HKp, QoLyl, jil, HKp, qbM, f, f, qbM, f, HKp, f, HKp, qbM, f, jil, f, jil, qbM, f, jil, HKp, f, jil, HKp, qbM, f, QoLyl, f, QoLyl, qbM, f, QoLyl, HKp, f, QoLyl, HKp, qbM, f, QoLyl, jil, f, QoLyl, jil, qbM, f, QoLyl, jil, HKp, f, QoLyl, jil, HKp, qbM> but was:<, qbM, HKp, qbM, jil, qbM, HKp, qbM, QoLyl, qbM, HKp, qbM, jil, qbM, HKp, qbM, f, qbM, HKp, qbM, jil, qbM, HKp, qbM, QoLyl, qbM, HKp, qbM, jil, qbM, HKp, qbM>-, ...and 32 failures more, test_32(java_programs.POWERSET_TEST): expected:<, BL, nuP, nuP, BL, RDBDH, RDBDH, BL, RDBDH, nuP, RDBDH, nuP, BL, T, T, BL, T, nuP, T, nuP, BL, T, RDBDH, T, RDBDH, BL, T, RDBDH, nuP, T, RDBDH, nuP, BL, GKHnS, GKHnS, BL, GKHnS, nuP, GKHnS, nuP, BL, GKHnS, RDBDH, GKHnS, RDBDH, BL, GKHnS, RDBDH, nuP, GKHnS, RDBDH, nuP, BL, GKHnS, T, GKHnS, T, BL, GKHnS, T, nuP, GKHnS, T, nuP, BL, GKHnS, T, RDBDH, GKHnS, T, RDBDH, BL, GKHnS, T, RDBDH, nuP, GKHnS, T, RDBDH, nuP, BL> but was:<, BL, nuP, BL, RDBDH, BL, nuP, BL, T, BL, nuP, BL, RDBDH, BL, nuP, BL, GKHnS, BL, nuP, BL, RDBDH, BL, nuP, BL, T, BL, nuP, BL, RDBDH, BL, nuP, BL>-, ...and 32 failures more, test_33(java_programs.POWERSET_TEST): expected:<, rpTQ, Gkya, Gkya, rpTQ, OjNWk, OjNWk, rpTQ, OjNWk, Gkya, OjNWk, Gkya, rpTQ, Seqic, Seqic, rpTQ, Seqic, Gkya, Seqic, Gkya, rpTQ, Seqic, OjNWk, Seqic, OjNWk, rpTQ, Seqic, OjNWk, Gkya, Seqic, OjNWk, Gkya, rpTQ, aiPp, aiPp, rpTQ, aiPp, Gkya, aiPp, Gkya, rpTQ, aiPp, OjNWk, aiPp, OjNWk, rpTQ, aiPp, OjNWk, Gkya, aiPp, OjNWk, Gkya, rpTQ, aiPp, Seqic, aiPp, Seqic, rpTQ, aiPp, Seqic, Gkya, aiPp, Seqic, Gkya, rpTQ, aiPp, Seqic, OjNWk, aiPp, Seqic, OjNWk, rpTQ, aiPp, Seqic, OjNWk, Gkya, aiPp, Seqic, OjNWk, Gkya, rpTQ> but was:<, rpTQ, Gkya, rpTQ, OjNWk, rpTQ, Gkya, rpTQ, Seqic, rpTQ, Gkya, rpTQ, OjNWk, rpTQ, Gkya, rpTQ, aiPp, rpTQ, Gkya, rpTQ, OjNWk, rpTQ, Gkya, rpTQ, Seqic, rpTQ, Gkya, rpTQ, OjNWk, rpTQ, Gkya, rpTQ>-, ...and 32 failures more, test_34(java_programs.POWERSET_TEST): expected:<, l, TZJV, TZJV, l, MUQwT, MUQwT, l, MUQwT, TZJV, MUQwT, TZJV, l> but was:<, l, TZJV, l, MUQwT, l, TZJV, l>-, ...and 32 failures more, test_35(java_programs.POWERSET_TEST): expected:<, Rg, EVODj, EVODj, Rg> but was:<, Rg, EVODj, Rg>-, ...and 32 failures more, test_36(java_programs.POWERSET_TEST): expected:<, o, Ni, Ni, o> but was:<, o, Ni, o>-, ...and 32 failures more, test_37(java_programs.POWERSET_TEST): expected:<, OE, UBt, UBt, OE, PYXMC, PYXMC, OE, PYXMC, UBt, PYXMC, UBt, OE, Qrfj, Qrfj, OE, Qrfj, UBt, Qrfj, UBt, OE, Qrfj, PYXMC, Qrfj, PYXMC, OE, Qrfj, PYXMC, UBt, Qrfj, PYXMC, UBt, OE, ux, ux, OE, ux, UBt, ux, UBt, OE, ux, PYXMC, ux, PYXMC, OE, ux, PYXMC, UBt, ux, PYXMC, UBt, OE, ux, Qrfj, ux, Qrfj, OE, ux, Qrfj, UBt, ux, Qrfj, UBt, OE, ux, Qrfj, PYXMC, ux, Qrfj, PYXMC, OE, ux, Qrfj, PYXMC, UBt, ux, Qrfj, PYXMC, UBt, OE> but was:<, OE, UBt, OE, PYXMC, OE, UBt, OE, Qrfj, OE, UBt, OE, PYXMC, OE, UBt, OE, ux, OE, UBt, OE, PYXMC, OE, UBt, OE, Qrfj, OE, UBt, OE, PYXMC, OE, UBt, OE>-, ...and 32 failures more, test_38(java_programs.POWERSET_TEST): expected:<, wjY, Gwtt, Gwtt, wjY, A, A, wjY, A, Gwtt, A, Gwtt, wjY, UTO, UTO, wjY, UTO, Gwtt, UTO, Gwtt, wjY, UTO, A, UTO, A, wjY, UTO, A, Gwtt, UTO, A, Gwtt, wjY> but was:<, wjY, Gwtt, wjY, A, wjY, Gwtt, wjY, UTO, wjY, Gwtt, wjY, A, wjY, Gwtt, wjY>-, ...and 32 failures more, test_39(java_programs.POWERSET_TEST): expected:<, fFD, YAQeC, YAQeC, fFD, Xj, Xj, fFD, Xj, YAQeC, Xj, YAQeC, fFD, A, A, fFD, A, YAQeC, A, YAQeC, fFD, A, Xj, A, Xj, fFD, A, Xj, YAQeC, A, Xj, YAQeC, fFD> but was:<, fFD, YAQeC, fFD, Xj, fFD, YAQeC, fFD, A, fFD, YAQeC, fFD, Xj, fFD, YAQeC, fFD>-, ...and 32 failures more, test_40(java_programs.POWERSET_TEST): expected:<, vrs, pYcel, pYcel, vrs, R, R, vrs, R, pYcel, R, pYcel, vrs> but was:<, vrs, pYcel, vrs, R, vrs, pYcel, vrs>-, ...and 32 failures more, test_41(java_programs.POWERSET_TEST): expected:<, rwLB, kBuv, kBuv, rwLB> but was:<, rwLB, kBuv, rwLB>-, ...and 32 failures more, test_42(java_programs.POWERSET_TEST): expected:<, id, s, s, id> but was:<, id, s, id>-, ...and 32 failures more, test_43(java_programs.POWERSET_TEST): expected:<, FTf, OvYo, OvYo, FTf> but was:<, FTf, OvYo, FTf>-, ...and 32 failures more, test_44(java_programs.POWERSET_TEST): expected:<, dlrq, qU, qU, dlrq> but was:<, dlrq, qU, dlrq>-, ...and 32 failures more, test_45(java_programs.POWERSET_TEST): expected:<, nlk, dBQ, dBQ, nlk, nzVm, nzVm, nlk, nzVm, dBQ, nzVm, dBQ, nlk> but was:<, nlk, dBQ, nlk, nzVm, nlk, dBQ, nlk>-, ...and 32 failures more, test_47(java_programs.POWERSET_TEST): expected:<, j, wO, wO, j> but was:<, j, wO, j>-, ...and 32 failures more, test_48(java_programs.POWERSET_TEST): expected:<, OY, gHD, gHD, OY, hixqU, hixqU, OY, hixqU, gHD, hixqU, gHD, OY, Ssa, Ssa, OY, Ssa, gHD, Ssa, gHD, OY, Ssa, hixqU, Ssa, hixqU, OY, Ssa, hixqU, gHD, Ssa, hixqU, gHD, OY> but was:<, OY, gHD, OY, hixqU, OY, gHD, OY, Ssa, OY, gHD, OY, hixqU, OY, gHD, OY>-, ...and 32 failures more, test_49(java_programs.POWERSET_TEST): expected:<, HwkZV, Gjuqi, Gjuqi, HwkZV> but was:<, HwkZV, Gjuqi, HwkZV>-, ...and 32 failures more]
+Thu Dec 20 07:35:24 PST 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p1
+Patch:
+
+--- java_programs\/POWERSET.java
++++ java_programs\/POWERSET.java
+@@ -18,7 +18,7 @@
+ 			}
+ 			output.addAll(to_add);
+ 			rest_subsets.addAll(output);
+-			return output;
++			return rest_subsets;
+ 		}else {
+ 			java.util.ArrayList empty_set = new java.util.ArrayList<java.util.ArrayList>();
+ 			empty_set.add(new java.util.ArrayList());
+
+
+failed tests number: 50
+failed tests info: [test_1(java_programs.POWERSET_TEST): expected:<, UZd, m, m, UZd> but was:<>-, test_2(java_programs.POWERSET_TEST): expected:<, noY, wBq, wBq, noY, BgoI, BgoI, noY, BgoI, wBq, BgoI, wBq, noY> but was:<>-, test_8(java_programs.POWERSET_TEST): expected:<, pES, lIX, lIX, pES, eWOv, eWOv, pES, eWOv, lIX, eWOv, lIX, pES, d, d, pES, d, lIX, d, lIX, pES, d, eWOv, d, eWOv, pES, d, eWOv, lIX, d, eWOv, lIX, pES> but was:<>-, test_9(java_programs.POWERSET_TEST): expected:<, Er, u, u, Er, aWSpN, aWSpN, Er, aWSpN, u, aWSpN, u, Er, dOmCf, dOmCf, Er, dOmCf, u, dOmCf, u, Er, dOmCf, aWSpN, dOmCf, aWSpN, Er, dOmCf, aWSpN, u, dOmCf, aWSpN, u, Er, fjIs, fjIs, Er, fjIs, u, fjIs, u, Er, fjIs, aWSpN, fjIs, aWSpN, Er, fjIs, aWSpN, u, fjIs, aWSpN, u, Er, fjIs, dOmCf, fjIs, dOmCf, Er, fjIs, dOmCf, u, fjIs, dOmCf, u, Er, fjIs, dOmCf, aWSpN, fjIs, dOmCf, aWSpN, Er, fjIs, dOmCf, aWSpN, u, fjIs, dOmCf, aWSpN, u, Er> but was:<>-, test_10(java_programs.POWERSET_TEST): expected:<, pxjSd> but was:<>-, test_11(java_programs.POWERSET_TEST): expected:<, xYN> but was:<>-, test_12(java_programs.POWERSET_TEST): expected:<, qxu, eNIS, eNIS, qxu, XB, XB, qxu, XB, eNIS, XB, eNIS, qxu, G, G, qxu, G, eNIS, G, eNIS, qxu, G, XB, G, XB, qxu, G, XB, eNIS, G, XB, eNIS, qxu, ct, ct, qxu, ct, eNIS, ct, eNIS, qxu, ct, XB, ct, XB, qxu, ct, XB, eNIS, ct, XB, eNIS, qxu, ct, G, ct, G, qxu, ct, G, eNIS, ct, G, eNIS, qxu, ct, G, XB, ct, G, XB, qxu, ct, G, XB, eNIS, ct, G, XB, eNIS, qxu> but was:<>-, test_13(java_programs.POWERSET_TEST): expected:<, EaCPP, WXoqP, WXoqP, EaCPP, HE, HE, EaCPP, HE, WXoqP, HE, WXoqP, EaCPP, Kr, Kr, EaCPP, Kr, WXoqP, Kr, WXoqP, EaCPP, Kr, HE, Kr, HE, EaCPP, Kr, HE, WXoqP, Kr, HE, WXoqP, EaCPP, f, f, EaCPP, f, WXoqP, f, WXoqP, EaCPP, f, HE, f, HE, EaCPP, f, HE, WXoqP, f, HE, WXoqP, EaCPP, f, Kr, f, Kr, EaCPP, f, Kr, WXoqP, f, Kr, WXoqP, EaCPP, f, Kr, HE, f, Kr, HE, EaCPP, f, Kr, HE, WXoqP, f, Kr, HE, WXoqP, EaCPP> but was:<>-, test_14(java_programs.POWERSET_TEST): expected:<, rfc> but was:<>-, test_3(java_programs.POWERSET_TEST): expected:<, yHArr, MgP, MgP, yHArr, uhfll, uhfll, yHArr, uhfll, MgP, uhfll, MgP, yHArr, Q, Q, yHArr, Q, MgP, Q, MgP, yHArr, Q, uhfll, Q, uhfll, yHArr, Q, uhfll, MgP, Q, uhfll, MgP, yHArr, P, P, yHArr, P, MgP, P, MgP, yHArr, P, uhfll, P, uhfll, yHArr, P, uhfll, MgP, P, uhfll, MgP, yHArr, P, Q, P, Q, yHArr, P, Q, MgP, P, Q, MgP, yHArr, P, Q, uhfll, P, Q, uhfll, yHArr, P, Q, uhfll, MgP, P, Q, uhfll, MgP, yHArr> but was:<>-, test_4(java_programs.POWERSET_TEST): expected:<, O, yigE, yigE, O, anMAO, anMAO, O, anMAO, yigE, anMAO, yigE, O, GMw, GMw, O, GMw, yigE, GMw, yigE, O, GMw, anMAO, GMw, anMAO, O, GMw, anMAO, yigE, GMw, anMAO, yigE, O, BR, BR, O, BR, yigE, BR, yigE, O, BR, anMAO, BR, anMAO, O, BR, anMAO, yigE, BR, anMAO, yigE, O, BR, GMw, BR, GMw, O, BR, GMw, yigE, BR, GMw, yigE, O, BR, GMw, anMAO, BR, GMw, anMAO, O, BR, GMw, anMAO, yigE, BR, GMw, anMAO, yigE, O> but was:<>-, ...and 40 failures more, test_5(java_programs.POWERSET_TEST): expected:<, g> but was:<>-, ...and 40 failures more, test_6(java_programs.POWERSET_TEST): expected:<, Wd, X, X, Wd, C, C, Wd, C, X, C, X, Wd, eIu, eIu, Wd, eIu, X, eIu, X, Wd, eIu, C, eIu, C, Wd, eIu, C, X, eIu, C, X, Wd> but was:<>-, ...and 40 failures more, test_7(java_programs.POWERSET_TEST): expected:<, GpbV, h, h, GpbV, zRN, zRN, GpbV, zRN, h, zRN, h, GpbV, Vnbx, Vnbx, GpbV, Vnbx, h, Vnbx, h, GpbV, Vnbx, zRN, Vnbx, zRN, GpbV, Vnbx, zRN, h, Vnbx, zRN, h, GpbV> but was:<>-, ...and 40 failures more, test_0(java_programs.POWERSET_TEST): expected:<, AlG, lmmJG, lmmJG, AlG, UYq, UYq, AlG, UYq, lmmJG, UYq, lmmJG, AlG, yMGc, yMGc, AlG, yMGc, lmmJG, yMGc, lmmJG, AlG, yMGc, UYq, yMGc, UYq, AlG, yMGc, UYq, lmmJG, yMGc, UYq, lmmJG, AlG, UEVgM, UEVgM, AlG, UEVgM, lmmJG, UEVgM, lmmJG, AlG, UEVgM, UYq, UEVgM, UYq, AlG, UEVgM, UYq, lmmJG, UEVgM, UYq, lmmJG, AlG, UEVgM, yMGc, UEVgM, yMGc, AlG, UEVgM, yMGc, lmmJG, UEVgM, yMGc, lmmJG, AlG, UEVgM, yMGc, UYq, UEVgM, yMGc, UYq, AlG, UEVgM, yMGc, UYq, lmmJG, UEVgM, yMGc, UYq, lmmJG, AlG> but was:<>-, ...and 40 failures more, test_15(java_programs.POWERSET_TEST): expected:<, AkR, Eh, Eh, AkR, GDQPu, GDQPu, AkR, GDQPu, Eh, GDQPu, Eh, AkR> but was:<>-, ...and 40 failures more, test_16(java_programs.POWERSET_TEST): expected:<, usRcA, bHCpi, bHCpi, usRcA> but was:<>-, ...and 40 failures more, test_17(java_programs.POWERSET_TEST): expected:<, K, du, du, K, q, q, K, q, du, q, du, K, vf, vf, K, vf, du, vf, du, K, vf, q, vf, q, K, vf, q, du, vf, q, du, K> but was:<>-, ...and 40 failures more, test_18(java_programs.POWERSET_TEST): expected:<, Hr, Ha, Ha, Hr, WwH, WwH, Hr, WwH, Ha, WwH, Ha, Hr, d, d, Hr, d, Ha, d, Ha, Hr, d, WwH, d, WwH, Hr, d, WwH, Ha, d, WwH, Ha, Hr, A, A, Hr, A, Ha, A, Ha, Hr, A, WwH, A, WwH, Hr, A, WwH, Ha, A, WwH, Ha, Hr, A, d, A, d, Hr, A, d, Ha, A, d, Ha, Hr, A, d, WwH, A, d, WwH, Hr, A, d, WwH, Ha, A, d, WwH, Ha, Hr> but was:<>-, ...and 40 failures more, test_19(java_programs.POWERSET_TEST): expected:<, TpLb, vXgdZ, vXgdZ, TpLb, naV, naV, TpLb, naV, vXgdZ, naV, vXgdZ, TpLb> but was:<>-, ...and 40 failures more, test_20(java_programs.POWERSET_TEST): expected:<, LwQ, A, A, LwQ, sdB, sdB, LwQ, sdB, A, sdB, A, LwQ, mEmW, mEmW, LwQ, mEmW, A, mEmW, A, LwQ, mEmW, sdB, mEmW, sdB, LwQ, mEmW, sdB, A, mEmW, sdB, A, LwQ> but was:<>-, ...and 40 failures more, test_21(java_programs.POWERSET_TEST): expected:<, dWFE, FK, FK, dWFE> but was:<>-, ...and 40 failures more, test_22(java_programs.POWERSET_TEST): expected:<, k, blR, blR, k, jSKbz, jSKbz, k, jSKbz, blR, jSKbz, blR, k, Cjmqn, Cjmqn, k, Cjmqn, blR, Cjmqn, blR, k, Cjmqn, jSKbz, Cjmqn, jSKbz, k, Cjmqn, jSKbz, blR, Cjmqn, jSKbz, blR, k> but was:<>-, ...and 40 failures more, test_23(java_programs.POWERSET_TEST): expected:<, M, cAtzc, cAtzc, M, Tzl, Tzl, M, Tzl, cAtzc, Tzl, cAtzc, M> but was:<>-, ...and 40 failures more, test_24(java_programs.POWERSET_TEST): expected:<, sxtH, x, x, sxtH, F, F, sxtH, F, x, F, x, sxtH, C, C, sxtH, C, x, C, x, sxtH, C, F, C, F, sxtH, C, F, x, C, F, x, sxtH, IRj, IRj, sxtH, IRj, x, IRj, x, sxtH, IRj, F, IRj, F, sxtH, IRj, F, x, IRj, F, x, sxtH, IRj, C, IRj, C, sxtH, IRj, C, x, IRj, C, x, sxtH, IRj, C, F, IRj, C, F, sxtH, IRj, C, F, x, IRj, C, F, x, sxtH> but was:<>-, ...and 40 failures more, test_25(java_programs.POWERSET_TEST): expected:<, ewLon, V, V, ewLon> but was:<>-, ...and 40 failures more, test_26(java_programs.POWERSET_TEST): expected:<, o, L, L, o, Bz, Bz, o, Bz, L, Bz, L, o, d, d, o, d, L, d, L, o, d, Bz, d, Bz, o, d, Bz, L, d, Bz, L, o, q, q, o, q, L, q, L, o, q, Bz, q, Bz, o, q, Bz, L, q, Bz, L, o, q, d, q, d, o, q, d, L, q, d, L, o, q, d, Bz, q, d, Bz, o, q, d, Bz, L, q, d, Bz, L, o> but was:<>-, ...and 40 failures more, test_27(java_programs.POWERSET_TEST): expected:<, sjL> but was:<>-, ...and 40 failures more, test_28(java_programs.POWERSET_TEST): expected:<, wf, o, o, wf, Ly, Ly, wf, Ly, o, Ly, o, wf, xrz, xrz, wf, xrz, o, xrz, o, wf, xrz, Ly, xrz, Ly, wf, xrz, Ly, o, xrz, Ly, o, wf> but was:<>-, ...and 40 failures more, test_29(java_programs.POWERSET_TEST): expected:<, qbM, HKp, HKp, qbM, jil, jil, qbM, jil, HKp, jil, HKp, qbM, QoLyl, QoLyl, qbM, QoLyl, HKp, QoLyl, HKp, qbM, QoLyl, jil, QoLyl, jil, qbM, QoLyl, jil, HKp, QoLyl, jil, HKp, qbM, f, f, qbM, f, HKp, f, HKp, qbM, f, jil, f, jil, qbM, f, jil, HKp, f, jil, HKp, qbM, f, QoLyl, f, QoLyl, qbM, f, QoLyl, HKp, f, QoLyl, HKp, qbM, f, QoLyl, jil, f, QoLyl, jil, qbM, f, QoLyl, jil, HKp, f, QoLyl, jil, HKp, qbM> but was:<>-, ...and 40 failures more, test_30(java_programs.POWERSET_TEST): expected:<, Jux> but was:<>-, ...and 40 failures more, test_31(java_programs.POWERSET_TEST): expected:<, TwBYK> but was:<>-, ...and 40 failures more, test_32(java_programs.POWERSET_TEST): expected:<, BL, nuP, nuP, BL, RDBDH, RDBDH, BL, RDBDH, nuP, RDBDH, nuP, BL, T, T, BL, T, nuP, T, nuP, BL, T, RDBDH, T, RDBDH, BL, T, RDBDH, nuP, T, RDBDH, nuP, BL, GKHnS, GKHnS, BL, GKHnS, nuP, GKHnS, nuP, BL, GKHnS, RDBDH, GKHnS, RDBDH, BL, GKHnS, RDBDH, nuP, GKHnS, RDBDH, nuP, BL, GKHnS, T, GKHnS, T, BL, GKHnS, T, nuP, GKHnS, T, nuP, BL, GKHnS, T, RDBDH, GKHnS, T, RDBDH, BL, GKHnS, T, RDBDH, nuP, GKHnS, T, RDBDH, nuP, BL> but was:<>-, ...and 40 failures more, test_33(java_programs.POWERSET_TEST): expected:<, rpTQ, Gkya, Gkya, rpTQ, OjNWk, OjNWk, rpTQ, OjNWk, Gkya, OjNWk, Gkya, rpTQ, Seqic, Seqic, rpTQ, Seqic, Gkya, Seqic, Gkya, rpTQ, Seqic, OjNWk, Seqic, OjNWk, rpTQ, Seqic, OjNWk, Gkya, Seqic, OjNWk, Gkya, rpTQ, aiPp, aiPp, rpTQ, aiPp, Gkya, aiPp, Gkya, rpTQ, aiPp, OjNWk, aiPp, OjNWk, rpTQ, aiPp, OjNWk, Gkya, aiPp, OjNWk, Gkya, rpTQ, aiPp, Seqic, aiPp, Seqic, rpTQ, aiPp, Seqic, Gkya, aiPp, Seqic, Gkya, rpTQ, aiPp, Seqic, OjNWk, aiPp, Seqic, OjNWk, rpTQ, aiPp, Seqic, OjNWk, Gkya, aiPp, Seqic, OjNWk, Gkya, rpTQ> but was:<>-, ...and 40 failures more, test_34(java_programs.POWERSET_TEST): expected:<, l, TZJV, TZJV, l, MUQwT, MUQwT, l, MUQwT, TZJV, MUQwT, TZJV, l> but was:<>-, ...and 40 failures more, test_35(java_programs.POWERSET_TEST): expected:<, Rg, EVODj, EVODj, Rg> but was:<>-, ...and 40 failures more, test_36(java_programs.POWERSET_TEST): expected:<, o, Ni, Ni, o> but was:<>-, ...and 40 failures more, test_37(java_programs.POWERSET_TEST): expected:<, OE, UBt, UBt, OE, PYXMC, PYXMC, OE, PYXMC, UBt, PYXMC, UBt, OE, Qrfj, Qrfj, OE, Qrfj, UBt, Qrfj, UBt, OE, Qrfj, PYXMC, Qrfj, PYXMC, OE, Qrfj, PYXMC, UBt, Qrfj, PYXMC, UBt, OE, ux, ux, OE, ux, UBt, ux, UBt, OE, ux, PYXMC, ux, PYXMC, OE, ux, PYXMC, UBt, ux, PYXMC, UBt, OE, ux, Qrfj, ux, Qrfj, OE, ux, Qrfj, UBt, ux, Qrfj, UBt, OE, ux, Qrfj, PYXMC, ux, Qrfj, PYXMC, OE, ux, Qrfj, PYXMC, UBt, ux, Qrfj, PYXMC, UBt, OE> but was:<>-, ...and 40 failures more, test_38(java_programs.POWERSET_TEST): expected:<, wjY, Gwtt, Gwtt, wjY, A, A, wjY, A, Gwtt, A, Gwtt, wjY, UTO, UTO, wjY, UTO, Gwtt, UTO, Gwtt, wjY, UTO, A, UTO, A, wjY, UTO, A, Gwtt, UTO, A, Gwtt, wjY> but was:<>-, ...and 40 failures more, test_39(java_programs.POWERSET_TEST): expected:<, fFD, YAQeC, YAQeC, fFD, Xj, Xj, fFD, Xj, YAQeC, Xj, YAQeC, fFD, A, A, fFD, A, YAQeC, A, YAQeC, fFD, A, Xj, A, Xj, fFD, A, Xj, YAQeC, A, Xj, YAQeC, fFD> but was:<>-, ...and 40 failures more, test_40(java_programs.POWERSET_TEST): expected:<, vrs, pYcel, pYcel, vrs, R, R, vrs, R, pYcel, R, pYcel, vrs> but was:<>-, ...and 40 failures more, test_41(java_programs.POWERSET_TEST): expected:<, rwLB, kBuv, kBuv, rwLB> but was:<>-, ...and 40 failures more, test_42(java_programs.POWERSET_TEST): expected:<, id, s, s, id> but was:<>-, ...and 40 failures more, test_43(java_programs.POWERSET_TEST): expected:<, FTf, OvYo, OvYo, FTf> but was:<>-, ...and 40 failures more, test_44(java_programs.POWERSET_TEST): expected:<, dlrq, qU, qU, dlrq> but was:<>-, ...and 40 failures more, test_45(java_programs.POWERSET_TEST): expected:<, nlk, dBQ, dBQ, nlk, nzVm, nzVm, nlk, nzVm, dBQ, nzVm, dBQ, nlk> but was:<>-, ...and 40 failures more, test_46(java_programs.POWERSET_TEST): expected:<, wTGRI> but was:<>-, ...and 40 failures more, test_47(java_programs.POWERSET_TEST): expected:<, j, wO, wO, j> but was:<>-, ...and 40 failures more, test_48(java_programs.POWERSET_TEST): expected:<, OY, gHD, gHD, OY, hixqU, hixqU, OY, hixqU, gHD, hixqU, gHD, OY, Ssa, Ssa, OY, Ssa, gHD, Ssa, gHD, OY, Ssa, hixqU, Ssa, hixqU, OY, Ssa, hixqU, gHD, Ssa, hixqU, gHD, OY> but was:<>-, ...and 40 failures more, test_49(java_programs.POWERSET_TEST): expected:<, HwkZV, Gjuqi, Gjuqi, HwkZV> but was:<>-, ...and 40 failures more]
+Thu Dec 20 07:35:25 PST 2018 - Analyzing patched program: POWERSET under path ./patchedPrograms/powerset/tibra/p2
+Patch:
+
+--- java_programs\/POWERSET.java
++++ java_programs\/POWERSET.java
+@@ -16,6 +16,7 @@
+ 				r.addAll(subset);
+ 				to_add.add(r);
+ 			}
++			output.addAll(rest_subsets);
+ 			output.addAll(to_add);
+ 			rest_subsets.addAll(output);
+ 			return output;
+failed tests number: 42
+failed tests info: [test_0(java_programs.POWERSET_TEST): expected:<, AlG, lmmJG, lmmJG, AlG, UYq, UYq, AlG, UYq, lmmJG, UYq, lmmJG, AlG, yMGc, yMGc, AlG, yMGc, lmmJG, yMGc, lmmJG, AlG, yMGc, UYq, yMGc, UYq, AlG, yMGc, UYq, lmmJG, yMGc, UYq, lmmJG, AlG, UEVgM, UEVgM, AlG, UEVgM, lmmJG, UEVgM, lmmJG, AlG, UEVgM, UYq, UEVgM, UYq, AlG, UEVgM, UYq, lmmJG, UEVgM, UYq, lmmJG, AlG, UEVgM, yMGc, UEVgM, yMGc, AlG, UEVgM, yMGc, lmmJG, UEVgM, yMGc, lmmJG, AlG, UEVgM, yMGc, UYq, UEVgM, yMGc, UYq, AlG, UEVgM, yMGc, UYq, lmmJG, UEVgM, yMGc, UYq, lmmJG, AlG> but was:<, AlG, lmmJG, AlG, UYq, AlG, lmmJG, AlG, yMGc, AlG, lmmJG, AlG, UYq, AlG, lmmJG, AlG, UEVgM, AlG, lmmJG, AlG, UYq, AlG, lmmJG, AlG, yMGc, AlG, lmmJG, AlG, UYq, AlG, lmmJG, AlG>-, test_1(java_programs.POWERSET_TEST): expected:<, UZd, m, m, UZd> but was:<, UZd, m, UZd>-, test_2(java_programs.POWERSET_TEST): expected:<, noY, wBq, wBq, noY, BgoI, BgoI, noY, BgoI, wBq, BgoI, wBq, noY> but was:<, noY, wBq, noY, BgoI, noY, wBq, noY>-, test_3(java_programs.POWERSET_TEST): expected:<, yHArr, MgP, MgP, yHArr, uhfll, uhfll, yHArr, uhfll, MgP, uhfll, MgP, yHArr, Q, Q, yHArr, Q, MgP, Q, MgP, yHArr, Q, uhfll, Q, uhfll, yHArr, Q, uhfll, MgP, Q, uhfll, MgP, yHArr, P, P, yHArr, P, MgP, P, MgP, yHArr, P, uhfll, P, uhfll, yHArr, P, uhfll, MgP, P, uhfll, MgP, yHArr, P, Q, P, Q, yHArr, P, Q, MgP, P, Q, MgP, yHArr, P, Q, uhfll, P, Q, uhfll, yHArr, P, Q, uhfll, MgP, P, Q, uhfll, MgP, yHArr> but was:<, yHArr, MgP, yHArr, uhfll, yHArr, MgP, yHArr, Q, yHArr, MgP, yHArr, uhfll, yHArr, MgP, yHArr, P, yHArr, MgP, yHArr, uhfll, yHArr, MgP, yHArr, Q, yHArr, MgP, yHArr, uhfll, yHArr, MgP, yHArr>-, test_4(java_programs.POWERSET_TEST): expected:<, O, yigE, yigE, O, anMAO, anMAO, O, anMAO, yigE, anMAO, yigE, O, GMw, GMw, O, GMw, yigE, GMw, yigE, O, GMw, anMAO, GMw, anMAO, O, GMw, anMAO, yigE, GMw, anMAO, yigE, O, BR, BR, O, BR, yigE, BR, yigE, O, BR, anMAO, BR, anMAO, O, BR, anMAO, yigE, BR, anMAO, yigE, O, BR, GMw, BR, GMw, O, BR, GMw, yigE, BR, GMw, yigE, O, BR, GMw, anMAO, BR, GMw, anMAO, O, BR, GMw, anMAO, yigE, BR, GMw, anMAO, yigE, O> but was:<, O, yigE, O, anMAO, O, yigE, O, GMw, O, yigE, O, anMAO, O, yigE, O, BR, O, yigE, O, anMAO, O, yigE, O, GMw, O, yigE, O, anMAO, O, yigE, O>-, test_6(java_programs.POWERSET_TEST): expected:<, Wd, X, X, Wd, C, C, Wd, C, X, C, X, Wd, eIu, eIu, Wd, eIu, X, eIu, X, Wd, eIu, C, eIu, C, Wd, eIu, C, X, eIu, C, X, Wd> but was:<, Wd, X, Wd, C, Wd, X, Wd, eIu, Wd, X, Wd, C, Wd, X, Wd>-, test_7(java_programs.POWERSET_TEST): expected:<, GpbV, h, h, GpbV, zRN, zRN, GpbV, zRN, h, zRN, h, GpbV, Vnbx, Vnbx, GpbV, Vnbx, h, Vnbx, h, GpbV, Vnbx, zRN, Vnbx, zRN, GpbV, Vnbx, zRN, h, Vnbx, zRN, h, GpbV> but was:<, GpbV, h, GpbV, zRN, GpbV, h, GpbV, Vnbx, GpbV, h, GpbV, zRN, GpbV, h, GpbV>-, test_8(java_programs.POWERSET_TEST): expected:<, pES, lIX, lIX, pES, eWOv, eWOv, pES, eWOv, lIX, eWOv, lIX, pES, d, d, pES, d, lIX, d, lIX, pES, d, eWOv, d, eWOv, pES, d, eWOv, lIX, d, eWOv, lIX, pES> but was:<, pES, lIX, pES, eWOv, pES, lIX, pES, d, pES, lIX, pES, eWOv, pES, lIX, pES>-, test_9(java_programs.POWERSET_TEST): expected:<, Er, u, u, Er, aWSpN, aWSpN, Er, aWSpN, u, aWSpN, u, Er, dOmCf, dOmCf, Er, dOmCf, u, dOmCf, u, Er, dOmCf, aWSpN, dOmCf, aWSpN, Er, dOmCf, aWSpN, u, dOmCf, aWSpN, u, Er, fjIs, fjIs, Er, fjIs, u, fjIs, u, Er, fjIs, aWSpN, fjIs, aWSpN, Er, fjIs, aWSpN, u, fjIs, aWSpN, u, Er, fjIs, dOmCf, fjIs, dOmCf, Er, fjIs, dOmCf, u, fjIs, dOmCf, u, Er, fjIs, dOmCf, aWSpN, fjIs, dOmCf, aWSpN, Er, fjIs, dOmCf, aWSpN, u, fjIs, dOmCf, aWSpN, u, Er> but was:<, Er, u, Er, aWSpN, Er, u, Er, dOmCf, Er, u, Er, aWSpN, Er, u, Er, fjIs, Er, u, Er, aWSpN, Er, u, Er, dOmCf, Er, u, Er, aWSpN, Er, u, Er>-, test_12(java_programs.POWERSET_TEST): expected:<, qxu, eNIS, eNIS, qxu, XB, XB, qxu, XB, eNIS, XB, eNIS, qxu, G, G, qxu, G, eNIS, G, eNIS, qxu, G, XB, G, XB, qxu, G, XB, eNIS, G, XB, eNIS, qxu, ct, ct, qxu, ct, eNIS, ct, eNIS, qxu, ct, XB, ct, XB, qxu, ct, XB, eNIS, ct, XB, eNIS, qxu, ct, G, ct, G, qxu, ct, G, eNIS, ct, G, eNIS, qxu, ct, G, XB, ct, G, XB, qxu, ct, G, XB, eNIS, ct, G, XB, eNIS, qxu> but was:<, qxu, eNIS, qxu, XB, qxu, eNIS, qxu, G, qxu, eNIS, qxu, XB, qxu, eNIS, qxu, ct, qxu, eNIS, qxu, XB, qxu, eNIS, qxu, G, qxu, eNIS, qxu, XB, qxu, eNIS, qxu>-, test_13(java_programs.POWERSET_TEST): expected:<, EaCPP, WXoqP, WXoqP, EaCPP, HE, HE, EaCPP, HE, WXoqP, HE, WXoqP, EaCPP, Kr, Kr, EaCPP, Kr, WXoqP, Kr, WXoqP, EaCPP, Kr, HE, Kr, HE, EaCPP, Kr, HE, WXoqP, Kr, HE, WXoqP, EaCPP, f, f, EaCPP, f, WXoqP, f, WXoqP, EaCPP, f, HE, f, HE, EaCPP, f, HE, WXoqP, f, HE, WXoqP, EaCPP, f, Kr, f, Kr, EaCPP, f, Kr, WXoqP, f, Kr, WXoqP, EaCPP, f, Kr, HE, f, Kr, HE, EaCPP, f, Kr, HE, WXoqP, f, Kr, HE, WXoqP, EaCPP> but was:<, EaCPP, WXoqP, EaCPP, HE, EaCPP, WXoqP, EaCPP, Kr, EaCPP, WXoqP, EaCPP, HE, EaCPP, WXoqP, EaCPP, f, EaCPP, WXoqP, EaCPP, HE, EaCPP, WXoqP, EaCPP, Kr, EaCPP, WXoqP, EaCPP, HE, EaCPP, WXoqP, EaCPP>-, ...and 32 failures more, test_15(java_programs.POWERSET_TEST): expected:<, AkR, Eh, Eh, AkR, GDQPu, GDQPu, AkR, GDQPu, Eh, GDQPu, Eh, AkR> but was:<, AkR, Eh, AkR, GDQPu, AkR, Eh, AkR>-, ...and 32 failures more, test_16(java_programs.POWERSET_TEST): expected:<, usRcA, bHCpi, bHCpi, usRcA> but was:<, usRcA, bHCpi, usRcA>-, ...and 32 failures more, test_17(java_programs.POWERSET_TEST): expected:<, K, du, du, K, q, q, K, q, du, q, du, K, vf, vf, K, vf, du, vf, du, K, vf, q, vf, q, K, vf, q, du, vf, q, du, K> but was:<, K, du, K, q, K, du, K, vf, K, du, K, q, K, du, K>-, ...and 32 failures more, test_18(java_programs.POWERSET_TEST): expected:<, Hr, Ha, Ha, Hr, WwH, WwH, Hr, WwH, Ha, WwH, Ha, Hr, d, d, Hr, d, Ha, d, Ha, Hr, d, WwH, d, WwH, Hr, d, WwH, Ha, d, WwH, Ha, Hr, A, A, Hr, A, Ha, A, Ha, Hr, A, WwH, A, WwH, Hr, A, WwH, Ha, A, WwH, Ha, Hr, A, d, A, d, Hr, A, d, Ha, A, d, Ha, Hr, A, d, WwH, A, d, WwH, Hr, A, d, WwH, Ha, A, d, WwH, Ha, Hr> but was:<, Hr, Ha, Hr, WwH, Hr, Ha, Hr, d, Hr, Ha, Hr, WwH, Hr, Ha, Hr, A, Hr, Ha, Hr, WwH, Hr, Ha, Hr, d, Hr, Ha, Hr, WwH, Hr, Ha, Hr>-, ...and 32 failures more, test_19(java_programs.POWERSET_TEST): expected:<, TpLb, vXgdZ, vXgdZ, TpLb, naV, naV, TpLb, naV, vXgdZ, naV, vXgdZ, TpLb> but was:<, TpLb, vXgdZ, TpLb, naV, TpLb, vXgdZ, TpLb>-, ...and 32 failures more, test_20(java_programs.POWERSET_TEST): expected:<, LwQ, A, A, LwQ, sdB, sdB, LwQ, sdB, A, sdB, A, LwQ, mEmW, mEmW, LwQ, mEmW, A, mEmW, A, LwQ, mEmW, sdB, mEmW, sdB, LwQ, mEmW, sdB, A, mEmW, sdB, A, LwQ> but was:<, LwQ, A, LwQ, sdB, LwQ, A, LwQ, mEmW, LwQ, A, LwQ, sdB, LwQ, A, LwQ>-, ...and 32 failures more, test_21(java_programs.POWERSET_TEST): expected:<, dWFE, FK, FK, dWFE> but was:<, dWFE, FK, dWFE>-, ...and 32 failures more, test_22(java_programs.POWERSET_TEST): expected:<, k, blR, blR, k, jSKbz, jSKbz, k, jSKbz, blR, jSKbz, blR, k, Cjmqn, Cjmqn, k, Cjmqn, blR, Cjmqn, blR, k, Cjmqn, jSKbz, Cjmqn, jSKbz, k, Cjmqn, jSKbz, blR, Cjmqn, jSKbz, blR, k> but was:<, k, blR, k, jSKbz, k, blR, k, Cjmqn, k, blR, k, jSKbz, k, blR, k>-, ...and 32 failures more, test_23(java_programs.POWERSET_TEST): expected:<, M, cAtzc, cAtzc, M, Tzl, Tzl, M, Tzl, cAtzc, Tzl, cAtzc, M> but was:<, M, cAtzc, M, Tzl, M, cAtzc, M>-, ...and 32 failures more, test_24(java_programs.POWERSET_TEST): expected:<, sxtH, x, x, sxtH, F, F, sxtH, F, x, F, x, sxtH, C, C, sxtH, C, x, C, x, sxtH, C, F, C, F, sxtH, C, F, x, C, F, x, sxtH, IRj, IRj, sxtH, IRj, x, IRj, x, sxtH, IRj, F, IRj, F, sxtH, IRj, F, x, IRj, F, x, sxtH, IRj, C, IRj, C, sxtH, IRj, C, x, IRj, C, x, sxtH, IRj, C, F, IRj, C, F, sxtH, IRj, C, F, x, IRj, C, F, x, sxtH> but was:<, sxtH, x, sxtH, F, sxtH, x, sxtH, C, sxtH, x, sxtH, F, sxtH, x, sxtH, IRj, sxtH, x, sxtH, F, sxtH, x, sxtH, C, sxtH, x, sxtH, F, sxtH, x, sxtH>-, ...and 32 failures more, test_25(java_programs.POWERSET_TEST): expected:<, ewLon, V, V, ewLon> but was:<, ewLon, V, ewLon>-, ...and 32 failures more, test_26(java_programs.POWERSET_TEST): expected:<, o, L, L, o, Bz, Bz, o, Bz, L, Bz, L, o, d, d, o, d, L, d, L, o, d, Bz, d, Bz, o, d, Bz, L, d, Bz, L, o, q, q, o, q, L, q, L, o, q, Bz, q, Bz, o, q, Bz, L, q, Bz, L, o, q, d, q, d, o, q, d, L, q, d, L, o, q, d, Bz, q, d, Bz, o, q, d, Bz, L, q, d, Bz, L, o> but was:<, o, L, o, Bz, o, L, o, d, o, L, o, Bz, o, L, o, q, o, L, o, Bz, o, L, o, d, o, L, o, Bz, o, L, o>-, ...and 32 failures more, test_28(java_programs.POWERSET_TEST): expected:<, wf, o, o, wf, Ly, Ly, wf, Ly, o, Ly, o, wf, xrz, xrz, wf, xrz, o, xrz, o, wf, xrz, Ly, xrz, Ly, wf, xrz, Ly, o, xrz, Ly, o, wf> but was:<, wf, o, wf, Ly, wf, o, wf, xrz, wf, o, wf, Ly, wf, o, wf>-, ...and 32 failures more, test_29(java_programs.POWERSET_TEST): expected:<, qbM, HKp, HKp, qbM, jil, jil, qbM, jil, HKp, jil, HKp, qbM, QoLyl, QoLyl, qbM, QoLyl, HKp, QoLyl, HKp, qbM, QoLyl, jil, QoLyl, jil, qbM, QoLyl, jil, HKp, QoLyl, jil, HKp, qbM, f, f, qbM, f, HKp, f, HKp, qbM, f, jil, f, jil, qbM, f, jil, HKp, f, jil, HKp, qbM, f, QoLyl, f, QoLyl, qbM, f, QoLyl, HKp, f, QoLyl, HKp, qbM, f, QoLyl, jil, f, QoLyl, jil, qbM, f, QoLyl, jil, HKp, f, QoLyl, jil, HKp, qbM> but was:<, qbM, HKp, qbM, jil, qbM, HKp, qbM, QoLyl, qbM, HKp, qbM, jil, qbM, HKp, qbM, f, qbM, HKp, qbM, jil, qbM, HKp, qbM, QoLyl, qbM, HKp, qbM, jil, qbM, HKp, qbM>-, ...and 32 failures more, test_32(java_programs.POWERSET_TEST): expected:<, BL, nuP, nuP, BL, RDBDH, RDBDH, BL, RDBDH, nuP, RDBDH, nuP, BL, T, T, BL, T, nuP, T, nuP, BL, T, RDBDH, T, RDBDH, BL, T, RDBDH, nuP, T, RDBDH, nuP, BL, GKHnS, GKHnS, BL, GKHnS, nuP, GKHnS, nuP, BL, GKHnS, RDBDH, GKHnS, RDBDH, BL, GKHnS, RDBDH, nuP, GKHnS, RDBDH, nuP, BL, GKHnS, T, GKHnS, T, BL, GKHnS, T, nuP, GKHnS, T, nuP, BL, GKHnS, T, RDBDH, GKHnS, T, RDBDH, BL, GKHnS, T, RDBDH, nuP, GKHnS, T, RDBDH, nuP, BL> but was:<, BL, nuP, BL, RDBDH, BL, nuP, BL, T, BL, nuP, BL, RDBDH, BL, nuP, BL, GKHnS, BL, nuP, BL, RDBDH, BL, nuP, BL, T, BL, nuP, BL, RDBDH, BL, nuP, BL>-, ...and 32 failures more, test_33(java_programs.POWERSET_TEST): expected:<, rpTQ, Gkya, Gkya, rpTQ, OjNWk, OjNWk, rpTQ, OjNWk, Gkya, OjNWk, Gkya, rpTQ, Seqic, Seqic, rpTQ, Seqic, Gkya, Seqic, Gkya, rpTQ, Seqic, OjNWk, Seqic, OjNWk, rpTQ, Seqic, OjNWk, Gkya, Seqic, OjNWk, Gkya, rpTQ, aiPp, aiPp, rpTQ, aiPp, Gkya, aiPp, Gkya, rpTQ, aiPp, OjNWk, aiPp, OjNWk, rpTQ, aiPp, OjNWk, Gkya, aiPp, OjNWk, Gkya, rpTQ, aiPp, Seqic, aiPp, Seqic, rpTQ, aiPp, Seqic, Gkya, aiPp, Seqic, Gkya, rpTQ, aiPp, Seqic, OjNWk, aiPp, Seqic, OjNWk, rpTQ, aiPp, Seqic, OjNWk, Gkya, aiPp, Seqic, OjNWk, Gkya, rpTQ> but was:<, rpTQ, Gkya, rpTQ, OjNWk, rpTQ, Gkya, rpTQ, Seqic, rpTQ, Gkya, rpTQ, OjNWk, rpTQ, Gkya, rpTQ, aiPp, rpTQ, Gkya, rpTQ, OjNWk, rpTQ, Gkya, rpTQ, Seqic, rpTQ, Gkya, rpTQ, OjNWk, rpTQ, Gkya, rpTQ>-, ...and 32 failures more, test_34(java_programs.POWERSET_TEST): expected:<, l, TZJV, TZJV, l, MUQwT, MUQwT, l, MUQwT, TZJV, MUQwT, TZJV, l> but was:<, l, TZJV, l, MUQwT, l, TZJV, l>-, ...and 32 failures more, test_35(java_programs.POWERSET_TEST): expected:<, Rg, EVODj, EVODj, Rg> but was:<, Rg, EVODj, Rg>-, ...and 32 failures more, test_36(java_programs.POWERSET_TEST): expected:<, o, Ni, Ni, o> but was:<, o, Ni, o>-, ...and 32 failures more, test_37(java_programs.POWERSET_TEST): expected:<, OE, UBt, UBt, OE, PYXMC, PYXMC, OE, PYXMC, UBt, PYXMC, UBt, OE, Qrfj, Qrfj, OE, Qrfj, UBt, Qrfj, UBt, OE, Qrfj, PYXMC, Qrfj, PYXMC, OE, Qrfj, PYXMC, UBt, Qrfj, PYXMC, UBt, OE, ux, ux, OE, ux, UBt, ux, UBt, OE, ux, PYXMC, ux, PYXMC, OE, ux, PYXMC, UBt, ux, PYXMC, UBt, OE, ux, Qrfj, ux, Qrfj, OE, ux, Qrfj, UBt, ux, Qrfj, UBt, OE, ux, Qrfj, PYXMC, ux, Qrfj, PYXMC, OE, ux, Qrfj, PYXMC, UBt, ux, Qrfj, PYXMC, UBt, OE> but was:<, OE, UBt, OE, PYXMC, OE, UBt, OE, Qrfj, OE, UBt, OE, PYXMC, OE, UBt, OE, ux, OE, UBt, OE, PYXMC, OE, UBt, OE, Qrfj, OE, UBt, OE, PYXMC, OE, UBt, OE>-, ...and 32 failures more, test_38(java_programs.POWERSET_TEST): expected:<, wjY, Gwtt, Gwtt, wjY, A, A, wjY, A, Gwtt, A, Gwtt, wjY, UTO, UTO, wjY, UTO, Gwtt, UTO, Gwtt, wjY, UTO, A, UTO, A, wjY, UTO, A, Gwtt, UTO, A, Gwtt, wjY> but was:<, wjY, Gwtt, wjY, A, wjY, Gwtt, wjY, UTO, wjY, Gwtt, wjY, A, wjY, Gwtt, wjY>-, ...and 32 failures more, test_39(java_programs.POWERSET_TEST): expected:<, fFD, YAQeC, YAQeC, fFD, Xj, Xj, fFD, Xj, YAQeC, Xj, YAQeC, fFD, A, A, fFD, A, YAQeC, A, YAQeC, fFD, A, Xj, A, Xj, fFD, A, Xj, YAQeC, A, Xj, YAQeC, fFD> but was:<, fFD, YAQeC, fFD, Xj, fFD, YAQeC, fFD, A, fFD, YAQeC, fFD, Xj, fFD, YAQeC, fFD>-, ...and 32 failures more, test_40(java_programs.POWERSET_TEST): expected:<, vrs, pYcel, pYcel, vrs, R, R, vrs, R, pYcel, R, pYcel, vrs> but was:<, vrs, pYcel, vrs, R, vrs, pYcel, vrs>-, ...and 32 failures more, test_41(java_programs.POWERSET_TEST): expected:<, rwLB, kBuv, kBuv, rwLB> but was:<, rwLB, kBuv, rwLB>-, ...and 32 failures more, test_42(java_programs.POWERSET_TEST): expected:<, id, s, s, id> but was:<, id, s, id>-, ...and 32 failures more, test_43(java_programs.POWERSET_TEST): expected:<, FTf, OvYo, OvYo, FTf> but was:<, FTf, OvYo, FTf>-, ...and 32 failures more, test_44(java_programs.POWERSET_TEST): expected:<, dlrq, qU, qU, dlrq> but was:<, dlrq, qU, dlrq>-, ...and 32 failures more, test_45(java_programs.POWERSET_TEST): expected:<, nlk, dBQ, dBQ, nlk, nzVm, nzVm, nlk, nzVm, dBQ, nzVm, dBQ, nlk> but was:<, nlk, dBQ, nlk, nzVm, nlk, dBQ, nlk>-, ...and 32 failures more, test_47(java_programs.POWERSET_TEST): expected:<, j, wO, wO, j> but was:<, j, wO, j>-, ...and 32 failures more, test_48(java_programs.POWERSET_TEST): expected:<, OY, gHD, gHD, OY, hixqU, hixqU, OY, hixqU, gHD, hixqU, gHD, OY, Ssa, Ssa, OY, Ssa, gHD, Ssa, gHD, OY, Ssa, hixqU, Ssa, hixqU, OY, Ssa, hixqU, gHD, Ssa, hixqU, gHD, OY> but was:<, OY, gHD, OY, hixqU, OY, gHD, OY, Ssa, OY, gHD, OY, hixqU, OY, gHD, OY>-, ...and 32 failures more, test_49(java_programs.POWERSET_TEST): expected:<, HwkZV, Gjuqi, Gjuqi, HwkZV> but was:<, HwkZV, Gjuqi, HwkZV>-, ...and 32 failures more]
+Thu Dec 20 07:35:27 PST 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/Arja/p1
+Patch:
+--- /tmp/Arja_QuixBugs_QUICKSORT_/src/main/java/QUICKSORT.java    2018-12-02 05:36:30.254338040 -0500
++++ /tmp/Arja_QuixBugs_QUICKSORT_/patches_2c2c/Patch_1280/patched/tmp/Arja_QuixBugs_QUICKSORT_/src/main/java/QUICKSORT.java    2018-12-02 05:43:02.203568027 -0500
+@@ -13,7 +13,9 @@
+ public class QUICKSORT {
+     public static ArrayList<Integer> quicksort(ArrayList<Integer> arr) {
+         if (arr.isEmpty()) {
+-            return new ArrayList<Integer>();
++            if (arr.isEmpty()) {
++                return new ArrayList<Integer>();
++            }
+         }
+ 
+         Integer pivot = arr.get(0);
+@@ -23,9 +25,8 @@
+         for (Integer x : arr.subList(1, arr.size())) {
+             if (x < pivot) {
+                 lesser.add(x);
+-            } else if (x > pivot) {
+-                greater.add(x);
+-            }
++            } else
++                greater.add(x);
+         }
+         ArrayList<Integer> middle = new ArrayList<Integer>();
+         middle.add(pivot);
+
+passed all tests 
+Thu Dec 20 07:35:28 PST 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/Arja/p2
+Patch:
+--- /tmp/Arja_QuixBugs_QUICKSORT_/src/main/java/QUICKSORT.java    2018-12-02 05:36:30.254338040 -0500
++++ /tmp/Arja_QuixBugs_QUICKSORT_/patches_2c2c/Patch_1259/patched/tmp/Arja_QuixBugs_QUICKSORT_/src/main/java/QUICKSORT.java    2018-12-02 05:42:44.931441007 -0500
+@@ -23,13 +23,15 @@
+         for (Integer x : arr.subList(1, arr.size())) {
+             if (x < pivot) {
+                 lesser.add(x);
+-            } else if (x > pivot) {
+-                greater.add(x);
+-            }
++            } else
++                greater.add(x);
+         }
+         ArrayList<Integer> middle = new ArrayList<Integer>();
+         middle.add(pivot);
+-        lesser = quicksort(lesser);
++        if (arr.isEmpty()) {
++            return new ArrayList<Integer>();
++        }
++        lesser = quicksort(lesser);
+         greater = quicksort(greater);
+         middle.addAll(greater);
+         lesser.addAll(middle);
+
+passed all tests 
+Thu Dec 20 07:35:30 PST 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/Arja/p3
+Patch:
+--- /tmp/Arja_QuixBugs_QUICKSORT_/src/main/java/QUICKSORT.java    2018-12-02 05:36:30.254338040 -0500
++++ /tmp/Arja_QuixBugs_QUICKSORT_/patches_2c2c/Patch_531/patched/tmp/Arja_QuixBugs_QUICKSORT_/src/main/java/QUICKSORT.java    2018-12-02 05:38:53.543931152 -0500
+@@ -17,15 +17,18 @@
+         }
+ 
+         Integer pivot = arr.get(0);
+-        ArrayList<Integer> lesser = new ArrayList<Integer>();
+-        ArrayList<Integer> greater = new ArrayList<Integer>();
++        if (arr.isEmpty()) {
++            return new ArrayList<Integer>();
++        }
++        ArrayList<Integer> lesser = new ArrayList<Integer>();
++        lesser = quicksort(lesser);
++        ArrayList<Integer> greater = new ArrayList<Integer>();
+ 
+         for (Integer x : arr.subList(1, arr.size())) {
+             if (x < pivot) {
+                 lesser.add(x);
+-            } else if (x > pivot) {
+-                greater.add(x);
+-            }
++            } else
++                greater.add(x);
+         }
+         ArrayList<Integer> middle = new ArrayList<Integer>();
+         middle.add(pivot);
+
+passed all tests 
+Thu Dec 20 07:35:31 PST 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/Arja/p4
+Patch:
+--- /tmp/Arja_QuixBugs_QUICKSORT_/src/main/java/QUICKSORT.java    2018-12-02 05:36:30.254338040 -0500
++++ /tmp/Arja_QuixBugs_QUICKSORT_/patches_2c2c/Patch_993/patched/tmp/Arja_QuixBugs_QUICKSORT_/src/main/java/QUICKSORT.java    2018-12-02 05:40:47.506590981 -0500
+@@ -20,16 +20,22 @@
+         ArrayList<Integer> lesser = new ArrayList<Integer>();
+         ArrayList<Integer> greater = new ArrayList<Integer>();
+ 
+-        for (Integer x : arr.subList(1, arr.size())) {
++        if (arr.isEmpty()) {
++            return new ArrayList<Integer>();
++        }
++        for (Integer x : arr.subList(1, arr.size())) {
+             if (x < pivot) {
+                 lesser.add(x);
+-            } else if (x > pivot) {
+-                greater.add(x);
+-            }
++            } else
++                greater.add(x);
+         }
+-        ArrayList<Integer> middle = new ArrayList<Integer>();
+-        middle.add(pivot);
+         lesser = quicksort(lesser);
++        ArrayList<Integer> middle = new ArrayList<Integer>();
++        middle.add(pivot);
++        if (arr.isEmpty()) {
++            return new ArrayList<Integer>();
++        }
++        lesser = quicksort(lesser);
+         greater = quicksort(greater);
+         middle.addAll(greater);
+         lesser.addAll(middle);
+
+passed all tests 
+Thu Dec 20 07:35:33 PST 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/Arja/p5
+Patch:
+--- /tmp/Arja_QuixBugs_QUICKSORT_/src/main/java/QUICKSORT.java    2018-12-02 05:36:30.254338040 -0500
++++ /tmp/Arja_QuixBugs_QUICKSORT_/patches_2c2c/Patch_898/patched/tmp/Arja_QuixBugs_QUICKSORT_/src/main/java/QUICKSORT.java    2018-12-02 05:40:08.922039461 -0500
+@@ -23,9 +23,8 @@
+         for (Integer x : arr.subList(1, arr.size())) {
+             if (x < pivot) {
+                 lesser.add(x);
+-            } else if (x > pivot) {
+-                greater.add(x);
+-            }
++            } else
++                greater.add(x);
+         }
+         ArrayList<Integer> middle = new ArrayList<Integer>();
+         middle.add(pivot);
+
+passed all tests 
+Thu Dec 20 07:35:34 PST 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/jkali/p1
+Patch:
+
+--- java_programs\/QUICKSORT.java
++++ java_programs\/QUICKSORT.java
+@@ -13,7 +13,7 @@
+ 			if (x < pivot) {
+ 				lesser.add(x);
+ 			}else
+-				if (x > pivot) {
++				if (true) {
+ 					greater.add(x);
+ 				}
+ 
+
+
+passed all tests 
+Thu Dec 20 07:35:35 PST 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/mutation/p1
+Patch:
+
+--- java_programs\/QUICKSORT.java
++++ java_programs\/QUICKSORT.java
+@@ -10,7 +10,7 @@
+ 		java.util.ArrayList<java.lang.Integer> lesser = new java.util.ArrayList<java.lang.Integer>();
+ 		java.util.ArrayList<java.lang.Integer> greater = new java.util.ArrayList<java.lang.Integer>();
+ 		for (java.lang.Integer x : arr.subList(1, arr.size())) {
+-			if (x < pivot) {
++			if (x <= pivot) {
+ 				lesser.add(x);
+ 			}else
+ 				if (x > pivot) {
+
+
+passed all tests 
+Thu Dec 20 07:35:37 PST 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/nopol-dynamoth/p1
+Patch:
+--- nopol-quixbugs/src/main/java/java_programs/QUICKSORT.java
++++ nopol-quixbugs/src/main/java/java_programs/QUICKSORT.java
+@@ -25,3 +25,3 @@
+                 lesser.add(x);
+-            } else if (x > pivot) {
++            } else if (arr.contains((java.lang.Object) pivot)) {
+                 greater.add(x);
+
+passed all tests 
+Thu Dec 20 07:35:38 PST 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/nopol-smt/p1
+Patch:
+--- nopol-quixbugs/src/main/java/java_programs/QUICKSORT.java
++++ nopol-quixbugs/src/main/java/java_programs/QUICKSORT.java
+@@ -25,3 +25,3 @@
+                 lesser.add(x);
+-            } else if (x > pivot) {
++            } else if (lesser!=null) {
+                 greater.add(x);
+
+passed all tests 
+Thu Dec 20 07:35:39 PST 2018 - Analyzing patched program: QUICKSORT under path ./patchedPrograms/quicksort/RSRepair/p1
+Patch:
+--- /tmp/RSRepair_QuixBugs_QUICKSORT_/src/main/java/QUICKSORT.java    2018-12-02 12:31:12.235565775 -0500
++++ /tmp/RSRepair_QuixBugs_QUICKSORT_/patches_4rrc/Patch_546/patched/tmp/RSRepair_QuixBugs_QUICKSORT_/src/main/java/QUICKSORT.java    2018-12-02 12:34:11.456017610 -0500
+@@ -23,9 +23,8 @@
+         for (Integer x : arr.subList(1, arr.size())) {
+             if (x < pivot) {
+                 lesser.add(x);
+-            } else if (x > pivot) {
+-                greater.add(x);
+-            }
++            } else
++                greater.add(x);
+         }
+         ArrayList<Integer> middle = new ArrayList<Integer>();
+         middle.add(pivot);
+
+passed all tests 
+Thu Dec 20 07:35:41 PST 2018 - Analyzing patched program: RPN_EVAL under path ./patchedPrograms/rpn_eval/cardumen/p1
+Patch:
+
+--- java_programs\/RPN_EVAL.java
++++ java_programs\/RPN_EVAL.java
+@@ -18,7 +18,7 @@
+ 				java.lang.Double b = ((java.lang.Double) (stack.pop()));
+ 				java.lang.Double c = 0.0;
+ 				java.util.function.BinaryOperator<java.lang.Double> bin_op = op.get(token);
+-				c = bin_op.apply(a, b);
++				c = bin_op.apply(b, a);
+ 				stack.push(c);
+ 			}
+ 		}
+
+
+passed all tests 

@@ -1,0 +1,17 @@
+--- ./src/main/java/buggy_java_programs/FLATTEN.java	2018-12-11 07:04:29.000000000 -0800
++++ ./src/main/java/java_programs/FLATTEN.java	2018-12-11 07:04:29.000000000 -0800
+@@ -18,12 +19,12 @@
+                 if (x instanceof ArrayList) {
+                     result.addAll((ArrayList) flatten(x));
+                 } else {
+-                    result.add(flatten(x));
++                    result.add((x));
+ 		}
+             }
+             return result;
+ 	} else {
+-	    return flatten(arr);
++	    return arr;
+ 	}
+     }
+ }

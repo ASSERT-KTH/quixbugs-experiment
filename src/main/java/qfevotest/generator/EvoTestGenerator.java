@@ -99,13 +99,24 @@ public class EvoTestGenerator {
 		String path = System.getProperty("java.class.path")+":"+dependencyPath;
 		String[] command = new String[] { "javac", "-cp", path,
 				programName+".java" };
-		System.out.println(Arrays.toString(command));
+		String[] commandNode = new String[] { "javac", "-cp", path,
+				"Node.java" };
+//		System.out.println(Arrays.toString(command));
+			
 		ProcessBuilder pb = new ProcessBuilder(command);
+		if("DEPTH_FIRST_SEARCH".equals(programName)) {
+			ProcessBuilder pbnode = new ProcessBuilder(commandNode);
+			pbnode.redirectOutput();
+			pbnode.redirectErrorStream(true);
+			pbnode.directory(new File(dirtocompile));
+			Process pnode = pbnode.start();
+			String outnode = readOut(pnode);
+			System.out.println("Compilation: " + outnode.isEmpty() + ": " + outnode);
+		}
 		pb.redirectOutput();
 		pb.redirectErrorStream(true);
 		pb.directory(new File(dirtocompile));
 		p = pb.start();
-
 		String out = readOut(p);
 		System.out.println("Compilation: " + out.isEmpty() + ": " + out);
 

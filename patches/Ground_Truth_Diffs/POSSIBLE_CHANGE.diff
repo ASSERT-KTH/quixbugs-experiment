@@ -1,0 +1,11 @@
+--- ./src/main/java/buggy_java_programs/POSSIBLE_CHANGE.java	2018-12-11 07:04:29.000000000 -0800
++++ ./src/main/java/java_programs/POSSIBLE_CHANGE.java	2018-12-11 07:04:29.000000000 -0800
+@@ -14,7 +14,7 @@
+         if (total == 0) {
+             return 1;
+         }
+-        if (total < 0) {
++        if (total < 0 ||coins.length==0) {
+             return 0;
+         }
+ 
