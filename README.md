@@ -320,61 +320,257 @@ java -cp /path/to/junit-4.9.jar org.junit.runner.JUnitCore qfevotest.generator.P
              String fst = longest_common_subsequence(a, b.substring(1));
              String snd = longest_common_subsequence(a.substring(1), b);
 ```
-* 
+* MAX_SUBLIST_SUM 
 ```Java
+@@ -16,7 +16,7 @@
+         int max_so_far = 0;
+ 
+         for (int x : arr) {
+-            max_ending_here = max_ending_here + x;
++            max_ending_here = Math.max(0,max_ending_here + x);
+             max_so_far = Math.max(max_so_far, max_ending_here);
+         }
+ 
+```
+* MERGESORT
+```Java
+@@ -35,7 +35,7 @@
+     }
+ 
+     public static ArrayList<Integer> mergesort(ArrayList<Integer> arr) {
+-        if (arr.size() == 0) { // <= 1 in correct version
++        if (arr.size() <= 1) { // <= 1 in correct version
+             return arr;
+         } else {
+             int middle = arr.size() / 2;
+```
+* NEXT_PALINDROME
+```Java
+@@ -32,7 +32,7 @@
+ 
+         ArrayList<Integer> otherwise = new ArrayList<Integer>();
+ 	otherwise.add(1);
+-	otherwise.addAll(Collections.nCopies(digit_list.length, 0));
++	otherwise.addAll(Collections.nCopies(digit_list.length-1, 0));
+ 	otherwise.add(1);
+ 
+         return String.valueOf(otherwise);
+```
+* NEXT_PERMUTATION
+```Java
+@@ -16,7 +16,7 @@
+         for (int i=perm.size()-2; i!=-1; i--) {
+             if (perm.get(i) < perm.get(i+1)) {
+                 for (int j=perm.size()-1; j!=i; j--) {
+-                    if (perm.get(j) < perm.get(i)) {
++                    if (perm.get(j) > perm.get(i)) {
+                         ArrayList<Integer> next_perm = perm;
+                         int temp_j = perm.get(j);
+                         int temp_i = perm.get(i);
+```
+* PASCAL
+```Java
+@@ -19,7 +19,7 @@
+ 
+         for (int r=1; r<n; r++) {
+             ArrayList<Integer> row = new ArrayList<Integer>();
+-            for (int c=0; c<r; c++) {
++            for (int c=0; c<r+1; c++) {
+                 int upleft, upright;
+                 if (c > 0) {
+                     upleft = rows.get(r-1).get(c-1);
+```
+* POSSIBLE_CHANGE
+```Java
+@@ -14,7 +14,7 @@
+         if (total == 0) {
+             return 1;
+         }
+-        if (total < 0) {
++        if (total < 0 ||coins.length==0) {
+             return 0;
+         }
+```
+* POWERSET
+```Java
+@@ -20,13 +20,17 @@
+ 
+             ArrayList<ArrayList> output = new ArrayList<ArrayList>(100);
+             ArrayList to_add = new ArrayList(100);
+-            to_add.add(first);
++
+             for (ArrayList subset : rest_subsets) {
+-                to_add.addAll(subset);
++            		ArrayList r = new ArrayList();
++				r.add(first);
++				r.addAll(subset);
++				to_add.add(r);
+             }
+-            output.add(to_add);
++            output.addAll(to_add);
++            rest_subsets.addAll(output);
+ 
+-            return output;
++            return rest_subsets;
+         } else {
+             ArrayList empty_set = new ArrayList<ArrayList>();
+             empty_set.add(new ArrayList());
 
 ```
-* 
+* QUICKSORT
 ```Java
+@@ -23,7 +23,7 @@
+         for (Integer x : arr.subList(1, arr.size())) {
+             if (x < pivot) {
+                 lesser.add(x);
+-            } else if (x > pivot) {
++            } else if (x >= pivot) {
+                 greater.add(x);
+             }
+         }
+```
+* REVERSE_LINKED_LIST
+```Java
+@@ -17,6 +19,7 @@
+         while (node != null) {
+             nextnode = node.getSuccessor();
+             node.setSuccessor(prevnode);
++            prevnode = node;
+             node = nextnode;
+         }
+         return prevnode;
+```
+* RPN_EVAL
+```Java
+@@ -31,7 +31,7 @@
+                 Double b = (Double) stack.pop();
+ 		Double c = 0.0;
+ 		BinaryOperator<Double> bin_op = op.get(token);
+-		c = bin_op.apply(a,b);
++		c = bin_op.apply(b,a);
+                 stack.push(c);
+             }
+         }
+```
+* SHORTEST_PATH_LENGTH
+```Java
+@@ -35,14 +37,14 @@
+                 }
+ 
+                 unvisitedNodes.put(nextnode, Math.min(unvisitedNodes.get(nextnode),
+-                        unvisitedNodes.get(nextnode) + length_by_edge.get(Arrays.asList(node, nextnode))));
++                        distance + length_by_edge.get(Arrays.asList(node, nextnode))));
+             }
+         }
+ 
+         return Integer.MAX_VALUE;
+     }
+```
+* SHORTEST_PATH_LENGTHS
+```Java
+@@ -33,7 +33,7 @@
+             for (int i = 0; i < numNodes; i++) {
+                 for (int j = 0; j < numNodes; j++) {
+                     int update_length = Math.min(length_by_path.get(Arrays.asList(i,j)),
+-                            length_by_path.get(Arrays.asList(i,k)) + length_by_path.get(Arrays.asList(j,k)));
++                            length_by_path.get(Arrays.asList(i,k)) + length_by_path.get(Arrays.asList(k,j)));
+                     length_by_path.put(Arrays.asList(i,j), update_length);
+                 }
+             }
+```
+* SHORTEST_PATHS
+```Java
+@@ -27,37 +31,11 @@
+                         weight_by_node.get(edge.get(0))
+                                 + weight_by_edge.get(edge),
+                         weight_by_node.get(edge.get(1)));
+-                weight_by_edge.put(edge, update_weight);            
++                weight_by_node.put(edge.get(1), update_weight);
+             }
+         }
+         return weight_by_node;
+     }
+```
+* SIEVE
+```Java
+@@ -38,7 +38,7 @@
+     public static ArrayList<Integer> sieve(Integer max) {
+         ArrayList<Integer> primes = new ArrayList<Integer>();
+         for (int n=2; n<max+1; n++) {
+-            if (any(list_comp(n, primes))) {
++            if (all(list_comp(n, primes))) {
+                 primes.add(n);
+             }
+         }
 
 ```
-* 
+
+* SQRT
 ```Java
+@@ -13,7 +13,7 @@
+ public class SQRT {
+     public static double sqrt(double x, double epsilon) {
+         double approx = x / 2d;
+-        while (Math.abs(x-approx) > epsilon) {
++        while (Math.abs(x-approx*approx) > epsilon) {
+             approx = 0.5d * (approx + x / approx);
+         }
+         return approx;
+```
+
+* SUBSEQUENCES
+```Java
+@@ -13,7 +13,9 @@
+ public class SUBSEQUENCES {
+     public static ArrayList<ArrayList> subsequences(int a, int b, int k) {
+         if (k == 0) {
+-            return new ArrayList();
++        	 ArrayList empty_set = new ArrayList<ArrayList>();
++         empty_set.add(new ArrayList());
++         return empty_set;
+         }
+ 
+         ArrayList ret = new ArrayList(50);
 
 ```
-* 
-```Java
 
+* TO_BASE
+```Java
+@@ -18,7 +18,7 @@
+         while (num > 0) {
+             i = num % b;
+             num = num / b; // floor division?
+-            result = result + String.valueOf(alphabet.charAt(i));
++            result = String.valueOf(alphabet.charAt(i))+result;
+         }
+ 
+         return result;
 ```
-* 
-```Java
 
+* TOPOLOGICAL_ORDERING
+```Java
+@@ -14,7 +16,7 @@
+         for (int i = 0; i < listSize; i++) {
+             Node node = orderedNodes.get(i);
+             for (Node nextNode : node.getSuccessors()) {
+-                if (orderedNodes.containsAll(nextNode.getSuccessors()) && !orderedNodes.contains(nextNode)) {
++                if (orderedNodes.containsAll(nextNode.getPredecessors()) && !orderedNodes.contains(nextNode)) {
+                     orderedNodes.add(nextNode);
+                     listSize++;
+                 }
 ```
-* 
-```Java
 
-```
-* 
+* WRAP
 ```Java
-
-```
-* 
-```Java
-
-```
-* 
-```Java
-
-```
-* 
-```Java
-
-```
-* 
-```Java
-
-```
-* 
-```Java
-
-```
-* 
-```Java
-
-```
-* 
-```Java
-
+@@ -28,7 +28,7 @@
+             text = text.substring(end);
+             lines.add(line);
+         }
+-
++        lines.add(text);
+         return lines;
+     }
+ }
 ```
 
 ### Preconditions
