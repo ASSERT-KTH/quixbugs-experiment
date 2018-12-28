@@ -3047,3 +3047,343 @@ Patch:
 
 
 passed all tests 
+
+
+Fri Dec 21 16:52:20 PST 2018 - Analyzing patched program: SHORTEST_PATH_LENGTHS under path ./patchedPrograms/shortest_path_lengths/Arja/p1
+Patch:
+--- /tmp/Arja_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 05:37:15.107933759 -0500
++++ /tmp/Arja_QuixBugs_SHORTEST_PATH_LENGTHS_/patches_r4jx/Patch_1094/patched/tmp/Arja_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 05:40:18.537088250 -0500
+@@ -17,17 +17,7 @@
+     public static Map<List<Integer>,Integer> shortest_path_lengths(int numNodes, Map<List<Integer>,Integer> length_by_edge) {
+         Map<List<Integer>,Integer> length_by_path = new HashMap<>();
+         for (int i = 0; i < numNodes; i++) {
+-            for (int j =0; j < numNodes; j++) {
+-                List<Integer> edge = new ArrayList<>(Arrays.asList(i,j));
+-                if (i == j) {
+-                    length_by_path.put(edge, 0);
+-                }
+-                else if (length_by_edge.containsKey(edge) ) {
+-                    length_by_path.put(edge, length_by_edge.get(edge));
+-                } else {
+-                    length_by_path.put(edge, INF);
+-                }
+-            }
++            return length_by_path;
+         }
+         for (int k = 0; k < numNodes; k++) {
+             for (int i = 0; i < numNodes; i++) {
+
+failed tests number: 51
+failed tests info: [test10(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test7(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test6(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test5(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-, test9(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-]
+Fri Dec 21 16:53:05 PST 2018 - Analyzing patched program: SHORTEST_PATH_LENGTHS under path ./patchedPrograms/shortest_path_lengths/Arja/p2
+Patch:
+--- /tmp/Arja_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 05:37:15.107933759 -0500
++++ /tmp/Arja_QuixBugs_SHORTEST_PATH_LENGTHS_/patches_r4jx/Patch_983/patched/tmp/Arja_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 05:40:00.808979783 -0500
+@@ -17,24 +17,15 @@
+     public static Map<List<Integer>,Integer> shortest_path_lengths(int numNodes, Map<List<Integer>,Integer> length_by_edge) {
+         Map<List<Integer>,Integer> length_by_path = new HashMap<>();
+         for (int i = 0; i < numNodes; i++) {
+-            for (int j =0; j < numNodes; j++) {
+-                List<Integer> edge = new ArrayList<>(Arrays.asList(i,j));
+-                if (i == j) {
+-                    length_by_path.put(edge, 0);
+-                }
+-                else if (length_by_edge.containsKey(edge) ) {
+-                    length_by_path.put(edge, length_by_edge.get(edge));
+-                } else {
+-                    length_by_path.put(edge, INF);
+-                }
+-            }
++            return length_by_path;
+         }
+         for (int k = 0; k < numNodes; k++) {
+             for (int i = 0; i < numNodes; i++) {
+                 for (int j = 0; j < numNodes; j++) {
+                     int update_length = Math.min(length_by_path.get(Arrays.asList(i,j)),
+                             length_by_path.get(Arrays.asList(i,k)) + length_by_path.get(Arrays.asList(j,k)));
+-                    length_by_path.put(Arrays.asList(i,j), update_length);
++                    length_by_path.put(Arrays.asList(i, j), update_length);
++                    length_by_path.put(Arrays.asList(i,j), update_length);
+                 }
+             }
+         }
+
+failed tests number: 51
+failed tests info: [test10(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test7(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test6(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test5(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-, test9(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-]
+Fri Dec 21 16:53:50 PST 2018 - Analyzing patched program: SHORTEST_PATH_LENGTHS under path ./patchedPrograms/shortest_path_lengths/Arja/p3
+Patch:
+--- /tmp/Arja_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 05:37:15.107933759 -0500
++++ /tmp/Arja_QuixBugs_SHORTEST_PATH_LENGTHS_/patches_r4jx/Patch_898/patched/tmp/Arja_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 05:39:47.324896921 -0500
+@@ -17,17 +17,7 @@
+     public static Map<List<Integer>,Integer> shortest_path_lengths(int numNodes, Map<List<Integer>,Integer> length_by_edge) {
+         Map<List<Integer>,Integer> length_by_path = new HashMap<>();
+         for (int i = 0; i < numNodes; i++) {
+-            for (int j =0; j < numNodes; j++) {
+-                List<Integer> edge = new ArrayList<>(Arrays.asList(i,j));
+-                if (i == j) {
+-                    length_by_path.put(edge, 0);
+-                }
+-                else if (length_by_edge.containsKey(edge) ) {
+-                    length_by_path.put(edge, length_by_edge.get(edge));
+-                } else {
+-                    length_by_path.put(edge, INF);
+-                }
+-            }
++            return length_by_path;
+         }
+         for (int k = 0; k < numNodes; k++) {
+             for (int i = 0; i < numNodes; i++) {
+
+failed tests number: 51
+failed tests info: [test10(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test7(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test6(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test9(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test5(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-]
+Fri Dec 21 16:54:32 PST 2018 - Analyzing patched program: SHORTEST_PATH_LENGTHS under path ./patchedPrograms/shortest_path_lengths/Arja/p4
+Patch:
+--- /tmp/Arja_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 05:37:15.107933759 -0500
++++ /tmp/Arja_QuixBugs_SHORTEST_PATH_LENGTHS_/patches_r4jx/Patch_1184/patched/tmp/Arja_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 05:40:33.393178755 -0500
+@@ -17,20 +17,22 @@
+     public static Map<List<Integer>,Integer> shortest_path_lengths(int numNodes, Map<List<Integer>,Integer> length_by_edge) {
+         Map<List<Integer>,Integer> length_by_path = new HashMap<>();
+         for (int i = 0; i < numNodes; i++) {
+-            for (int j =0; j < numNodes; j++) {
+-                List<Integer> edge = new ArrayList<>(Arrays.asList(i,j));
+-                if (i == j) {
+-                    length_by_path.put(edge, 0);
+-                }
+-                else if (length_by_edge.containsKey(edge) ) {
+-                    length_by_path.put(edge, length_by_edge.get(edge));
+-                } else {
+-                    length_by_path.put(edge, INF);
+-                }
+-            }
++            return length_by_path;
+         }
+         for (int k = 0; k < numNodes; k++) {
+             for (int i = 0; i < numNodes; i++) {
++                for (int j = 0; j < numNodes; j++) {
++                    List<Integer> edge = new ArrayList<>(Arrays.asList(i, j));
++                    if (i == j) {
++                        length_by_path.put(edge, 0);
++                    } else if (length_by_edge.containsKey(edge)) {
++                        length_by_path.put(edge, length_by_edge.get(edge));
++                    } else {
++                        length_by_path.put(edge, INF);
++                    }
++                }
++            }
++            for (int i = 0; i < numNodes; i++) {
+                 for (int j = 0; j < numNodes; j++) {
+                     int update_length = Math.min(length_by_path.get(Arrays.asList(i,j)),
+                             length_by_path.get(Arrays.asList(i,k)) + length_by_path.get(Arrays.asList(j,k)));
+
+failed tests number: 51
+failed tests info: [test10(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test7(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test6(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test5(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-, test9(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-]
+Fri Dec 21 16:55:16 PST 2018 - Analyzing patched program: SHORTEST_PATH_LENGTHS under path ./patchedPrograms/shortest_path_lengths/Arja/p5
+Patch:
+--- /tmp/Arja_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 05:37:15.107933759 -0500
++++ /tmp/Arja_QuixBugs_SHORTEST_PATH_LENGTHS_/patches_r4jx/Patch_603/patched/tmp/Arja_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 05:39:01.968615670 -0500
+@@ -21,22 +21,23 @@
+                 List<Integer> edge = new ArrayList<>(Arrays.asList(i,j));
+                 if (i == j) {
+                     length_by_path.put(edge, 0);
+-                }
+-                else if (length_by_edge.containsKey(edge) ) {
+-                    length_by_path.put(edge, length_by_edge.get(edge));
+-                } else {
+-                    length_by_path.put(edge, INF);
+-                }
++                } else
++                    return length_by_path;
+             }
+         }
+         for (int k = 0; k < numNodes; k++) {
+             for (int i = 0; i < numNodes; i++) {
+-                for (int j = 0; j < numNodes; j++) {
+-                    int update_length = Math.min(length_by_path.get(Arrays.asList(i,j)),
+-                            length_by_path.get(Arrays.asList(i,k)) + length_by_path.get(Arrays.asList(j,k)));
+-                    length_by_path.put(Arrays.asList(i,j), update_length);
+-                }
+-            }
++                for (int j = 0; j < numNodes; j++) {
++                    List<Integer> edge = new ArrayList<>(Arrays.asList(i, j));
++                    if (i == j) {
++                        length_by_path.put(edge, 0);
++                    } else if (length_by_edge.containsKey(edge)) {
++                        length_by_path.put(edge, length_by_edge.get(edge));
++                    } else {
++                        length_by_path.put(edge, INF);
++                    }
++                }
++            }
+         }
+         return length_by_path;
+     }
+
+failed tests number: 46
+failed tests info: [test10(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test7(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-][test6(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test9(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-]
+Fri Dec 21 16:56:01 PST 2018 - Analyzing patched program: SHORTEST_PATH_LENGTHS under path ./patchedPrograms/shortest_path_lengths/jgenprog/p1
+Patch:
+
+--- java_programs\/SHORTEST_PATH_LENGTHS.java
++++ java_programs\/SHORTEST_PATH_LENGTHS.java
+@@ -16,6 +16,7 @@
+ 						length_by_path.put(edge, length_by_edge.get(edge));
+ 					}else {
+ 						length_by_path.put(edge, java_programs.SHORTEST_PATH_LENGTHS.INF);
++						return length_by_path;
+ 					}
+ 
+ 			}
+
+
+failed tests number: 16
+failed tests info: [][][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<3>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<3>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-][][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<3>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-][][][][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][][][][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][][][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-][][]
+Fri Dec 21 16:56:46 PST 2018 - Analyzing patched program: SHORTEST_PATH_LENGTHS under path ./patchedPrograms/shortest_path_lengths/RSRepair/p1
+Patch:
+--- /tmp/RSRepair_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 12:31:10.452838352 -0500
++++ /tmp/RSRepair_QuixBugs_SHORTEST_PATH_LENGTHS_/patches_s07s/Patch_64/patched/tmp/RSRepair_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 12:31:27.716800105 -0500
+@@ -17,17 +17,7 @@
+     public static Map<List<Integer>,Integer> shortest_path_lengths(int numNodes, Map<List<Integer>,Integer> length_by_edge) {
+         Map<List<Integer>,Integer> length_by_path = new HashMap<>();
+         for (int i = 0; i < numNodes; i++) {
+-            for (int j =0; j < numNodes; j++) {
+-                List<Integer> edge = new ArrayList<>(Arrays.asList(i,j));
+-                if (i == j) {
+-                    length_by_path.put(edge, 0);
+-                }
+-                else if (length_by_edge.containsKey(edge) ) {
+-                    length_by_path.put(edge, length_by_edge.get(edge));
+-                } else {
+-                    length_by_path.put(edge, INF);
+-                }
+-            }
++            return length_by_path;
+         }
+         for (int k = 0; k < numNodes; k++) {
+             for (int i = 0; i < numNodes; i++) {
+
+failed tests number: 51
+failed tests info: [test10(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test7(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test6(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test5(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-, test9(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-]
+Fri Dec 21 16:59:33 PST 2018 - Analyzing patched program: SHORTEST_PATH_LENGTHS under path ./patchedPrograms/shortest_path_lengths/RSRepair/p2
+Patch:
+--- /tmp/RSRepair_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 12:31:10.452838352 -0500
++++ /tmp/RSRepair_QuixBugs_SHORTEST_PATH_LENGTHS_/patches_s07s/Patch_187/patched/tmp/RSRepair_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 12:31:46.092758943 -0500
+@@ -21,22 +21,12 @@
+                 List<Integer> edge = new ArrayList<>(Arrays.asList(i,j));
+                 if (i == j) {
+                     length_by_path.put(edge, 0);
+-                }
+-                else if (length_by_edge.containsKey(edge) ) {
+-                    length_by_path.put(edge, length_by_edge.get(edge));
+-                } else {
+-                    length_by_path.put(edge, INF);
+-                }
++                } else
++                    ;
+             }
+         }
+         for (int k = 0; k < numNodes; k++) {
+-            for (int i = 0; i < numNodes; i++) {
+-                for (int j = 0; j < numNodes; j++) {
+-                    int update_length = Math.min(length_by_path.get(Arrays.asList(i,j)),
+-                            length_by_path.get(Arrays.asList(i,k)) + length_by_path.get(Arrays.asList(j,k)));
+-                    length_by_path.put(Arrays.asList(i,j), update_length);
+-                }
+-            }
++            return length_by_path;
+         }
+         return length_by_path;
+     }
+
+failed tests number: 46
+failed tests info: [test10(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): test timed out after 60000 milliseconds-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): test timed out after 60000 milliseconds-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test7(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test6(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test9(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-]
+Fri Dec 21 17:02:21 PST 2018 - Analyzing patched program: SHORTEST_PATH_LENGTHS under path ./patchedPrograms/shortest_path_lengths/RSRepair/p3
+Patch:
+--- /tmp/RSRepair_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 12:31:10.452838352 -0500
++++ /tmp/RSRepair_QuixBugs_SHORTEST_PATH_LENGTHS_/patches_s07s/Patch_128/patched/tmp/RSRepair_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 12:31:37.476778299 -0500
+@@ -21,22 +21,11 @@
+                 List<Integer> edge = new ArrayList<>(Arrays.asList(i,j));
+                 if (i == j) {
+                     length_by_path.put(edge, 0);
+-                }
+-                else if (length_by_edge.containsKey(edge) ) {
+-                    length_by_path.put(edge, length_by_edge.get(edge));
+-                } else {
+-                    length_by_path.put(edge, INF);
+-                }
++                } else
++                    ;
+             }
+         }
+         for (int k = 0; k < numNodes; k++) {
+-            for (int i = 0; i < numNodes; i++) {
+-                for (int j = 0; j < numNodes; j++) {
+-                    int update_length = Math.min(length_by_path.get(Arrays.asList(i,j)),
+-                            length_by_path.get(Arrays.asList(i,k)) + length_by_path.get(Arrays.asList(j,k)));
+-                    length_by_path.put(Arrays.asList(i,j), update_length);
+-                }
+-            }
+         }
+         return length_by_path;
+     }
+
+failed tests number: 46
+failed tests info: [test10(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): test timed out after 60000 milliseconds-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): test timed out after 60000 milliseconds-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test7(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-][test6(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<2>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test9(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-]
+Fri Dec 21 17:03:09 PST 2018 - Analyzing patched program: SHORTEST_PATH_LENGTHS under path ./patchedPrograms/shortest_path_lengths/RSRepair/p4
+Patch:
+--- /tmp/RSRepair_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 12:31:10.452838352 -0500
++++ /tmp/RSRepair_QuixBugs_SHORTEST_PATH_LENGTHS_/patches_s07s/Patch_170/patched/tmp/RSRepair_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 12:31:43.788764128 -0500
+@@ -23,7 +23,7 @@
+                     length_by_path.put(edge, 0);
+                 }
+                 else if (length_by_edge.containsKey(edge) ) {
+-                    length_by_path.put(edge, length_by_edge.get(edge));
++                    return length_by_path;
+                 } else {
+                     length_by_path.put(edge, INF);
+                 }
+@@ -31,11 +31,6 @@
+         }
+         for (int k = 0; k < numNodes; k++) {
+             for (int i = 0; i < numNodes; i++) {
+-                for (int j = 0; j < numNodes; j++) {
+-                    int update_length = Math.min(length_by_path.get(Arrays.asList(i,j)),
+-                            length_by_path.get(Arrays.asList(i,k)) + length_by_path.get(Arrays.asList(j,k)));
+-                    length_by_path.put(Arrays.asList(i,j), update_length);
+-                }
+             }
+         }
+         return length_by_path;
+
+failed tests number: 9
+failed tests info: [][][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-][][][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-][][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<1>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-][][][][][][][][][][][][][][][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-][][]
+Fri Dec 21 17:05:55 PST 2018 - Analyzing patched program: SHORTEST_PATH_LENGTHS under path ./patchedPrograms/shortest_path_lengths/RSRepair/p5
+Patch:
+--- /tmp/RSRepair_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 12:31:10.452838352 -0500
++++ /tmp/RSRepair_QuixBugs_SHORTEST_PATH_LENGTHS_/patches_s07s/Patch_764/patched/tmp/RSRepair_QuixBugs_SHORTEST_PATH_LENGTHS_/src/main/java/SHORTEST_PATH_LENGTHS.java    2018-12-02 12:33:14.252555940 -0500
+@@ -19,23 +19,10 @@
+         for (int i = 0; i < numNodes; i++) {
+             for (int j =0; j < numNodes; j++) {
+                 List<Integer> edge = new ArrayList<>(Arrays.asList(i,j));
+-                if (i == j) {
+-                    length_by_path.put(edge, 0);
+-                }
+-                else if (length_by_edge.containsKey(edge) ) {
+-                    length_by_path.put(edge, length_by_edge.get(edge));
+-                } else {
+-                    length_by_path.put(edge, INF);
+-                }
+             }
+         }
+         for (int k = 0; k < numNodes; k++) {
+             for (int i = 0; i < numNodes; i++) {
+-                for (int j = 0; j < numNodes; j++) {
+-                    int update_length = Math.min(length_by_path.get(Arrays.asList(i,j)),
+-                            length_by_path.get(Arrays.asList(i,k)) + length_by_path.get(Arrays.asList(j,k)));
+-                    length_by_path.put(Arrays.asList(i,j), update_length);
+-                }
+             }
+         }
+         return length_by_path;
+
+failed tests number: 51
+failed tests info: [test10(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): test timed out after 60000 milliseconds-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): test timed out after 60000 milliseconds-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test4(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test7(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test3(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-][test6(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<4> but was:<0>-, test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test5(java_programs.SHORTEST_PATH_LENGTHS_ESTest): null-, test9(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-][test2(java_programs.SHORTEST_PATH_LENGTHS_ESTest): expected:<1> but was:<0>-, test1(java_programs.SHORTEST_PATH_LENGTHS_ESTest): Expecting exception: NullPointerException-]
