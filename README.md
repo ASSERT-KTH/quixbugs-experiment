@@ -574,6 +574,72 @@ java -cp /path/to/junit-4.9.jar org.junit.runner.JUnitCore qfevotest.generator.P
  }
 ```
 
+### Results of patch assessment by varying number of tests. A `X` denotes  the patch is identified as incorrect.
+
+| patch_id    | Evosuite 1 run | Evosuite 5 runs  | Evosuite 30 runs | InputSampling 10 tests | InputSampling 50 tests | InputSampling 300 tests |
+| ----------- |    ---------   |     ---------    |      ---------   |  ---------   |  ---------   |  ---------   |
+|depth_first_search_Astor_1  |X|       X          |         X        |       X      |     X        |       X      |      
+|depth_first_search_Astor_2  |X|       X          |         X        |              |              |              |         
+|depth_first_search_Astor_3  |X|       X          |         X        |              |              |              | 
+|depth_first_search_Arja_1   |X|       X          |         X        |              |              |              |  
+|depth_first_search_Arja_2   |X|       X          |         X        |              |              |              |          |depth_first_search_Arja_3   |X|       X          |         X        |              |              |              |   
+|depth_first_search_Arja_4   |X|       X          |         X        |              |              |              | 
+|depth_first_search_Arja_5   |X|       X          |         X        |              |              |              | 
+|depth_first_search_Nopol_1  |X|       X          |         X        |              |              |              |
+|depth_first_search_RSRepair_1|X|      X          |         X        |              |              |              | 
+|depth_first_search_RSRepair_2|X|      X          |         X        |              |              |              |
+|depth_first_search_RSRepair_3|X|      X          |         X        |              |              |              |   
+|depth_first_search_RSRepair_4|X|      X          |         X        |              |              |              |    |depth_first_search_RSRepair_5|X|      X          |         X        |              |              |              | 
+|detect_cycle_NPEFix_1        | |                 |                  |              |              |              |    
+|detect_cycle_NPEFix_2        | |                 |                  |              |              |              |         
+|detect_cycle_NPEFix_3        | |                 |                  |              |              |              |         
+|detect_cycle_NPEFix_4        | |                 |                  |              |              |              | 
+|detect_cycle_NPEFix_5        | |                 |                  |              |              |              |
+|find_in_sorted_Nopol_1       |X|       X         |        X         |       X      |       X      |       X      |         |get_factors_Astor_1          |X|       X         |        X         |              |              |              |
+|hanoi_NPEFix_1               |X|       X         |        X         |              |              |              |          |is_valid_parenthsization_Nopol_1|X|    X         |        X         |              |       X      |       X      |         
+|  knapsack_Astor_1           | |                 |                  |              |              |              |
+|levenshetein_Astor_1         | |                 |                  |              |              |              |
+|  lis_Astor_1                | |                 |                  |              |              |              |
+|  lis_Astor_2                | |                 |                  |              |              |              |
+|  lis_Arja_1                 | |                 |                  |              |              |              |        
+|  lis_Arja_2                 | |                 |                  |              |              |              |   
+|  lis_Arja_3                 | |                 |                  |              |              |              |   
+|  lis_Arja_4                 | |                 |                  |              |              |              |   
+|  lis_Arja_5                 | |                 |                  |              |              |              |         
+|  lis_RSRepair_1             | |                 |                  |              |              |              |  
+|  lis_RSRepair_2             | |                 |                  |              |              |              |  
+|  lis_RSRepair_3             | |                 |                  |              |              |              |  
+|  lis_RSRepair_4             | |                 |                  |              |              |              |  
+|  lis_RSRepair_5             | |                 |                  |              |              |              |  
+|  mergesort_Astor_1          | |                 |                  |              |              |              | 
+|  next_permutation_Astor_1   | |                 |                  |              |              |              | 
+|powerset_Astor_1             | |                 |                  |       X      |       X      |        X     |  
+|powerset_Astor_2             | |                 |                  |       X      |       X      |        X     |  
+|powerset_Astor_3             | |                 |                  |       X      |       X      |        X     |  
+|quicksort_Astor_1            | |                 |                  |              |              |              |         
+|quicksort_Astor_2            | |                 |                  |              |              |              |  
+|quicksort_Arja_1             | |                 |                  |              |              |              |         |quicksort_Arja_2             | |                 |                  |              |              |              |
+|quicksort_Arja_3             | |                 |                  |              |              |              |
+|quicksort_Arja_4             | |                 |                  |              |              |              |
+|quicksort_Arja_5             | |                 |                  |              |              |              |
+|quicksort_Nopol_1            | |                 |                  |              |              |              |
+|quicksort_Nopol_2            | |                 |                  |              |              |              |
+|quicksort_RSRepair_1         | |                 |                  |              |              |              |         |rpn_eval_Astor_1             | |                 |                  |              |              |              |   
+|shortest_path_lengths_Astor_1| |      X          |         X        |      X       |       X      |        X     |         
+|shortest_path_lengths_Arja_1 |X|      X          |         X        |      X       |       X      |        X     | 
+|shortest_path_lengths_Arja_2 |X|      X          |         X        |      X       |       X      |        X     |        
+|shortest_path_lengths_Arja_3 |X|      X          |         X        |      X       |       X      |        X     |         
+|shortest_path_lengths_Arja_4 |X|      X          |         X        |      X       |       X      |        X     |         
+|shortest_path_lengths_Arja_5 |X|      X          |         X        |      X       |       X      |        X     |        
+|shortest_path_lengths_RSRepair_1|X|   X          |         X        |      X       |       X      |        X     |          |shortest_path_lengths_RSRepair_2|X|   X          |         X        |      X       |       X      |        X     |          |shortest_path_lengths_RSRepair_3|X|   X          |         X        |      X       |       X      |        X     |         |shortest_path_lengths_RSRepair_4|X|   X          |         X        |      X       |       X      |        X     |    
+|shortest_path_lengths_RSRepair_5|X|   X          |         X        |      X       |       X      |        X     |        
+|Total discarded patches        |28|   29         |        29        |      16      |       17     |       17     | 
+
+
+
+
+
+
 ### Preconditions
 
 Some programs of QuixBugs have preconditions that constraints the input domain. It is important to clear about the preconditions when sampling the input domain for genereating tests in InputSampling.
