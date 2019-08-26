@@ -636,10 +636,6 @@ java -cp /path/to/junit-4.9.jar org.junit.runner.JUnitCore qfevotest.generator.P
 |Total discarded patches        |28|   29         |        29        |      16      |       17     |       17     | 
 
 
-### Updates
-
-* detect_cycle_NPEFix_3  is an incorrect patch which was assessed as correct. This patch introduces a new null pointer exception. Thanks for the report at [issue #11](https://github.com/KTH/quixbugs-experiment/issues/11) by @ngocpq.
-
 
 ### Preconditions
 
@@ -722,6 +718,8 @@ Evosuite generates test cases that fail on the version used for generating them,
 |shortest_path_lengths|Undeclared exception|
   
 
+### Updates
 
+* detect_cycle_NPEFix_3  is an incorrect patch which was assessed as correct. This patch introduces a new null pointer exception. Thanks for the report at [issue #11](https://github.com/KTH/quixbugs-experiment/issues/11) by @ngocpq.
 
 
