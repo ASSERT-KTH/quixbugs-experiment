@@ -2,8 +2,8 @@ package buggy_java_programs;
 import java.util.*;
 import java.util.Map.Entry;
 
-import java_programs.Node;
-import java_programs.WeightedEdge;
+import buggy_java_programs.Node;
+import buggy_java_programs.WeightedEdge;
 /**
  * Minimum spanning tree
  */
