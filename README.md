@@ -1,7 +1,20 @@
 ## Automatic repair experiment on QuixBugs.
 
-This experiment is to evaluate effectiveness of two representative automatic repair tools Astor and Nopol on repairing [QuixBugs](https://github.com/jkoppel/QuixBugs) benchmark. QuixBugs is a benchmark suite of 40 confirmed bugs from classic algorithms with a bug on a single line of code. Before we start our experiment, we did some [preperation work](https://github.com/jkoppel/QuixBugs/pulls?q=is%3Apr+is%3Aclosed) to contribute QuixBugs as a usable repair benchmark in Java programs.
+Experimental data about the effectiveness of two representative automatic repair tools Astor and Nopol on repairing [QuixBugs](https://github.com/jkoppel/QuixBugs) benchmark. QuixBugs is a benchmark suite of 40 confirmed bugs from classic algorithms with a bug on a single line of code. The paper is [A Comprehensive Study of Automatic Program Repair on the QuixBugs Benchmark](http://arxiv.org/pdf/1805.03454).
 
+```
+@inproceedings{arXiv-1805.03454,
+ title = {A Comprehensive Study of Automatic Program Repair on the QuixBugs Benchmark},
+ booktitle = {Proceedings of SANER Workshops},
+ year = {2019},
+ doi = {10.1109/IBF.2019.8665475},
+ author = {He Ye and Matias Martinez and Thomas Durieux and Martin Monperrus},
+ url = {http://arxiv.org/pdf/1805.03454},
+}
+
+```
+
+See also [contributions in QuixBugs](https://github.com/jkoppel/QuixBugs/pulls?q=is%3Apr+author%3Asophiehye)
 
 
 ### Folder Structure
