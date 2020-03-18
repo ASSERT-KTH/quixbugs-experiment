@@ -1,0 +1,27 @@
+target=java_programs.SHORTEST_PATH_LENGTHS
+
+symbolic.method=SHORTEST_PATH_LENGTHS.shortest_path_lengths(sym,sym)
+
+classpath=/Users/sophie/Documents/quixbugs-experiment/target/classes
+
+#specify the search strategy (default is DFS)
+search.class = .search.heuristic.BFSHeuristic
+
+vm.insn_factory.class=gov.nasa.jpf.symbc.SymbolicInstructionFactory
+
+#instruct jpf to not stop at first error
+search.multiple_errors=true
+symbolic.debug=true
+symbolic.dp=z3inc
+symbolic.string_dp=automata
+symbolic.string_dp_timeout_ms=3000
+search.depth_limit = 20
+#symbolic.lazy=on
+#listener to print information (PCs, test cases) about symbolic run
+#listener = gov.nasa.jpf.symbc.SymbolicListener
+listener = gov.nasa.jpf.symbc.sequences.SymbolicSequenceListener,gov.nasa.jpf.listener.CoverageAnalyzer,gov.nasa.jpf.symbc.SymbolicListener
+coverage.include=*
+coverage.show_methods=true
+#coverage.show_bodies=true
+
+vm.storage.class=nil
