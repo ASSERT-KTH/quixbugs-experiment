@@ -1,4 +1,4 @@
-package java_programs;
+package buggy_java_programs;
 import java.util.*;
 
 /*
@@ -24,7 +24,7 @@ public class HANOI {
             crap_set.remove(end);
             int helper = crap_set.poll();
             steps.addAll(hanoi(height-1, start, helper));
-            steps.add(new Pair<Integer,Integer>(start, end));
+            steps.add(new Pair<Integer,Integer>(start, helper));
             steps.addAll(hanoi(height-1, helper, end));
         }
 

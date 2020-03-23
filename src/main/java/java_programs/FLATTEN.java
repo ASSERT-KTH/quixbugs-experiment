@@ -1,6 +1,5 @@
-package java_programs;
+package buggy_java_programs;
 import java.util.*;
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -19,12 +18,12 @@ public class FLATTEN {
                 if (x instanceof ArrayList) {
                     result.addAll((ArrayList) flatten(x));
                 } else {
-                    result.add((x));
+                    result.add(flatten(x));
 		}
             }
             return result;
 	} else {
-	    return arr;
+	    return flatten(arr);
 	}
     }
 }

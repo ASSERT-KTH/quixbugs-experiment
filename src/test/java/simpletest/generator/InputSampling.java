@@ -38,9 +38,9 @@ import spoon.support.reflect.code.CtBlockImpl;
  */
 public class InputSampling {
 
-	public static int TIMEOUT = 60000;
+	public static int TIMEOUT = 4000;
 	public static int DELTA_FLOAT_COMPARISON = 0;
-	public static int TOTAL_TEST_NUMBER=	300;
+	public static int TOTAL_TEST_NUMBER=	3000;
 
 	public static double[] DELTAS_TESTS_SQRT = new double[] { 0.01, 0.5, 0.3, 0.2, 0.01, 0.05, 0.03 };
 	// Test to add anotation ignore: key is program+test_id
@@ -91,10 +91,16 @@ public class InputSampling {
 			
 			
 			String expected = getOutput(program, program.toUpperCase(), subjectsPakcageName, (Object[]) parameterMap.get("parameters"));
-
 			if("error".equals(expected)) {
 				continue;
 			}
+			
+			if(expected.length()>1000) {
+				continue;
+			}
+			
+		
+			
 			Class returnType = getReturnType(program, program.toUpperCase(), subjectsPakcageName);
 			boolean isOutputDecimal = returnType.getSimpleName().toLowerCase().equals("double");
 			CtCodeSnippetStatement stmtInvProgramUnderRepair = f.Core().createCodeSnippetStatement();
@@ -214,7 +220,7 @@ public class InputSampling {
 		String subjectPackageName = "java_programs";
 		String testPackageName = "java_programs";
 		
-		String[] programs = new String[] {"hanoi"};
+		String[] programs = new String[] {"shortest_path_lengths"};
 		
 		for (String prog : programs) {
 			String programToExecute = prog;
@@ -314,7 +320,7 @@ public class InputSampling {
 
 	private static double getFloatComparisonDelta(String program, int nrTestcase) {
 		if (program.toLowerCase().equals("sqrt")) {
-			return DELTAS_TESTS_SQRT[nrTestcase];
+			return DELTAS_TESTS_SQRT[3];
 		} else {
 			return DELTA_FLOAT_COMPARISON;
 		}

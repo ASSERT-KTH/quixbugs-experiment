@@ -1,4 +1,4 @@
-package java_programs;
+package buggy_java_programs;
 import java.util.*;
 
 /*
@@ -23,7 +23,7 @@ public class QUICKSORT {
         for (Integer x : arr.subList(1, arr.size())) {
             if (x < pivot) {
                 lesser.add(x);
-            } else if (x >= pivot) {
+            } else if (x > pivot) {
                 greater.add(x);
             }
         }

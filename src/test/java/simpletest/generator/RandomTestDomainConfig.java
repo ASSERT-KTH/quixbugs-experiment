@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
-import java_programs.Node;
+import java_programs_correct.Node;
 
 public class RandomTestDomainConfig {
 	
@@ -92,7 +92,22 @@ public class RandomTestDomainConfig {
 				}
 				params[index]= i;
 				paramStr += "(" + type.getTypeName() + ")" + i+",";
-			} else if(type.getTypeName().equals("java.lang.String")) {
+			}  else if(type.getTypeName().equals("double")){
+				double i = 0;
+				Random random = new Random();	
+				i = Math.random();
+				if("sqrt".equals(program)) {		
+					if(index==0) {
+						i=random.nextInt(30);
+					}
+//					if(index==1) {
+//						i=random.nextInt(50)/(random.nextInt(50)+50);
+//					}
+				} 
+												
+				params[index]= i;
+				paramStr += "(" + type.getTypeName() + ")" + i+",";
+			} 	else if(type.getTypeName().equals("java.lang.String")) {
 				if("is_valid_parenthesization".equals(program)) {
 					String parentheses = randomparentheses();
 					params[index] = parentheses;

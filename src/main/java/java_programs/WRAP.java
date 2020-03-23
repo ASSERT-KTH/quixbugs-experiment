@@ -1,4 +1,4 @@
-package java_programs;
+package buggy_java_programs;
 import java.util.*;
 
 /*
@@ -28,7 +28,7 @@ public class WRAP {
             text = text.substring(end);
             lines.add(line);
         }
-        lines.add(text);
+
         return lines;
     }
 }

@@ -1,4 +1,4 @@
-package java_programs;
+package buggy_java_programs;
 import java.util.*;
 
 /*
@@ -38,7 +38,7 @@ public class SIEVE {
     public static ArrayList<Integer> sieve(Integer max) {
         ArrayList<Integer> primes = new ArrayList<Integer>();
         for (int n=2; n<max+1; n++) {
-            if (all(list_comp(n, primes))) {
+            if (any(list_comp(n, primes))) {
                 primes.add(n);
             }
         }

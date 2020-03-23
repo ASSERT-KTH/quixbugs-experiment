@@ -1,4 +1,4 @@
-package java_programs;
+package buggy_java_programs;
 import java.util.*;
 
 /*
@@ -24,7 +24,6 @@ public class GET_FACTORS {
                 return prepend;
             }
         }
-        
-        return new ArrayList<Integer>(Arrays.asList(n));
+        return new ArrayList<Integer>();
     }
 }

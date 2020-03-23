@@ -1,6 +1,5 @@
-package java_programs;
+package buggy_java_programs;
 import java.util.*;
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -25,7 +24,7 @@ public class KHEAPSORT {
         }
 
         ArrayList<Integer> output = new ArrayList<Integer>();
-        for (Integer x : arr.subList(k, arr.size())) {
+        for (Integer x : arr) {
             heap.add(x);
             Integer popped = heap.poll();
             output.add(popped);
