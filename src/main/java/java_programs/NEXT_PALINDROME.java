@@ -1,4 +1,4 @@
-package buggy_java_programs;
+package java_programs;
 import java.util.*;
 import java.lang.Math.*;
 /*
@@ -32,7 +32,7 @@ public class NEXT_PALINDROME {
 
         ArrayList<Integer> otherwise = new ArrayList<Integer>();
 	otherwise.add(1);
-	otherwise.addAll(Collections.nCopies(digit_list.length, 0));
+	otherwise.addAll(Collections.nCopies(digit_list.length-1, 0));
 	otherwise.add(1);
 
         return String.valueOf(otherwise);

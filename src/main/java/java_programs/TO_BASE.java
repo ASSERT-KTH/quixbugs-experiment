@@ -1,4 +1,4 @@
-package buggy_java_programs;
+package java_programs;
 import java.util.*;
 
 /*
@@ -18,7 +18,7 @@ public class TO_BASE {
         while (num > 0) {
             i = num % b;
             num = num / b; // floor division?
-            result = result + String.valueOf(alphabet.charAt(i));
+            result = String.valueOf(alphabet.charAt(i))+result;
         }
 
         return result;

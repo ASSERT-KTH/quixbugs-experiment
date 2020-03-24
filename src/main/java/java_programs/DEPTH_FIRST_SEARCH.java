@@ -1,9 +1,11 @@
-package buggy_java_programs;
+package java_programs;
 import java.util.*;
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+
+import java_programs.Node;
 
 /**
  *
@@ -19,6 +21,7 @@ public class DEPTH_FIRST_SEARCH {
                 } else if (node == goalnode) {
                     return true;
                 } else {
+                  	nodesvisited.add(node);
                     for (Node successornodes : node.getSuccessors()) {
 	                    if (search(successornodes)) { return true; }
                     }

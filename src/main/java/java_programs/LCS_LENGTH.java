@@ -1,5 +1,6 @@
-package buggy_java_programs;
+package java_programs;
 import java.util.*;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -32,9 +33,10 @@ public class LCS_LENGTH {
             for (int j=0; j < t.length(); j++) {
                 if (s.charAt(i) == t.charAt(j)) {
 
-                    if (dp.containsKey(i-1)) {
+                //	dp.get(i-1).containsKey(j-1)
+                    if (dp.containsKey(i-1)&&dp.get(i-1).containsKey(j-1)) {
                         Map<Integer, Integer> internal_map = dp.get(i);
-                        int insert_value = dp.get(i-1).get(j) + 1;
+                        int insert_value = dp.get(i-1).get(j-1) + 1;
                         internal_map.put(j, insert_value);
                         dp.put(i,internal_map);
                     } else {

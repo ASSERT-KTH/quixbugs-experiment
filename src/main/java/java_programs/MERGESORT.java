@@ -1,4 +1,4 @@
-package buggy_java_programs;
+package java_programs;
 import java.util.*;
 
 /*
@@ -35,7 +35,7 @@ public class MERGESORT {
     }
 
     public static ArrayList<Integer> mergesort(ArrayList<Integer> arr) {
-        if (arr.size() == 0) { // <= 1 in correct version
+        if (arr.size() <= 1) { // <= 1 in correct version
             return arr;
         } else {
             int middle = arr.size() / 2;

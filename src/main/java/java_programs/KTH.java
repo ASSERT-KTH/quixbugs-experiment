@@ -1,7 +1,14 @@
-package buggy_java_programs;
+package java_programs;
 import java.util.*;
-/*
 
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author derricklin
  */
 public class KTH {
     public static Integer kth(ArrayList<Integer> arr, int k) {
@@ -22,7 +29,7 @@ public class KTH {
         if (k < num_less) {
             return kth(below, k);
         } else if (k >= num_lessoreq) {
-            return kth(above, k);
+            return kth(above, k-num_lessoreq);
         } else {
             return pivot;
         }

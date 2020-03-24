@@ -1,4 +1,4 @@
-package buggy_java_programs;
+package java_programs;
 import java.util.*;
 /*
  * To change this template, choose Tools | Templates
@@ -14,7 +14,7 @@ public class POSSIBLE_CHANGE {
         if (total == 0) {
             return 1;
         }
-        if (total < 0) {
+        if (total < 0 ||coins.length==0) {
             return 0;
         }
 

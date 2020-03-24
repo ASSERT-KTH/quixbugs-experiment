@@ -1,4 +1,4 @@
-package buggy_java_programs;
+package java_programs;
 import java.util.*;
 
 /*
@@ -13,7 +13,9 @@ import java.util.*;
 public class SUBSEQUENCES {
     public static ArrayList<ArrayList> subsequences(int a, int b, int k) {
         if (k == 0) {
-            return new ArrayList();
+        	 ArrayList empty_set = new ArrayList<ArrayList>();
+         empty_set.add(new ArrayList());
+         return empty_set;
         }
 
         ArrayList ret = new ArrayList(50);

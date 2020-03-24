@@ -1,4 +1,4 @@
-package buggy_java_programs;
+package java_programs;
 import java.util.*;
 import java.util.ArrayDeque;
 
@@ -21,7 +21,7 @@ public class BREADTH_FIRST_SEARCH {
 
         nodesvisited.add(startnode);
 
-        while (true) {
+        while (!queue.isEmpty()) {
             Node node = queue.removeFirst();
 
             if (node == goalnode) {
@@ -39,7 +39,7 @@ public class BREADTH_FIRST_SEARCH {
          * The buggy program always drops into while(true) loop and will not return false
          * Removed below line to fix compilation error
          */
-        // return false;
+         return false;
     }
 
 }

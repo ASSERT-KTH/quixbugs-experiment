@@ -1,9 +1,11 @@
-package buggy_java_programs;
+package java_programs;
 import java.util.*;
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+
+import java_programs.Node;
 
 /**
  *
@@ -15,7 +17,7 @@ public class DETECT_CYCLE {
         Node tortoise = node;
 
         while (true) {
-            if (hare.getSuccessor() == null)
+            if (null==hare ||hare.getSuccessor() == null)
                 return false;
 
             tortoise = tortoise.getSuccessor();
