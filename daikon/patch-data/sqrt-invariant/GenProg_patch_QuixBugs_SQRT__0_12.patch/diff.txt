@@ -1,0 +1,6 @@
+<java_programs.SQRT.sqrt(double, double):::ENTER>
+  <null, x > epsilon {0.9922+}> (Bin,MJ)
+<java_programs.SQRT.sqrt(double, double):::EXIT>
+  <null, return > orig(epsilon) {0.9922+}> (Bin,MJ)
+  <orig(x) == return**2 {1+}, null> (Bin,JM)
+  <return >= 1.414213562373095 {1+}, return >= 1.4166666666666665 {0-}> (Una,DJU)

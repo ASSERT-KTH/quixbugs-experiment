@@ -1,0 +1,5492 @@
+// Declaration file written by daikon.dcomp
+
+VarComparability
+implicit
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH:::CLASS
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH:::OBJECT
+this
+java_programs.DEPTH_FIRST_SEARCH # isNonNull=true, isParam=true
+hashcode
+2
+
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH.DEPTH_FIRST_SEARCH():::ENTER
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH.DEPTH_FIRST_SEARCH():::EXIT12
+this
+java_programs.DEPTH_FIRST_SEARCH # isNonNull=true, isParam=true
+hashcode
+2
+
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH.depth_first_search(java_programs.Node, java_programs.Node):::ENTER
+startnode
+java_programs.Node # isParam=true
+hashcode
+2
+startnode.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+15
+startnode.value.toString
+java.lang.String
+java.lang.String
+26
+startnode.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+startnode.successors[..]
+java.util.ArrayList
+hashcode[]
+2[27]
+startnode.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[28]
+startnode.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+startnode.predecessors[..]
+java.util.ArrayList
+hashcode[]
+17[29]
+startnode.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[30]
+startnode.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+18
+startnode.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+24
+startnode.successor.value.toString
+java.lang.String
+java.lang.String
+25
+startnode.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+22
+startnode.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+23[31]
+startnode.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[32]
+startnode.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+19
+startnode.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+20[33]
+startnode.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[34]
+startnode.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+21
+goalnode
+java_programs.Node # isParam=true
+hashcode
+2
+goalnode.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+15
+goalnode.value.toString
+java.lang.String
+java.lang.String
+16
+goalnode.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+goalnode.successors[..]
+java.util.ArrayList
+hashcode[]
+14[35]
+goalnode.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[36]
+goalnode.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+goalnode.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[37]
+goalnode.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[38]
+goalnode.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+goalnode.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+11
+goalnode.successor.value.toString
+java.lang.String
+java.lang.String
+12
+goalnode.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+goalnode.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+10[39]
+goalnode.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[40]
+goalnode.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+goalnode.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[41]
+goalnode.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[42]
+goalnode.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH.depth_first_search(java_programs.Node, java_programs.Node):::EXIT31
+startnode
+java_programs.Node # isParam=true
+hashcode
+2
+startnode.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+15
+startnode.value.toString
+java.lang.String
+java.lang.String
+27
+startnode.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+startnode.successors[..]
+java.util.ArrayList
+hashcode[]
+2[28]
+startnode.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[29]
+startnode.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+startnode.predecessors[..]
+java.util.ArrayList
+hashcode[]
+18[30]
+startnode.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[31]
+startnode.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+19
+startnode.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+25
+startnode.successor.value.toString
+java.lang.String
+java.lang.String
+26
+startnode.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+23
+startnode.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+24[32]
+startnode.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[33]
+startnode.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+20
+startnode.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+21[34]
+startnode.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[35]
+startnode.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+22
+goalnode
+java_programs.Node # isParam=true
+hashcode
+2
+goalnode.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+15
+goalnode.value.toString
+java.lang.String
+java.lang.String
+16
+goalnode.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+goalnode.successors[..]
+java.util.ArrayList
+hashcode[]
+14[36]
+goalnode.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[37]
+goalnode.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+goalnode.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[38]
+goalnode.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[39]
+goalnode.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+goalnode.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+11
+goalnode.successor.value.toString
+java.lang.String
+java.lang.String
+12
+goalnode.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+goalnode.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+10[40]
+goalnode.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[41]
+goalnode.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+goalnode.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[42]
+goalnode.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[43]
+goalnode.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+return
+boolean
+boolean
+17
+
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH.main(java.lang.String[]):::ENTER
+args
+java.lang.String[] # isParam=true
+hashcode
+2
+args.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+args[..]
+java.lang.String[]
+hashcode[]
+3[5]
+args[..].toString
+java.lang.String[]
+java.lang.String[]
+4[6]
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH.main(java.lang.String[]):::EXIT55
+args
+java.lang.String[] # isParam=true
+hashcode
+2
+args.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+args[..]
+java.lang.String[]
+hashcode[]
+3[5]
+args[..].toString
+java.lang.String[]
+java.lang.String[]
+4[6]
+
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH.equals(java.lang.Object):::ENTER
+this
+java_programs.DEPTH_FIRST_SEARCH # isNonNull=true, isParam=true
+hashcode
+3
+obj
+java.lang.Object # isParam=true
+hashcode
+2
+obj.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH.equals(java.lang.Object):::EXIT1
+this
+java_programs.DEPTH_FIRST_SEARCH # isNonNull=true, isParam=true
+hashcode
+4
+obj
+java.lang.Object # isParam=true
+hashcode
+2
+obj.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+return
+boolean
+boolean
+3
+
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH.equals_dcomp_instrumented(java.lang.Object):::ENTER
+this
+java_programs.DEPTH_FIRST_SEARCH # isNonNull=true, isParam=true
+hashcode
+3
+obj
+java.lang.Object # isParam=true
+hashcode
+2
+obj.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH.equals_dcomp_instrumented(java.lang.Object):::EXIT1
+this
+java_programs.DEPTH_FIRST_SEARCH # isNonNull=true, isParam=true
+hashcode
+4
+obj
+java.lang.Object # isParam=true
+hashcode
+2
+obj.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+return
+boolean
+boolean
+3
+
+DECLARE
+java_programs.Node:::CLASS
+
+DECLARE
+java_programs.Node:::OBJECT
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+2
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+21
+this.value.toString
+java.lang.String
+java.lang.String
+22
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+20
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+2[23]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[24]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[25]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[26]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+18
+this.successor.value.toString
+java.lang.String
+java.lang.String
+19
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+16
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+17[27]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[28]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[29]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[30]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+15
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+12
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+13[31]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[32]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+10[33]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[34]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+11
+
+
+DECLARE
+java_programs.Node.Node():::ENTER
+
+DECLARE
+java_programs.Node.Node():::EXIT16
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+2
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+21
+this.value.toString
+java.lang.String
+java.lang.String
+22
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+20
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+2[23]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[24]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[25]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[26]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+18
+this.successor.value.toString
+java.lang.String
+java.lang.String
+19
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+16
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+17[27]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[28]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[29]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[30]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+15
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+12
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+13[31]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[32]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+10[33]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[34]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+11
+
+
+DECLARE
+java_programs.Node.Node(java.lang.String):::ENTER
+value
+java.lang.String # isParam=true
+hashcode
+2
+value.toString
+java.lang.String
+java.lang.String
+3
+
+DECLARE
+java_programs.Node.Node(java.lang.String):::EXIT23
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+2
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+21
+this.value.toString
+java.lang.String
+java.lang.String
+22
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+20
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+2[24]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[25]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[26]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[27]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+18
+this.successor.value.toString
+java.lang.String
+java.lang.String
+19
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+16
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+17[28]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[29]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[30]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[31]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+15
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+12
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+13[32]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[33]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+10[34]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[35]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+11
+value
+java.lang.String # isParam=true
+hashcode
+21
+value.toString
+java.lang.String
+java.lang.String
+23
+
+
+DECLARE
+java_programs.Node.Node(java.lang.String, java_programs.Node):::ENTER
+value
+java.lang.String # isParam=true
+hashcode
+17
+value.toString
+java.lang.String
+java.lang.String
+18
+successor
+java_programs.Node # isParam=true
+hashcode
+2
+successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+15
+successor.value.toString
+java.lang.String
+java.lang.String
+16
+successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+successor.successors[..]
+java.util.ArrayList
+hashcode[]
+14[19]
+successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[20]
+successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[21]
+successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[22]
+successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+11
+successor.successor.value.toString
+java.lang.String
+java.lang.String
+12
+successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+10[23]
+successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[24]
+successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[25]
+successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[26]
+successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+
+DECLARE
+java_programs.Node.Node(java.lang.String, java_programs.Node):::EXIT28
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+17
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+36
+this.value.toString
+java.lang.String
+java.lang.String
+37
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+35
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+17[40]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[41]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+18
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+19[42]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[43]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+20
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+33
+this.successor.value.toString
+java.lang.String
+java.lang.String
+34
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+31
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+32[44]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[45]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+21
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+22[46]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[47]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+23
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+29
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+30
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+27
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+28[48]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[49]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+24
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+25[50]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[51]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+26
+value
+java.lang.String # isParam=true
+hashcode
+38
+value.toString
+java.lang.String
+java.lang.String
+39
+successor
+java_programs.Node # isParam=true
+hashcode
+2
+successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+15
+successor.value.toString
+java.lang.String
+java.lang.String
+16
+successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+successor.successors[..]
+java.util.ArrayList
+hashcode[]
+14[52]
+successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[53]
+successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[54]
+successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[55]
+successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+11
+successor.successor.value.toString
+java.lang.String
+java.lang.String
+12
+successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+10[56]
+successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[57]
+successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[58]
+successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[59]
+successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+
+
+DECLARE
+java_programs.Node.Node(java.lang.String, java.util.ArrayList):::ENTER
+value
+java.lang.String # isParam=true
+hashcode
+4
+value.toString
+java.lang.String
+java.lang.String
+5
+successors
+java.util.ArrayList # isParam=true
+hashcode
+2
+successors[..]
+java.util.ArrayList
+hashcode[]
+3[6]
+successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[7]
+
+DECLARE
+java_programs.Node.Node(java.lang.String, java.util.ArrayList):::EXIT33
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+3
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+21
+this.value.toString
+java.lang.String
+java.lang.String
+22
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+2
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+3[24]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[25]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+4
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+5[26]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[27]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+6
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+19
+this.successor.value.toString
+java.lang.String
+java.lang.String
+20
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+17
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+18[28]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[29]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+7
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+8[30]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[31]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+9
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+15
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+16
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+14[32]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[33]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+10
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+11[34]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[35]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+12
+value
+java.lang.String # isParam=true
+hashcode
+21
+value.toString
+java.lang.String
+java.lang.String
+23
+successors
+java.util.ArrayList # isParam=true
+hashcode
+2
+successors[..]
+java.util.ArrayList
+hashcode[]
+3[36]
+successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[37]
+
+
+DECLARE
+java_programs.Node.Node(java.lang.String, java.util.ArrayList, java.util.ArrayList):::ENTER
+value
+java.lang.String # isParam=true
+hashcode
+6
+value.toString
+java.lang.String
+java.lang.String
+7
+predecessors
+java.util.ArrayList # isParam=true
+hashcode
+2
+predecessors[..]
+java.util.ArrayList
+hashcode[]
+3[8]
+predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[9]
+successors
+java.util.ArrayList # isParam=true
+hashcode
+4
+successors[..]
+java.util.ArrayList
+hashcode[]
+5[10]
+successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[11]
+
+DECLARE
+java_programs.Node.Node(java.lang.String, java.util.ArrayList, java.util.ArrayList):::EXIT39
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+6
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+25
+this.value.toString
+java.lang.String
+java.lang.String
+26
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+24
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+6[29]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[30]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+7
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+8[31]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[32]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+9
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+22
+this.successor.value.toString
+java.lang.String
+java.lang.String
+23
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+20
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+21[33]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[34]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+10
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+11[35]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[36]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+12
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+18
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+19
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+16
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+17[37]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[38]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+14[39]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[40]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+15
+value
+java.lang.String # isParam=true
+hashcode
+27
+value.toString
+java.lang.String
+java.lang.String
+28
+predecessors
+java.util.ArrayList # isParam=true
+hashcode
+2
+predecessors[..]
+java.util.ArrayList
+hashcode[]
+3[41]
+predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[42]
+successors
+java.util.ArrayList # isParam=true
+hashcode
+4
+successors[..]
+java.util.ArrayList
+hashcode[]
+5[43]
+successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[44]
+
+
+DECLARE
+java_programs.Node.getValue():::ENTER
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+2
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+21
+this.value.toString
+java.lang.String
+java.lang.String
+22
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+20
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+2[23]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[24]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[25]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[26]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+18
+this.successor.value.toString
+java.lang.String
+java.lang.String
+19
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+16
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+17[27]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[28]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[29]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[30]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+15
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+12
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+13[31]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[32]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+10[33]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[34]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+11
+
+DECLARE
+java_programs.Node.getValue():::EXIT42
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+4
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+23
+this.value.toString
+java.lang.String
+java.lang.String
+24
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+22
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+4[25]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[26]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+5
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+6[27]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[28]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+7
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+20
+this.successor.value.toString
+java.lang.String
+java.lang.String
+21
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+18
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+19[29]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[30]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+8
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+9[31]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[32]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+10
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+16
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+17
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+14
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+15[33]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[34]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+11
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+12[35]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[36]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+13
+return
+java.lang.String
+hashcode
+2
+return.toString
+java.lang.String
+java.lang.String
+3
+
+
+DECLARE
+java_programs.Node.setSuccessor(java_programs.Node):::ENTER
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+17
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+36
+this.value.toString
+java.lang.String
+java.lang.String
+37
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+35
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+17[38]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[39]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+18
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+19[40]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[41]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+20
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+33
+this.successor.value.toString
+java.lang.String
+java.lang.String
+34
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+31
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+32[42]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[43]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+21
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+22[44]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[45]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+23
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+29
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+30
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+27
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+28[46]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[47]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+24
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+25[48]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[49]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+26
+successor
+java_programs.Node # isParam=true
+hashcode
+2
+successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+15
+successor.value.toString
+java.lang.String
+java.lang.String
+16
+successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+successor.successors[..]
+java.util.ArrayList
+hashcode[]
+14[50]
+successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[51]
+successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[52]
+successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[53]
+successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+11
+successor.successor.value.toString
+java.lang.String
+java.lang.String
+12
+successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+10[54]
+successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[55]
+successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[56]
+successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[57]
+successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+
+DECLARE
+java_programs.Node.setSuccessor(java_programs.Node):::EXIT47
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+17
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+36
+this.value.toString
+java.lang.String
+java.lang.String
+37
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+35
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+17[38]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[39]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+18
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+19[40]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[41]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+20
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+33
+this.successor.value.toString
+java.lang.String
+java.lang.String
+34
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+31
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+32[42]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[43]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+21
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+22[44]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[45]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+23
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+29
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+30
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+27
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+28[46]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[47]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+24
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+25[48]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[49]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+26
+successor
+java_programs.Node # isParam=true
+hashcode
+2
+successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+15
+successor.value.toString
+java.lang.String
+java.lang.String
+16
+successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+successor.successors[..]
+java.util.ArrayList
+hashcode[]
+14[50]
+successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[51]
+successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[52]
+successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[53]
+successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+11
+successor.successor.value.toString
+java.lang.String
+java.lang.String
+12
+successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+10[54]
+successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[55]
+successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[56]
+successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[57]
+successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+
+
+DECLARE
+java_programs.Node.setSuccessors(java.util.ArrayList):::ENTER
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+3
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+22
+this.value.toString
+java.lang.String
+java.lang.String
+23
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+21
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+3[24]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[25]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+4
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+5[26]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[27]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+6
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+19
+this.successor.value.toString
+java.lang.String
+java.lang.String
+20
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+17
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+18[28]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[29]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+7
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+8[30]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[31]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+9
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+15
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+16
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+14[32]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[33]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+10
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+11[34]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[35]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+12
+successors
+java.util.ArrayList # isParam=true
+hashcode
+2
+successors[..]
+java.util.ArrayList
+hashcode[]
+3[36]
+successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[37]
+
+DECLARE
+java_programs.Node.setSuccessors(java.util.ArrayList):::EXIT51
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+3
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+22
+this.value.toString
+java.lang.String
+java.lang.String
+23
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+21
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+3[24]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[25]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+4
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+5[26]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[27]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+6
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+19
+this.successor.value.toString
+java.lang.String
+java.lang.String
+20
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+17
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+18[28]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[29]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+7
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+8[30]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[31]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+9
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+15
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+16
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+14[32]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[33]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+10
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+11[34]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[35]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+12
+successors
+java.util.ArrayList # isParam=true
+hashcode
+2
+successors[..]
+java.util.ArrayList
+hashcode[]
+3[36]
+successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[37]
+
+
+DECLARE
+java_programs.Node.setPredecessors(java.util.ArrayList):::ENTER
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+4
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+23
+this.value.toString
+java.lang.String
+java.lang.String
+24
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+22
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+4[25]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[26]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+5
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+6[27]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[28]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+7
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+20
+this.successor.value.toString
+java.lang.String
+java.lang.String
+21
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+18
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+19[29]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[30]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+8
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+9[31]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[32]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+10
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+16
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+17
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+14
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+15[33]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[34]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+11
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+12[35]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[36]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+13
+predecessors
+java.util.ArrayList # isParam=true
+hashcode
+2
+predecessors[..]
+java.util.ArrayList
+hashcode[]
+3[37]
+predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[38]
+
+DECLARE
+java_programs.Node.setPredecessors(java.util.ArrayList):::EXIT57
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+4
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+23
+this.value.toString
+java.lang.String
+java.lang.String
+24
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+22
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+4[25]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[26]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+5
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+6[27]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[28]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+7
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+20
+this.successor.value.toString
+java.lang.String
+java.lang.String
+21
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+18
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+19[29]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[30]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+8
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+9[31]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[32]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+10
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+16
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+17
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+14
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+15[33]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[34]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+11
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+12[35]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[36]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+13
+predecessors
+java.util.ArrayList # isParam=true
+hashcode
+2
+predecessors[..]
+java.util.ArrayList
+hashcode[]
+3[37]
+predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[38]
+
+
+DECLARE
+java_programs.Node.getSuccessor():::ENTER
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+2
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+21
+this.value.toString
+java.lang.String
+java.lang.String
+22
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+20
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+2[23]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[24]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[25]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[26]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+18
+this.successor.value.toString
+java.lang.String
+java.lang.String
+19
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+16
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+17[27]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[28]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[29]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[30]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+15
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+12
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+13[31]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[32]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+10[33]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[34]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+11
+
+DECLARE
+java_programs.Node.getSuccessor():::EXIT60
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+17
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+36
+this.value.toString
+java.lang.String
+java.lang.String
+37
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+35
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+17[38]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[39]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+18
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+19[40]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[41]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+20
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+33
+this.successor.value.toString
+java.lang.String
+java.lang.String
+34
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+31
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+32[42]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[43]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+21
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+22[44]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[45]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+23
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+29
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+30
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+27
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+28[46]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[47]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+24
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+25[48]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[49]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+26
+return
+java_programs.Node
+hashcode
+2
+return.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+15
+return.value.toString
+java.lang.String
+java.lang.String
+16
+return.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+return.successors[..]
+java.util.ArrayList
+hashcode[]
+14[50]
+return.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[51]
+return.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+return.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[52]
+return.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[53]
+return.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+return.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+11
+return.successor.value.toString
+java.lang.String
+java.lang.String
+12
+return.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+return.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+10[54]
+return.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[55]
+return.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+return.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[56]
+return.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[57]
+return.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+
+
+DECLARE
+java_programs.Node.getSuccessors():::ENTER
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+2
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+21
+this.value.toString
+java.lang.String
+java.lang.String
+22
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+20
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+2[23]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[24]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[25]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[26]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+18
+this.successor.value.toString
+java.lang.String
+java.lang.String
+19
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+16
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+17[27]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[28]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[29]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[30]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+15
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+12
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+13[31]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[32]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+10[33]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[34]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+11
+
+DECLARE
+java_programs.Node.getSuccessors():::EXIT64
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+3
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+21
+this.value.toString
+java.lang.String
+java.lang.String
+22
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+2
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+3[23]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[24]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+4
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+5[25]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[26]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+6
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+19
+this.successor.value.toString
+java.lang.String
+java.lang.String
+20
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+17
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+18[27]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[28]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+7
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+8[29]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[30]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+9
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+15
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+16
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+14[31]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[32]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+10
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+11[33]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[34]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+12
+return
+java.util.ArrayList
+hashcode
+2
+return[..]
+java.util.ArrayList
+hashcode[]
+3[35]
+return[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[36]
+
+
+DECLARE
+java_programs.Node.getPredecessors():::ENTER
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+2
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+21
+this.value.toString
+java.lang.String
+java.lang.String
+22
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+20
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+2[23]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[24]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[25]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[26]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+18
+this.successor.value.toString
+java.lang.String
+java.lang.String
+19
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+16
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+17[27]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[28]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[29]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[30]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+15
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+12
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+13[31]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[32]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+10[33]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[34]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+11
+
+DECLARE
+java_programs.Node.getPredecessors():::EXIT67
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+4
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+23
+this.value.toString
+java.lang.String
+java.lang.String
+24
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+22
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+4[25]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[26]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+5
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+6[27]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[28]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+7
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+20
+this.successor.value.toString
+java.lang.String
+java.lang.String
+21
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+18
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+19[29]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[30]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+8
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+9[31]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[32]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+10
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+16
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+17
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+14
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+15[33]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[34]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+11
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+12[35]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[36]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+13
+return
+java.util.ArrayList
+hashcode
+2
+return[..]
+java.util.ArrayList
+hashcode[]
+3[37]
+return[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[38]
+
+
+DECLARE
+java_programs.Node.equals(java.lang.Object):::ENTER
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+3
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+22
+this.value.toString
+java.lang.String
+java.lang.String
+23
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+21
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+3[24]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[25]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+4
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+5[26]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[27]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+6
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+19
+this.successor.value.toString
+java.lang.String
+java.lang.String
+20
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+17
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+18[28]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[29]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+7
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+8[30]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[31]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+9
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+15
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+16
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+14[32]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[33]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+10
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+11[34]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[35]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+12
+obj
+java.lang.Object # isParam=true
+hashcode
+2
+obj.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+
+DECLARE
+java_programs.Node.equals(java.lang.Object):::EXIT1
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+4
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+23
+this.value.toString
+java.lang.String
+java.lang.String
+24
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+22
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+4[25]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[26]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+5
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+6[27]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[28]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+7
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+20
+this.successor.value.toString
+java.lang.String
+java.lang.String
+21
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+18
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+19[29]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[30]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+8
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+9[31]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[32]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+10
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+16
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+17
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+14
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+15[33]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[34]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+11
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+12[35]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[36]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+13
+obj
+java.lang.Object # isParam=true
+hashcode
+2
+obj.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+return
+boolean
+boolean
+3
+
+
+DECLARE
+java_programs.Node.equals_dcomp_instrumented(java.lang.Object):::ENTER
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+3
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+22
+this.value.toString
+java.lang.String
+java.lang.String
+23
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+21
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+3[24]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[25]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+4
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+5[26]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[27]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+6
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+19
+this.successor.value.toString
+java.lang.String
+java.lang.String
+20
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+17
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+18[28]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[29]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+7
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+8[30]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[31]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+9
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+15
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+16
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+14[32]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[33]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+10
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+11[34]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[35]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+12
+obj
+java.lang.Object # isParam=true
+hashcode
+2
+obj.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+
+DECLARE
+java_programs.Node.equals_dcomp_instrumented(java.lang.Object):::EXIT1
+this
+java_programs.Node # isNonNull=true, isParam=true
+hashcode
+4
+this.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+23
+this.value.toString
+java.lang.String
+java.lang.String
+24
+this.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+22
+this.successors[..]
+java.util.ArrayList
+hashcode[]
+4[25]
+this.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[26]
+this.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+5
+this.predecessors[..]
+java.util.ArrayList
+hashcode[]
+6[27]
+this.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[28]
+this.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+7
+this.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+20
+this.successor.value.toString
+java.lang.String
+java.lang.String
+21
+this.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+18
+this.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+19[29]
+this.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[30]
+this.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+8
+this.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+9[31]
+this.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[32]
+this.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+10
+this.successor.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+16
+this.successor.successor.value.toString
+java.lang.String
+java.lang.String
+17
+this.successor.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+14
+this.successor.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+15[33]
+this.successor.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[34]
+this.successor.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+11
+this.successor.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+12[35]
+this.successor.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[36]
+this.successor.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+13
+obj
+java.lang.Object # isParam=true
+hashcode
+2
+obj.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+return
+boolean
+boolean
+3
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH$1Search:::CLASS
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH$1Search:::OBJECT
+this
+java_programs.DEPTH_FIRST_SEARCH$1Search # isNonNull=true, isParam=true
+hashcode
+2
+this.val$nodesvisited
+java.util.Set # declaringClassPackageName=java_programs
+hashcode
+18
+this.val$nodesvisited.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+this.val$goalnode
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+3
+this.val$goalnode.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+16
+this.val$goalnode.value.toString
+java.lang.String
+java.lang.String
+17
+this.val$goalnode.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+14
+this.val$goalnode.successors[..]
+java.util.ArrayList
+hashcode[]
+15[19]
+this.val$goalnode.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[20]
+this.val$goalnode.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+4
+this.val$goalnode.predecessors[..]
+java.util.ArrayList
+hashcode[]
+5[21]
+this.val$goalnode.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[22]
+this.val$goalnode.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+6
+this.val$goalnode.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+12
+this.val$goalnode.successor.value.toString
+java.lang.String
+java.lang.String
+13
+this.val$goalnode.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+10
+this.val$goalnode.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+11[23]
+this.val$goalnode.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[24]
+this.val$goalnode.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+7
+this.val$goalnode.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+8[25]
+this.val$goalnode.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[26]
+this.val$goalnode.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+9
+
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH$1Search.Search(java.util.Set, java_programs.Node):::ENTER
+$hidden$1
+java.util.Set # isParam=true
+hashcode
+2
+$hidden$1.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+$hidden$2
+java_programs.Node # isParam=true
+hashcode
+3
+$hidden$2.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+16
+$hidden$2.value.toString
+java.lang.String
+java.lang.String
+17
+$hidden$2.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+14
+$hidden$2.successors[..]
+java.util.ArrayList
+hashcode[]
+15[18]
+$hidden$2.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[19]
+$hidden$2.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+4
+$hidden$2.predecessors[..]
+java.util.ArrayList
+hashcode[]
+5[20]
+$hidden$2.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[21]
+$hidden$2.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+6
+$hidden$2.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+12
+$hidden$2.successor.value.toString
+java.lang.String
+java.lang.String
+13
+$hidden$2.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+10
+$hidden$2.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+11[22]
+$hidden$2.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[23]
+$hidden$2.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+7
+$hidden$2.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+8[24]
+$hidden$2.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[25]
+$hidden$2.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+9
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH$1Search.Search(java.util.Set, java_programs.Node):::EXIT15
+this
+java_programs.DEPTH_FIRST_SEARCH$1Search # isNonNull=true, isParam=true
+hashcode
+18
+this.val$nodesvisited
+java.util.Set # declaringClassPackageName=java_programs
+hashcode
+2
+this.val$nodesvisited.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+this.val$goalnode
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+3
+this.val$goalnode.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+16
+this.val$goalnode.value.toString
+java.lang.String
+java.lang.String
+29
+this.val$goalnode.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+14
+this.val$goalnode.successors[..]
+java.util.ArrayList
+hashcode[]
+28[30]
+this.val$goalnode.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[31]
+this.val$goalnode.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+4
+this.val$goalnode.predecessors[..]
+java.util.ArrayList
+hashcode[]
+19[32]
+this.val$goalnode.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[33]
+this.val$goalnode.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+20
+this.val$goalnode.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+26
+this.val$goalnode.successor.value.toString
+java.lang.String
+java.lang.String
+27
+this.val$goalnode.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+24
+this.val$goalnode.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+25[34]
+this.val$goalnode.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[35]
+this.val$goalnode.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+21
+this.val$goalnode.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+22[36]
+this.val$goalnode.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[37]
+this.val$goalnode.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+23
+$hidden$1
+java.util.Set # isParam=true
+hashcode
+2
+$hidden$1.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+$hidden$2
+java_programs.Node # isParam=true
+hashcode
+3
+$hidden$2.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+16
+$hidden$2.value.toString
+java.lang.String
+java.lang.String
+17
+$hidden$2.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+14
+$hidden$2.successors[..]
+java.util.ArrayList
+hashcode[]
+15[38]
+$hidden$2.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[39]
+$hidden$2.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+4
+$hidden$2.predecessors[..]
+java.util.ArrayList
+hashcode[]
+5[40]
+$hidden$2.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[41]
+$hidden$2.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+6
+$hidden$2.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+12
+$hidden$2.successor.value.toString
+java.lang.String
+java.lang.String
+13
+$hidden$2.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+10
+$hidden$2.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+11[42]
+$hidden$2.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[43]
+$hidden$2.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+7
+$hidden$2.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+8[44]
+$hidden$2.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[45]
+$hidden$2.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+9
+
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH$1Search.search(java_programs.Node):::ENTER
+this
+java_programs.DEPTH_FIRST_SEARCH$1Search # isNonNull=true, isParam=true
+hashcode
+16
+this.val$nodesvisited
+java.util.Set # declaringClassPackageName=java_programs
+hashcode
+28
+this.val$nodesvisited.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+this.val$goalnode
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+2
+this.val$goalnode.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+this.val$goalnode.value.toString
+java.lang.String
+java.lang.String
+27
+this.val$goalnode.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+this.val$goalnode.successors[..]
+java.util.ArrayList
+hashcode[]
+26[29]
+this.val$goalnode.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[30]
+this.val$goalnode.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+this.val$goalnode.predecessors[..]
+java.util.ArrayList
+hashcode[]
+17[31]
+this.val$goalnode.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[32]
+this.val$goalnode.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+18
+this.val$goalnode.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+24
+this.val$goalnode.successor.value.toString
+java.lang.String
+java.lang.String
+25
+this.val$goalnode.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+22
+this.val$goalnode.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+23[33]
+this.val$goalnode.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[34]
+this.val$goalnode.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+19
+this.val$goalnode.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+20[35]
+this.val$goalnode.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[36]
+this.val$goalnode.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+21
+node
+java_programs.Node # isParam=true
+hashcode
+2
+node.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+node.value.toString
+java.lang.String
+java.lang.String
+15
+node.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+node.successors[..]
+java.util.ArrayList
+hashcode[]
+2[37]
+node.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[38]
+node.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+node.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[39]
+node.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[40]
+node.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+node.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+11
+node.successor.value.toString
+java.lang.String
+java.lang.String
+12
+node.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+node.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+10[41]
+node.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[42]
+node.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+node.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[43]
+node.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[44]
+node.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH$1Search.search(java_programs.Node):::EXIT18
+this
+java_programs.DEPTH_FIRST_SEARCH$1Search # isNonNull=true, isParam=true
+hashcode
+17
+this.val$nodesvisited
+java.util.Set # declaringClassPackageName=java_programs
+hashcode
+29
+this.val$nodesvisited.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+this.val$goalnode
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+2
+this.val$goalnode.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+this.val$goalnode.value.toString
+java.lang.String
+java.lang.String
+28
+this.val$goalnode.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+this.val$goalnode.successors[..]
+java.util.ArrayList
+hashcode[]
+27[30]
+this.val$goalnode.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[31]
+this.val$goalnode.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+this.val$goalnode.predecessors[..]
+java.util.ArrayList
+hashcode[]
+18[32]
+this.val$goalnode.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[33]
+this.val$goalnode.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+19
+this.val$goalnode.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+25
+this.val$goalnode.successor.value.toString
+java.lang.String
+java.lang.String
+26
+this.val$goalnode.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+23
+this.val$goalnode.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+24[34]
+this.val$goalnode.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[35]
+this.val$goalnode.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+20
+this.val$goalnode.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+21[36]
+this.val$goalnode.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[37]
+this.val$goalnode.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+22
+node
+java_programs.Node # isParam=true
+hashcode
+2
+node.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+node.value.toString
+java.lang.String
+java.lang.String
+15
+node.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+node.successors[..]
+java.util.ArrayList
+hashcode[]
+2[38]
+node.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[39]
+node.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+node.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[40]
+node.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[41]
+node.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+node.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+11
+node.successor.value.toString
+java.lang.String
+java.lang.String
+12
+node.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+node.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+10[42]
+node.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[43]
+node.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+node.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[44]
+node.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[45]
+node.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+return
+boolean
+boolean
+16
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH$1Search.search(java_programs.Node):::EXIT20
+this
+java_programs.DEPTH_FIRST_SEARCH$1Search # isNonNull=true, isParam=true
+hashcode
+17
+this.val$nodesvisited
+java.util.Set # declaringClassPackageName=java_programs
+hashcode
+29
+this.val$nodesvisited.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+this.val$goalnode
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+2
+this.val$goalnode.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+this.val$goalnode.value.toString
+java.lang.String
+java.lang.String
+28
+this.val$goalnode.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+this.val$goalnode.successors[..]
+java.util.ArrayList
+hashcode[]
+27[30]
+this.val$goalnode.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[31]
+this.val$goalnode.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+this.val$goalnode.predecessors[..]
+java.util.ArrayList
+hashcode[]
+18[32]
+this.val$goalnode.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[33]
+this.val$goalnode.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+19
+this.val$goalnode.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+25
+this.val$goalnode.successor.value.toString
+java.lang.String
+java.lang.String
+26
+this.val$goalnode.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+23
+this.val$goalnode.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+24[34]
+this.val$goalnode.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[35]
+this.val$goalnode.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+20
+this.val$goalnode.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+21[36]
+this.val$goalnode.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[37]
+this.val$goalnode.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+22
+node
+java_programs.Node # isParam=true
+hashcode
+2
+node.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+node.value.toString
+java.lang.String
+java.lang.String
+15
+node.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+node.successors[..]
+java.util.ArrayList
+hashcode[]
+2[38]
+node.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[39]
+node.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+node.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[40]
+node.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[41]
+node.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+node.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+11
+node.successor.value.toString
+java.lang.String
+java.lang.String
+12
+node.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+node.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+10[42]
+node.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[43]
+node.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+node.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[44]
+node.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[45]
+node.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+return
+boolean
+boolean
+16
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH$1Search.search(java_programs.Node):::EXIT23
+this
+java_programs.DEPTH_FIRST_SEARCH$1Search # isNonNull=true, isParam=true
+hashcode
+17
+this.val$nodesvisited
+java.util.Set # declaringClassPackageName=java_programs
+hashcode
+29
+this.val$nodesvisited.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+this.val$goalnode
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+2
+this.val$goalnode.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+this.val$goalnode.value.toString
+java.lang.String
+java.lang.String
+28
+this.val$goalnode.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+this.val$goalnode.successors[..]
+java.util.ArrayList
+hashcode[]
+27[30]
+this.val$goalnode.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[31]
+this.val$goalnode.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+this.val$goalnode.predecessors[..]
+java.util.ArrayList
+hashcode[]
+18[32]
+this.val$goalnode.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[33]
+this.val$goalnode.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+19
+this.val$goalnode.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+25
+this.val$goalnode.successor.value.toString
+java.lang.String
+java.lang.String
+26
+this.val$goalnode.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+23
+this.val$goalnode.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+24[34]
+this.val$goalnode.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[35]
+this.val$goalnode.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+20
+this.val$goalnode.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+21[36]
+this.val$goalnode.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[37]
+this.val$goalnode.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+22
+node
+java_programs.Node # isParam=true
+hashcode
+2
+node.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+node.value.toString
+java.lang.String
+java.lang.String
+15
+node.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+node.successors[..]
+java.util.ArrayList
+hashcode[]
+2[38]
+node.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[39]
+node.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+node.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[40]
+node.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[41]
+node.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+node.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+11
+node.successor.value.toString
+java.lang.String
+java.lang.String
+12
+node.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+node.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+10[42]
+node.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[43]
+node.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+node.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[44]
+node.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[45]
+node.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+return
+boolean
+boolean
+16
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH$1Search.search(java_programs.Node):::EXIT26
+this
+java_programs.DEPTH_FIRST_SEARCH$1Search # isNonNull=true, isParam=true
+hashcode
+17
+this.val$nodesvisited
+java.util.Set # declaringClassPackageName=java_programs
+hashcode
+29
+this.val$nodesvisited.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+this.val$goalnode
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+2
+this.val$goalnode.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+this.val$goalnode.value.toString
+java.lang.String
+java.lang.String
+28
+this.val$goalnode.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+this.val$goalnode.successors[..]
+java.util.ArrayList
+hashcode[]
+27[30]
+this.val$goalnode.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[31]
+this.val$goalnode.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+this.val$goalnode.predecessors[..]
+java.util.ArrayList
+hashcode[]
+18[32]
+this.val$goalnode.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[33]
+this.val$goalnode.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+19
+this.val$goalnode.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+25
+this.val$goalnode.successor.value.toString
+java.lang.String
+java.lang.String
+26
+this.val$goalnode.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+23
+this.val$goalnode.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+24[34]
+this.val$goalnode.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[35]
+this.val$goalnode.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+20
+this.val$goalnode.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+21[36]
+this.val$goalnode.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[37]
+this.val$goalnode.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+22
+node
+java_programs.Node # isParam=true
+hashcode
+2
+node.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+node.value.toString
+java.lang.String
+java.lang.String
+15
+node.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+13
+node.successors[..]
+java.util.ArrayList
+hashcode[]
+2[38]
+node.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[39]
+node.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+3
+node.predecessors[..]
+java.util.ArrayList
+hashcode[]
+4[40]
+node.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[41]
+node.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+node.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+11
+node.successor.value.toString
+java.lang.String
+java.lang.String
+12
+node.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+node.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+10[42]
+node.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[43]
+node.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+node.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[44]
+node.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[45]
+node.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+return
+boolean
+boolean
+16
+
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH$1Search.equals(java.lang.Object):::ENTER
+this
+java_programs.DEPTH_FIRST_SEARCH$1Search # isNonNull=true, isParam=true
+hashcode
+3
+this.val$nodesvisited
+java.util.Set # declaringClassPackageName=java_programs
+hashcode
+19
+this.val$nodesvisited.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+this.val$goalnode
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+4
+this.val$goalnode.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+17
+this.val$goalnode.value.toString
+java.lang.String
+java.lang.String
+18
+this.val$goalnode.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+15
+this.val$goalnode.successors[..]
+java.util.ArrayList
+hashcode[]
+16[20]
+this.val$goalnode.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[21]
+this.val$goalnode.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+5
+this.val$goalnode.predecessors[..]
+java.util.ArrayList
+hashcode[]
+6[22]
+this.val$goalnode.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[23]
+this.val$goalnode.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+7
+this.val$goalnode.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+13
+this.val$goalnode.successor.value.toString
+java.lang.String
+java.lang.String
+14
+this.val$goalnode.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+11
+this.val$goalnode.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+12[24]
+this.val$goalnode.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[25]
+this.val$goalnode.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+8
+this.val$goalnode.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+9[26]
+this.val$goalnode.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[27]
+this.val$goalnode.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+10
+obj
+java.lang.Object # isParam=true
+hashcode
+2
+obj.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH$1Search.equals(java.lang.Object):::EXIT1
+this
+java_programs.DEPTH_FIRST_SEARCH$1Search # isNonNull=true, isParam=true
+hashcode
+4
+this.val$nodesvisited
+java.util.Set # declaringClassPackageName=java_programs
+hashcode
+20
+this.val$nodesvisited.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+this.val$goalnode
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+this.val$goalnode.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+18
+this.val$goalnode.value.toString
+java.lang.String
+java.lang.String
+19
+this.val$goalnode.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+16
+this.val$goalnode.successors[..]
+java.util.ArrayList
+hashcode[]
+17[21]
+this.val$goalnode.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[22]
+this.val$goalnode.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+this.val$goalnode.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[23]
+this.val$goalnode.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[24]
+this.val$goalnode.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+this.val$goalnode.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+this.val$goalnode.successor.value.toString
+java.lang.String
+java.lang.String
+15
+this.val$goalnode.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+12
+this.val$goalnode.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+13[25]
+this.val$goalnode.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[26]
+this.val$goalnode.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+this.val$goalnode.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+10[27]
+this.val$goalnode.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[28]
+this.val$goalnode.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+11
+obj
+java.lang.Object # isParam=true
+hashcode
+2
+obj.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+return
+boolean
+boolean
+3
+
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH$1Search.equals_dcomp_instrumented(java.lang.Object):::ENTER
+this
+java_programs.DEPTH_FIRST_SEARCH$1Search # isNonNull=true, isParam=true
+hashcode
+3
+this.val$nodesvisited
+java.util.Set # declaringClassPackageName=java_programs
+hashcode
+19
+this.val$nodesvisited.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+this.val$goalnode
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+4
+this.val$goalnode.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+17
+this.val$goalnode.value.toString
+java.lang.String
+java.lang.String
+18
+this.val$goalnode.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+15
+this.val$goalnode.successors[..]
+java.util.ArrayList
+hashcode[]
+16[20]
+this.val$goalnode.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[21]
+this.val$goalnode.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+5
+this.val$goalnode.predecessors[..]
+java.util.ArrayList
+hashcode[]
+6[22]
+this.val$goalnode.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[23]
+this.val$goalnode.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+7
+this.val$goalnode.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+13
+this.val$goalnode.successor.value.toString
+java.lang.String
+java.lang.String
+14
+this.val$goalnode.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+11
+this.val$goalnode.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+12[24]
+this.val$goalnode.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[25]
+this.val$goalnode.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+8
+this.val$goalnode.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+9[26]
+this.val$goalnode.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[27]
+this.val$goalnode.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+10
+obj
+java.lang.Object # isParam=true
+hashcode
+2
+obj.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+
+DECLARE
+java_programs.DEPTH_FIRST_SEARCH$1Search.equals_dcomp_instrumented(java.lang.Object):::EXIT1
+this
+java_programs.DEPTH_FIRST_SEARCH$1Search # isNonNull=true, isParam=true
+hashcode
+4
+this.val$nodesvisited
+java.util.Set # declaringClassPackageName=java_programs
+hashcode
+20
+this.val$nodesvisited.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+this.val$goalnode
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+5
+this.val$goalnode.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+18
+this.val$goalnode.value.toString
+java.lang.String
+java.lang.String
+19
+this.val$goalnode.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+16
+this.val$goalnode.successors[..]
+java.util.ArrayList
+hashcode[]
+17[21]
+this.val$goalnode.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[22]
+this.val$goalnode.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+6
+this.val$goalnode.predecessors[..]
+java.util.ArrayList
+hashcode[]
+7[23]
+this.val$goalnode.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[24]
+this.val$goalnode.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+8
+this.val$goalnode.successor.value
+java.lang.String # declaringClassPackageName=java_programs
+hashcode
+14
+this.val$goalnode.successor.value.toString
+java.lang.String
+java.lang.String
+15
+this.val$goalnode.successor.successors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+12
+this.val$goalnode.successor.successors[..]
+java.util.ArrayList
+hashcode[]
+13[25]
+this.val$goalnode.successor.successors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[26]
+this.val$goalnode.successor.predecessors
+java.util.ArrayList # declaringClassPackageName=java_programs
+hashcode
+9
+this.val$goalnode.successor.predecessors[..]
+java.util.ArrayList
+hashcode[]
+10[27]
+this.val$goalnode.successor.predecessors[..].getClass().getName()
+java.lang.Class[]
+java.lang.String[]
+1[28]
+this.val$goalnode.successor.successor
+java_programs.Node # declaringClassPackageName=java_programs
+hashcode
+11
+obj
+java.lang.Object # isParam=true
+hashcode
+2
+obj.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+return
+boolean
+boolean
+3
+

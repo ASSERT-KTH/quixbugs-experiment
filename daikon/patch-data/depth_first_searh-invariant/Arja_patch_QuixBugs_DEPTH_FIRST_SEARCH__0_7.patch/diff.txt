@@ -1,0 +1,27 @@
+<java_programs.DEPTH_FIRST_SEARCH$1Search.search(java_programs.Node):::EXIT>
+  <(return == false)  ==>  (size(node.successors[..]) one of { 0, 1 }) {1+}, (return == false)  ==>  (size(node.successors[..]) one of { 0, 1, 3 }) {1+}> (Nul,DJJ)
+  <(return == false)  ==>  (node.successors[..] elements has only one value) {1+}, null> (Nul,JM)
+  <(return == false)  ==>  (node.value.toString one of { "B", "E", "F" }) {1+}, null> (Nul,JM)
+  <(return == false)  ==>  (node.successors[..].getClass().getName() one of { [], [java_programs.Node] }) {1+}, null> (Nul,JM)
+  <null, node.predecessors == orig(node.predecessors) {1+}> (Bin,MJ)
+  <node.predecessors[..] is the reverse of orig(node.predecessors[..]) {1+}, null> (Bin,JM)
+  <node.predecessors[..].getClass().getName() == orig(node.predecessors[..].getClass().getName()) {1+}, null> (Bin,JM)
+  <node.predecessors != null {0.9977+}, null> (Una,JM)
+<java_programs.DEPTH_FIRST_SEARCH.depth_first_search(java_programs.Node, java_programs.Node):::EXIT>
+  <(return == false)  ==>  (orig(startnode.predecessors) has only one value) {1+}, null> (Nul,JM)
+  <null, startnode.predecessors == orig(startnode.predecessors) {1+}> (Bin,MJ)
+  <startnode.predecessors[..] is the reverse of orig(startnode.predecessors[..]) {1+}, null> (Bin,JM)
+  <startnode.predecessors[..].getClass().getName() == orig(startnode.predecessors[..].getClass().getName()) {1+}, null> (Bin,JM)
+<java_programs.Node.getSuccessors():::EXIT>
+  <null, this.predecessors == orig(this.predecessors) {1+}> (Bin,MJ)
+  <this.predecessors[..] is the reverse of orig(this.predecessors[..]) {1+}, null> (Bin,JM)
+  <this.predecessors[..].getClass().getName() == orig(this.predecessors[..].getClass().getName()) {1+}, null> (Bin,JM)
+<java_programs.Node.setSuccessors(java.util.ArrayList):::EXIT>
+  <null, size(this.successors[..])-1 == orig(size(this.successors[..])) {1+}> (Bin,MJ)
+  <null, this.successors == orig(successors) {1+}> (Bin,MJ)
+  <this.successors == orig(this.successors) {1+}, null> (Bin,JM)
+  <this.successors[..] == orig(this.successors[..]) {1+}, null> (Bin,JM)
+  <size(this.successors[..]) == 0 {1-}, size(this.successors[..]) == 1 {1+}> (Una,DJJ)
+  <this.successors[..] elements one of {  } {0-}, this.successors[..] elements has only one value {1+}> (Una,DUJ)
+  <this.successors[..] == [] {1+}, this.successors[..] contains no nulls and has only one value, of length 1 {1+}> (Una,DJJ)
+  <this.successors[..].getClass().getName() == [] {1+}, this.successors[..].getClass().getName() == [java_programs.Node] {1+}> (Una,DJJ)
