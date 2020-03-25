@@ -1,0 +1,120 @@
+Daikon version 5.7.2, released November 7, 2018; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+java_programs.FIND_IN_SORTED.binsearch(int[], int, int, int):::ENTER
+arr != null
+arr[] elements >= 1
+arr[] sorted by <=
+x >= 0
+start one of { 0, 5, 7 }
+end >= 0
+x >= start
+x != size(arr[])-1
+x != arr[start]
+start <= end
+start < size(arr[])-1
+start < arr[start]
+end <= size(arr[])
+end != size(arr[])-1
+size(arr[]) != arr[start]
+size(arr[])-1 != arr[start]
+===========================================================================
+java_programs.FIND_IN_SORTED.binsearch(int[], int, int, int):::EXIT14
+orig(start) == orig(end)
+arr[] one of { [1, 2, 3, 4, 6, 7, 8], [3, 5, 6, 7, 8, 9, 12, 13, 14, 24, 26, 27], [24, 26, 28, 50, 59] }
+return == -1
+orig(x) one of { 0, 5, 101 }
+orig(start) == 0
+orig(size(arr[])) one of { 5, 7, 12 }
+arr[orig(start)] one of { 1, 3, 24 }
+===========================================================================
+java_programs.FIND_IN_SORTED.binsearch(int[], int, int, int):::EXIT18
+arr[] one of { [1, 2, 3, 4, 6, 7, 8], [3, 5, 6, 7, 8, 9, 12, 13, 14, 24, 26, 27], [24, 26, 28, 50, 59] }
+arr[] sorted by <
+return == -1
+orig(x) one of { 0, 5, 101 }
+orig(start) == 0
+orig(end) >= 1
+orig(size(arr[])) one of { 5, 7, 12 }
+arr[orig(start)] one of { 1, 3, 24 }
+arr[] elements > return
+arr[] elements > orig(start)
+arr[] elements >= arr[orig(start)]
+return < arr[orig(start)]
+return < arr[orig(end)-1]
+orig(x) != orig(end)
+orig(x) != orig(size(arr[]))
+orig(x) != arr[orig(end)-1]
+orig(start) < orig(end)
+orig(start) < arr[orig(end)-1]
+orig(end) <= arr[orig(end)-1]
+size(arr[])-1 != arr[orig(end)-1]
+orig(size(arr[])) != arr[orig(end)-1]
+arr[orig(start)] <= arr[orig(end)-1]
+===========================================================================
+java_programs.FIND_IN_SORTED.binsearch(int[], int, int, int):::EXIT20
+orig(x) == arr[return]
+orig(x) == orig(arr[post(return)])
+orig(end) == orig(size(arr[]))
+arr[] == [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+return == 8
+orig(arr) has only one value
+orig(x) == 18
+orig(start) one of { 0, 5 }
+orig(end) == 10
+arr[return-1] == 16
+arr[orig(start)] one of { 2, 12 }
+arr[orig(end)-1] == 20
+return in arr[]
+orig(end) in arr[]
+===========================================================================
+java_programs.FIND_IN_SORTED.binsearch(int[], int, int, int):::EXIT22
+orig(x) == arr[return]
+orig(x) == orig(arr[post(return)])
+orig(end) == orig(size(arr[]))
+return one of { 3, 6, 8 }
+orig(start) one of { 0, 7 }
+orig(end) one of { 7, 10, 12 }
+arr[orig(start)] one of { 1, 3, 16 }
+return in arr[]
+===========================================================================
+java_programs.FIND_IN_SORTED.binsearch(int[], int, int, int):::EXIT
+arr[] == orig(arr[])
+arr[] elements >= 1
+arr[] sorted by <=
+return >= -1
+return < orig(x)
+return != orig(start)
+return < orig(end)
+return < size(arr[])-1
+orig(x) != size(arr[])-1
+orig(x) != arr[orig(start)]
+orig(start) < size(arr[])-1
+orig(start) < arr[orig(start)]
+orig(end) != size(arr[])-1
+size(arr[])-1 != arr[orig(start)]
+orig(size(arr[])) != arr[orig(start)]
+===========================================================================
+java_programs.FIND_IN_SORTED.find_in_sorted(int[], int):::ENTER
+arr[] sorted by <=
+x != size(arr[])-1
+===========================================================================
+java_programs.FIND_IN_SORTED.find_in_sorted(int[], int):::EXIT
+arr[] == orig(arr[])
+arr[] sorted by <=
+return < orig(x)
+return < size(arr[])-1
+orig(x) != size(arr[])-1
+===========================================================================
+java_programs.FIND_IN_SORTED.main(java.lang.String[]):::ENTER
+args has only one value
+args.getClass().getName() == java.lang.String[].class
+args[] == []
+args[].toString == []
+===========================================================================
+java_programs.FIND_IN_SORTED.main(java.lang.String[]):::EXIT
+args[] == orig(args[])
+args[] == []
+args[].toString == []
+Exiting Daikon.

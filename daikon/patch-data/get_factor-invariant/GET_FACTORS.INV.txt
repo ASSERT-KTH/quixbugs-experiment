@@ -1,0 +1,35 @@
+Daikon version 5.7.2, released November 7, 2018; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+java_programs.GET_FACTORS.get_factors(int):::ENTER
+===========================================================================
+java_programs.GET_FACTORS.get_factors(int):::EXIT16
+return has only one value
+return[] == []
+return[].getClass().getName() == []
+orig(n) == 1
+===========================================================================
+java_programs.GET_FACTORS.get_factors(int):::EXIT24
+size(return[]) one of { 2, 3, 4 }
+===========================================================================
+java_programs.GET_FACTORS.get_factors(int):::EXIT28
+return[].getClass().getName() == [java.lang.Integer]
+size(return[]) == 1
+===========================================================================
+java_programs.GET_FACTORS.get_factors(int):::EXIT
+return != null
+return[] elements != null
+return[].getClass().getName() elements == java.lang.Integer.class
+===========================================================================
+java_programs.GET_FACTORS.main(java.lang.String[]):::ENTER
+args has only one value
+args.getClass().getName() == java.lang.String[].class
+args[] == []
+args[].toString == []
+===========================================================================
+java_programs.GET_FACTORS.main(java.lang.String[]):::EXIT
+args[] == orig(args[])
+args[] == []
+args[].toString == []
+Exiting Daikon.

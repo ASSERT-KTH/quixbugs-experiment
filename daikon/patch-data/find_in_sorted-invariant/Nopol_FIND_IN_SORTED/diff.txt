@@ -1,0 +1,26 @@
+<java_programs.FIND_IN_SORTED.binsearch(int[], int, int, int):::ENTER>
+  <x >= start {0.9999+}, null> (Bin,JM)
+  <null, start <= size(arr[..]) {0.9999+}> (Bin,MJ)
+  <start < arr[start] {0.9999+}, null> (Bin,JM)
+  <start < size(arr[..])-1 {0.9999+}, null> (Bin,JM)
+  <size(arr[..]) != arr[start] {0.9999+}, null> (Bin,JM)
+  <size(arr[..])-1 != arr[start] {0.9999+}, null> (Bin,JM)
+  <null, start != size(arr[..])-1 {0.9999+}> (Bin,MJ)
+  <x != arr[start] {0.9999+}, null> (Bin,JM)
+  <x != size(arr[..])-1 {0.9999+}, null> (Bin,JM)
+  <end >= 0 {1+}, end >= 0 {0-}> (Una,SJU)
+  <start one of { 0, 5, 7 } {1+}, null> (Una,JM)
+<java_programs.FIND_IN_SORTED.binsearch(int[], int, int, int):::EXIT>
+  <orig(start) < arr[orig(start)] {0.9999+}, null> (Bin,JM)
+  <orig(start) < size(arr[..])-1 {0.9999+}, null> (Bin,JM)
+  <return < orig(x) {0.9999+}, null> (Bin,JM)
+  <orig(size(arr[..])) != arr[orig(start)] {0.9999+}, null> (Bin,JM)
+  <null, orig(start) != size(arr[..])-1 {0.9999+}> (Bin,MJ)
+  <orig(x) != arr[orig(start)] {0.9999+}, null> (Bin,JM)
+  <orig(x) != size(arr[..])-1 {0.9999+}, null> (Bin,JM)
+  <size(arr[..])-1 != arr[orig(start)] {0.9999+}, null> (Bin,JM)
+<java_programs.FIND_IN_SORTED.find_in_sorted(int[], int):::ENTER>
+  <x != size(arr[..])-1 {0.9922+}, null> (Bin,JM)
+<java_programs.FIND_IN_SORTED.find_in_sorted(int[], int):::EXIT>
+  <return < orig(x) {0.9922+}, null> (Bin,JM)
+  <orig(x) != size(arr[..])-1 {0.9922+}, null> (Bin,JM)
