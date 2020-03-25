@@ -1,0 +1,217 @@
+// Declaration file written by daikon.dcomp
+
+VarComparability
+implicit
+DECLARE
+java_programs.SHORTEST_PATH_LENGTHS:::CLASS
+java_programs.SHORTEST_PATH_LENGTHS.INF
+int # declaringClassPackageName=java_programs
+int
+2
+
+DECLARE
+java_programs.SHORTEST_PATH_LENGTHS:::OBJECT
+this
+java_programs.SHORTEST_PATH_LENGTHS # isNonNull=true, isParam=true
+hashcode
+3
+java_programs.SHORTEST_PATH_LENGTHS.INF
+int # declaringClassPackageName=java_programs
+int
+2
+
+
+DECLARE
+java_programs.SHORTEST_PATH_LENGTHS.SHORTEST_PATH_LENGTHS():::ENTER
+
+DECLARE
+java_programs.SHORTEST_PATH_LENGTHS.SHORTEST_PATH_LENGTHS():::EXIT13
+this
+java_programs.SHORTEST_PATH_LENGTHS # isNonNull=true, isParam=true
+hashcode
+3
+java_programs.SHORTEST_PATH_LENGTHS.INF
+int # declaringClassPackageName=java_programs
+int
+2
+
+
+DECLARE
+java_programs.SHORTEST_PATH_LENGTHS.shortest_path_lengths(int, java.util.Map):::ENTER
+java_programs.SHORTEST_PATH_LENGTHS.INF
+int # declaringClassPackageName=java_programs
+int
+2
+numNodes
+int # isParam=true
+int
+4
+length_by_edge
+java.util.Map # isParam=true
+hashcode
+3
+length_by_edge.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+
+DECLARE
+java_programs.SHORTEST_PATH_LENGTHS.shortest_path_lengths(int, java.util.Map):::EXIT26
+java_programs.SHORTEST_PATH_LENGTHS.INF
+int # declaringClassPackageName=java_programs
+int
+2
+numNodes
+int # isParam=true
+int
+4
+length_by_edge
+java.util.Map # isParam=true
+hashcode
+3
+length_by_edge.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+return
+java.util.Map
+hashcode
+5
+return.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+
+
+DECLARE
+java_programs.SHORTEST_PATH_LENGTHS.main(java.lang.String[]):::ENTER
+java_programs.SHORTEST_PATH_LENGTHS.INF
+int # declaringClassPackageName=java_programs
+int
+5
+args
+java.lang.String[] # isParam=true
+hashcode
+2
+args.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+args[..]
+java.lang.String[]
+hashcode[]
+3[6]
+args[..].toString
+java.lang.String[]
+java.lang.String[]
+4[7]
+
+DECLARE
+java_programs.SHORTEST_PATH_LENGTHS.main(java.lang.String[]):::EXIT53
+java_programs.SHORTEST_PATH_LENGTHS.INF
+int # declaringClassPackageName=java_programs
+int
+5
+args
+java.lang.String[] # isParam=true
+hashcode
+2
+args.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+args[..]
+java.lang.String[]
+hashcode[]
+3[6]
+args[..].toString
+java.lang.String[]
+java.lang.String[]
+4[7]
+
+
+DECLARE
+java_programs.SHORTEST_PATH_LENGTHS.equals(java.lang.Object):::ENTER
+this
+java_programs.SHORTEST_PATH_LENGTHS # isNonNull=true, isParam=true
+hashcode
+4
+java_programs.SHORTEST_PATH_LENGTHS.INF
+int # declaringClassPackageName=java_programs
+int
+2
+obj
+java.lang.Object # isParam=true
+hashcode
+3
+obj.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+
+DECLARE
+java_programs.SHORTEST_PATH_LENGTHS.equals(java.lang.Object):::EXIT1
+this
+java_programs.SHORTEST_PATH_LENGTHS # isNonNull=true, isParam=true
+hashcode
+5
+java_programs.SHORTEST_PATH_LENGTHS.INF
+int # declaringClassPackageName=java_programs
+int
+2
+obj
+java.lang.Object # isParam=true
+hashcode
+3
+obj.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+return
+boolean
+boolean
+4
+
+
+DECLARE
+java_programs.SHORTEST_PATH_LENGTHS.equals_dcomp_instrumented(java.lang.Object):::ENTER
+this
+java_programs.SHORTEST_PATH_LENGTHS # isNonNull=true, isParam=true
+hashcode
+4
+java_programs.SHORTEST_PATH_LENGTHS.INF
+int # declaringClassPackageName=java_programs
+int
+2
+obj
+java.lang.Object # isParam=true
+hashcode
+3
+obj.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+
+DECLARE
+java_programs.SHORTEST_PATH_LENGTHS.equals_dcomp_instrumented(java.lang.Object):::EXIT1
+this
+java_programs.SHORTEST_PATH_LENGTHS # isNonNull=true, isParam=true
+hashcode
+5
+java_programs.SHORTEST_PATH_LENGTHS.INF
+int # declaringClassPackageName=java_programs
+int
+2
+obj
+java.lang.Object # isParam=true
+hashcode
+3
+obj.getClass().getName()
+java.lang.Class
+java.lang.String
+1
+return
+boolean
+boolean
+4
+

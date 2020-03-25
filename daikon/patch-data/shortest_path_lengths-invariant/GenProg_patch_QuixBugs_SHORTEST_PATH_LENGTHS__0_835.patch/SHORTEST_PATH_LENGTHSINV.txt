@@ -1,0 +1,25 @@
+Daikon version 5.7.2, released November 7, 2018; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+java_programs.SHORTEST_PATH_LENGTHS:::CLASS
+===========================================================================
+java_programs.SHORTEST_PATH_LENGTHS.main(java.lang.String[]):::ENTER
+args has only one value
+args.getClass().getName() == java.lang.String[].class
+args[] == []
+args[].toString == []
+===========================================================================
+java_programs.SHORTEST_PATH_LENGTHS.main(java.lang.String[]):::EXIT
+args[] == orig(args[])
+args[] == []
+args[].toString == []
+===========================================================================
+java_programs.SHORTEST_PATH_LENGTHS.shortest_path_lengths(int, java.util.Map):::ENTER
+numNodes one of { 4, 5, 6 }
+length_by_edge.getClass().getName() == java.util.HashMap.class
+===========================================================================
+java_programs.SHORTEST_PATH_LENGTHS.shortest_path_lengths(int, java.util.Map):::EXIT
+return.getClass().getName() == orig(length_by_edge.getClass().getName())
+return.getClass().getName() == java.util.HashMap.class
+Exiting Daikon.
