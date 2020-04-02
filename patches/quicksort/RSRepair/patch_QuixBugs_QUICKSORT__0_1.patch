@@ -1,0 +1,16 @@
+--- /tmp/RSRepair_QuixBugs_QUICKSORT_/src/main/java/QUICKSORT.java	2018-12-02 12:31:12.235565775 -0500
++++ /tmp/RSRepair_QuixBugs_QUICKSORT_/patches_4rrc/Patch_546/patched/tmp/RSRepair_QuixBugs_QUICKSORT_/src/main/java/QUICKSORT.java	2018-12-02 12:34:11.456017610 -0500
+@@ -23,9 +23,8 @@
+         for (Integer x : arr.subList(1, arr.size())) {
+             if (x < pivot) {
+                 lesser.add(x);
+-            } else if (x > pivot) {
+-                greater.add(x);
+-            }
++            } else
++				greater.add(x);
+         }
+         ArrayList<Integer> middle = new ArrayList<Integer>();
+         middle.add(pivot);
+
+
