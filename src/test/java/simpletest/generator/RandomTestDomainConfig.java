@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
-import java_programs_correct.Node;
+import correct_java_programs.Node;
 
 public class RandomTestDomainConfig {
 	

@@ -31,7 +31,7 @@ public class RPN_EVAL {
                 Double b = (Double) stack.pop();
 		Double c = 0.0;
 		BinaryOperator<Double> bin_op = op.get(token);
-		c = bin_op.apply(b,a);
+		c = bin_op.apply(a,b);
                 stack.push(c);
             }
         }

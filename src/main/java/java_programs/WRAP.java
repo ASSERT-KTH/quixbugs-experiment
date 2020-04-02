@@ -28,7 +28,7 @@ public class WRAP {
             text = text.substring(end);
             lines.add(line);
         }
-        lines.add(text);
+
         return lines;
     }
 }

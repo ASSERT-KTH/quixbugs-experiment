@@ -5,8 +5,6 @@ import java.util.*;
  * and open the template in the editor.
  */
 
-import java_programs.Node;
-
 /**
  *
  * @author derricklin
@@ -21,7 +19,6 @@ public class DEPTH_FIRST_SEARCH {
                 } else if (node == goalnode) {
                     return true;
                 } else {
-                  	nodesvisited.add(node);
                     for (Node successornodes : node.getSuccessors()) {
 	                    if (search(successornodes)) { return true; }
                     }

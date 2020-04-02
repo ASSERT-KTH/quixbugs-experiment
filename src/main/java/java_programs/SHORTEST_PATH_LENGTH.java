@@ -1,8 +1,6 @@
 package java_programs;
 import java.util.*;
 
-import java_programs.Node;
-
 /**
  *
  * @author Angela Chen
@@ -16,7 +14,7 @@ public class SHORTEST_PATH_LENGTH {
         Set<Node> visitedNodes = new HashSet<>();
 
         unvisitedNodes.put(startnode, 0);
-     
+
         while (!unvisitedNodes.isEmpty()) {
             Node node = getNodeWithMinDistance(unvisitedNodes);
             int distance = unvisitedNodes.get(node);
@@ -37,7 +35,7 @@ public class SHORTEST_PATH_LENGTH {
                 }
 
                 unvisitedNodes.put(nextnode, Math.min(unvisitedNodes.get(nextnode),
-                        distance + length_by_edge.get(Arrays.asList(node, nextnode))));
+                        unvisitedNodes.get(nextnode) + length_by_edge.get(Arrays.asList(node, nextnode))));
             }
         }
 

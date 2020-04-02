@@ -28,7 +28,7 @@ public class LIS {
 
             if (length == longest || val < arr[ends.get(length+1)]) {
                 ends.put(length+1, i);
-                longest = Math.max(longest,length + 1);
+                longest = length + 1;
             }
 
             i++;

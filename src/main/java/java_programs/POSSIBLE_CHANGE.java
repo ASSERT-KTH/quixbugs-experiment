@@ -14,7 +14,7 @@ public class POSSIBLE_CHANGE {
         if (total == 0) {
             return 1;
         }
-        if (total < 0 ||coins.length==0) {
+        if (total < 0) {
             return 0;
         }
 

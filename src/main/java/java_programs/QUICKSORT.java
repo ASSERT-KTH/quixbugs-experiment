@@ -21,9 +21,9 @@ public class QUICKSORT {
         ArrayList<Integer> greater = new ArrayList<Integer>();
 
         for (Integer x : arr.subList(1, arr.size())) {
-            if (x < pivot) {
+			if (x < pivot) {
                 lesser.add(x);
-            } else if (x >= pivot) {
+            } else if (x > pivot) {
                 greater.add(x);
             }
         }
