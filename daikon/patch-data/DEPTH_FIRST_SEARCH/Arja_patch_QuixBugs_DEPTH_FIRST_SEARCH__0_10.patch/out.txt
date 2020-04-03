@@ -1,0 +1,3 @@
+                                                                               [2:06:42 PM]: Checking size of /home/wasp/Desktop/research/quixbugs-experiment/
+DEPTH_FIRST_SEARCH.inv.gz: 31 errors found in 10,971 samples (0.28%)
+DEPTH_FIRST_SEARCH.inv.gz: 31 false positives, out of 1839, which is 1.69%.

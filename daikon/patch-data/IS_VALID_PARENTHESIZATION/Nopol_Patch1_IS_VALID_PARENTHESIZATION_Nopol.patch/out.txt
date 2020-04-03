@@ -1,0 +1,3 @@
+                                                                               [2:36:33 AM]: Reading /home/wasp/Desktop/research/quixbugs-experiment/IS_VALID_
+IS_VALID_PARENTHESIZATION.inv.gz: 7 errors found in 172 samples (4.07%)
+IS_VALID_PARENTHESIZATION.inv.gz: 7 false positives, out of 140, which is 5.00%.

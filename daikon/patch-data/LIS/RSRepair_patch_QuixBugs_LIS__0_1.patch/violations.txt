@@ -1,0 +1,9 @@
+# Times an invariant was evaluated ----------- 12
+# Entry program points traversed ------------- 5
+# Normal-exit program points traversed ------- 5
+# Exceptional-exit program points traversed -- 0
+# Total exit program points traversed -------- 5
+
+# Violations: 
+violated on entry of main(java.lang.String[]) : precondition  : args[..].toString == []
+violated on exit  of main(java.lang.String[]) : postcondition : args[..].toString == []

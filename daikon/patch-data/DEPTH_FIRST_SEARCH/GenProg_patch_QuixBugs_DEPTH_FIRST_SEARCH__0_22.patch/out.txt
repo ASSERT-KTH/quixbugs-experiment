@@ -1,0 +1,3 @@
+                                                                               [2:02:02 PM]:                                                                  
+DEPTH_FIRST_SEARCH.inv.gz: 53 errors found in 11,090 samples (0.48%)
+DEPTH_FIRST_SEARCH.inv.gz: 53 false positives, out of 1958, which is 2.71%.

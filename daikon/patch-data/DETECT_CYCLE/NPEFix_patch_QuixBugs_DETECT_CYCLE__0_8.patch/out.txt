@@ -1,0 +1,3 @@
+                                                                               [1:17:17 PM]:                                                                  
+DETECT_CYCLE.inv.gz: 78 errors found in 13,146 samples (0.59%)
+DETECT_CYCLE.inv.gz: 78 false positives, out of 2596, which is 3.00%.
