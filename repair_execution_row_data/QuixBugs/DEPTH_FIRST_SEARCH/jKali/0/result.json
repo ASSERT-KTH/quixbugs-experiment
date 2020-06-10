@@ -1,0 +1,27 @@
+{
+  "repair_end": "2020-06-09 19:05:04.429493", 
+  "repair_begin": "2020-06-09 19:05:01.176381", 
+  "patches": [
+    {
+      "PATCH_DIFF_ORIG": "--- \\/tmp\\/jKali_QuixBugs_DEPTH_FIRST_SEARCH_\\/src\\/main\\/java\\/Nodejava\\n+++ \\/tmp\\/jKali_QuixBugs_DEPTH_FIRST_SEARCH_\\/src\\/main\\/java\\/Nodejava\\n@@ -47,7 +47,7 @@\\n \\t}\\n \\n \\tpublic void setSuccessors(java.util.ArrayList<java_programs.Node> successors) {\\n-\\t\\tthis.successors = successors;\\n+\\n \\t}\\n \\n \\tpublic void setPredecessors(java.util.ArrayList<java_programs.Node> predecessors) {\\n\\n", 
+      "patchhunks": [
+        {
+          "MODIFIED_FILE_PATH": "\\/tmp\\/jKali_QuixBugs_DEPTH_FIRST_SEARCH_\\/.\\/output_astor\\/AstorMain-DEPTH_FIRST_SEARCH-\\/\\/src\\/\\/variant-2\\/java_programs\\/Node.java", 
+          "ORIGINAL_CODE": "this.successors = successors", 
+          "LOCATION": "java_programs.Node", 
+          "BUGGY_CODE_TYPE": "CtAssignmentImpl|CtBlockImpl", 
+          "OPERATOR": "RemoveOp", 
+          "PATH": "\\/tmp\\/jKali_QuixBugs_DEPTH_FIRST_SEARCH_\\/src\\/main\\/java\\/Node.java", 
+          "LINE": "50", 
+          "MP_RANKING": "0", 
+          "SUSPICIOUNESS": "1"
+        }
+      ], 
+      "GENERATION": "1", 
+      "VARIANT_ID": "2", 
+      "TIME": "0", 
+      "VALIDATION": "|true|0|5|[]|", 
+      "FOLDER_SOLUTION_CODE": "\\/tmp\\/jKali_QuixBugs_DEPTH_FIRST_SEARCH_\\/.\\/output_astor\\/AstorMain-DEPTH_FIRST_SEARCH-\\/\\/bin\\/\\/variant-2"
+    }
+  ]
+}

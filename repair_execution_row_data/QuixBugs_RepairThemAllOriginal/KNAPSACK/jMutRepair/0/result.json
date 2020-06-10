@@ -1,0 +1,29 @@
+{
+  "repair_end": "2020-06-09 19:23:11.904147", 
+  "repair_begin": "2020-06-09 19:22:56.309561", 
+  "patches": [
+    {
+      "PATCH_DIFF_ORIG": "--- \\/tmp\\/jMutRepair_QuixBugs_KNAPSACK_\\/src\\/main\\/java\\/KNAPSACKjava\\n+++ \\/tmp\\/jMutRepair_QuixBugs_KNAPSACK_\\/src\\/main\\/java\\/KNAPSACKjava\\n@@ -27,7 +27,7 @@\\n \\t\\t\\t\\tif ((i == 0) || (j == 0)) {\\n \\t\\t\\t\\t\\tmemo[i][j] = 0;\\n \\t\\t\\t\\t}else\\n-\\t\\t\\t\\t\\tif (weight < j) {\\n+\\t\\t\\t\\t\\tif (weight <= j) {\\n \\t\\t\\t\\t\\t\\tmemo[i][j] = java.lang.Math.max(memo[(i - 1)][j], (value + (memo[(i - 1)][(j - weight)])));\\n \\t\\t\\t\\t\\t}else \\n \\t\\t\\t\\t\\t{\\n\\n", 
+      "patchhunks": [
+        {
+          "MODIFIED_FILE_PATH": "\\/tmp\\/jMutRepair_QuixBugs_KNAPSACK_\\/.\\/output_astor\\/AstorMain-KNAPSACK-\\/\\/src\\/\\/variant-26\\/java_programs\\/KNAPSACK.java", 
+          "ORIGINAL_CODE": "weight < j", 
+          "PATCH_HUNK_CODE": "weight <= j", 
+          "LOCATION": "java_programs.KNAPSACK", 
+          "BUGGY_CODE_TYPE": "CtBinaryOperatorImpl|CtIfImpl", 
+          "OPERATOR": "IfExpresionMutOp", 
+          "PATH": "\\/tmp\\/jMutRepair_QuixBugs_KNAPSACK_\\/src\\/main\\/java\\/KNAPSACK.java", 
+          "LINE": "30", 
+          "MP_RANKING": "2", 
+          "SUSPICIOUNESS": "0.775", 
+          "PATCH_HUNK_TYPE": "CtBinaryOperatorImpl|CtIfImpl"
+        }
+      ], 
+      "GENERATION": "1", 
+      "VARIANT_ID": "26", 
+      "TIME": "9", 
+      "VALIDATION": "|true|0|10|[]|", 
+      "FOLDER_SOLUTION_CODE": "\\/tmp\\/jMutRepair_QuixBugs_KNAPSACK_\\/.\\/output_astor\\/AstorMain-KNAPSACK-\\/\\/bin\\/\\/variant-26"
+    }
+  ]
+}
