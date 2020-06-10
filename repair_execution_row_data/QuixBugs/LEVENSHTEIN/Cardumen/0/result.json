@@ -1,0 +1,56 @@
+{
+  "repair_end": "2020-06-08 22:04:46.933564", 
+  "repair_begin": "2020-06-08 22:01:07.598884", 
+  "patches": [
+    {
+      "PATCH_DIFF_ORIG": "--- \\/tmp\\/Cardumen_QuixBugs_LEVENSHTEIN_\\/src\\/main\\/java\\/LEVENSHTEINjava\\n+++ \\/tmp\\/Cardumen_QuixBugs_LEVENSHTEIN_\\/src\\/main\\/java\\/LEVENSHTEINjava\\n@@ -14,7 +14,7 @@\\n \\t\\tif ((source.isEmpty()) || (target.isEmpty())) {\\n \\t\\t\\treturn source.isEmpty() ? target.length() : source.length();\\n \\t\\t}else \\t\\t\\tif ((source.charAt(0)) == (target.charAt(0))) {\\n-\\t\\t\\t\\treturn 1 + (java_programs.LEVENSHTEIN.levenshtein(source.substring(1), target.substring(1)));\\n+\\t\\t\\t\\treturn java_programs.LEVENSHTEIN.levenshtein(source.substring(1), target.substring(1));\\n \\t\\t\\t}else {\\n \\t\\t\\t\\treturn 1 + (java.lang.Math.min(java.lang.Math.min(\\n \\t\\t\\t\\tjava_programs.LEVENSHTEIN.levenshtein(source, target.substring(1)), \\n\\n", 
+      "patchhunks": [
+        {
+          "MODIFIED_FILE_PATH": "\\/tmp\\/Cardumen_QuixBugs_LEVENSHTEIN_\\/.\\/output_astor\\/AstorMain-LEVENSHTEIN-\\/\\/src\\/\\/variant-48\\/java_programs\\/LEVENSHTEIN.java", 
+          "ORIGINAL_CODE": "1 + (java_programs.LEVENSHTEIN.levenshtein(source.substring(1), target.substring(1)))", 
+          "INGREDIENT_SCOPE": "-", 
+          "PATCH_HUNK_CODE": "java_programs.LEVENSHTEIN.levenshtein(source.substring(1), target.substring(1))", 
+          "INGREDIENT_PARENT": "(java_programs.LEVENSHTEIN.levenshtein(_String_0.substring(1), _String_1.substring(1)))", 
+          "LOCATION": "java_programs.LEVENSHTEIN", 
+          "BUGGY_CODE_TYPE": "CtBinaryOperatorImpl|CtReturnImpl", 
+          "OPERATOR": "ExpressionReplaceOperator", 
+          "PATH": "\\/tmp\\/Cardumen_QuixBugs_LEVENSHTEIN_\\/src\\/main\\/java\\/LEVENSHTEIN.java", 
+          "LINE": "17", 
+          "MP_RANKING": "6", 
+          "SUSPICIOUNESS": "1", 
+          "PATCH_HUNK_TYPE": "CtInvocationImpl|CtReturnImpl"
+        }
+      ], 
+      "GENERATION": "24", 
+      "VARIANT_ID": "48", 
+      "TIME": "11", 
+      "VALIDATION": "|true|0|6|[]|", 
+      "FOLDER_SOLUTION_CODE": "\\/tmp\\/Cardumen_QuixBugs_LEVENSHTEIN_\\/.\\/output_astor\\/AstorMain-LEVENSHTEIN-\\/\\/bin\\/\\/variant-48"
+    }, 
+    {
+      "PATCH_DIFF_ORIG": "--- \\/tmp\\/Cardumen_QuixBugs_LEVENSHTEIN_\\/src\\/main\\/java\\/LEVENSHTEINjava\\n+++ \\/tmp\\/Cardumen_QuixBugs_LEVENSHTEIN_\\/src\\/main\\/java\\/LEVENSHTEINjava\\n@@ -14,7 +14,7 @@\\n \\t\\tif ((source.isEmpty()) || (target.isEmpty())) {\\n \\t\\t\\treturn source.isEmpty() ? target.length() : source.length();\\n \\t\\t}else \\t\\t\\tif ((source.charAt(0)) == (target.charAt(0))) {\\n-\\t\\t\\t\\treturn 1 + (java_programs.LEVENSHTEIN.levenshtein(source.substring(1), target.substring(1)));\\n+\\t\\t\\t\\treturn java_programs.LEVENSHTEIN.levenshtein(target.substring(1), source.substring(1));\\n \\t\\t\\t}else {\\n \\t\\t\\t\\treturn 1 + (java.lang.Math.min(java.lang.Math.min(\\n \\t\\t\\t\\tjava_programs.LEVENSHTEIN.levenshtein(source, target.substring(1)), \\n\\n", 
+      "patchhunks": [
+        {
+          "MODIFIED_FILE_PATH": "\\/tmp\\/Cardumen_QuixBugs_LEVENSHTEIN_\\/.\\/output_astor\\/AstorMain-LEVENSHTEIN-\\/\\/src\\/\\/variant-290\\/java_programs\\/LEVENSHTEIN.java", 
+          "ORIGINAL_CODE": "1 + (java_programs.LEVENSHTEIN.levenshtein(source.substring(1), target.substring(1)))", 
+          "INGREDIENT_SCOPE": "-", 
+          "PATCH_HUNK_CODE": "java_programs.LEVENSHTEIN.levenshtein(target.substring(1), source.substring(1))", 
+          "INGREDIENT_PARENT": "(java_programs.LEVENSHTEIN.levenshtein(_String_0.substring(1), _String_1.substring(1)))", 
+          "LOCATION": "java_programs.LEVENSHTEIN", 
+          "BUGGY_CODE_TYPE": "CtBinaryOperatorImpl|CtReturnImpl", 
+          "OPERATOR": "ExpressionReplaceOperator", 
+          "PATH": "\\/tmp\\/Cardumen_QuixBugs_LEVENSHTEIN_\\/src\\/main\\/java\\/LEVENSHTEIN.java", 
+          "LINE": "17", 
+          "MP_RANKING": "6", 
+          "SUSPICIOUNESS": "1", 
+          "PATCH_HUNK_TYPE": "CtInvocationImpl|CtReturnImpl"
+        }
+      ], 
+      "GENERATION": "145", 
+      "VARIANT_ID": "290", 
+      "TIME": "77", 
+      "VALIDATION": "|true|0|6|[]|", 
+      "FOLDER_SOLUTION_CODE": "\\/tmp\\/Cardumen_QuixBugs_LEVENSHTEIN_\\/.\\/output_astor\\/AstorMain-LEVENSHTEIN-\\/\\/bin\\/\\/variant-290"
+    }
+  ]
+}

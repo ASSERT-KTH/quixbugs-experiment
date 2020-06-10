@@ -1,0 +1,60 @@
+cd /tmp/Cardumen_QuixBugs_MINIMUM_SPANNING_TREE_;
+export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8 -Duser.language=en-US -Duser.country=US -Duser.language=en";
+TZ="America/New_York"; export TZ;
+export PATH="/home/mmartinez/jdk1.8.0_45/bin/:$PATH";
+export JAVA_HOME="/home/mmartinez/jdk1.8.0_45/bin/";
+time java -Xmx4g -Xms1g -cp /home/mmartinez/experiment-repair-2020/RepairThemAll/script/../libs/jtestex7.jar:/home/mmartinez/experiment-repair-2020/RepairThemAll/script/../repair_tools/astor.jar fr.inria.main.evolution.AstorMain \
+	-mode cardumen \
+	-location . \
+	-id MINIMUM_SPANNING_TREE- \
+	-failing java_testcases.junit.MINIMUM_SPANNING_TREE_Test \
+	-jvm4testexecution /home/mmartinez/jdk1.8.0_45/bin/ \
+	-jvm4evosuitetestexecution /home/mmartinez/jdk1.8.0_45/bin/ \
+	-maxgen 1000000 \
+	-maxtime 120 \
+	-stopfirst true \
+	-seed 0 \
+	-scope local \
+	-population 1 \
+	-javacompliancelevel 8 \
+	-srcjavafolder src/main/java \
+	-srctestfolder src/test/java \
+	-binjavafolder target/classes \
+	-bintestfolder target/test-classes \
+	-parameters stopfirst:false:maxCombinationVariableLimit:true:maxVarCombination:1000 \
+	-dependencies /home/mmartinez/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/mmartinez/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar;
+	echo "\n\nNode: `hostname`\n";
+	echo "\n\nDate: `date`\n";
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8 -Duser.language=en-US -Duser.country=US -Duser.language=en
+[INFO ] fr.inria.astor.core.setup.ProjectConfiguration.getVersionJDK(ProjectConfiguration.java:282) - Version of the JVM used: 1.8.0_45
+[INFO ] fr.inria.main.AbstractMain.processArguments(AbstractMain.java:370) - Java version of the JDK used to run tests: 1.8.0_45
+[INFO ] fr.inria.main.AbstractMain.processArguments(AbstractMain.java:371) - The compliance of the JVM is:  8
+[INFO ] fr.inria.main.AbstractMain.processArguments(AbstractMain.java:645) - command line arguments: [-mode  cardumen  -location  .  -id  MINIMUM_SPANNING_TREE-  -failing  java_testcases.junit.MINIMUM_SPANNING_TREE_Test  -jvm4testexecution  /home/mmartinez/jdk1.8.0_45/bin/  -jvm4evosuitetestexecution  /home/mmartinez/jdk1.8.0_45/bin/  -maxgen  1000000  -maxtime  120  -stopfirst  true  -seed  0  -scope  local  -population  1  -javacompliancelevel  8  -srcjavafolder  src/main/java  -srctestfolder  src/test/java  -binjavafolder  target/classes  -bintestfolder  target/test-classes  -parameters  stopfirst:false:maxCombinationVariableLimit:true:maxVarCombination:1000  -dependencies  /home/mmartinez/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/mmartinez/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar]
+[INFO ] fr.inria.main.evolution.AstorMain.execute(AstorMain.java:216) - Running Astor on a JDK at /home/mmartinez/jdk1.8.0_45/jre
+[INFO ] fr.inria.main.AbstractMain.determineSourceFolders(AbstractMain.java:849) - Source folders: [/tmp/Cardumen_QuixBugs_MINIMUM_SPANNING_TREE_/./src/main/java]
+[INFO ] fr.inria.main.AbstractMain.determineSourceFolders(AbstractMain.java:868) - Source Test folders: [/tmp/Cardumen_QuixBugs_MINIMUM_SPANNING_TREE_/./src/test/java]
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.calculateSuspicious(GZoltarFaultLocalization.java:75) - -Executing Gzoltar classpath: /tmp/Cardumen_QuixBugs_MINIMUM_SPANNING_TREE_/./output_astor/AstorMain-MINIMUM_SPANNING_TREE-//bin//default from 0 classes with test cases
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:149) - Gzoltar fault localization: min susp value parameter: 0.1
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:169) - -gz-Adding classpath: [/tmp/Cardumen_QuixBugs_MINIMUM_SPANNING_TREE_/./output_astor/AstorMain-MINIMUM_SPANNING_TREE-//bin//default, /home/mmartinez/.m2/repository/junit/junit/4.11/junit-4.11.jar, /home/mmartinez/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar]
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:218) - Gzoltar Test Result Total:0, fails: 0, GZoltar suspicious 0, with positive susp 0
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:226) - nr test results 0
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:271) - Gzoltar found: 0 with susp > 0.1, we consider: 0
+Exception in thread "main" java.lang.IllegalArgumentException: No suspicious gen for analyze
+	at fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.calculateSuspicious(GZoltarFaultLocalization.java:93)
+	at fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:49)
+	at fr.inria.astor.core.solutionsearch.AstorCoreEngine.calculateSuspicious(AstorCoreEngine.java:898)
+	at fr.inria.main.evolution.AstorMain.createEngine(AstorMain.java:125)
+	at fr.inria.main.evolution.AstorMain.run(AstorMain.java:179)
+	at fr.inria.main.evolution.AstorMain.execute(AstorMain.java:236)
+	at fr.inria.main.evolution.AstorMain.main(AstorMain.java:210)
+Command exited with non-zero status 1
+3.66user 0.47system 0:02.12elapsed 194%CPU (0avgtext+0avgdata 255732maxresident)k
+181600inputs+5216outputs (15major+40323minor)pagefaults 0swaps
+
+
+Node: grisou-6.nancy.grid5000.fr
+
+
+
+Date: Mon 08 Jun 2020 04:04:04 PM EDT
+
