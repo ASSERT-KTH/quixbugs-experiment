@@ -1,0 +1,15 @@
+
+--- java_programs\/Node.java
++++ java_programs\/Node.java
+@@ -46,8 +46,8 @@
+ 		this.successor = successor;
+ 	}
+ 
+-	public void setSuccessors(java.util.ArrayList<java_programs.Node> successors) {
+-		this.successors = successors;
++	public void setSuccessors(java.util.ArrayList<java_programs.Node> successors) { 		this.value = value;
++
+ 	}
+ 
+ 	public void setPredecessors(java.util.ArrayList<java_programs.Node> predecessors) {
+

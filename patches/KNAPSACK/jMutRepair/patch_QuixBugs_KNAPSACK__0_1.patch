@@ -1,0 +1,13 @@
+
+--- java_programs\/KNAPSACK.java
++++ java_programs\/KNAPSACK.java
+@@ -27,7 +27,7 @@
+ 				if ((i == 0) || (j == 0)) {
+ 					memo[i][j] = 0;
+ 				}else
+-					if (weight < j) {
++					if (weight <= j) {
+ 						memo[i][j] = java.lang.Math.max(memo[(i - 1)][j], (value + (memo[(i - 1)][(j - weight)])));
+ 					}else 
+ 					{
+
