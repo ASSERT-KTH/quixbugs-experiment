@@ -1,9 +1,0 @@
---- nopol-quixbugs/src/main/java/java_programs/Node.java
-+++ nopol-quixbugs/src/main/java/java_programs/Node.java
-@@ -49,3 +49,5 @@
-     public void setSuccessors(ArrayList<Node> successors) {
--        this.successors = successors;
-+        if (successors.contains((java.lang.Object) this)) {
-+            this.successors = successors;
-+        }
-     }

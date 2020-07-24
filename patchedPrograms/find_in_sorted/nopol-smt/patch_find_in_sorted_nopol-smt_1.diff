@@ -1,7 +1,0 @@
---- nopol-quixbugs/src/main/java/java_programs/FIND_IN_SORTED.java
-+++ nopol-quixbugs/src/main/java/java_programs/FIND_IN_SORTED.java
-@@ -16,3 +16,3 @@
-         int mid = start + (end - start) / 2; // check this is floor division
--        if (x < arr[mid]) {
-+        if ((mid <= 2) || (((x) != ((arr[mid]))) && (!(arr.length < (arr[mid]))))) {
-             return binsearch(arr, x, start, mid);
