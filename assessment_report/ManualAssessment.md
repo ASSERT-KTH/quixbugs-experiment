@@ -1,4 +1,5 @@
 |patch_id| Manual assessment |
+| ----------- |    ---------   |
 |Nopol_Patch1_FIND_IN_SORTED_Nopol.patch| Overfitting | 
 |NPEFix_patch_QuixBugs_DETECT_CYCLE__0_8.patch| Correct | 
 |NPEFix_patch_QuixBugs_DETECT_CYCLE__0_5.patch| Correct | 
