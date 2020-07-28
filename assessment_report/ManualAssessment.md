@@ -10,6 +10,7 @@
 |NPEFix_patch_QuixBugs_DETECT_CYCLE__0_4.patch| Overfitting | 
 |NPEFix_patch_QuixBugs_DETECT_CYCLE__0_2.patch| Overfitting | 
 |Nopol_patch_lis_statement.patch| Correct | 
+|GenProg_patch_QuixBugs_LIS__0_0.patch| Correct | 
 |GenProg_patch_QuixBugs_LIS__0_14.patch| Correct | 
 |GenProg_patch_QuixBugs_LIS__0_51.patch| Correct | 
 |GenProg_patch_QuixBugs_LIS__0_91.patch| Correct | 
