@@ -1,0 +1,7 @@
+Our manual assessment consider all QuickSort patches are correct. 
+
+The ground truth patch change: " else if (x > pivot) {​ " to " else if (x >= pivot) {​ "
+which equals to else or else if(true). ​
+
+Thus we consider all program repair patches semantically equivalent to else / else if(true) /else if (x >= pivot)
+are correct.
