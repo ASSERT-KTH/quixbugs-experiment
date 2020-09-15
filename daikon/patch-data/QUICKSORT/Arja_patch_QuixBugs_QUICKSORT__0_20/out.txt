@@ -1,0 +1,4 @@
+                                                                               [2:00:27 PM]:                                                                  At ppt java_programs.QUICKSORT.main(java.lang.String[]):::EXIT, Invariant 'orig(args) has only one value' invalidated by sample orig(args)=2059904228: at line 17888 in file QUICKSORT.dtrace.gz
+
+/home/wasp/Desktop/research/quixbugs-experiment/QUICKSORT_correct.inv.gz: 1 errors found in 35,380 samples (0.00%)
+/home/wasp/Desktop/research/quixbugs-experiment/QUICKSORT_correct.inv.gz: 1 false positives, out of 122, which is 0.82%.

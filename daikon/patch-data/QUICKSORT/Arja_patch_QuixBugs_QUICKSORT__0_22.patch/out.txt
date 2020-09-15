@@ -1,3 +1,0 @@
-                                                                               [2:33:15 PM]:                                                                  
-QUICKSORT.inv.gz: 2 errors found in 17,029 samples (0.01%)
-QUICKSORT.inv.gz: 2 false positives, out of 132, which is 1.52%.

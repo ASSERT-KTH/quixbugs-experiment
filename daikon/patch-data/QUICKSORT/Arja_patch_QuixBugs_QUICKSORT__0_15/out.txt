@@ -1,0 +1,3 @@
+                                                                               [1:58:52 PM]:                                                                  
+/home/wasp/Desktop/research/quixbugs-experiment/QUICKSORT_correct.inv.gz: 0 errors found in 41,998 samples (0.00%)
+/home/wasp/Desktop/research/quixbugs-experiment/QUICKSORT_correct.inv.gz: 0 false positives, out of 188, which is 0.00%.

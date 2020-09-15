@@ -1,0 +1,3 @@
+                                                                               [2:00:16 PM]:                                                                  [2:00:17 PM]: Reading QUICKSORT.dtrace.gz (line 434679, 29.46%) ...            
+/home/wasp/Desktop/research/quixbugs-experiment/QUICKSORT_correct.inv.gz: 0 errors found in 3,650,798 samples (0.00%)
+/home/wasp/Desktop/research/quixbugs-experiment/QUICKSORT_correct.inv.gz: 0 false positives, out of 188, which is 0.00%.
