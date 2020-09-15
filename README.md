@@ -602,7 +602,7 @@ A csv file called InputSample_check.csv will be generated in the root directory 
 ### Patch Assessments
 
 We give assessment reusults for all 338 patches in the [Assessments.md](https://github.com/KTH/quixbugs-experiment/blob/master/assessment_report/Assessments.md).
-Our manual assessment considers all patches generated for LIS and Quicksort are correct. We also share our manual tests of LIS to confirm LIS patches correctness and the explaination of Quicksort patches in [here] (https://github.com/KTH/quixbugs-experiment/tree/master/assessment_report/manual-assessment-explanations).
+Our manual assessment considers all patches generated for LIS and Quicksort are correct. We also share our manual tests of LIS to confirm LIS patches correctness and the explaination of Quicksort patches in [here](https://github.com/KTH/quixbugs-experiment/tree/master/assessment_report/manual-assessment-explanations).
 
 Our manual assessment consider 4 DETECT_CYCLE patches are overfitting because of the new introduced null pointer exception according to the below updates reported by @ngocpq.
 
