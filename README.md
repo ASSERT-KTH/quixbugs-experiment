@@ -3,13 +3,16 @@
 Experimental data about the effectiveness of two representative automatic repair tools Astor and Nopol on repairing [QuixBugs](https://github.com/jkoppel/QuixBugs) benchmark. QuixBugs is a benchmark suite of 40 confirmed bugs from classic algorithms with a bug on a single line of code. The paper is [A Comprehensive Study of Automatic Program Repair on the QuixBugs Benchmark](http://arxiv.org/pdf/1805.03454).
 
 ```
-@inproceedings{arXiv-1805.03454,
- title = {A Comprehensive Study of Automatic Program Repair on the QuixBugs Benchmark},
- booktitle = {Proceedings of SANER Workshops},
- year = {2019},
- doi = {10.1109/IBF.2019.8665475},
- author = {He Ye and Matias Martinez and Thomas Durieux and Martin Monperrus},
- url = {http://arxiv.org/pdf/1805.03454},
+@article{YE2021110825,
+title = "A comprehensive study of automatic program repair on the QuixBugs benchmark",
+author = "He Ye and Matias Martinez and Thomas Durieux and Martin Monperrus",
+journal = "Journal of Systems and Software",
+volume = "171",
+pages = "110825",
+year = "2021",
+issn = "0164-1212",
+doi = "https://doi.org/10.1016/j.jss.2020.110825",
+url = "http://www.sciencedirect.com/science/article/pii/S0164121220302193"
 }
 
 ```
